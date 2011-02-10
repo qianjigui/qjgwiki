@@ -37,8 +37,7 @@ module KnowledgeUtils
 
       def pre_tag(level)
         case level
-        when 1 then '='
-        when 2 then '=='
+        when 1 then '=='
         else
           ('  '*level)+'*  '
         end
@@ -46,8 +45,7 @@ module KnowledgeUtils
 
       def end_tag(level)
         case level
-        when 1 then '='
-        when 2 then '=='
+        when 1 then '=='
         else
           ''
         end
