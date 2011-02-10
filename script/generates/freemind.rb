@@ -49,6 +49,7 @@ module KnowledgeUtils
         when 1 then '='
         when 2 then '=='
         else
+          ''
         end
       end
 
