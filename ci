@@ -5,6 +5,8 @@
 # http://www.opensource.org/licenses/mit-license.php
 $KCODE = 'utf8'
 
+system 'rake'
+
 args = '['+ARGV.join(' ')+']'
 args.gsub!(',','--**comma**--')
 args ='' if ARGV.length <= 0
