@@ -10,7 +10,7 @@ require 'script/hgrake'
 
 include KnowledgeUtils::Generate
 include KnowledgeUtils
-generators = [ EncryptGenerator.new(CONFS), GoogleWikiGenerator.new(CONFS) ]
+generators = [ EncryptGenerator.new(CONFS), FreemindGenerator.new(CONFS), GoogleWikiGenerator.new(CONFS) ]
 
 task :gen_make do
   generators.each do |g|

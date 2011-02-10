@@ -37,15 +37,7 @@ module KnowledgeUtils
         end
       end
 
-      private 
-      def cp_files(from, dest)
-        FileUtils.cp(from, dest)
-      end
-
-      def mv_files(from, dest)
-        FileUtils.mv(from, dest)
-      end
-
+      private
       def dest_name(file,src,dir_index,suffix,new_suffix, dest)
         dest+File.dirname(file).sub(src,'').split('/').map{|path| path.capitalize}.join('')+File.basename(file).sub(dir_index,'').capitalize.sub(suffix, new_suffix)
       end

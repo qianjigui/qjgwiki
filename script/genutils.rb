@@ -48,6 +48,14 @@ module KnowledgeUtils
       end
       def clean_imp
       end
+
+      def cp_files(from, dest)
+        FileUtils.cp(from, dest)
+      end
+
+      def mv_files(from, dest)
+        FileUtils.mv(from, dest)
+      end
     end
     Dir[MODULE_PATH+'/'+GenerateBase::DIRECTORY+'/*.rb'].each do |gfile|
       require gfile
