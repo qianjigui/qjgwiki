@@ -21,6 +21,7 @@ module KnowledgeUtils
 
       def generate_imp
         FileSet.files(@src+'/**/**'+@mm, /\/#{@encrypt_dir}\//).each do |file|
+          to_wiki(file, @mm, @twi)
         end
       end
 
