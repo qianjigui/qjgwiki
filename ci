@@ -12,3 +12,7 @@ args.gsub!(',','--**comma**--')
 args ='' if ARGV.length <= 0
 system 'rake','hg:ci'+args
 system 'rake','hg:push'
+
+Dir.chdir('./wiki')
+system 'rake','hg:ci'+args
+system 'rake','hg:push'
