@@ -13,8 +13,8 @@ module KnowledgeUtils
         @wiki_suffix = @wiki[:suffix]
         @dir_index = @conf[:build][:src][:index]
 
-        @mm = @type[:mm]
-        @twi= @type[:twi]
+        @mm = @types[:mm]
+        @twi= @types[:twi]
 
         clean
       end
