@@ -1,0 +1,16 @@
+:build :
+  :encrypt:
+    :dir: gpg
+    :suffix: .gpg
+  :wiki:
+    :dir: wiki
+    :suffix: .wiki
+  :src:
+    :dir: 'src'
+    :index: /\Aindex/i
+  :template: template
+
+:types:
+  :mm: .mm
+  :twi: .twi
+  :wiki: .wiki

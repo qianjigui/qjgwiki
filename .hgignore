@@ -1,0 +1,19 @@
+#use glob syntax.
+syntax: glob
+
+*~
+*.db
+*.old
+*.bak
+*.tmp
+*.swp
+*.twi
+
+wiki/*
+
+.hg_auths.yml
+.gpg.yml
+
+# switch to regexp syntax.
+syntax: regexp
+src.*/gpg/.*
