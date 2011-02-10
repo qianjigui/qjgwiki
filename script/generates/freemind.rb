@@ -55,7 +55,7 @@ module KnowledgeUtils
       def traver(root, level, file)
         root.elements.each('node') do |node|
           file.puts pre_tag(level)+node.attributes[VALUE]+end_tag(level)
-          traver(node, level+1)
+          traver(node, level+1, file)
         end
       end
 
