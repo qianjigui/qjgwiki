@@ -4,5 +4,8 @@
 
 在看了网上很多解决方案后，我决定采用Vimwiki的整体模式，然后配合自己的使用风格，最后决定自己构建了一套Wiki管理整合与发布脚本集合。
 
+一位前辈的知识管理框架
+[http://qjg-wiki.googlecode.com/files/HowtoManageYourKnowledge.png]
+
 =介绍=
   * 功能介绍 ItProjectMywikiFunctions
