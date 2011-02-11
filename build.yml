@@ -7,7 +7,7 @@
     :suffix: .wiki
   :src:
     :dir: 'src'
-    :index: /\Aindex/i
+    :index: index
   :template: template
 
 :types:

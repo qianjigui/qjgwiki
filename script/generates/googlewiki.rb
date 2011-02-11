@@ -9,7 +9,7 @@ module KnowledgeUtils
       def prepare_imp
         @wiki_dir = @wiki[:dir]+'/'
         @wiki_suffix = @wiki[:suffix]
-        @dir_index = @conf[:build][:src][:index]
+        @dir_index = /\A#{@conf[:build][:src][:index]}/i
 
         clean
       end
