@@ -1,0 +1,20 @@
+#summary C语言
+<wiki:toc max_depth="3" />
+=C Programming language=
+
+==Makefile==
+Makefile 详细指南 [http://blog.csdn.net/liang13664759/archive/2007/09/04/1771246.aspx]
+
+利用make工具，将构建自动化。进而又先后出现了Ant、Maven以及Rake，这些工具不但是将构建自动化，并且进一步将任务管理自动化。
+
+===要素===
+====规则====
+可以算是依赖关系管理，通过前后规则进行依赖判定，然后按依赖关系进行构建。
+
+{{{
+target: prerequisites
+<Tab>commands
+<Tab>commands
+<Tab>commands
+}}}
+
