@@ -1,5 +1,5 @@
 #summary Linux/Ubuntu 使用知识
-
+<wiki:toc max_depth="3" />
 =Ubuntu=
 
 ==屏幕问题==
@@ -34,7 +34,7 @@
       * {{{ acpi=noirq }}}:
         关闭ACPI的IRQ(硬中断)
 
-  *而我是直接采用{{{ pci=noacpi }}}。*
+  而我是直接采用 _pci=noacpi_ 。
 
   休眠、挂起、待机的区别:
     * 挂起是一种省电模式，系统将机器的硬盘、显示器等外部设备停止工作，而CPU、内存仍然工作，等待用户随时唤醒。

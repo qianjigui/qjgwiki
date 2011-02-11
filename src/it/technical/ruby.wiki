@@ -1,4 +1,5 @@
 #summary Ruby 编程技巧
+<wiki:toc max_depth="3" />
 
 =文件定位=
 ==文件名==
