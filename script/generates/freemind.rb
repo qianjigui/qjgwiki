@@ -68,6 +68,7 @@ module KnowledgeUtils
         File.open(file.sub(mm,twi), 'w') do |f|
           sum = root.attributes[VALUE]
           f.puts '#summary '+ sum
+          f.puts '<wiki:toc max_depth="3" />'
           f.puts '='+sum+'='
           traver(root, 1, f)
         end
