@@ -44,7 +44,7 @@ module KnowledgeUtils
       def generate_index(file_map, file, level=1)
         info = file_map[:info]
         if info
-          file.puts '  '*level + '* '+info[:summary]+' '+info[:link]
+          file.puts '  '*level + '* '+info[:summary]+' ['+info[:link]+']'
         end
         keys = file_map.keys.select {|k| k!=:info}
         keys.sort.each do |k|
