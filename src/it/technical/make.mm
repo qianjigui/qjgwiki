@@ -22,7 +22,7 @@
 <node CREATED="1297634923024" ID="ID_1891119758" MODIFIED="1297634923752" TEXT="$?  &#x6240;&#x6709;&#x6bd4;&#x76ee;&#x6807;&#x65b0;&#x7684;&#x4f9d;&#x8d56;&#x76ee;&#x6807;&#x7684;&#x96c6;&#x5408;&#x3002;&#x4ee5;&#x7a7a;&#x683c;&#x5206;&#x9694;&#x3002; "/>
 <node CREATED="1297634926695" ID="ID_683852265" MODIFIED="1297634927427" TEXT="$^ &#x6240;&#x6709;&#x7684;&#x4f9d;&#x8d56;&#x76ee;&#x6807;&#x7684;&#x96c6;&#x5408;&#x3002;&#x4ee5;&#x7a7a;&#x683c;&#x5206;&#x9694;&#x3002;&#x5982;&#x679c;&#x5728;&#x4f9d;&#x8d56;&#x76ee;&#x6807;&#x4e2d;&#x6709;&#x591a;&#x4e2a;&#x91cd;&#x590d;&#x7684;&#xff0c;&#x90a3;&#x4e2a;&#x8fd9;&#x4e2a;&#x53d8;&#x91cf;&#x4f1a;&#x53bb;&#x9664;&#x91cd;&#x590d;&#x7684;&#x4f9d;&#x8d56;&#x76ee;&#x6807;&#xff0c;&#x53ea;&#x4fdd;&#x7559;&#x4e00;&#x4efd;&#x3002; "/>
 <node CREATED="1297634930177" ID="ID_712628662" MODIFIED="1297634930963" TEXT="$+ &#x8fd9;&#x4e2a;&#x53d8;&#x91cf;&#x5f88;&#x50cf;&quot;$^&quot;&#xff0c;&#x4e5f;&#x662f;&#x6240;&#x6709;&#x4f9d;&#x8d56;&#x76ee;&#x6807;&#x7684;&#x96c6;&#x5408;&#x3002;&#x53ea;&#x662f;&#x5b83;&#x4e0d;&#x53bb;&#x9664;&#x91cd;&#x590d;&#x7684;&#x4f9d;&#x8d56;&#x76ee;&#x6807;&#x3002; "/>
-<node CREATED="1297634934127" ID="ID_812850875" MODIFIED="1297634934944" TEXT="$* &#x8fd9;&#x4e2a;&#x53d8;&#x91cf;&#x8868;&#x793a;&#x76ee;&#x6807;&#x6a21;&#x5f0f;&#x4e2d;&quot;%&quot;&#x53ca;&#x5176;&#x4e4b;&#x524d;&#x7684;&#x90e8;&#x5206; "/>
+<node CREATED="1297634934127" ID="ID_812850875" MODIFIED="1297635063454" TEXT="$`*` &#x8fd9;&#x4e2a;&#x53d8;&#x91cf;&#x8868;&#x793a;&#x76ee;&#x6807;&#x6a21;&#x5f0f;&#x4e2d;&quot;%&quot;&#x53ca;&#x5176;&#x4e4b;&#x524d;&#x7684;&#x90e8;&#x5206; "/>
 </node>
 </node>
 <node CREATED="1297633707697" ID="ID_934303259" MODIFIED="1297633710522" POSITION="left" TEXT="&#x8868;&#x8fbe;&#x5f0f;">
@@ -111,15 +111,15 @@
 <node CREATED="1297619892146" ID="ID_1363097601" MODIFIED="1297619912387" TEXT="&#x663e;&#x5f0f;">
 <node CREATED="1297620269477" ID="ID_263559553" MODIFIED="1297620272054" TEXT="Simple">
 <node CREATED="1297620274015" ID="ID_278619290" MODIFIED="1297620292260" STYLE="fork" TEXT="target: prerequisties"/>
-<node CREATED="1297620292824" ID="ID_1361638952" MODIFIED="1297620296968" TEXT="&lt;tab&gt;command"/>
+<node CREATED="1297620292824" ID="ID_1361638952" MODIFIED="1297635124061" TEXT="`&lt;TAB&gt;`command"/>
 <node CREATED="1297620309796" ID="ID_951508242" MODIFIED="1297620328814" TEXT="&#x53cd;&#x659c;&#x6760; \ &#x4f5c;&#x4e3a;&#x6362;&#x884c;&#x7b26;"/>
 </node>
 <node CREATED="1297620369901" ID="ID_1297488152" MODIFIED="1297620373742" TEXT="&#x901a;&#x914d;&#x7b26;">
-<node CREATED="1297620392769" ID="ID_1874241540" MODIFIED="1297620490545" TEXT="&quot;*&quot;: &#x4efb;&#x4f55;&#x5b57;&#x7b26;"/>
+<node CREATED="1297620392769" ID="ID_1874241540" MODIFIED="1297635130292" TEXT="&quot;`*`&quot;: &#x4efb;&#x4f55;&#x5b57;&#x7b26;"/>
 <node CREATED="1297620491506" ID="ID_1454146034" MODIFIED="1297620503020" TEXT="&quot;?&quot;: &#x5355;&#x4e2a;&#x5b57;&#x7b26;"/>
 <node CREATED="1297620504155" ID="ID_1864421890" MODIFIED="1297620518033" TEXT="[...]: &#x96c6;&#x5408;&#x4e2d;&#x7684;&#x4e00;&#x4e2a;&#x5b57;&#x7b26;"/>
 <node CREATED="1297620592709" ID="ID_127084901" MODIFIED="1297620604543" TEXT="&#x53cd;&#x659c;&#x6760;\&#x8f6c;&#x4e49;&#x4e3a;&#x666e;&#x901a;&#x5b57;&#x7b26;"/>
-<node CREATED="1297620620935" ID="ID_1109831168" MODIFIED="1297620631016" TEXT="$(wildcard *) &#x5c55;&#x5f00;&#x901a;&#x914d;&#x7b26;&#x7ed3;&#x679c;"/>
+<node CREATED="1297620620935" ID="ID_1109831168" MODIFIED="1297635136302" TEXT="$(wildcard `*`) &#x5c55;&#x5f00;&#x901a;&#x914d;&#x7b26;&#x7ed3;&#x679c;"/>
 </node>
 <node CREATED="1297632313486" ID="ID_567419745" MODIFIED="1297632395799" TEXT="&#x76ee;&#x6807;">
 <node CREATED="1297632397394" ID="ID_307586894" MODIFIED="1297632410411" TEXT="&#x4f2a;&#x76ee;&#x6807; .PHONY"/>
