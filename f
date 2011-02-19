@@ -6,18 +6,24 @@
 $KCODE = 'utf8'
 
 require 'script/utils'
+require 'optparse'
 
 conf = KnowledgeUtils::CONFS
-build = conf[:build]
-files = Dir[build[:src][:dir]+'/**/**'].select {|f| File.file?(f) and !f.include?(build[:encrypt][:suffix]) }
 
+def get_files(conf)
+  build = conf[:build]
+  Dir[build[:src][:dir]+'/**/**'].select {|f| File.file?(f) and !f.include?(build[:encrypt][:suffix]) }
+end
+
+files = get_files(conf)
+
+keyword = nil
 begin
-keyword = ARGV[0]+''
+  keyword = ARGV[0].downcase
 rescue NoMethodError
   puts 'Please input the keyword'
   exit 1
 end
-keyword.downcase!
 
 require 'rubygems'
 require 'diff/lcs'
