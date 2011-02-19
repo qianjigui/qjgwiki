@@ -30,3 +30,6 @@
    nf.puts template.result(binding)
  end
 }}}
+
+==Ruby 265 Methods==
+  ItTechnicalRuby265methods

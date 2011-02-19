@@ -9,14 +9,38 @@ Makefile 详细指南 [http://blog.csdn.net/liang13664759/archive/2007/09/04/177
 
 总结的思维导图: ItTechnicalMake
 
-===要素===
-====规则====
-可以算是依赖关系管理，通过前后规则进行依赖判定，然后按依赖关系进行构建。
+==Mod 取余==
+余数的定义:
+  当被除数不够整除时余下的数。当都是正整数时:
 
+除法实际可转化为减数，不够减时剩下的就是余数。
+
+例如:
+  12%5
+  12-5-5
+  2
+
+当存在负数时: x%y
 {{{
-target: prerequisites
-<Tab>commands
-<Tab>commands
-<Tab>commands
+   i. 当异号时：
+                 if |x|>|y|
+                    result: x+y
+                 else
+                    result: x
+             例：
+                -6% 5等于－1
+                 6%-5等于 1
+                 5%-6等于 5
+                -5% 6等于 -5
+   ii. 当同号时：
+                if |x|>|y|
+                    result: x-y
+                 else
+                    result: x
+             例：
+               -1%-5等于-1
+                -6%-5等于-1
+                -4%-5等于-4
+                -5%-6等于-5
 }}}
 
