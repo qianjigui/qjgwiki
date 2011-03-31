@@ -75,7 +75,7 @@ module KnowledgeUtils
       end
 
       def process_text(value)
-        if /<longnode>.*<\/longnode>/=~value
+        if /<longnode>.*<\/longnode>/mi=~value
           long_node_parse(value)
         else
           value
@@ -83,10 +83,10 @@ module KnowledgeUtils
       end
 
       def long_node_parse(value)
-        value.sub!('<longnode>','')
+        value.sub!(/<longnode>[\s ]*/,"LongNode:\n")
         value.sub!('</longnode>','')
         #For table
-        value.gsub!(/\|\|[\s]*\|\|/,"||\n||")
+        value.gsub!(/\|\|[\s ]*\|\|/,"||\n||")
         value
       end
     end
