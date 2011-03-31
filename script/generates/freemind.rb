@@ -53,7 +53,7 @@ module KnowledgeUtils
 
       def traver(root, level, file)
         root.elements.each('node') do |node|
-          file.puts pre_tag(level)+node.attributes[VALUE]+end_tag(level)
+          file.puts pre_tag(level)+process_text(node.attributes[VALUE])+end_tag(level)
           traver(node, level+1, file)
         end
       end
@@ -66,12 +66,28 @@ module KnowledgeUtils
           root = node
         end
         File.open(file.sub(mm,twi), 'w') do |f|
-          sum = root.attributes[VALUE]
+          sum = process_text(root.attributes[VALUE])
           f.puts '#summary '+ sum
           f.puts '<wiki:toc max_depth="3" />'
           f.puts '='+sum+'='
           traver(root, 1, f)
         end
+      end
+
+      def process_text(value)
+        if /<longnode>.*<\/longnode>/=~value
+          long_node_parse(value)
+        else
+          value
+        end
+      end
+
+      def long_node_parse(value)
+        value.sub!('<longnode>','')
+        value.sub!('</longnode>','')
+        #For table
+        value.gsub!(/\|\|[\s]*\|\|/,"||\n||")
+        value
       end
     end
   end
