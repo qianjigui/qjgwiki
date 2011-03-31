@@ -83,8 +83,8 @@ module KnowledgeUtils
       end
 
       def long_node_parse(value)
-        value.sub!(/<longnode>[\s ]*/,"LongNode:\n")
-        value.sub!('</longnode>','')
+        value.sub!(/<longnode>[\s ]*/,":\n")
+        value.sub!('</longnode>',"\n\n")
         #For table
         value.gsub!(/\|\|[\s ]*\|\|/,"||\n||")
         value
