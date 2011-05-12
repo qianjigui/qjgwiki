@@ -227,16 +227,39 @@
 </node>
 <node CREATED="1298122362803" ID="ID_1923048731" MODIFIED="1298122363680" TEXT="ViewPlatform"/>
 <node CREATED="1298122376160" ID="ID_1503755970" MODIFIED="1298122377285" TEXT="Environmental">
-<node CREATED="1298122378014" ID="ID_667559632" MODIFIED="1298122381275" TEXT="Background"/>
-<node CREATED="1298122387115" ID="ID_1669028046" MODIFIED="1298122390721" TEXT="Behaviour"/>
+<node CREATED="1298122378014" ID="ID_667559632" MODIFIED="1298122381275" TEXT="Background">
+<node CREATED="1305199888323" ID="ID_357195558" MODIFIED="1305199901159" TEXT="Background(Color3f backgroundColour) "/>
+<node CREATED="1305199910256" ID="ID_1277828143" MODIFIED="1305199910977" TEXT="Background(ImageComponent2D backgroundImage) "/>
+</node>
+<node CREATED="1298122387115" ID="ID_1669028046" MODIFIED="1298122390721" TEXT="Behaviour">
+<node CREATED="1305200144268" ID="ID_1737422384" MODIFIED="1305200145396" TEXT="void setSchedulingBounds(Bounds region) "/>
+<node CREATED="1305200192216" ID="ID_541988409" MODIFIED="1305200193566" TEXT="Mouse"/>
+<node CREATED="1305200193836" ID="ID_260231300" MODIFIED="1305200196060" TEXT="Picking"/>
+</node>
 <node CREATED="1298122398987" ID="ID_1387778528" MODIFIED="1298122400281" TEXT="Clip"/>
-<node CREATED="1298122406849" ID="ID_1933846412" MODIFIED="1298122407963" TEXT="Fog"/>
-<node CREATED="1298122408370" ID="ID_1532226174" MODIFIED="1298122409690" TEXT="Light"/>
+<node CREATED="1298122406849" ID="ID_1933846412" MODIFIED="1298122407963" TEXT="Fog">
+<node CREATED="1305200010854" ID="ID_88341694" MODIFIED="1305200012095" TEXT="LinearFog ">
+<node CREATED="1305200029306" ID="ID_240551538" MODIFIED="1305200030945" TEXT="Colour"/>
+<node CREATED="1305200033294" ID="ID_690569425" MODIFIED="1305200036141" TEXT="Front distance"/>
+<node CREATED="1305200038066" ID="ID_208596120" MODIFIED="1305200040701" TEXT="Back distance"/>
+<node CREATED="1305200075116" ID="ID_1900311000" MODIFIED="1305200075843" TEXT="LinearFog(Color3f colour, double frontDistance, double backDistance) "/>
+</node>
+<node CREATED="1305200017485" ID="ID_1117288891" MODIFIED="1305200018156" TEXT="ExponentialFog "/>
+</node>
+<node CREATED="1298122408370" ID="ID_1532226174" MODIFIED="1305197294866" TEXT="Lighting">
+<node CREATED="1305197295751" ID="ID_923991678" MODIFIED="1305197296859" TEXT="DirectionalLight "/>
+<node CREATED="1305197305834" ID="ID_952906984" MODIFIED="1305197306480" TEXT="PointLight "/>
+<node CREATED="1305197314371" ID="ID_1151096523" MODIFIED="1305197314958" TEXT="SpotLight ">
+<node CREATED="1305197324998" ID="ID_982559099" MODIFIED="1305197325569" TEXT="a point light source that shines in a specific direction "/>
+</node>
+<node CREATED="1305197340688" ID="ID_226163069" MODIFIED="1305197378289" TEXT="AmbientLight &#x6f2b;&#x53cd;&#x5c04;&#x5149;&#x6e90;"/>
+</node>
 <node CREATED="1298122410044" ID="ID_890666002" MODIFIED="1298122411156" TEXT="Sound"/>
 <node CREATED="1298502545955" ID="ID_1611115215" MODIFIED="1298502561466" TEXT="BoundingSphere(&#x6548;&#x679c;&#x8303;&#x56f4;&#x7403;)">
 <node CREATED="1298502562465" ID="ID_981529920" MODIFIED="1298502586216" TEXT="new BoundingSphere(new Point3d(), Double.MAX_VALUE)"/>
 <node CREATED="1298502588794" ID="ID_1895113714" MODIFIED="1298502612933" TEXT="&#x7ed9;&#x51fa;&#x4f5c;&#x7528;&#x70b9;&#x548c;&#x4f5c;&#x7528;&#x534a;&#x5f84;&#xff0c;&#x8fd9;&#x6837;&#x5c31;&#x53ef;&#x4ee5;&#x5f71;&#x54cd;&#x4e00;&#x5b9a;&#x80fd;&#x8303;&#x56f4;&#x7684;&#x7269;&#x4f53;"/>
 </node>
+<node CREATED="1305199747493" ID="ID_1659018953" MODIFIED="1305199748467" TEXT="BoundingBox(Point3d lower, Point3d upper)  "/>
 </node>
 </node>
 </node>
@@ -258,10 +281,48 @@
 <node CREATED="1298483691789" ID="ID_75715105" MODIFIED="1298483696539" TEXT="character spacing"/>
 </node>
 </node>
-<node CREATED="1298122427114" ID="ID_1785392787" MODIFIED="1298122427987" TEXT="Appearance">
-<node CREATED="1298122451450" ID="ID_296147596" MODIFIED="1298122452698" TEXT="Material"/>
-<node CREATED="1298122457444" ID="ID_37887862" MODIFIED="1298122458319" TEXT="Texture"/>
-<node CREATED="1298122463990" ID="ID_622029068" MODIFIED="1298122464958" TEXT="TransparencyAttributes"/>
+<node CREATED="1298122427114" ID="ID_1785392787" MODIFIED="1305196737346" TEXT="Appearance">
+<node CREATED="1298122451450" ID="ID_296147596" MODIFIED="1298122452698" TEXT="Material">
+<node CREATED="1305197111641" ID="ID_1956216599" MODIFIED="1305197112644" TEXT="defines the appearance of an object under illumination, such as the ambient colour, diffuse colour, specular colour, emissive colour, and shininess. "/>
+</node>
+<node CREATED="1298122457444" ID="ID_37887862" MODIFIED="1298122458319" TEXT="Texture">
+<node CREATED="1305197123282" ID="ID_1203371572" MODIFIED="1305197124346" TEXT="defines the texture image and filtering parameters used when tex- ture mapping is enabled. "/>
+</node>
+<node CREATED="1305197161878" ID="ID_1359346782" MODIFIED="1305197162625" TEXT="TexCoordGeneration ">
+<node CREATED="1305197178880" ID="ID_999212542" MODIFIED="1305197179542" TEXT="defines the attributes that apply to tex- ture coordinate generation, such as whether coordinate generation is enabled, coordinate format (2D or 3D coordinates), coordinate generation mode (object linear, eye linear, or spherical reflection mapping), and the R, S and T coordi- nate plane equations. "/>
+</node>
+<node CREATED="1305197193712" ID="ID_614435809" MODIFIED="1305197194292" TEXT="TextureUnitState ">
+<node CREATED="1305197203900" ID="ID_378295897" MODIFIED="1305197204506" TEXT="an array that defines the texture state for each of N separate texture units. This allows multiple textures to be applied to a geometry. "/>
+<node CREATED="1305197216902" ID="ID_1381589353" MODIFIED="1305197218303" TEXT="Each TextureUnitState object contains a Texture object, a TextureAttributes object and a TexCoordGeneration object. "/>
+</node>
+<node CREATED="1305196737239" ID="ID_436682192" MODIFIED="1305196743177" TEXT="Attribute">
+<node CREATED="1305196756796" ID="ID_759001614" MODIFIED="1305196935544" TEXT="LineAttributes">
+<node CREATED="1305196870095" ID="ID_658845454" MODIFIED="1305196872291" TEXT="pattern"/>
+<node CREATED="1305196872563" ID="ID_720964720" MODIFIED="1305196873683" TEXT="width"/>
+<node CREATED="1305196877212" ID="ID_230610615" MODIFIED="1305196882365" TEXT="antialiasing&#x6297;&#x952f;&#x9f7f;"/>
+</node>
+<node CREATED="1305196762434" ID="ID_474245653" MODIFIED="1305196962435" TEXT="PointAttributes">
+<node CREATED="1305196900268" ID="ID_1353378297" MODIFIED="1305196902233" TEXT="point"/>
+<node CREATED="1305196902509" ID="ID_1633876914" MODIFIED="1305196903415" TEXT="size"/>
+<node CREATED="1305196903686" ID="ID_1125663076" MODIFIED="1305196904605" TEXT="antialiasing"/>
+</node>
+<node CREATED="1305196980382" ID="ID_1717337339" MODIFIED="1305196986078" TEXT="PolygonAttributes">
+<node CREATED="1305197024132" ID="ID_670222029" MODIFIED="1305197025045" TEXT="defines the attributes used to render polygons, in- cluding culling, rasterization mode (filled, lines, or points), constant offset, offset factor and whether back facing normals are flipped. "/>
+</node>
+<node CREATED="1305197040518" ID="ID_1267349495" MODIFIED="1305197046174" TEXT="RenderingAttributes">
+<node CREATED="1305197073386" ID="ID_1802785202" MODIFIED="1305197074148" TEXT="defines rendering operations, including the alpha test function and test value, the raster operation, whether vertex colours are ignored, whether invisible objects are rendered, and whether the depth buffer is enabled. "/>
+</node>
+<node CREATED="1298122463990" ID="ID_622029068" MODIFIED="1298122464958" TEXT="TransparencyAttributes">
+<node CREATED="1305197091804" ID="ID_1426741674" MODIFIED="1305197092889" TEXT="defines the attributes that affect transparency mode (blended, screen-door), blending function (used in transparency and antialiasing operations), and a blend value that defines the amount of trans- parency to be applied. "/>
+</node>
+<node CREATED="1305196783193" ID="ID_493902351" MODIFIED="1305196949555" TEXT="ColoringAttributes">
+<node CREATED="1305196814689" ID="ID_723214476" MODIFIED="1305196818125" TEXT="Color selection"/>
+<node CREATED="1305196818433" ID="ID_652772211" MODIFIED="1305196823478" TEXT="Shading&#x5e95;&#x7eb9;"/>
+</node>
+<node CREATED="1305197134052" ID="ID_964568989" MODIFIED="1305197138203" TEXT="TextureAttributes">
+<node CREATED="1305197149400" ID="ID_1485466664" MODIFIED="1305197150046" TEXT="defines the attributes that apply to texture mapping, such as the texture mode, texture transform, blend colour, and perspective correction mode "/>
+</node>
+</node>
 </node>
 </node>
 </node>
