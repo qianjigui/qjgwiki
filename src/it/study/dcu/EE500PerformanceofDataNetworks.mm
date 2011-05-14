@@ -123,11 +123,34 @@
 <node CREATED="1300017349459" ID="ID_1373855695" MODIFIED="1300017359779" TEXT="&#x53ef;&#x9760;&#x5206;&#x7ec4;&#x8fde;&#x63a5;&#x670d;&#x52a1;">
 <node CREATED="1300017361015" ID="ID_1074637910" MODIFIED="1300017406228" TEXT="&#x5206;&#x7ec4;&#x5927;&#x5c0f;">
 <icon BUILTIN="help"/>
+<node CREATED="1305363881432" ID="ID_53482404" MODIFIED="1305363896168" TEXT="MSS(Maximum Segment Size)">
+<node CREATED="1305363913560" ID="ID_1008725599" MODIFIED="1305363918498" TEXT="Segment Header">
+<node CREATED="1305363919044" ID="ID_1054121545" MODIFIED="1305363924349" TEXT="TCP Header(20bytes)"/>
+<node CREATED="1305363924705" ID="ID_1395057318" MODIFIED="1305363930269" TEXT="IP Header(20bytes)"/>
+</node>
+<node CREATED="1305363933192" ID="ID_1850117488" MODIFIED="1305363977026" TEXT="&#x8d8a;&#x5927;&#x6548;&#x7387;&#x8d8a;&#x9ad8;&#xff0c;&#x4e3b;&#x8981;&#x95ee;&#x9898;&#x662f;&#x6bcf;&#x4e00;&#x6bb5;&#x90fd;&#x9700;&#x8981;&#x9644;&#x5e26;&#x4e00;&#x4e2a;&#x5305;&#x5934;&#x3002;&#x6bb5;&#x8d8a;&#x591a;&#xff0c;&#x5305;&#x5934;&#x8d8a;&#x591a;&#x3002;&#x6574;&#x4f53;&#x4e0a;&#x6548;&#x7387;&#x8d8a;&#x4f4e;&#x3002;"/>
+<node CREATED="1305364007863" ID="ID_469886640" MODIFIED="1305364012792" TEXT="&#x8fde;&#x63a5;&#x65f6;&#x786e;&#x5b9a;"/>
+<node CREATED="1305364015753" ID="ID_290733278" MODIFIED="1305364027464" TEXT="&#x7531;SYN Segment&#x643a;&#x5e26;"/>
+<node CREATED="1305364039345" ID="ID_366696839" MODIFIED="1305364046490" TEXT="Default Value=534bytes"/>
+</node>
 </node>
 </node>
 <node CREATED="1300017384972" ID="ID_481669140" MODIFIED="1300017393095" TEXT="&#x5931;&#x6548;&#x91cd;&#x53d1;">
 <node CREATED="1300017393872" ID="ID_871013711" MODIFIED="1300017404372" TEXT="&#x91cd;&#x53d1;&#x7684;&#x65f6;&#x95f4;&#x63a7;&#x5236;">
 <icon BUILTIN="help"/>
+<node CREATED="1305364118773" ID="ID_95881698" MODIFIED="1305364141617" TEXT="RTO(Retransmission TimeOut)">
+<node CREATED="1305364185075" ID="ID_437730023" MODIFIED="1305364206732" TEXT="&#x7531;RTT(Round trip time)&#x786e;&#x5b9a;&#x521d;&#x503c;"/>
+<node CREATED="1305364215951" ID="ID_1615330340" MODIFIED="1305364265804" TEXT="&#x7531;SRTT(Smoothed estimator)&#x4f30;&#x8ba1;">
+<node CREATED="1305364272472" ID="ID_152115787" MODIFIED="1305364283406" TEXT="low-pass filter"/>
+</node>
+<node CREATED="1305364291489" ID="ID_1340033706" MODIFIED="1305364306321" TEXT="2&#x6b21;&#x6307;&#x6570;&#x589e;&#x957f;">
+<node CREATED="1305364377629" ID="ID_102910292" MODIFIED="1305364385031" TEXT="1,3,7,15,31,63"/>
+</node>
+</node>
+<node CREATED="1305364322417" ID="ID_644857843" MODIFIED="1305364331082" TEXT="Keepalive Timer">
+<node CREATED="1305364331543" ID="ID_269849431" MODIFIED="1305364350312" TEXT="&#x5982;&#x679c;&#x5728;&#x4e00;&#x4e2a;&#x65f6;&#x95f4;&#x6bb5;&#x5185;&#x5168;&#x90e8;&#x4e3a;&#x5931;&#x8d25;&#xff0c;&#x5219;&#x9700;&#x8981;&#x91cd;&#x7f6e;&#x8fde;&#x63a5;"/>
+</node>
+<node CREATED="1305364944976" ID="ID_489773117" MODIFIED="1305364946602" TEXT="http://wwuyingjie.blog.51cto.com/309671/109553"/>
 </node>
 </node>
 <node CREATED="1300017471317" ID="ID_1056743385" MODIFIED="1300017488694" TEXT="&#x62e5;&#x585e;&#x63a7;&#x5236;">
@@ -170,8 +193,48 @@
 </node>
 <node CREATED="1300018135449" ID="ID_1322016486" MODIFIED="1300018138428" TEXT="Vegas"/>
 </node>
-<node CREATED="1300018182392" ID="ID_1271868514" MODIFIED="1300018186090" TEXT="SCTP">
+<node CREATED="1300018182392" ID="ID_1271868514" MODIFIED="1305365848251" TEXT="SCTP">
+<node CREATED="1305365848218" ID="ID_1373927982" MODIFIED="1305365855007" TEXT="&#x7528;&#x9014;">
 <node CREATED="1300018186991" ID="ID_1730743860" MODIFIED="1300018190885" TEXT="&#x65e0;&#x7ebf;"/>
+<node CREATED="1305365855774" ID="ID_28042474" MODIFIED="1305365858471" TEXT="&#x624b;&#x673a;"/>
+</node>
+<node CREATED="1305365892012" ID="ID_1900047778" MODIFIED="1305365894078" TEXT="Need">
+<node CREATED="1305365895026" ID="ID_1388680963" MODIFIED="1305365899235" TEXT="Multi-Streaming"/>
+<node CREATED="1305365899509" ID="ID_934709176" MODIFIED="1305365902790" TEXT="Multi-Homing"/>
+</node>
+<node CREATED="1305366334664" ID="ID_866898188" MODIFIED="1305366336911" TEXT="Features">
+<node CREATED="1305366343040" ID="ID_1553100635" MODIFIED="1305366353232" TEXT="Reliable transport protocol">
+<node CREATED="1305366413767" ID="ID_112292033" MODIFIED="1305366416437" TEXT="&#x53ef;&#x9760;"/>
+</node>
+<node CREATED="1305366368844" ID="ID_1476886239" MODIFIED="1305366391433" TEXT="Use association instread of connection">
+<node CREATED="1305366417670" ID="ID_1471383147" MODIFIED="1305366420895" TEXT="&#x5173;&#x8054;"/>
+</node>
+<node CREATED="1305366433535" ID="ID_1155538891" MODIFIED="1305366451246" TEXT="Design for message oriented application">
+<node CREATED="1305366512974" ID="ID_1263654747" MODIFIED="1305366524243" TEXT="&#x9762;&#x5411;&#x6d88;&#x606f;&#x5e94;&#x7528;&#x7684;&#x8bbe;&#x8ba1;"/>
+<node CREATED="1305366804357" ID="ID_1975112023" MODIFIED="1305366808829" TEXT="&#x5757;&#x7ed1;&#x5b9a;"/>
+</node>
+<node CREATED="1305366462614" ID="ID_1348081272" MODIFIED="1305366489853" TEXT="Acknowledge error free transfer of message"/>
+<node CREATED="1305366529365" ID="ID_696094584" MODIFIED="1305366560710" TEXT="Detection of data corruption, data loss and data duplication"/>
+<node CREATED="1305366575479" ID="ID_1719877496" MODIFIED="1305366625825" TEXT="Selective retransmission to correct lost data and duplicated data">
+<node CREATED="1305366834011" ID="ID_143089961" MODIFIED="1305366840326" TEXT="&#x9009;&#x62e9;&#x6027;ACK"/>
+</node>
+<node CREATED="1305366635769" ID="ID_1267253211" MODIFIED="1305366657890" TEXT="Active monitoring of session connectivity via heartbeat "/>
+<node CREATED="1305366665457" ID="ID_1729704567" MODIFIED="1305366666186" TEXT="Resistance to denial of service attacks ">
+<node CREATED="1305366853385" ID="ID_1048248247" MODIFIED="1305366859127" TEXT="&#x62b5;&#x6297;DDOS"/>
+</node>
+<node CREATED="1305366674384" ID="ID_1793978255" MODIFIED="1305366675038" TEXT="Supports multi-streaming "/>
+<node CREATED="1305366681745" ID="ID_1825793592" MODIFIED="1305366682391" TEXT="Supports multi-homing "/>
+</node>
+<node CREATED="1305366406241" ID="ID_508082604" MODIFIED="1305366407602" TEXT="http://blogold.chinaunix.net/u1/34831/showart_1871853.html"/>
+<node CREATED="1305366927444" ID="ID_67187291" MODIFIED="1305366931212" TEXT="Message Format">
+<node CREATED="1305369510390" ID="ID_293358122" MODIFIED="1305369511238" TEXT="http://qjg-wiki.googlecode.com/files/SCTP-Header.jpg"/>
+<node CREATED="1305369517857" ID="ID_371069753" MODIFIED="1305369518544" TEXT="http://qjg-wiki.googlecode.com/files/SCTP-Chunks.jpg"/>
+<node CREATED="1305369525363" ID="ID_432748340" MODIFIED="1305369526066" TEXT="http://qjg-wiki.googlecode.com/files/SCTP-Chunk-Important.jpg"/>
+</node>
+<node CREATED="1305369877160" ID="ID_584277982" MODIFIED="1305369878427" TEXT="Association Establishment Procedure ">
+<node CREATED="1305370344460" ID="ID_376384499" MODIFIED="1305370345468" TEXT="http://qjg-wiki.googlecode.com/files/SCTP-Connection-Steps.jpg"/>
+<node CREATED="1305370291230" ID="ID_698645058" MODIFIED="1305370292171" TEXT="&lt;longnode&gt;   # Assume Endpoint A initiates association establishment with endpoint B   # A sends an INIT chunk and enters the COOKIE WAIT state   # A starts an INIT timer whose timeout determines resending of the INIT chunk   # B receives the INIT chunk and reads chunk data   # Based on the data, B generates a secure hash code using a secret key   # The generated values are placed into a COOKIE chunk, along with the derived message authentication code (MAC)   # The cookie is sent to A in an INIT-ACK chunk   # B remains in CLOSED state   # A receives the INIT-ACK chunk and stops the INIT timer   # A places the cookie from the INIT-ACK chunk in a COOKIE ECHO chunk returned to B   # A COOKIE ECHO timer is started whose timeout determines resending of COOKIE ECHO   # A enters the COOKIE ECHOED STATE   # B receives the echoed cookie and uses MAC to verify it If OK, B initialises the SCTP instance   # B responds with a COOKIE-ACK chunk   # Both A and B endpoints enter the ESTABLISHED state &lt;/longnode&gt; "/>
+</node>
 </node>
 </node>
 <node CREATED="1300018225881" ID="ID_1095584272" MODIFIED="1300018227242" TEXT="UDP">
