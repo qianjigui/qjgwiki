@@ -235,10 +235,42 @@
 <node CREATED="1305370344460" ID="ID_376384499" MODIFIED="1305370345468" TEXT="http://qjg-wiki.googlecode.com/files/SCTP-Connection-Steps.jpg"/>
 <node CREATED="1305370291230" ID="ID_698645058" MODIFIED="1305370529575" TEXT="&lt;longnode&gt;&#xa;  Steps:&#xa;&#xa;  # Assume Endpoint A initiates association establishment with endpoint B&#xa;  # A sends an INIT chunk and enters the COOKIE WAIT state&#xa;  # A starts an INIT timer whose timeout determines resending of the INIT chunk&#xa;  # B receives the INIT chunk and reads chunk data&#xa;  # Based on the data, B generates a secure hash code using a secret key&#xa;  # The generated values are placed into a COOKIE chunk, along with the derived message authentication code (MAC)&#xa;  # The cookie is sent to A in an INIT-ACK chunk&#xa;  # B remains in CLOSED state&#xa;  # A receives the INIT-ACK chunk and stops the INIT timer&#xa;  # A places the cookie from the INIT-ACK chunk in a COOKIE ECHO chunk returned to B&#xa;  # A COOKIE ECHO timer is started whose timeout determines resending of COOKIE ECHO&#xa;  # A enters the COOKIE ECHOED STATE&#xa;  # B receives the echoed cookie and uses MAC to verify it If OK, B initialises the SCTP instance&#xa;  # B responds with a COOKIE-ACK chunk&#xa;  # Both A and B endpoints enter the ESTABLISHED state&#xa;&lt;/longnode&gt;&#xa;"/>
 </node>
+<node CREATED="1305374593636" ID="ID_23490628" MODIFIED="1305374598807" TEXT="Mobile SCTP">
+<node CREATED="1305374611406" ID="ID_98573425" MODIFIED="1305374612103" TEXT="Adds Dynamic Address Reconfiguration (ADDIP) ">
+<node CREATED="1305374622688" ID="ID_1367197807" MODIFIED="1305374634556" TEXT="Enables SCTP to add, delete, and change existing IP addresses attached to an association during an active connection"/>
+<node CREATED="1305374648629" ID="ID_240918821" MODIFIED="1305374649300" TEXT="Enables support for seamless handover for mobile hosts that are moving between IP networks "/>
+</node>
+<node CREATED="1305374662492" ID="ID_1321650967" MODIFIED="1305374663531" TEXT="Uses ASCONF and ASCONF-ACK chunks ">
+<node CREATED="1305374670664" ID="ID_1335165369" MODIFIED="1305374671330" TEXT="Add new IP address to the association "/>
+<node CREATED="1305374679083" ID="ID_172264038" MODIFIED="1305374679735" TEXT="Change the primary IP address of the association "/>
+<node CREATED="1305374686666" ID="ID_1616440996" MODIFIED="1305374687220" TEXT="Delete an old IP address from the association "/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1300018225881" ID="ID_1095584272" MODIFIED="1300018227242" TEXT="UDP">
-<node CREATED="1300018227843" ID="ID_961164487" MODIFIED="1300018229640" TEXT="DCCP"/>
+<node CREATED="1300018227843" ID="ID_961164487" MODIFIED="1300018229640" TEXT="DCCP">
+<node CREATED="1305374741709" ID="ID_372405670" MODIFIED="1305374743808" TEXT="Features">
+<node CREATED="1305374822932" ID="ID_1125386753" MODIFIED="1305374823557" TEXT="Supports unreliable transport of datagram flows "/>
+<node CREATED="1305374827182" ID="ID_27261080" MODIFIED="1305374827855" TEXT="Provides acknowledgements "/>
+<node CREATED="1305374831570" ID="ID_764143554" MODIFIED="1305374832158" TEXT="A reliable handshake for connection setup and teardown "/>
+<node CREATED="1305374835520" ID="ID_1603506958" MODIFIED="1305374836174" TEXT="Reliable negotiation of features "/>
+<node CREATED="1305374843669" ID="ID_212744696" MODIFIED="1305374846259" TEXT="A choice of TCP-friendly congestion control mechanisms">
+<node CREATED="1305374852386" ID="ID_430245205" MODIFIED="1305374852961" TEXT="TCP-like congestion control [RFC 2581] (CCID 2)">
+<node CREATED="1305374858225" ID="ID_261490387" MODIFIED="1305374858944" TEXT="appropriate for flows wishing to quickly take advantage of available bandwidth"/>
+</node>
+<node CREATED="1305374864540" ID="ID_607688602" MODIFIED="1305374865253" TEXT="TCP-Friendly Rate Control [RFC 3448] (CCID 3)">
+<node CREATED="1305374871767" ID="ID_430025958" MODIFIED="1305374872282" TEXT="appropriate for flows that require a steadier sent rate"/>
+</node>
+</node>
+<node CREATED="1305374877627" ID="ID_91265992" MODIFIED="1305374878147" TEXT="Options to tell reliably the sender which packets reached the receiver ">
+<node CREATED="1305374882801" ID="ID_962064011" MODIFIED="1305374883867" TEXT="and if lost packets were ECN marked, corrupted, or dropped in the receive buffer "/>
+</node>
+<node CREATED="1305374893048" ID="ID_624309476" MODIFIED="1305374893640" TEXT="Congestion control including Explicit Congestion Notification (ECN) and ECN Nonce "/>
+<node CREATED="1305374897558" ID="ID_114896846" MODIFIED="1305374898173" TEXT="Mechanisms to avoid holding state for unacknowledged connection attempts or finished connections "/>
+<node CREATED="1305374905166" ID="ID_955567261" MODIFIED="1305374905916" TEXT="No graceful close, no other flow control apart from congestion control "/>
+</node>
+</node>
 </node>
 </node>
 </node>
