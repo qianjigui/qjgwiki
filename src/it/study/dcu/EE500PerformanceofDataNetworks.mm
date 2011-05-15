@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1297935133446" ID="ID_1948158339" MODIFIED="1305385843714" TEXT="EE500PerformanceofDataNetworks">
+<node CREATED="1297935133446" ID="ID_1948158339" MODIFIED="1305452774502" TEXT="EE500PerformanceofDataNetworks">
 <node CREATED="1297935191008" ID="ID_1237430710" MODIFIED="1297935194074" POSITION="right" TEXT="background">
 <node CREATED="1297935257937" ID="ID_1743148936" MODIFIED="1297935270232" TEXT="Hierarchy of Layer">
 <node CREATED="1297935278088" ID="ID_1470781468" MODIFIED="1297935723466" TEXT="Modularity&#x6a21;&#x5757;&#x5316;"/>
@@ -515,5 +515,81 @@
 </node>
 </node>
 <node CREATED="1305387848705" ID="ID_1650135281" MODIFIED="1305387850731" POSITION="left" TEXT="Mobility Issues"/>
+<node CREATED="1305452779122" ID="ID_831840508" MODIFIED="1305452780509" POSITION="right" TEXT="Energy Conservation in Wireless and Mobile Communications ">
+<node CREATED="1305452792917" ID="ID_697428397" MODIFIED="1305452793944" TEXT="OSI layer - power save protocols ">
+<node CREATED="1305452800262" ID="ID_771410870" MODIFIED="1305452801080" TEXT="Load Partitioning ">
+<node CREATED="1305452955387" ID="ID_263240658" MODIFIED="1305452956592" TEXT="all the power intensive computation is performed at the AP and not locally. The Mobile device sends a request to the AP which contains the computation that needs to be performed and waits for the result. "/>
+</node>
+<node CREATED="1305452813859" ID="ID_1214478216" MODIFIED="1305452814620" TEXT="Application &#x2013; based Adaptive Mechanisms ">
+<node CREATED="1305452980054" ID="ID_491676472" MODIFIED="1305452980684" TEXT="Proxies &#x2013; used to inform the application about the changes in battery power. The applications can use this info in order to limit their functionalities "/>
+<node CREATED="1305452987889" ID="ID_497207952" MODIFIED="1305452988504" TEXT="For database systems &#x2013; energy can be conserved by reducing the number of transmissions for different operations: data retrieval, indexing, querying operations. "/>
+<node CREATED="1305452995561" ID="ID_174314366" MODIFIED="1305452996352" TEXT="For video processing &#x2013; adaptation mechanisms which slightly degrade the video quality by reducing the number of bits transmitted over the wireless system "/>
+</node>
+<node CREATED="1305453026817" ID="ID_1387041264" MODIFIED="1305453027360" TEXT="Transport Layer ">
+<node CREATED="1305453035171" ID="ID_14640246" MODIFIED="1305453035758" TEXT="TCP-Probing "/>
+<node CREATED="1305453074940" ID="ID_724736220" MODIFIED="1305453075507" TEXT="Wave and Wait Protocols "/>
+</node>
+<node CREATED="1305453095656" ID="ID_1892483649" MODIFIED="1305453096348" TEXT="Network Layer ">
+<node CREATED="1305452821586" ID="ID_423285196" MODIFIED="1305452822338" TEXT="Routing Protocols ">
+<node CREATED="1305453111331" ID="ID_780621860" MODIFIED="1305453112078" TEXT="Backbone based routing protocol ">
+<node CREATED="1305453124095" ID="ID_615398119" MODIFIED="1305453138534" TEXT="backbone node&#x9aa8;&#x5e72;&#x8282;&#x70b9;">
+<node CREATED="1305453143134" ID="ID_109408673" MODIFIED="1305453144752" TEXT="Active"/>
+<node CREATED="1305453176399" ID="ID_1313042545" MODIFIED="1305453176927" TEXT="A path between all source and destination nodes in the network is established "/>
+<node CREATED="1305453187476" ID="ID_736451779" MODIFIED="1305453188017" TEXT="Any node will be within one hop of at least one backbone node "/>
+<node CREATED="1305453204139" ID="ID_815778346" MODIFIED="1305453204745" TEXT="The decision of which nodes to be the backbone nodes is also changing periodically "/>
+</node>
+<node CREATED="1305453145707" ID="ID_480252776" MODIFIED="1305453148041" TEXT="Other nodes">
+<node CREATED="1305453150430" ID="ID_449212600" MODIFIED="1305453162459" TEXT="Sleep periodically"/>
+</node>
+</node>
+<node CREATED="1305453264847" ID="ID_1896700602" MODIFIED="1305453265472" TEXT="Topology based routing protocol ">
+<node CREATED="1305453671017" ID="ID_3585326" MODIFIED="1305453671462" TEXT="Goal: reduce the transmission power of all nodes in the network "/>
+<node CREATED="1305453689820" ID="ID_508794554" MODIFIED="1305453690480" TEXT="All the nodes operate with the lowest transmission power possible "/>
+<node CREATED="1305453752437" ID="ID_550414717" MODIFIED="1305453752993" TEXT="Homogeneous networks &#x2013; the nodes are within the range of their nearest one-hop neighbour "/>
+<node CREATED="1305453756826" ID="ID_1334668565" MODIFIED="1305453757427" TEXT="Heterogeneous networks &#x2013; (different nodes with different power limitations) &#x2013; transmission powers may be adjusted according to the network needs "/>
+</node>
+</node>
+</node>
+<node CREATED="1305453770771" ID="ID_394770657" MODIFIED="1305453771412" TEXT="Data Link Layer ">
+<node CREATED="1305453844007" ID="ID_987771719" MODIFIED="1305453845026" TEXT="The techniques involve reducing the transmission overhead during ARQ (Automatic Repeat Request) and FEC (Forward Error Correction) - schemes used to reduce the number of packet errors at the receiver "/>
+<node CREATED="1305453849072" ID="ID_1795016628" MODIFIED="1305453849715" TEXT="ARQ enabled &#x2013; the router can automatically request the retransmission of a packet directly from its source without involving the receiver. "/>
+<node CREATED="1305453854464" ID="ID_960071036" MODIFIED="1305453855115" TEXT="It has been shown that transmitting at lower power and sending multiple ARQ is more energy efficient than to send at high transmission power and achieve better throughput. "/>
+<node CREATED="1305453858652" ID="ID_1074361150" MODIFIED="1305453859297" TEXT="By integrating FEC &#x2013; which reduces the number of retransmissions necessary at the lower transmission power &#x2013; more energy savings can be achieved "/>
+<node CREATED="1305453863681" ID="ID_1837466037" MODIFIED="1305453864346" TEXT="Packet Scheduling protocols - may reduce the number of retransmissions =&gt; the overall power consumption is reduced "/>
+</node>
+<node CREATED="1305453907489" ID="ID_826328243" MODIFIED="1305453908528" TEXT="MAC Layer ">
+<node CREATED="1305452828898" ID="ID_231683726" MODIFIED="1305452829580" TEXT="Sleep Scheduling Protocols ">
+<node CREATED="1305453950506" ID="ID_174460488" MODIFIED="1305453951140" TEXT="Basic Principle: a big amount of power is wasted listening on the radio channel even though there is nothing there to receive "/>
+<node CREATED="1305453954200" ID="ID_1815877102" MODIFIED="1305453954816" TEXT="The radio will switch between its on and off power states in order to reduce the effects of the idle listening "/>
+<node CREATED="1305453957675" ID="ID_325599565" MODIFIED="1305453958232" TEXT="The radio interface will be wake up whenever it expects to transmit or receive packets and sleep otherwise "/>
+</node>
+<node CREATED="1305453981388" ID="ID_455985393" MODIFIED="1305453982428" TEXT="Synchronous Sleep Scheduling Protocols "/>
+<node CREATED="1305454026969" ID="ID_443852644" MODIFIED="1305454027803" TEXT="Battery aware MAC protocols (BAMAC) "/>
+</node>
+<node CREATED="1305454053845" ID="ID_1089777113" MODIFIED="1305454054491" TEXT="Physical Layer "/>
+<node CREATED="1305452837824" ID="ID_1285150740" MODIFIED="1305452838601" TEXT="Topology Control Mechanisms "/>
+</node>
+<node CREATED="1305454091854" ID="ID_240006968" MODIFIED="1305454100715" TEXT="Existing Standards">
+<node CREATED="1305454117018" ID="ID_1196849587" MODIFIED="1305454117616" TEXT="WPAN - 802.15.1 standard (Bluetooth) ">
+<node CREATED="1305454140465" ID="ID_916695513" MODIFIED="1305454141121" TEXT="There are 8 different operational states defined in Bluetooth, 3 of them are dedicated to low power operations ">
+<node CREATED="1305454272062" ID="ID_946661560" MODIFIED="1305454272707" TEXT="Sniff state - the active Bluetooth device lowers its duty cycle and listens to the piconet at reduced rate "/>
+<node CREATED="1305454276754" ID="ID_1112938458" MODIFIED="1305454277349" TEXT="Hold state - the device shuts down all communication capabilities it has with the piconet, but keeps the slot (from the seven activeslots available in a piconet) as active "/>
+<node CREATED="1305454288813" ID="ID_440211903" MODIFIED="1305454289516" TEXT="Park state - disable all communication with the piconet, as in case of Hold state, except that this time give up also its access to one of the seven active slots available for the devices within the piconet "/>
+</node>
+</node>
+<node CREATED="1305454305441" ID="ID_272152197" MODIFIED="1305454306775" TEXT="LTE">
+<node CREATED="1305454327159" ID="ID_588027616" MODIFIED="1305454327947" TEXT="RRC Active State "/>
+<node CREATED="1305454383631" ID="ID_1714375671" MODIFIED="1305454384247" TEXT="RRC Idle State "/>
+</node>
+</node>
+<node CREATED="1305452846416" ID="ID_121108080" MODIFIED="1305452847064" TEXT="Energy Harvesting Techniques ">
+<node CREATED="1305452853694" ID="ID_1584406140" MODIFIED="1305452854338" TEXT="Solar panels "/>
+<node CREATED="1305452860582" ID="ID_54284343" MODIFIED="1305452861191" TEXT="Piezoelectric materials "/>
+<node CREATED="1305452867278" ID="ID_932960370" MODIFIED="1305452867874" TEXT="Human Active Energy "/>
+<node CREATED="1305452874065" ID="ID_1681541610" MODIFIED="1305452874762" TEXT="Human Passive Energy "/>
+<node CREATED="1305452880487" ID="ID_247731043" MODIFIED="1305452881125" TEXT="RF Energy/Ambient Energy "/>
+<node CREATED="1305452890366" ID="ID_1223619521" MODIFIED="1305452890977" TEXT="Wind Generators "/>
+</node>
+</node>
 </node>
 </map>
