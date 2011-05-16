@@ -101,12 +101,25 @@
 <node CREATED="1298034920654" ID="ID_1869827323" MODIFIED="1298035012082" TEXT="SLA(Service Level Agreement)&#x670d;&#x52a1;&#x7ea7;&#x522b;&#x8bb8;&#x53ef;">
 <node CREATED="1298034960511" ID="ID_1984835404" MODIFIED="1298034981423" TEXT="Service Level Objectives (SLO)&#x8981;&#x6c42;">
 <node CREATED="1298035045186" ID="ID_1109363248" MODIFIED="1298035048192" TEXT="Parameters">
-<node CREATED="1298035076992" ID="ID_1106607614" MODIFIED="1298035077664" TEXT="Availability"/>
-<node CREATED="1298035080995" ID="ID_179761766" MODIFIED="1298035081692" TEXT="Delivery "/>
-<node CREATED="1298035084593" ID="ID_15926534" MODIFIED="1298035085281" TEXT="Latency "/>
-<node CREATED="1298035087993" ID="ID_1683461745" MODIFIED="1298035088596" TEXT="Bandwidth "/>
+<node CREATED="1298035076992" ID="ID_1106607614" MODIFIED="1305538605733" TEXT="Availability&#x53ef;&#x9760;&#x6027;">
+<node CREATED="1305538641208" ID="ID_377697091" MODIFIED="1305538691520" TEXT="the percentage of the feasibility of service in every particular service request &#x6210;&#x529f;&#x670d;&#x52a1;&#x7387;"/>
+<node CREATED="1305538671151" ID="ID_1449682984" MODIFIED="1305538678465" TEXT="availability of service is the key parameter that customers are interested in"/>
+</node>
+<node CREATED="1298035080995" ID="ID_179761766" MODIFIED="1305538612747" TEXT="Delivery &#x4f20;&#x8f93;&#x7a33;&#x5b9a;&#x6027;">
+<node CREATED="1305538752997" ID="ID_1164055514" MODIFIED="1305538797330" TEXT="the converse of packet loss, which means that a percentage of each service is delivered without packet loss &#x6210;&#x529f;&#x4f20;&#x8f93;&#x7387;"/>
+<node CREATED="1305538801201" ID="ID_1843188528" MODIFIED="1305538801927" TEXT="packet delay &#x6570;&#x636e;&#x5305;&#x5ef6;&#x8fdf; "/>
+</node>
+<node CREATED="1298035084593" ID="ID_15926534" MODIFIED="1305538620361" TEXT="Latency &#x5ef6;&#x8fdf;">
+<node CREATED="1305538898842" ID="ID_1196904774" MODIFIED="1305538899584" TEXT="the time taken for a packet to travel from a service access point (SAP) to a distant target and back"/>
+<node CREATED="1305538916288" ID="ID_433383235" MODIFIED="1305538916978" TEXT="it usually includes the transport time and queuing delay. "/>
+</node>
+<node CREATED="1298035087993" ID="ID_1683461745" MODIFIED="1305538624855" TEXT="Bandwidth &#x5e26;&#x5bbd;">
+<node CREATED="1305538938405" ID="ID_138177334" MODIFIED="1305538939379" TEXT="means the used capacity or available capacity &#x2013; stated in the SLA "/>
+</node>
 <node CREATED="1298035091391" ID="ID_1136805259" MODIFIED="1298035092134" TEXT="MTBF (Mean Time Between Failure) "/>
-<node CREATED="1298035095232" ID="ID_1118183821" MODIFIED="1298035095829" TEXT="MTRS (Mean Time to Restore Service) "/>
+<node CREATED="1298035095232" ID="ID_1118183821" MODIFIED="1298035095829" TEXT="MTRS (Mean Time to Restore Service) ">
+<node CREATED="1305538964982" ID="ID_1635823878" MODIFIED="1305538965950" TEXT="The average time that a device will take to recover from any failure "/>
+</node>
 </node>
 </node>
 <node CREATED="1298034973812" ID="ID_1433435135" MODIFIED="1298034985551" TEXT="Service Level Guarantees (SLG)&#x4fdd;&#x8bc1;">
@@ -449,6 +462,16 @@
 <node CREATED="1305279640950" ID="ID_1078297344" MODIFIED="1305279643266" POSITION="right" TEXT="Android">
 <node CREATED="1305279647550" ID="ID_1895409936" MODIFIED="1305279650600" TEXT="Architecture">
 <node CREATED="1305279738490" ID="ID_406934712" MODIFIED="1305279739180" TEXT="http://qjg-wiki.googlecode.com/files/Android-system-architecture.jpg"/>
+<node CREATED="1305542916915" ID="ID_282463709" MODIFIED="1305542925584" TEXT="Android Runtime Layer">
+<node CREATED="1305542952371" ID="ID_431263851" MODIFIED="1305542952993" TEXT="Core Libraries &#x2013; provide the functionality of JAVA Programming Language "/>
+<node CREATED="1305542956294" ID="ID_100332794" MODIFIED="1305542956934" TEXT="Android Applications runs in its own process, with its own instance of the Dalvik Virtual machine "/>
+<node CREATED="1305543001196" ID="ID_1809699451" MODIFIED="1305543002219" TEXT="Dalvik VM: Java based license free VM ">
+<node CREATED="1305543006580" ID="ID_1788810864" MODIFIED="1305543007079" TEXT="Register based VM, optimization for low memory requirements "/>
+<node CREATED="1305543015519" ID="ID_1624152259" MODIFIED="1305543016195" TEXT="Executes files in the Dalvik Executable (.dex) format "/>
+<node CREATED="1305543021410" ID="ID_642136657" MODIFIED="1305543022038" TEXT="DX tool converts classes to .dex format "/>
+<node CREATED="1305543025112" ID="ID_1054788672" MODIFIED="1305543025775" TEXT="Relies on the Linux Kernel for underlying functionality: threading and low-level memory management "/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1305385843571" ID="ID_209392230" MODIFIED="1305385846547" POSITION="left" TEXT="Performance at Higher Network Layers ">
@@ -514,7 +537,72 @@
 </node>
 </node>
 </node>
-<node CREATED="1305387848705" ID="ID_1650135281" MODIFIED="1305387850731" POSITION="left" TEXT="Mobility Issues"/>
+<node CREATED="1305387848705" ID="ID_1650135281" MODIFIED="1305387850731" POSITION="left" TEXT="Mobility Issues">
+<node CREATED="1305543204606" ID="ID_1660623760" MODIFIED="1305543207679" TEXT="Moblie IP">
+<node CREATED="1305543213520" ID="ID_1277982186" MODIFIED="1305543219658" TEXT="Features">
+<node CREATED="1305543220387" ID="ID_1167299679" MODIFIED="1305543221043" TEXT="Enables dynamical point of network attachment change with host location change "/>
+<node CREATED="1305543224642" ID="ID_1343112504" MODIFIED="1305543225040" TEXT="Maintains all network connections "/>
+<node CREATED="1305543228147" ID="ID_374383731" MODIFIED="1305543228558" TEXT="Enables hosts to be tracked without changing their IP addresses "/>
+<node CREATED="1305543232002" ID="ID_1381855152" MODIFIED="1305543232622" TEXT="Requires no software changes in any non-mobile hosts or routers "/>
+<node CREATED="1305543235959" ID="ID_983992315" MODIFIED="1305543236538" TEXT="Requires additional infrastructure "/>
+<node CREATED="1305543239778" ID="ID_1788565665" MODIFIED="1305543240364" TEXT="Requires no modifications to IP addresses or IP address format "/>
+<node CREATED="1305543243428" ID="ID_377976329" MODIFIED="1305543243996" TEXT="Supports security "/>
+<node CREATED="1305543247429" ID="ID_869542761" MODIFIED="1305543248075" TEXT="Standardised by the Internet Engineering Task Force (IETF) "/>
+</node>
+<node CREATED="1305543727633" ID="ID_1299257661" MODIFIED="1305543728384" TEXT="Nodes     &#x79fb;&#x52a8;&#x8282;&#x70b9;&#xff08;MN&#xff09;&#x3001;&#x5bb6;&#x4e61;&#x4ee3;&#x7406;&#xff08;HA&#xff09;&#x3001;&#x901a;&#x4fe1;&#x8282;&#x70b9;&#xff08;CN&#xff09;&#x3002;&#x5176;&#x4e2d;MN&#x4e3a;&#x79fb;&#x52a8;&#x7ec8;&#x7aef;&#xff1b;HA&#x4f4d;&#x4e8e;&#x5bb6;&#x4e61;&#x5b50;&#x7f51;&#xff0c;&#x8d1f;&#x8d23;&#x8bb0;&#x5f55;MN&#x7684;&#x5f53;&#x524d;&#x4f4d;&#x7f6e;&#xff0c;&#x5e76;&#x5c06;&#x53d1;&#x5f80;MN&#x7684;&#x6570;&#x636e;&#x8f6c;&#x53d1;&#x81f3;MN&#x7684;&#x5f53;&#x524d;&#x4f4d;&#x7f6e;&#xff1b;CN&#x4e3a;&#x4e0e;MN&#x901a;&#x4fe1;&#x7684;&#x5bf9;&#x7aef;&#x8282;&#x70b9;&#x3002; ">
+<node CREATED="1305543974304" ID="ID_1065334600" MODIFIED="1305543975183" TEXT="Mobile Node (MN) ">
+<node CREATED="1305543978629" ID="ID_759751421" MODIFIED="1305543979315" TEXT="A host that changes its point of attachment from one network or subnetwork to another "/>
+<node CREATED="1305543982863" ID="ID_1215731465" MODIFIED="1305543983511" TEXT="Assigned a permanent IP address (called home address) which does not change "/>
+<node CREATED="1305543986304" ID="ID_881405547" MODIFIED="1305543986974" TEXT="All other hosts send packets to the home address regardless of mobile node&#x2019; s location "/>
+<node CREATED="1305543989718" ID="ID_1048455605" MODIFIED="1305543990465" TEXT="It continues to communicate with other hosts via the network at current location "/>
+</node>
+<node CREATED="1305543734837" ID="ID_313170068" MODIFIED="1305543735614" TEXT="Home Agent (HA) ">
+<node CREATED="1305543740141" ID="ID_547865394" MODIFIED="1305543740997" TEXT="A router with additional functionality "/>
+<node CREATED="1305543744965" ID="ID_1308712406" MODIFIED="1305543745692" TEXT="Located on the home network of MN "/>
+<node CREATED="1305543749492" ID="ID_1149389622" MODIFIED="1305543750249" TEXT="Maintains current location information of MN "/>
+<node CREATED="1305543754416" ID="ID_951162989" MODIFIED="1305543755102" TEXT="Performs mobility binding of MN&#x2019; s home address with temporary IP address dependent on current location "/>
+<node CREATED="1305543759569" ID="ID_421830397" MODIFIED="1305543760245" TEXT="Forwards packets (tunnels) to the appropriate network when MN is away "/>
+</node>
+<node CREATED="1305544116914" ID="ID_1232903629" MODIFIED="1305544117868" TEXT="Foreign Agent (FA) ">
+<node CREATED="1305544124218" ID="ID_588785854" MODIFIED="1305544124858" TEXT="A router on a MN&apos;s visited network with enhanced functionality "/>
+<node CREATED="1305544127549" ID="ID_559144221" MODIFIED="1305544128132" TEXT="Advertises itself periodically "/>
+<node CREATED="1305544130692" ID="ID_1812454743" MODIFIED="1305544131388" TEXT="Accepts MN registration requests "/>
+<node CREATED="1305544134215" ID="ID_1746979879" MODIFIED="1305544134975" TEXT="Sends a care-of-address (CoA) (usually FA&#x2019; s IP address) to HA when a MN registers "/>
+<node CREATED="1305544447915" ID="ID_1103963774" MODIFIED="1305544448580" TEXT="Provides routing services to the MN while registered ">
+<node CREATED="1305544461585" ID="ID_332136056" MODIFIED="1305544462791" TEXT="The foreign agent detunnels and delivers datagrams tunneled by HA to the MN"/>
+<node CREATED="1305544466990" ID="ID_1208541965" MODIFIED="1305544467571" TEXT="Routes all datagrams sent by MN"/>
+</node>
+</node>
+<node CREATED="1305544487021" ID="ID_1454030387" MODIFIED="1305544487763" TEXT="Correspondent Node (CN)">
+<node CREATED="1305544490968" ID="ID_1613358779" MODIFIED="1305544491606" TEXT="End-host with which MN communicates (e.g. a web server, another host) "/>
+<node CREATED="1305544494736" ID="ID_183015999" MODIFIED="1305544495311" TEXT="Can be located anywhere "/>
+<node CREATED="1305544498645" ID="ID_781384221" MODIFIED="1305544499271" TEXT="Can be mobile or stationary "/>
+<node CREATED="1305544502081" ID="ID_1903061221" MODIFIED="1305544502719" TEXT="Is not aware of the fact that MN is changing location "/>
+</node>
+</node>
+</node>
+<node CREATED="1305540069396" ID="ID_1066495790" MODIFIED="1305540070435" TEXT="Hierarchical Mobile IPv6 (HMIPv6) ">
+<node CREATED="1305540079628" ID="ID_1077483623" MODIFIED="1305540080625" TEXT="Principles ">
+<node CREATED="1305540159252" ID="ID_1300775547" MODIFIED="1305540159944" TEXT="Frequent handovers increase the BU overhead "/>
+<node CREATED="1305540162887" ID="ID_1596924218" MODIFIED="1305540163530" TEXT="Increased delay if CN is located far away from the MN "/>
+<node CREATED="1305540166750" ID="ID_1811573835" MODIFIED="1305540167375" TEXT="Hierarchical Mobile IPv6 organizes the network hierarchically "/>
+<node CREATED="1305540170399" ID="ID_1895682141" MODIFIED="1305540171045" TEXT="Separate mobility management in local mobility and global mobility "/>
+<node CREATED="1305540174082" ID="ID_472026385" MODIFIED="1305540175348" TEXT="Mobility anchor point (MAP) manages local mobility "/>
+</node>
+<node CREATED="1305540475809" ID="ID_300320595" MODIFIED="1305540476460" TEXT="Handover Procedure ">
+<node CREATED="1305540482302" ID="ID_1307701317" MODIFIED="1305540482841" TEXT="MN (at home) communicates with CN "/>
+<node CREATED="1305540485852" ID="ID_661090576" MODIFIED="1305540486383" TEXT="MN moves to new network (Stage 1) "/>
+<node CREATED="1305540489457" ID="ID_395216210" MODIFIED="1305540489968" TEXT="MN registers its CoA with HA (Stage 2) "/>
+<node CREATED="1305540493090" ID="ID_1983122322" MODIFIED="1305540493616" TEXT="MN registers its CoA with MAP (Stage 3) "/>
+<node CREATED="1305540496479" ID="ID_1530628378" MODIFIED="1305540497040" TEXT="MN moves to new network in same domain(Stage 4) "/>
+<node CREATED="1305540500188" ID="ID_707259262" MODIFIED="1305540500792" TEXT="MN registers its CoA with MAP (Stage 5) "/>
+<node CREATED="1305540504324" ID="ID_1731681845" MODIFIED="1305540504921" TEXT="MN moves to new network in a different domain (Stage 6) "/>
+<node CREATED="1305540508094" ID="ID_302462811" MODIFIED="1305540508626" TEXT="MN registers its CoA with HA (Stage 7) "/>
+<node CREATED="1305540511662" ID="ID_554808684" MODIFIED="1305540512288" TEXT="MN registers its CoA with MAP (Stage 8) "/>
+</node>
+</node>
+<node CREATED="1305540807665" ID="ID_934930844" MODIFIED="1305540808337" TEXT="http://hi.baidu.com/yuanmx0307/blog/item/a10b79ec474da54779f05540.html"/>
+</node>
 <node CREATED="1305452779122" ID="ID_831840508" MODIFIED="1305452780509" POSITION="right" TEXT="Energy Conservation in Wireless and Mobile Communications ">
 <node CREATED="1305452792917" ID="ID_697428397" MODIFIED="1305452793944" TEXT="OSI layer - power save protocols ">
 <node CREATED="1305452800262" ID="ID_771410870" MODIFIED="1305452801080" TEXT="Load Partitioning ">
@@ -575,6 +663,28 @@
 <node CREATED="1305454272062" ID="ID_946661560" MODIFIED="1305454272707" TEXT="Sniff state - the active Bluetooth device lowers its duty cycle and listens to the piconet at reduced rate "/>
 <node CREATED="1305454276754" ID="ID_1112938458" MODIFIED="1305454277349" TEXT="Hold state - the device shuts down all communication capabilities it has with the piconet, but keeps the slot (from the seven activeslots available in a piconet) as active "/>
 <node CREATED="1305454288813" ID="ID_440211903" MODIFIED="1305454289516" TEXT="Park state - disable all communication with the piconet, as in case of Hold state, except that this time give up also its access to one of the seven active slots available for the devices within the piconet "/>
+</node>
+</node>
+<node CREATED="1305541956948" ID="ID_331533505" MODIFIED="1305541959716" TEXT="WiMAX">
+<node CREATED="1305542019346" ID="ID_39352950" MODIFIED="1305542020079" TEXT="3 Power Save Classes (PSCs) based on different QoS characteristics ">
+<node CREATED="1305542025796" ID="ID_265004392" MODIFIED="1305542762235" TEXT="Each PSC consists of a sequence of interleaved listening and sleep intervals &#x90fd;&#x542b;&#x6709;&#x76f8;&#x95f4;&#x7684;&#x76d1;&#x542c;&#x548c;&#x7b49;&#x5f85;"/>
+<node CREATED="1305542029961" ID="ID_1259791660" MODIFIED="1305542779467" TEXT="Can support one or multiple traffic flows in a mobile station with similar characteristics &#x652f;&#x6301;&#x4e00;&#x4e2a;&#x6216;&#x591a;&#x4e2a;&#x6570;&#x636e;&#x6d41;"/>
+<node CREATED="1305542321958" ID="ID_489436021" MODIFIED="1305542830624" TEXT="A mobile station can turn off its radio interface when all its PSCs are in the sleep window, it wakes up when any PSC is in a listening window &#x5728;&#x7a7a;&#x95f2;&#x65f6;&#x53ef;&#x4ee5;&#x5b8c;&#x5168;&#x8fdb;&#x5165;&#x7761;&#x7720;&#x72b6;&#x6001;&#xff0c;&#x5982;&#x679c;&#x6709;&#x67d0;&#x4e2a;PSC&#x8fdb;&#x5165;&#x76d1;&#x542c;&#x72b6;&#x6001;&#xff0c;&#x5219;&#x5524;&#x9192;&#x5176;&#x4ed6;&#x3002;"/>
+<node CREATED="1305542332131" ID="ID_1539500525" MODIFIED="1305542851383" TEXT="Each flow of a mobile station can be corresponded to a PSC &#x6bcf;&#x4e2a;&#x6d41;&#x90fd;&#x53ef;&#x4ee5;&#x54cd;&#x5e94;PSC"/>
+<node CREATED="1305542056571" ID="ID_57364353" MODIFIED="1305542057696" TEXT="class power saving ">
+<node CREATED="1305542064892" ID="ID_1333736168" MODIFIED="1305542066514" TEXT="1st">
+<node CREATED="1305542085280" ID="ID_1265048361" MODIFIED="1305542086082" TEXT="designed for non-real-time traffic flows "/>
+<node CREATED="1305542094102" ID="ID_1418078618" MODIFIED="1305542094662" TEXT="it has exponentially increasing sleep window if no packet comes "/>
+</node>
+<node CREATED="1305542096907" ID="ID_1205541458" MODIFIED="1305542098507" TEXT="2nd">
+<node CREATED="1305542118632" ID="ID_1606537968" MODIFIED="1305542119309" TEXT="designed for real-time traffic flows "/>
+<node CREATED="1305542124011" ID="ID_227674810" MODIFIED="1305542125301" TEXT="It has a fixed size of sleep window "/>
+</node>
+<node CREATED="1305542099000" ID="ID_405525813" MODIFIED="1305542100297" TEXT="3rd">
+<node CREATED="1305542141801" ID="ID_1083059714" MODIFIED="1305542142462" TEXT="designed for multicast connections or management opeartions "/>
+</node>
+</node>
+<node CREATED="1305542393226" ID="ID_1796232330" MODIFIED="1305542394457" TEXT="http://qjg-wiki.googlecode.com/files/WiMAXClassesPowerSaving.jpg"/>
 </node>
 </node>
 <node CREATED="1305454305441" ID="ID_272152197" MODIFIED="1305454306775" TEXT="LTE">
