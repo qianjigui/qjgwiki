@@ -353,6 +353,34 @@
 </node>
 </node>
 </node>
+<node CREATED="1305556270809" ID="ID_1760154773" MODIFIED="1305556276502" TEXT="&#x6d4b;&#x91cf;&#x65b9;&#x6cd5;&#x7684;&#x7f3a;&#x70b9;">
+<node CREATED="1305556280313" ID="ID_467638140" MODIFIED="1305556280833" TEXT="Active Measurements - problems &#x4e3b;&#x52a8;&#x6d4b;&#x91cf;&#x7684;&#x95ee;&#x9898; ">
+<node CREATED="1305556294437" ID="ID_874039146" MODIFIED="1305556295149" TEXT="Path Asymmetry &#x8def;&#x5f84;&#x4e0d;&#x4e00;&#x81f4;&#xff0c;&#x53d1;&#x9001;&#x4e0e;&#x63a5;&#x6536;&#x8def;&#x5f84;&#x5c31;&#x6709;&#x53ef;&#x80fd;&#x6709;&#x4e0d;&#x540c;">
+<node CREATED="1305556299586" ID="ID_514381813" MODIFIED="1305556300294" TEXT="Nodes visited by traceroute are those in &apos;forward&apos; path, which are not necessary the same as &apos;reverse&apos; path"/>
+</node>
+<node CREATED="1305556305974" ID="ID_514955852" MODIFIED="1305556306774" TEXT="Unstable Paths and False Edges &#x53d1;&#x9001;&#x7684;&#x8def;&#x5f84;&#x4e0d;&#x7a33;&#x5b9a;&#xff0c;&#x6709;&#x4e9b;&#x8282;&#x70b9;&#x53ef;&#x80fd;&#x5df2;&#x7ecf;&#x5931;&#x6548;">
+<node CREATED="1305556311354" ID="ID_1991221143" MODIFIED="1305556312043" TEXT="Traceroute reports nodes visited by successive probe packets with increasing TTL. Discovered IP path is only valid if the path being measured does not change during measurement process."/>
+</node>
+<node CREATED="1305556316746" ID="ID_1196597135" MODIFIED="1305556317490" TEXT="Alias Resolution &#x540c;&#x4e00;&#x4e2a;&#x8bbe;&#x5907;&#x53ef;&#x80fd;&#x6709;&#x591a;&#x4e2a;&#x6807;&#x793a;">
+<node CREATED="1305556322047" ID="ID_532457467" MODIFIED="1305556322668" TEXT="Traceroute discovers &apos;interfaces&apos; rather than &apos;routers&apos; &#x4e0d;&#x4ec5;&#x4ec5;&#x662f;&#x8def;&#x7531;&#xff0c;&#x8fd8;&#x6709;&#x5f88;&#x591a;&#x662f;&#x63a5;&#x53e3;"/>
+<node CREATED="1305556326514" ID="ID_1646259771" MODIFIED="1305556327118" TEXT="Nodes can have multiple network interfaces, each with different IP address &#x540c;&#x4e00;&#x4e2a;&#x8282;&#x70b9;&#x53ef;&#x80fd;&#x542b;&#x6709;&#x591a;&#x4e2a;&#x7f51;&#x5361;"/>
+<node CREATED="1305556330865" ID="ID_542683611" MODIFIED="1305556331634" TEXT="Source IP address in ICMP &apos;time exceeded&apos; response packets is the address of the interface that the router uses to send packets back."/>
+<node CREATED="1305556337063" ID="ID_1354300335" MODIFIED="1305556337845" TEXT="If both interfaces belong to the same router, responses will be sent by one interface =&gt; we can match ECHO responses from trace route to both IP address. If the response comes from the same source interface, we infer that both interfaces belong to the same router"/>
+</node>
+<node CREATED="1305556347630" ID="ID_986665364" MODIFIED="1305556348441" TEXT="Measurement load &#x7528;&#x4e8e;&#x6d4b;&#x91cf;&#x7684;&#x8d1f;&#x8f7d;">
+<node CREATED="1305556352896" ID="ID_184097179" MODIFIED="1305556353632" TEXT="Sometimes RTT for TTL=n could be smaller than TTL=n&#x2010;1"/>
+</node>
+</node>
+<node CREATED="1305556286909" ID="ID_1336519764" MODIFIED="1305556287525" TEXT="Passive Measurements - challenges &#x88ab;&#x52a8;&#x6d4b;&#x91cf;&#x7684;&#x6311;&#x6218; ">
+<node CREATED="1305556362069" ID="ID_1014314659" MODIFIED="1305556362816" TEXT="Large volume of measurement data &#x5927;&#x91cf;&#x9700;&#x8981;&#x6d4b;&#x91cf;&#x7684;&#x6570;&#x636e;">
+<node CREATED="1305556367134" ID="ID_1492445389" MODIFIED="1305556367730" TEXT="Challenges in storing and processing data &#x5b58;&#x50a8;&#x4e0e;&#x5904;&#x7406;&#x6570;&#x636e;"/>
+</node>
+<node CREATED="1305556372067" ID="ID_655098585" MODIFIED="1305556372598" TEXT="Privacy issues &#x9690;&#x79c1;&#x95ee;&#x9898;"/>
+<node CREATED="1305556377191" ID="ID_683170430" MODIFIED="1305556377727" TEXT="Collection of detailed traffic statistics from heterogeneous network links. &#x5f02;&#x6784;&#x7f51;&#x7edc;&#x8be6;&#x7ec6;&#x7edf;&#x8ba1;&#x95f4;&#x6709;&#x51b2;&#x7a81;"/>
+<node CREATED="1305556383092" ID="ID_1951652611" MODIFIED="1305556383867" TEXT="Non&#x2010;interference with the measured network (nonintrusiveness). &#x5b58;&#x5728;&#x5f88;&#x591a;&#x4e0d;&#x5141;&#x8bb8;&#x5e72;&#x6270;&#x7684;&#x7f51;&#x7edc;"/>
+<node CREATED="1305556388177" ID="ID_1732268795" MODIFIED="1305556388846" TEXT="Obtaining a global view of the monitored network from a reasonable number of monitoring points. &#x5982;&#x4f55;&#x7531;&#x4e00;&#x90e8;&#x5206;&#x6765;&#x8003;&#x5bdf;&#x6574;&#x4f53;"/>
+</node>
+</node>
 <node CREATED="1298037622267" ID="ID_662246116" MODIFIED="1298037633665" TEXT="Performance">
 <node CREATED="1298037638753" ID="ID_414439246" MODIFIED="1298037674167" TEXT="Packet loss rate"/>
 <node CREATED="1298037650523" ID="ID_1022499610" MODIFIED="1298037652398" TEXT="Latency"/>
@@ -378,6 +406,10 @@
 <node CREATED="1298662067153" ID="ID_122750680" MODIFIED="1298662070065" TEXT="Not sure how"/>
 </node>
 </node>
+<node CREATED="1305557646366" ID="ID_654228405" MODIFIED="1305557650054" TEXT="Benefit">
+<node CREATED="1305557658773" ID="ID_1488794953" MODIFIED="1305557659410" TEXT="Allows for investigation of the properties of the system "/>
+<node CREATED="1305557666794" ID="ID_779773042" MODIFIED="1305557667536" TEXT="Enables prediction of future system behavior and outputs "/>
+</node>
 <node CREATED="1298662139977" ID="ID_977350080" MODIFIED="1298662143534" TEXT="As a solution">
 <node CREATED="1298662149128" ID="ID_317052804" MODIFIED="1298662153281" TEXT="Reduced complex"/>
 <node CREATED="1298662156305" ID="ID_1846164308" MODIFIED="1298662179546" TEXT="Important characteristics only"/>
@@ -390,10 +422,14 @@
 <node CREATED="1298662275923" ID="ID_1641671440" MODIFIED="1298662286427" TEXT="Initial Conditions"/>
 <node CREATED="1298662289166" ID="ID_763526107" MODIFIED="1298662301225" TEXT="Environment influence"/>
 </node>
+<node CREATED="1305557702573" ID="ID_1260475626" MODIFIED="1305557703239" TEXT="Most models are inherently inexact (due to the simplifications and assumptions made) "/>
 </node>
 <node CREATED="1298662317660" ID="ID_221216306" MODIFIED="1298662320073" TEXT="Definition">
+<node CREATED="1305557581826" ID="ID_1319347792" MODIFIED="1305557582870" TEXT="Process of building a model "/>
+<node CREATED="1305557601003" ID="ID_1059980347" MODIFIED="1305557601930" TEXT="Designing and analyzing a representation of a system to study the effect changes to system variables have ">
 <node CREATED="1298662326036" ID="ID_855130216" MODIFIED="1298662328560" TEXT="Simulation"/>
 <node CREATED="1298662331102" ID="ID_980423957" MODIFIED="1298662333090" TEXT="Analysis"/>
+</node>
 </node>
 <node CREATED="1298662352128" ID="ID_217560978" MODIFIED="1298662353302" TEXT="Type">
 <node CREATED="1298662370310" ID="ID_884536907" MODIFIED="1298662390942" TEXT="Variables">
@@ -601,6 +637,32 @@
 <node CREATED="1305540511662" ID="ID_554808684" MODIFIED="1305540512288" TEXT="MN registers its CoA with MAP (Stage 8) "/>
 </node>
 </node>
+<node CREATED="1305556514089" ID="ID_1233923388" MODIFIED="1305556794363" TEXT="Intra-MSC">
+<node CREATED="1305556794319" ID="ID_1067076820" MODIFIED="1305556798467" TEXT="Handover">
+<node CREATED="1305556782765" ID="ID_1013378712" MODIFIED="1305556783581" TEXT="http://qjg-wiki.googlecode.com/files/Intra-MSC-Handover.jpg"/>
+<node CREATED="1305556803784" ID="ID_914120780" MODIFIED="1305556805331" TEXT="Aim">
+<node CREATED="1305556813609" ID="ID_806795074" MODIFIED="1305556814281" TEXT="Perform communication with mobile device via BSS B instead of via BSS A "/>
+<node CREATED="1305556841322" ID="ID_1622072208" MODIFIED="1305556842139" TEXT="Seamless continue the communication "/>
+</node>
+<node CREATED="1305556862158" ID="ID_1275171159" MODIFIED="1305556863969" TEXT="Initiation">
+<node CREATED="1305556870835" ID="ID_1920452392" MODIFIED="1305556871521" TEXT="handover initiated by BSS A "/>
+<node CREATED="1305556879577" ID="ID_1441074385" MODIFIED="1305556880274" TEXT="stronger signal to/from BSS B than that to/from BSS A "/>
+<node CREATED="1305556888584" ID="ID_482543051" MODIFIED="1305556889357" TEXT="maintaining connectivity "/>
+<node CREATED="1305556895591" ID="ID_291361406" MODIFIED="1305556896413" TEXT="reducing battery power drain "/>
+<node CREATED="1305556903179" ID="ID_1134766793" MODIFIED="1305556903848" TEXT="Balancing load (free resources e.g. channel in BSS A) "/>
+</node>
+<node CREATED="1305556938547" ID="ID_595902049" MODIFIED="1305556941143" TEXT="Process">
+<node CREATED="1305556949876" ID="ID_1000926430" MODIFIED="1305556950553" TEXT="BSS A informs MSC about pending handover and provides a list of potential BSSs "/>
+<node CREATED="1305556964937" ID="ID_1817459007" MODIFIED="1305556965623" TEXT="MSC selects BSS B from list and sets up path to BSS B "/>
+<node CREATED="1305556972531" ID="ID_1449332733" MODIFIED="1305556973112" TEXT="BSS B allocates radio channel to be used by MS "/>
+<node CREATED="1305556980511" ID="ID_935747025" MODIFIED="1305556981170" TEXT="BSS B informs BSS A via MSC it is ready for handover "/>
+<node CREATED="1305556988252" ID="ID_425728481" MODIFIED="1305556988882" TEXT="BSS A informs MS to perform handover to BSS B "/>
+<node CREATED="1305556995163" ID="ID_1817283797" MODIFIED="1305556995849" TEXT="MS and BSS B exchange signals to activate new channel "/>
+<node CREATED="1305557029810" ID="ID_280882859" MODIFIED="1305557030588" TEXT="MS informs MSC via BSS B about handover completion. MSC reroutes call "/>
+<node CREATED="1305557036539" ID="ID_517832190" MODIFIED="1305557037209" TEXT="MSC and BSS A release resources "/>
+</node>
+</node>
+</node>
 <node CREATED="1305540807665" ID="ID_934930844" MODIFIED="1305540808337" TEXT="http://hi.baidu.com/yuanmx0307/blog/item/a10b79ec474da54779f05540.html"/>
 </node>
 <node CREATED="1305452779122" ID="ID_831840508" MODIFIED="1305452780509" POSITION="right" TEXT="Energy Conservation in Wireless and Mobile Communications ">
@@ -688,8 +750,26 @@
 </node>
 </node>
 <node CREATED="1305454305441" ID="ID_272152197" MODIFIED="1305454306775" TEXT="LTE">
-<node CREATED="1305454327159" ID="ID_588027616" MODIFIED="1305454327947" TEXT="RRC Active State "/>
-<node CREATED="1305454383631" ID="ID_1714375671" MODIFIED="1305454384247" TEXT="RRC Idle State "/>
+<node CREATED="1305454327159" ID="ID_588027616" MODIFIED="1305454327947" TEXT="RRC Active State ">
+<node CREATED="1305554642054" ID="ID_1848402273" MODIFIED="1305554761275" TEXT="Data is exchanged between the network and the mobile device &#x6570;&#x636e;&#x4ea4;&#x6362;&#x53d1;&#x751f;&#x5728;&#x7f51;&#x7edc;&#x548c;&#x79fb;&#x52a8;&#x8bbe;&#x5907;&#x4e2d;"/>
+<node CREATED="1305554649418" ID="ID_1980739345" MODIFIED="1305554903582" TEXT="The mobile remains in active state even when there is no data transmitted for some time (e.g., after the content of a web page has been fully loaded) &#x4e00;&#x76f4;&#x5904;&#x4e8e;&#x5de5;&#x4f5c;&#x72b6;&#x6001;&#x4e0d;&#x7ba1;&#x662f;&#x5426;&#x6709;&#x6570;&#x636e;&#x4f20;&#x8f93;"/>
+<node CREATED="1305554667117" ID="ID_1149798742" MODIFIED="1305554925581" TEXT="The mobile can deactivate its receiver in order to conserve energy &#x79fb;&#x52a8;&#x8bbe;&#x5907;&#x53ef;&#x4ee5;&#x5173;&#x95ed;&#x63a5;&#x6536;&#x7aef;&#x4ee5;&#x964d;&#x4f4e;&#x80fd;&#x8017;"/>
+<node CREATED="1305554688079" ID="ID_899223843" MODIFIED="1305554688735" TEXT="After some inactivity time the network can activate the Discontinuous Reception Mode (DRX) - meaning that the mobile has to listen to downlink bandwidth assignments and control commands periodically and switch off its receiver at all other times "/>
+<node CREATED="1305554693116" ID="ID_953796781" MODIFIED="1305554693683" TEXT="DRX interval can be flexible (from ms to s) "/>
+<node CREATED="1305554697871" ID="ID_992715446" MODIFIED="1305554727924" TEXT="Mobility is controlled by the network - the mobile device has to send signal measurements from the current or neighbour cell"/>
+</node>
+<node CREATED="1305454383631" ID="ID_1714375671" MODIFIED="1305454384247" TEXT="RRC Idle State ">
+<node CREATED="1305554874987" ID="ID_200343749" MODIFIED="1305554963316" TEXT="If no packets were transmitted for a certain amount of time, the eNodeB can put the connection to a user in RRC Idle state &#x5982;&#x679c;&#x6ca1;&#x6709;&#x4f20;&#x8f93;&#xff0c;&#x5219;&#x8fdb;&#x5165;&#x5173;&#x95ed;&#x72b6;&#x6001;"/>
+<node CREATED="1305554967658" ID="ID_1331959405" MODIFIED="1305554985555" TEXT="The logical connection to the network and the assigned IP address is retained &#x5730;&#x5740;&#x88ab;&#x4fdd;&#x7559;"/>
+<node CREATED="1305554989256" ID="ID_1093071966" MODIFIED="1305554997053" TEXT="The radio connection is removed &#x4fe1;&#x53f7;&#x8fde;&#x63a5;&#x5173;&#x95ed;"/>
+<node CREATED="1305555001785" ID="ID_1710044496" MODIFIED="1305555002517" TEXT="The MME is informed about the Idle State as the IP packets arriving from the Internet cannot be delivered to the radio network "/>
+<node CREATED="1305555021321" ID="ID_1169680451" MODIFIED="1305555021952" TEXT="In this case the MME sends a paging message to the mobile device, re-establishing the radio bearer "/>
+<node CREATED="1305555048920" ID="ID_1623149703" MODIFIED="1305555049597" TEXT="If the mobile device in Idle states wants to send an IP packet, it has to request the establishment of a new radio bearer before the packet transmission "/>
+<node CREATED="1305555071732" ID="ID_421116918" MODIFIED="1305555072382" TEXT="When in Idle state, the network cannot control the mobility of the device "/>
+<node CREATED="1305555077622" ID="ID_635240078" MODIFIED="1305555078305" TEXT="The device can decide on its own to move from one cell to another "/>
+<node CREATED="1305555085708" ID="ID_1529915766" MODIFIED="1305555086445" TEXT="The device has to report a cell change to the network only if the tracking area is changed (a tracking area consists of several cells) "/>
+<node CREATED="1305555091659" ID="ID_1682364033" MODIFIED="1305555092457" TEXT="MME will send a paging message via all the cells within the tracking are when a new IP packet for the device arrives from the Internet "/>
+</node>
 </node>
 </node>
 <node CREATED="1305452846416" ID="ID_121108080" MODIFIED="1305452847064" TEXT="Energy Harvesting Techniques ">
