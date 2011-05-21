@@ -224,6 +224,7 @@
 <node CREATED="1298483492212" ID="ID_1608761996" MODIFIED="1298483495573" TEXT="Constructor">
 <node CREATED="1298483496230" ID="ID_1046318560" MODIFIED="1298483496796" TEXT="Shape3D() "/>
 <node CREATED="1298483503818" ID="ID_337666777" MODIFIED="1298483504465" TEXT="Shape3D(Geometry geometry, Appearance appearance) "/>
+<node CREATED="1305749765285" ID="ID_656333125" MODIFIED="1305749766464" TEXT="It contains a list of one or more Geometry component objects and a single Appearance component object. The geometry objects define the shape node&apos;s geometric data. The appearance object specifies that object&apos;s appearance attributes, including color, material, texture, and so on. "/>
 </node>
 <node CREATED="1298483523571" ID="ID_15993740" MODIFIED="1298483527360" TEXT="Getter/Setter">
 <node CREATED="1298483528011" ID="ID_468938900" MODIFIED="1298483528436" TEXT="void addGeometry(Geometry geometry) "/>
@@ -256,6 +257,7 @@
 <node CREATED="1305200033294" ID="ID_690569425" MODIFIED="1305200036141" TEXT="Front distance"/>
 <node CREATED="1305200038066" ID="ID_208596120" MODIFIED="1305200040701" TEXT="Back distance"/>
 <node CREATED="1305200075116" ID="ID_1900311000" MODIFIED="1305200075843" TEXT="LinearFog(Color3f colour, double frontDistance, double backDistance) "/>
+<node CREATED="1305750508458" ID="ID_1312865795" MODIFIED="1305750545654" TEXT="&#x7269;&#x4f53;&#x8ddd;&#x79bb;&#x4e0e;&#x70df;&#x96fe;&#x6574;&#x4f53;&#x6548;&#x679c;&#x76f8;&#x9664;&#xff0c;&#x67e5;&#x770b;&#x5f71;&#x54cd;&#x56e0;&#x5b50;&#xff0c;&#x7136;&#x540e;&#x505a;&#x989c;&#x8272;&#x53e0;&#x52a0;"/>
 </node>
 <node CREATED="1305200017485" ID="ID_1117288891" MODIFIED="1305200018156" TEXT="ExponentialFog "/>
 </node>
@@ -266,6 +268,7 @@
 <node CREATED="1305197324998" ID="ID_982559099" MODIFIED="1305197325569" TEXT="a point light source that shines in a specific direction "/>
 </node>
 <node CREATED="1305197340688" ID="ID_226163069" MODIFIED="1305197378289" TEXT="AmbientLight &#x6f2b;&#x53cd;&#x5c04;&#x5149;&#x6e90;"/>
+<node CREATED="1305752486300" ID="ID_808458751" MODIFIED="1305752493404" TEXT="&#x73af;&#x5883;&#x5149;&#x6548;&#x679c;&#x8ba1;&#x7b97;http://hi.baidu.com/fcl06/blog/item/ad858e163246fb59f2de3207.html/cmtid/ceaa4a826b25faac0df4d25b"/>
 </node>
 <node CREATED="1298122410044" ID="ID_890666002" MODIFIED="1298122411156" TEXT="Sound"/>
 <node CREATED="1298502545955" ID="ID_1611115215" MODIFIED="1298502561466" TEXT="BoundingSphere(&#x6548;&#x679c;&#x8303;&#x56f4;&#x7403;)">
@@ -305,6 +308,11 @@
 </node>
 <node CREATED="1298122457444" ID="ID_37887862" MODIFIED="1298122458319" TEXT="Texture">
 <node CREATED="1305197123282" ID="ID_1203371572" MODIFIED="1305197124346" TEXT="defines the texture image and filtering parameters used when tex- ture mapping is enabled. "/>
+<node CREATED="1305750613989" ID="ID_551853554" MODIFIED="1305750621360" TEXT="&#x8d34;&#x56fe;&#x7eb9;&#x7406;">
+<node CREATED="1305750640898" ID="ID_296430923" MODIFIED="1305750641596" TEXT="texture coordinates ">
+<node CREATED="1305751109655" ID="ID_1901405076" MODIFIED="1305751110612" TEXT="http://blog.csdn.net/doing5552/archive/2008/04/22/2315425.aspx"/>
+</node>
+</node>
 <node CREATED="1305575545923" ID="ID_750219781" MODIFIED="1305575548950" TEXT="Two modes">
 <node CREATED="1305575553994" ID="ID_271561079" MODIFIED="1305575561089" TEXT="CLAMP &#x5f3a;&#x5236;&#x62c9;&#x4f38;">
 <node CREATED="1305575620580" ID="ID_423703129" MODIFIED="1305575622328" TEXT="force"/>
@@ -340,6 +348,10 @@
 </node>
 <node CREATED="1298122463990" ID="ID_622029068" MODIFIED="1298122464958" TEXT="TransparencyAttributes">
 <node CREATED="1305197091804" ID="ID_1426741674" MODIFIED="1305197092889" TEXT="defines the attributes that affect transparency mode (blended, screen-door), blending function (used in transparency and antialiasing operations), and a blend value that defines the amount of trans- parency to be applied. "/>
+<node CREATED="1305752914293" ID="ID_1939841444" MODIFIED="1305752915080" TEXT="SCREEN_DOOR&#x6a21;&#x5f0f;&#x901a;&#x8fc7;&#x9009;&#x62e9;&#x67d0;&#x4e9b;&#x50cf;&#x7d20;&#x5b8c;&#x5168;&#x900f;&#x660e;&#x800c;&#x5176;&#x4ed6;&#x5b8c;&#x5168;&#x4e0d;&#x900f;&#x660e;&#x5b9e;&#x73b0;&#x3002;&#x5b8c;&#x5168;&#x900f;&#x660e;&#x7684;&#x50cf;&#x7d20;&#x6240;&#x5360;&#x6bd4;&#x4f8b;&#x4e0e;&#x6307;&#x5b9a;&#x7684;&#x900f;&#x660e;&#x53c2;&#x6570;&#x51e0;&#x8fd1;&#x76f8;&#x7b49;&#x3002;BLENDED&#x6a21;&#x5f0f;&#x900f;&#x660e;&#x5ea6;&#x5219;&#x901a;&#x8fc7;&#x5c06;&#x6240;&#x6709;&#x50cf;&#x7d20;&#x4ee5;&#x6307;&#x5b9a;&#x900f;&#x660e;&#x53c2;&#x6570;&#x767e;&#x5206;&#x6570;&#x900f;&#x660e;&#x5316;&#x3002;&#xff08;BLENDED transparency is achieved by having all pixels be paririally transparent int the percentage specified by the transparency parameter.&#xff09;&#x6df7;&#x5408;&#x65b9;&#x7a0b;&#x7531;srcBlendFunction&#x548c;dstBlendFunction&#x5c5e;&#x6027;&#x6307;&#x5b9a;&#x3002;">
+<node CREATED="1305752938579" ID="ID_1295864090" MODIFIED="1305752939271" TEXT="The SCREEN_DOOR mode creates gaps in the foreground colour to simulate different levels of transparency. The BLENDED mode blends the foreground and background colours to generate a more accurate and visually appealing result. "/>
+</node>
+<node CREATED="1305752838165" ID="ID_413659015" MODIFIED="1305752839220" TEXT="http://hi.baidu.com/straybirdsnest/blog/item/a02225429c0068046a63e57f.html"/>
 </node>
 <node CREATED="1305196783193" ID="ID_493902351" MODIFIED="1305196949555" TEXT="ColoringAttributes">
 <node CREATED="1305196814689" ID="ID_723214476" MODIFIED="1305196818125" TEXT="Color selection"/>
