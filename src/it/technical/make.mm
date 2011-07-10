@@ -56,7 +56,7 @@
 <node CREATED="1297633152325" ID="ID_1038663057" MODIFIED="1297633153394" TEXT="endef"/>
 </node>
 <node CREATED="1310338351857" ID="ID_347922101" MODIFIED="1310338360653" TEXT="&#x66f4;&#x65b0;&#x6587;&#x4ef6;&#x4fee;&#x6539;&#x4fe1;&#x606f;">
-<node CREATED="1310338361646" ID="ID_1182890364" MODIFIED="1310338491823" TEXT="&lt;code language=&quot;makefile&quot;&gt; update_modify_time=touch -d &quot;`stat -c %y $^ | sort -n | tail -1`&quot; $@ &lt;/code&gt;"/>
+<node CREATED="1310338361646" ID="ID_1182890364" MODIFIED="1310338589474" TEXT="&lt;code language=&quot;makefile&quot;&gt; update_modify_time=touch -d &quot;``stat -c %y $^ | sort -n | tail -1``&quot; $@ &lt;/code&gt;"/>
 </node>
 </node>
 <node CREATED="1297605299435" ID="ID_922394327" MODIFIED="1297605304228" POSITION="left" TEXT="&#x6587;&#x4ef6;&#x6307;&#x793a;">
