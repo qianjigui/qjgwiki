@@ -93,6 +93,7 @@ C++ 命名规则 [http://blog.csdn.net/huliang82/article/details/3870153]
 ==编译器==
 ===GCC===
   * templates may not be ‘virtual’, *typename* change to *class*
+  * 模板的定义与实现需要写在同一个头文件中
   * 模板中使用迭代:
 {{{
 typename std::list<_Tp>::iterator terrain_it;//define a iterator
@@ -123,3 +124,6 @@ fun(s);//Right
 什么时候需要使用引用、指针，何时创建一个内存区域，如何保持一致性？
 从现在的编程感觉来说，我认为需要*同一层次(函数体、循环体)*创建或者销毁数据。
 如果下层调用需要，通过指针传递进去。
+
+==编程注意事项==
+  * 数据越界，看看template complex abs() 实现
