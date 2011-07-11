@@ -127,3 +127,4 @@ fun(s);//Right
 
 ==编程注意事项==
   * 数据越界，看看template complex abs() 实现
+

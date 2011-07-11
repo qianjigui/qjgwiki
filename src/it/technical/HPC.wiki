@@ -1,0 +1,31 @@
+#summary 高性能计算
+<wiki:toc max_depth="3" />
+=高性能计算=
+
+==番外篇==
+我的研究生毕业设计的方向是利用大规模计算平台做分布式高性能计算，这也是我的第一次接触大型机、第一次做科学计算类应用的开发。
+
+==大视野==
+做高性能计算，需要结合指定的业务领域、利用现有的计算资源做定向开发。
+由于业务环境、硬件环境的要求，在做这方面的开发时需要考虑好框架和工具。
+
+==工具==
+目前主流的、用于并行计算的开源框架有：OpenMPI、OpenMP等相关联产品。
+
+==总结与教训==
+
+===Erlang的选用与问题===
+当时选用Erlang做数值计算是比较主观的，
+一方面刚好这个时候开始学习Erlang语言、并用其做了些小的应用程序，发现其的内建并行机制与消息传递特性非常方便，也想用到这个领域；
+另一方面也是受到这篇 [http://www.google.com/url?sa=t&source=web&cd=1&ved=0CBcQFjAA&url=http%3A%2F%2Fwww.erlang.org%2Fworkshop%2F2008%2FSess23.pdf&rct=j&q=High-performance%20technical%20computing%20with%20erlang&ei=0j8bTpybIYPQhAecwIDNBQ&usg=AFQjCNFT9Fh4Lp0QHtWcdCnyHnS3PNpOXw&sig2=vLBrA-MRZxo_PIUrUNHGfg&cad=rja 讨论文献]的影响。
+
+在真实使用中发现有如下问题:
+  * 数值计算所依赖的数据*多*、初期接口数据结构设计不好，就容易导致函数参数过多过长。
+  * 涉及大规模数据复制、传递、拷贝等问题时，由于Erlang的特性(做复制拷贝)，速度很慢。可以通过 *hipe_bifs* 库临时解决。
+  * 通过C扩展完成计算逻辑，这个尝试成功了。但是业务逻辑、语言间交互接口及编码复杂、繁琐，得不偿失。
+  * 如果在已经模块划分好的计算逻辑上做修改，由于Erlang的NIF、Driver、Port等接口的限制，很难只利用Erlang的消息传递、进程管理模块。
+
+如果结合协议业务的编程思路，可以硬性规定数值计算数据摆放格式，通过强制类型转换等手法做到简化接口，整合NIF扩展的问题。不过改动复杂，一旦数据集发生变化都需要大范围更改。
+
+附:
+  * [http://www.mikespook.com/2010/02/扯淡-erlang-的“适合”和“不适合”/ 扯淡-erlang-的“适合”和“不适合”]
