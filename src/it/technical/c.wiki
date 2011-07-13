@@ -44,6 +44,9 @@ Makefile 详细指南 [http://blog.csdn.net/liang13664759/archive/2007/09/04/177
                 -5%-6等于-5
 }}}
 
+==struct==
+[http://stackoverflow.com/questions/612328/difference-between-struct-and-typedef-struct-in-c]
+
 =C++ Programming language=
 ==命名空间==
 {{{
