@@ -16,12 +16,14 @@
 ===多线程模型===
 入门阅读:
   * [http://blog.csdn.net/frozen_fish/article/details/1679491 手把手教你Linux下的多线程设计－－Linux下多线程编程详解(一) ]
+  * [http://hi.baidu.com/ivy_jing/blog/item/abe56f123ecab414213f2e1c.html 类成员函数作pthread_create的函数参数]
 
 感觉问题的关键是了解专用API，在毕业设计时苦于向Erlang的迁移而发现了Erlang自带的线程API，觉得还是值得尝试的。
   * thread_create(...) 创建
   * thread_exit(...) 手动线程退出，返回相关结果
   * thread_join() 阻塞挂起，等待依赖线程退出
   * 利用互斥、信号量做调度
+  * 在老API的基础上，参数是类成员函数建议使用static方法
 
 ==总结与教训==
 
