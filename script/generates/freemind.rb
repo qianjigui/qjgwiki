@@ -35,11 +35,14 @@ module KnowledgeUtils
       private
       VALUE = 'TEXT'
 
+      def pre_spaces(level)
+        ('  '*level)
+      end
       def pre_tag(level)
         case level
         when 1 then '=='
         else
-          ('  '*level)+'*  '
+          pre_spaces(level)+'*  '
         end
       end
 
@@ -53,7 +56,7 @@ module KnowledgeUtils
 
       def traver(root, level, file)
         root.elements.each('node') do |node|
-          file.puts pre_tag(level)+process_text(node.attributes[VALUE], node)+end_tag(level)
+          file.puts pre_tag(level)+process_text(node.attributes[VALUE], node, level)+end_tag(level)
           traver(node, level+1, file)
         end
       end
@@ -74,11 +77,11 @@ module KnowledgeUtils
         end
       end
 
-      def process_text(value, node=nil)
+      def process_text(value, node=nil, level=1)
         if /<longnode>.*<\/longnode>/mi=~value
           long_node_parse(value)
         elsif value.nil?
-          richcontent(node)
+          richcontent(node, level)
         else
           value
         end
@@ -92,7 +95,7 @@ module KnowledgeUtils
         {:tag=>'&#160;',:value=>' '},
         {:tag=>/[\n\r]\s*[\n\r]/,:value=>"\n"},
       ]
-      def richcontent(node)
+      def richcontent(node, level)
         res = ''
         unless node.nil?
           node.elements.each('richcontent/html/body') do |body|
@@ -103,7 +106,8 @@ module KnowledgeUtils
             RICHCONTENT_TAGS.each do |t|
               tag_value.gsub!(t[:tag],t[:value])
             end
-            res = '<blockquote>'+tag_value+'</blockquote>'
+            res = "\n<blockquote>"+tag_value+"</blockquote>"
+            res.gsub!("\n","\n"+pre_spaces(level))
           end
         end
         res
