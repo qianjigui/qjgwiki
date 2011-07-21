@@ -22,13 +22,22 @@
       &#160;&#160;&#160; <i>structured block</i>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
+</node>
+<node CREATED="1311274723975" ID="ID_1057604326" MODIFIED="1311274728679" TEXT="clauses">
+<node CREATED="1311274748116" ID="ID_1268712881" MODIFIED="1311274760378" TEXT="if(scalar-expression)"/>
+<node CREATED="1311274786207" ID="ID_75758067" MODIFIED="1311274800151" TEXT="num_threads(integer-expression)"/>
+<node CREATED="1311274800884" ID="ID_680776796" MODIFIED="1311274805414" TEXT="private(list)"/>
+<node CREATED="1311274805710" ID="ID_109900500" MODIFIED="1311274811566" TEXT="firstprivate(list)"/>
+<node CREATED="1311274812108" ID="ID_134286608" MODIFIED="1311274822599" TEXT="shared(list)"/>
+<node CREATED="1311274822895" ID="ID_264207989" MODIFIED="1311274834115" TEXT="default(none|shared)"/>
+<node CREATED="1311274834460" ID="ID_1841389363" MODIFIED="1311274840756" TEXT="copyin(list)"/>
+<node CREATED="1311274841056" ID="ID_740615793" MODIFIED="1311274850281" TEXT="reduction(operator:list)"/>
 </node>
 </node>
 <node CREATED="1311254431628" ID="ID_386925736" MODIFIED="1311257181076" TEXT="Work-Sharing&#x4ee5;&#x4e0b;&#x4ee3;&#x7801;&#x5c06;&#x8fdb;&#x884c;&#x591a;&#x7ebf;&#x7a0b;&#x6539;&#x5199;">
 <node CREATED="1311257184721" ID="ID_666043063" MODIFIED="1311257215605" TEXT="iterations over the threads &#x4e0d;&#x4f9d;&#x8d56;&#x8fed;&#x4ee3;">
-<node CREATED="1311257257050" ID="ID_720247660" MODIFIED="1311257345436">
+<node CREATED="1311257257050" ID="ID_720247660" MODIFIED="1311274555721">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -38,15 +47,24 @@
       <b>#pragma omp for </b><i>[clause[[,] clause]...] </i>
     </p>
     <p>
-      <i>&#160;&#160;&#160;&#160;for-loop</i>
+      &#160;&#160;&#160;&#160;<i>for-loop</i>
     </p>
   </body>
 </html>
 </richcontent>
 </node>
+<node CREATED="1311274859153" ID="ID_627817025" MODIFIED="1311274862247" TEXT="clauses">
+<node CREATED="1311274886319" ID="ID_1362875657" MODIFIED="1311274890046" TEXT="private(list)"/>
+<node CREATED="1311274891877" ID="ID_1169926233" MODIFIED="1311274897744" TEXT="firstprivate(list)"/>
+<node CREATED="1311274898266" ID="ID_1900260359" MODIFIED="1311274904851" TEXT="lastprivate(list)"/>
+<node CREATED="1311274905161" ID="ID_1689432820" MODIFIED="1311274911964" TEXT="reduction(operator:list)"/>
+<node CREATED="1311274912360" ID="ID_1307374038" MODIFIED="1311274916975" TEXT="ordered"/>
+<node CREATED="1311274917286" ID="ID_104405635" MODIFIED="1311274939567" TEXT="schedule(kind`[`,chunk_size`]`)"/>
+<node CREATED="1311274940149" ID="ID_1974496496" MODIFIED="1311274943228" TEXT="nowait"/>
+</node>
 </node>
 <node CREATED="1311257192535" ID="ID_763206218" MODIFIED="1311257225267" TEXT="independent work units&#x76f8;&#x4e92;&#x72ec;&#x7acb;&#x7684;&#x4ee3;&#x7801;&#x5355;&#x5143;">
-<node CREATED="1311257257050" ID="ID_1591262793" MODIFIED="1311257435963">
+<node CREATED="1311257257050" ID="ID_1591262793" MODIFIED="1311274594596">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -56,33 +74,40 @@
       <b>#pragma omp sections </b><i>[clause[[,] clause]...] </i>
     </p>
     <p>
-      <i>{ </i>
+      &#160;{
     </p>
     <p>
-      <i>&#160;&#160;&#160;&#160;&#160;[</i><b>#pragma omp section</b><i>] </i>
+      &#160;&#160;&#160;&#160;&#160;[<b>#pragma omp section</b>]
     </p>
     <p>
-      <i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;structured block </i>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;structured block
     </p>
     <p>
-      <i>&#160;&#160;&#160;&#160;&#160;[</i><b>#pragma omp section</b><i>] </i>
+      &#160;&#160;&#160;&#160;&#160;[<b>#pragma omp section</b>]
     </p>
     <p>
-      <i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;structured block </i>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;structured block
     </p>
     <p>
       &#160;&#160;&#160;&#160;&#160;......
     </p>
     <p>
-      <i>}</i>
+      &#160;&#160;}
     </p>
   </body>
 </html>
 </richcontent>
 </node>
+<node CREATED="1311274985088" ID="ID_592346694" MODIFIED="1311274988190" TEXT="clauses">
+<node CREATED="1311274989114" ID="ID_1319397379" MODIFIED="1311274993411" TEXT="private(list)"/>
+<node CREATED="1311274993838" ID="ID_1799543590" MODIFIED="1311274998643" TEXT="firstprivate(list)"/>
+<node CREATED="1311274998984" ID="ID_1670452537" MODIFIED="1311275003682" TEXT="lastprivate(list)"/>
+<node CREATED="1311275003956" ID="ID_1294712119" MODIFIED="1311275010483" TEXT="reduction(operator:list)"/>
+<node CREATED="1311275010824" ID="ID_1220500141" MODIFIED="1311275013711" TEXT="nowait"/>
+</node>
 </node>
 <node CREATED="1311257226408" ID="ID_788966758" MODIFIED="1311257252431" TEXT="Only one thread executes the code block&#x53ea;&#x6709;&#x4e00;&#x4e2a;&#x7ebf;&#x7a0b;&#x8fd0;&#x884c;&#x7684;&#x4ee3;&#x7801;&#x5355;&#x5143;">
-<node CREATED="1311257257050" ID="ID_1660604550" MODIFIED="1311257482118">
+<node CREATED="1311257257050" ID="ID_1660604550" MODIFIED="1311274605758">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -92,18 +117,58 @@
       <b>#pragma omp single </b><i>[clause[[,] clause] ...] </i>
     </p>
     <p>
-      <i>&#160;&#160;&#160;&#160;&#160;structured block</i>
+      &#160;&#160;&#160;&#160;&#160;<i>structured block</i>
     </p>
   </body>
 </html>
 </richcontent>
+</node>
+<node CREATED="1311275029994" ID="ID_1309371516" MODIFIED="1311275035434" TEXT="clauses">
+<node CREATED="1311275036300" ID="ID_1317665760" MODIFIED="1311275039705" TEXT="private(list)"/>
+<node CREATED="1311275040001" ID="ID_399043603" MODIFIED="1311275044988" TEXT="firstprivate(list)"/>
+<node CREATED="1311275045262" ID="ID_1185482239" MODIFIED="1311275051320" TEXT="copyprivate(list)"/>
+<node CREATED="1311275051595" ID="ID_1694432213" MODIFIED="1311275052841" TEXT="nowait"/>
 </node>
 </node>
 <node CREATED="1311257521388" ID="ID_8061124" MODIFIED="1311257528355" TEXT="Combined Parallel"/>
 </node>
 <node CREATED="1311254435299" ID="ID_180751899" MODIFIED="1311254441691" TEXT="Barrier"/>
 </node>
-<node CREATED="1311254448928" ID="ID_1657897954" MODIFIED="1311254476288" TEXT="Clauses&#x9644;&#x52a0;&#x4fee;&#x9970;&#x548c;&#x6761;&#x6b3e;"/>
+<node CREATED="1311254448928" ID="ID_1657897954" MODIFIED="1311254476288" TEXT="Clauses&#x9644;&#x52a0;&#x4fee;&#x9970;&#x548c;&#x6761;&#x6b3e;">
+<node CREATED="1311275066111" ID="ID_1525812033" MODIFIED="1311275070973" TEXT="shared(list)">
+<node CREATED="1311275081059" ID="ID_216784158" MODIFIED="1311275099403" TEXT="&#x5229;&#x7528;&#x8fd9;&#x4e2a;&#x6709;&#x6548;&#x533a;&#x57df;&#x7684;&#x53d8;&#x91cf;"/>
+<node CREATED="1311275099684" ID="ID_1133079160" MODIFIED="1311275106539" TEXT="&#x5229;&#x7528;&#x6307;&#x9488;&#x6765;&#x8fbe;&#x5230;&#x6548;&#x679c;"/>
+</node>
+<node CREATED="1311275112176" ID="ID_1019140478" MODIFIED="1311275115433" TEXT="private(list)">
+<node CREATED="1311275116080" ID="ID_766655686" MODIFIED="1311275127043" TEXT="&#x5728;&#x5404;&#x81ea;&#x7ebf;&#x7a0b;&#x5185;&#x90e8;&#x521b;&#x5efa;&#x4e00;&#x4e2a;&#x526f;&#x672c;"/>
+<node CREATED="1311275132459" ID="ID_108279782" MODIFIED="1311275139761" TEXT="&#x5229;&#x7528;&#x4f20;&#x503c;&#x7684;&#x6548;&#x679c;"/>
+</node>
+<node CREATED="1311275143706" ID="ID_833737897" MODIFIED="1311275147583" TEXT="lastprivate(list)">
+<node CREATED="1311275151790" ID="ID_1551039736" MODIFIED="1311275182185" TEXT="&#x6309;&#x903b;&#x8f91;&#x5148;&#x540e;&#x5c06;&#x6700;&#x540e;&#x4e00;&#x4e2a;&#x88ab;&#x8d4b;&#x503c;&#x7684;&#x6570;&#x636e;&#x4f5c;&#x4e3a;&#x672c;&#x6570;&#x636e;&#x57df;&#x7684;&#x7ed3;&#x679c;"/>
+</node>
+<node CREATED="1311275187031" ID="ID_44574148" MODIFIED="1311275194041" TEXT="firstprivate(list)">
+<node CREATED="1311275203277" ID="ID_1188768481" MODIFIED="1311275209070" TEXT="&#x7528;&#x4e8e;&#x521d;&#x59cb;&#x5316;"/>
+<node CREATED="1311275209353" ID="ID_85561451" MODIFIED="1311275227663" TEXT="&#x5728;&#x5404;&#x4e2a;&#x7ebf;&#x7a0b;&#x4e2d;&#x53ef;&#x80fd;&#x9700;&#x8981;&#x7528;&#x5230;&#x5916;&#x9762;&#x7684;&#x521d;&#x59cb;&#x6570;&#x636e;"/>
+</node>
+<node CREATED="1311275241220" ID="ID_860560069" MODIFIED="1311275248930" TEXT="default(none|shared)">
+<node CREATED="1311275251635" ID="ID_1989014717" MODIFIED="1311275264596" TEXT="&#x7ed9;&#x4e0b;&#x9762;&#x6240;&#x6709;&#x7684;&#x6570;&#x636e;&#x6307;&#x5b9a;&#x9ed8;&#x8ba4;&#x533a;&#x95f4;"/>
+<node CREATED="1311275265012" ID="ID_1366430105" MODIFIED="1311275281651" TEXT="none:&#x4e0d;&#x6307;&#x5b9a;&#xff0c;&#x9700;&#x8981;&#x7a0b;&#x5e8f;&#x5458;&#x9010;&#x4e2a;&#x8bbe;&#x7f6e;"/>
+<node CREATED="1311275281915" ID="ID_358873981" MODIFIED="1311275292036" TEXT="shared:&#x9ed8;&#x8ba4;&#x90fd;&#x4e3a;shared(....)"/>
+</node>
+<node CREATED="1311275309485" ID="ID_1260521232" MODIFIED="1311275311370" TEXT="nowait">
+<node CREATED="1311275354637" ID="ID_1620680431" MODIFIED="1311275355701" TEXT="&#x5ffd;&#x7565; barrier&#xff08;&#x7b49;&#x5f85;&#xff09;&#x3002; Overrides the barrier implicit in a directive. "/>
+</node>
+<node CREATED="1311275440224" ID="ID_557967183" MODIFIED="1311275459417" TEXT="schedule(kind`[`,chunk_size`]`)">
+<node CREATED="1311275460154" ID="ID_1300513937" MODIFIED="1311275461522" TEXT="kind">
+<node CREATED="1311275462371" ID="ID_1493632343" MODIFIED="1311275472153" TEXT="&#x6709; dynamic&#x3001;guided&#x3001;runtime&#x3001;static &#x56db;&#x7a2e;&#x65b9;&#x6cd5;&#x3002;"/>
+<node CREATED="1311275483898" ID="ID_1754198025" MODIFIED="1311275498310" TEXT="&#x5404;&#x4e2a;&#x7ebf;&#x7a0b;&#x7684;for&#x8fed;&#x4ee3;&#x8303;&#x56f4;"/>
+</node>
+<node CREATED="1311275473243" ID="ID_719735212" MODIFIED="1311275473814" TEXT="&#x8a2d;&#x5b9a; for &#x8ff4;&#x5708;&#x7684;&#x5e73;&#x884c;&#x5316;&#x65b9;&#x6cd5;&#xff1b;"/>
+</node>
+</node>
+</node>
+<node CREATED="1311275364328" ID="ID_153449745" MODIFIED="1311275368396" POSITION="right" TEXT="&#x5b66;&#x4e60;&#x8d44;&#x6e90;">
+<node CREATED="1311275385907" ID="ID_1706241026" MODIFIED="1311275396095" TEXT="[http://kheresy.wordpress.com/2006/06/09/&#x7c21;&#x6613;&#x7684;&#x7a0b;&#x5f0f;&#x5e73;&#x884c;&#x5316;&#x65b9;&#x6cd5;&#xff0d;openmp&#xff08;&#x4e00;&#xff09;&#x7c21;&#x4ecb;/]"/>
 </node>
 </node>
 </map>

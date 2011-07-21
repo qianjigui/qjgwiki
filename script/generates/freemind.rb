@@ -103,7 +103,7 @@ module KnowledgeUtils
             RICHCONTENT_TAGS.each do |t|
               tag_value.gsub!(t[:tag],t[:value])
             end
-            res += tag_value
+            res = '<blockquote>'+tag_value+'</blockquote>'
           end
         end
         res
