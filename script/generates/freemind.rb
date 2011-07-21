@@ -53,7 +53,7 @@ module KnowledgeUtils
 
       def traver(root, level, file)
         root.elements.each('node') do |node|
-          file.puts pre_tag(level)+process_text(node.attributes[VALUE])+end_tag(level)
+          file.puts pre_tag(level)+process_text(node.attributes[VALUE], node)+end_tag(level)
           traver(node, level+1, file)
         end
       end
@@ -66,7 +66,7 @@ module KnowledgeUtils
           root = node
         end
         File.open(file.sub(mm,twi), 'w') do |f|
-          sum = process_text(root.attributes[VALUE])
+          sum = process_text(root.attributes[VALUE], root)
           f.puts '#summary '+ sum
           f.puts '<wiki:toc max_depth="3" />'
           f.puts '='+sum+'='
@@ -74,12 +74,39 @@ module KnowledgeUtils
         end
       end
 
-      def process_text(value)
+      def process_text(value, node=nil)
         if /<longnode>.*<\/longnode>/mi=~value
           long_node_parse(value)
+        elsif value.nil?
+          richcontent(node)
         else
           value
         end
+      end
+
+      RICHCONTENT_TAGS = [
+        {:tag=>'[', :value=>'`[`'},
+        {:tag=>']', :value=>'`]`'},
+        {:tag=>'<p>',:value=>"\n"},
+        {:tag=>'</p>',:value=>"\n"},
+        {:tag=>'&#160;',:value=>' '},
+        {:tag=>/[\n\r]\s*[\n\r]/,:value=>"\n"},
+      ]
+      def richcontent(node)
+        res = ''
+        unless node.nil?
+          node.elements.each('richcontent/html/body') do |body|
+            tag_value=''
+            body.elements.each do |tag|
+              tag_value += tag.to_s
+            end
+            RICHCONTENT_TAGS.each do |t|
+              tag_value.gsub!(t[:tag],t[:value])
+            end
+            res += tag_value
+          end
+        end
+        res
       end
 
       def long_node_parse(value)
