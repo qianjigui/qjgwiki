@@ -19,6 +19,7 @@ module KnowledgeUtils
         file_map = get_file_map(file_infos)
         File.open(@index_wiki, 'w') do |file|
           file.puts '#summary Wiki Index'
+          file.puts '<wiki:toc max_depth="3" />'
 
           file.puts '=按类别排序='
           generate_index(file_map, file)
