@@ -50,8 +50,7 @@
       &#160;&#160;&#160;&#160;<i>for-loop</i>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1311274859153" ID="ID_627817025" MODIFIED="1311274862247" TEXT="clauses">
 <node CREATED="1311274886319" ID="ID_1362875657" MODIFIED="1311274890046" TEXT="private(list)"/>
@@ -95,8 +94,7 @@
       &#160;&#160;}
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1311274985088" ID="ID_592346694" MODIFIED="1311274988190" TEXT="clauses">
 <node CREATED="1311274989114" ID="ID_1319397379" MODIFIED="1311274993411" TEXT="private(list)"/>
@@ -120,8 +118,7 @@
       &#160;&#160;&#160;&#160;&#160;<i>structured block</i>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1311275029994" ID="ID_1309371516" MODIFIED="1311275035434" TEXT="clauses">
 <node CREATED="1311275036300" ID="ID_1317665760" MODIFIED="1311275039705" TEXT="private(list)"/>
@@ -132,7 +129,89 @@
 </node>
 <node CREATED="1311257521388" ID="ID_8061124" MODIFIED="1311257528355" TEXT="Combined Parallel"/>
 </node>
-<node CREATED="1311254435299" ID="ID_180751899" MODIFIED="1311254441691" TEXT="Barrier"/>
+<node CREATED="1311254435299" ID="ID_180751899" MODIFIED="1311371829617" TEXT="Synchronization&#x7528;&#x4e8e;&#x7ebf;&#x7a0b;&#x540c;&#x6b65;">
+<node CREATED="1311371839652" ID="ID_1121450710" MODIFIED="1311371852807" TEXT="barrier">
+<node CREATED="1311371854686" ID="ID_1314419406" MODIFIED="1311371859174" TEXT="#pragma omp barrier"/>
+<node CREATED="1311371865101" ID="ID_1179594756" MODIFIED="1311371888543" TEXT="&#x8fd9;&#x6b64;&#x5904;&#x6240;&#x6709;&#x7ebf;&#x7a0b;&#x5168;&#x90e8;&#x6267;&#x884c;&#x5b8c;&#xff0c;&#x540c;&#x6b65;&#x540e;&#x7ee7;&#x7eed;&#x6267;&#x884c;"/>
+</node>
+<node CREATED="1311371896501" ID="ID_1381469070" MODIFIED="1311371899861" TEXT="Ordered">
+<node CREATED="1311371913080" ID="ID_1378383623" MODIFIED="1311371956168">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>#pragma</b>&#160;<b>omp</b>&#160;<b>ordered</b>
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160; <i>structured block</i>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1311372066990" ID="ID_1902840735" MODIFIED="1311372068221" TEXT="&#x6307;&#x5b9a;&#x63a5;&#x4e0b;&#x4f86;&#x88ab;&#x7a0b;&#x5f0f;&#xff0c;&#x5728;&#x88ab;&#x5e73;&#x884c;&#x5316;&#x7684; for &#x8ff4;&#x5708;&#x5c07;&#x4f9d;&#x5e8f;&#x7684;&#x57f7;&#x884c;&#x3002; Specifies that code under a parallelized for loop should be executed like a sequential loop. "/>
+</node>
+<node CREATED="1311372076199" ID="ID_1895062273" MODIFIED="1311372079529" TEXT="critical">
+<node CREATED="1311372081031" ID="ID_1516305058" MODIFIED="1311372147799">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>#pragma</b>&#160;<b>omp</b>&#160;<b>critical</b>&#160;<i>[(name)] </i>
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160; <i>structured block</i>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1311372153016" ID="ID_906969573" MODIFIED="1311372265810" TEXT="block&#x4e2d;&#x7684;&#x8bed;&#x53e5;&#x5c06;&#x901a;&#x8fc7;&#x9501;&#x673a;&#x5236;&#x6765;&#x7ef4;&#x62a4;&#x6267;&#x884c;&#x7684;&#x5355;&#x4e00;&#x6027;"/>
+<node CREATED="1311372210479" ID="ID_984043041" MODIFIED="1311372228736" TEXT="&#x901a;&#x8fc7;&#x540d;&#x5b57;name&#x6765;&#x5b9e;&#x73b0;&#x4e0d;&#x540c;&#x5730;&#x65b9;&#x7684;&#x9501;&#x673a;&#x5236;"/>
+</node>
+<node CREATED="1311372240773" ID="ID_827007005" MODIFIED="1311372244581" TEXT="atomic">
+<node CREATED="1311372267762" ID="ID_633177756" MODIFIED="1311372295437">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>#pragma</b>&#160;<b>omp</b>&#160;<b>atomic</b>
+    </p>
+    <p>
+      &#160;&#160;&#160; <i>statement</i>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1311372296306" ID="ID_792518696" MODIFIED="1311372306707" TEXT="&#x8bed;&#x53e5;&#x539f;&#x5b50;&#x5316;&#x6267;&#x884c;"/>
+</node>
+<node CREATED="1311372317958" ID="ID_654730046" MODIFIED="1311372321202" TEXT="master">
+<node CREATED="1311372324613" ID="ID_275108654" MODIFIED="1311372372930">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>#pragma</b>&#160;<b>omp</b>&#160;<b>master</b>
+    </p>
+    <p>
+      &#160;&#160;&#160; <i>structured block</i>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1311372373815" ID="ID_1395054546" MODIFIED="1311372382674" TEXT="&#x53ea;&#x6709;&#x4e3b;&#x7ebf;&#x7a0b;&#x6267;&#x884c;"/>
+</node>
+</node>
 </node>
 <node CREATED="1311254448928" ID="ID_1657897954" MODIFIED="1311254476288" TEXT="Clauses&#x9644;&#x52a0;&#x4fee;&#x9970;&#x548c;&#x6761;&#x6b3e;">
 <node CREATED="1311275066111" ID="ID_1525812033" MODIFIED="1311275070973" TEXT="shared(list)">
@@ -165,10 +244,26 @@
 </node>
 <node CREATED="1311275473243" ID="ID_719735212" MODIFIED="1311275473814" TEXT="&#x8a2d;&#x5b9a; for &#x8ff4;&#x5708;&#x7684;&#x5e73;&#x884c;&#x5316;&#x65b9;&#x6cd5;&#xff1b;"/>
 </node>
+<node CREATED="1311372406596" ID="ID_544925194" MODIFIED="1311372421365" TEXT="if(scalar-logical-expression)"/>
+<node CREATED="1311372428258" ID="ID_289229188" MODIFIED="1311372438164" TEXT="num_threads(scalar-integer-expression)"/>
+<node CREATED="1311372447669" ID="ID_619979244" MODIFIED="1311372455031" TEXT="reduction(operator:list)">
+<node CREATED="1311372455985" ID="ID_1875412181" MODIFIED="1311372502217" TEXT="operator:initial ization value">
+<node CREATED="1311372488883" ID="ID_929888444" MODIFIED="1311372506633" TEXT="`*`:0"/>
+<node CREATED="1311372507277" ID="ID_1205232730" MODIFIED="1311372526984" TEXT="`*`:1"/>
+<node CREATED="1311372507277" ID="ID_112871023" MODIFIED="1311372532246" TEXT="`-`:0"/>
+<node CREATED="1311372507277" ID="ID_338777555" MODIFIED="1311372547633" TEXT="`&amp;`:`~`0"/>
+<node CREATED="1311372507277" ID="ID_1354264393" MODIFIED="1311372557654" TEXT="`|`:0"/>
+<node CREATED="1311372507277" ID="ID_448303208" MODIFIED="1311372563704" TEXT="`^`:0"/>
+<node CREATED="1311372507277" ID="ID_650874343" MODIFIED="1311372571373" TEXT="`&amp;&amp;`:1"/>
+<node CREATED="1311372507277" ID="ID_165335805" MODIFIED="1311372576495" TEXT="`||`:0"/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1311275364328" ID="ID_153449745" MODIFIED="1311275368396" POSITION="right" TEXT="&#x5b66;&#x4e60;&#x8d44;&#x6e90;">
 <node CREATED="1311275385907" ID="ID_1706241026" MODIFIED="1311275396095" TEXT="[http://kheresy.wordpress.com/2006/06/09/&#x7c21;&#x6613;&#x7684;&#x7a0b;&#x5f0f;&#x5e73;&#x884c;&#x5316;&#x65b9;&#x6cd5;&#xff0d;openmp&#xff08;&#x4e00;&#xff09;&#x7c21;&#x4ecb;/]"/>
+<node CREATED="1311373252066" ID="ID_1842661791" MODIFIED="1311373267717" TEXT="[OpenMp&#x7f16;&#x7a0b;&#x6307;&#x5357; http://www.cnblogs.com/me115/archive/2011/01/25/1944567.html]"/>
+<node CREATED="1311373276300" ID="ID_1975021489" MODIFIED="1311373315130" TEXT="[OpenMP&#x5de5;&#x4f5c;&#x539f;&#x7406; http://cobweb.ecn.purdue.edu/ParaMount/iwomp2008/documents/chapman-underthehood]"/>
 </node>
 </node>
 </map>
