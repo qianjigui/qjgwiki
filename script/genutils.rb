@@ -5,6 +5,8 @@
 # http://www.opensource.org/licenses/mit-license.php
 $KCODE = 'utf8'
 
+require 'fileutils'
+
 module KnowledgeUtils
   module Generate
     class GenerateBase
@@ -47,6 +49,12 @@ module KnowledgeUtils
       def generate_imp
       end
       def clean_imp
+      end
+
+
+      def touch_mtime(dest, time)
+        time = File.mtime(time) if time.class==String
+        FileUtils.touch dest, :mtime => time
       end
 
       def cp_files(from, dest)

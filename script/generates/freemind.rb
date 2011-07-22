@@ -68,13 +68,15 @@ module KnowledgeUtils
         doc.elements.each('map/node') do |node|
           root = node
         end
-        File.open(file.sub(mm,twi), 'w') do |f|
+        newfile = file.sub(mm,twi)
+        File.open(newfile, 'w') do |f|
           sum = process_text(root.attributes[VALUE], root)
           f.puts '#summary '+ sum
           f.puts '<wiki:toc max_depth="3" />'
           f.puts '='+sum+'='
           traver(root, 1, f)
         end
+        touch_mtime newfile, file
       end
 
       def process_text(value, node=nil, level=1)

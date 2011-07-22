@@ -23,6 +23,7 @@ module KnowledgeUtils
             dest = dest_name(file, @src, @dir_index, k[:type], @wiki_suffix, @wiki_dir)
             if k[:cp]
               cp_files(file, dest)
+              touch_mtime dest, file
             else
               mv_files(file, dest)
             end

@@ -19,7 +19,12 @@ module KnowledgeUtils
         file_map = get_file_map(file_infos)
         File.open(@index_wiki, 'w') do |file|
           file.puts '#summary Wiki Index'
+
+          file.puts '=按类别排序='
           generate_index(file_map, file)
+
+          file.puts '=按修改时间排序='
+          generate_list_by_downmtime(file_infos, file)
         end
       end
 
@@ -50,6 +55,14 @@ module KnowledgeUtils
         keys.sort.each do |k|
           file.puts '  '*level + '* '+k
           generate_index(file_map[k], file, level+1)
+        end
+      end
+      def generate_list_by_downmtime(file_infos, file)
+        fis = file_infos.sort do |x,y|
+          y[:mtime]<=>x[:mtime]
+        end
+        fis.each do |info|
+          file.puts "  * `[`_#{info[:mtime].to_s}_`]` #{info[:summary]} [#{info[:link]}]"
         end
       end
       def get_file_map(file_infos)
@@ -85,7 +98,8 @@ module KnowledgeUtils
           link = File.basename(file,wiki_suffix)
           path = get_path(file).sub(wiki_suffix,'')
           summary = get_summary(file)
-          file_infos<<{:link => link, :path => path, :summary=>summary}
+          mtime = File.mtime(file)
+          file_infos<<{:link => link, :path => path, :summary=>summary, :mtime=>mtime}
         end
         file_infos
       end
