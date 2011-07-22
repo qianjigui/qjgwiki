@@ -148,8 +148,7 @@
       &#160;&#160;&#160;&#160; <i>structured block</i>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1311372066990" ID="ID_1902840735" MODIFIED="1311372068221" TEXT="&#x6307;&#x5b9a;&#x63a5;&#x4e0b;&#x4f86;&#x88ab;&#x7a0b;&#x5f0f;&#xff0c;&#x5728;&#x88ab;&#x5e73;&#x884c;&#x5316;&#x7684; for &#x8ff4;&#x5708;&#x5c07;&#x4f9d;&#x5e8f;&#x7684;&#x57f7;&#x884c;&#x3002; Specifies that code under a parallelized for loop should be executed like a sequential loop. "/>
 </node>
@@ -167,8 +166,7 @@
       &#160;&#160;&#160;&#160; <i>structured block</i>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1311372153016" ID="ID_906969573" MODIFIED="1311372265810" TEXT="block&#x4e2d;&#x7684;&#x8bed;&#x53e5;&#x5c06;&#x901a;&#x8fc7;&#x9501;&#x673a;&#x5236;&#x6765;&#x7ef4;&#x62a4;&#x6267;&#x884c;&#x7684;&#x5355;&#x4e00;&#x6027;"/>
 <node CREATED="1311372210479" ID="ID_984043041" MODIFIED="1311372228736" TEXT="&#x901a;&#x8fc7;&#x540d;&#x5b57;name&#x6765;&#x5b9e;&#x73b0;&#x4e0d;&#x540c;&#x5730;&#x65b9;&#x7684;&#x9501;&#x673a;&#x5236;"/>
@@ -187,8 +185,7 @@
       &#160;&#160;&#160; <i>statement</i>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1311372296306" ID="ID_792518696" MODIFIED="1311372306707" TEXT="&#x8bed;&#x53e5;&#x539f;&#x5b50;&#x5316;&#x6267;&#x884c;"/>
 </node>
@@ -206,8 +203,7 @@
       &#160;&#160;&#160; <i>structured block</i>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1311372373815" ID="ID_1395054546" MODIFIED="1311372382674" TEXT="&#x53ea;&#x6709;&#x4e3b;&#x7ebf;&#x7a0b;&#x6267;&#x884c;"/>
 </node>
@@ -261,9 +257,9 @@
 </node>
 </node>
 <node CREATED="1311275364328" ID="ID_153449745" MODIFIED="1311275368396" POSITION="right" TEXT="&#x5b66;&#x4e60;&#x8d44;&#x6e90;">
-<node CREATED="1311275385907" ID="ID_1706241026" MODIFIED="1311275396095" TEXT="[http://kheresy.wordpress.com/2006/06/09/&#x7c21;&#x6613;&#x7684;&#x7a0b;&#x5f0f;&#x5e73;&#x884c;&#x5316;&#x65b9;&#x6cd5;&#xff0d;openmp&#xff08;&#x4e00;&#xff09;&#x7c21;&#x4ecb;/]"/>
-<node CREATED="1311373252066" ID="ID_1842661791" MODIFIED="1311373267717" TEXT="[OpenMp&#x7f16;&#x7a0b;&#x6307;&#x5357; http://www.cnblogs.com/me115/archive/2011/01/25/1944567.html]"/>
-<node CREATED="1311373276300" ID="ID_1975021489" MODIFIED="1311373315130" TEXT="[OpenMP&#x5de5;&#x4f5c;&#x539f;&#x7406; http://cobweb.ecn.purdue.edu/ParaMount/iwomp2008/documents/chapman-underthehood]"/>
+<node CREATED="1311275385907" ID="ID_1706241026" MODIFIED="1311373819667" TEXT="[http://kheresy.wordpress.com/2006/06/09/&#x7c21;&#x6613;&#x7684;&#x7a0b;&#x5f0f;&#x5e73;&#x884c;&#x5316;&#x65b9;&#x6cd5;&#xff0d;openmp&#xff08;&#x4e00;&#xff09;&#x7c21;&#x4ecb;/ OpenMP&#x7b80;&#x4ecb;&#x4e0e;&#x8bed;&#x6cd5;&#x8be6;&#x7ec6;&#x5217;&#x8868;]"/>
+<node CREATED="1311373252066" ID="ID_1842661791" MODIFIED="1311373830872" TEXT="[http://www.cnblogs.com/me115/archive/2011/01/25/1944567.html OpenMp&#x7f16;&#x7a0b;&#x6750;&#x6599;&#x96c6;&#x5408;]"/>
+<node CREATED="1311373276300" ID="ID_1975021489" MODIFIED="1311373842891" TEXT="[http://cobweb.ecn.purdue.edu/ParaMount/iwomp2008/documents/chapman-underthehood OpenMP&#x5de5;&#x4f5c;&#x539f;&#x7406;]"/>
 </node>
 </node>
 </map>
