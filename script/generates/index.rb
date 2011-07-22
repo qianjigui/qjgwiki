@@ -50,7 +50,7 @@ module KnowledgeUtils
       def generate_index(file_map, file, level=1)
         info = file_map[:info]
         if info
-          file.puts '  '*level + '* '+info[:summary]+' ['+info[:link]+']'
+          file.puts '  '*level + '* '+" [#{info[:link]} #{info[:summary]}]"
         end
         keys = file_map.keys.select {|k| k!=:info}
         keys.sort.each do |k|
@@ -63,7 +63,7 @@ module KnowledgeUtils
           y[:mtime]<=>x[:mtime]
         end
         fis.each do |info|
-          file.puts "  * `[`_#{info[:mtime].to_s}_`]` #{info[:summary]} [#{info[:link]}]"
+          file.puts "  * `[`_#{info[:mtime].to_s}_`]` [#{info[:link]} #{info[:summary]} ]"
         end
       end
       def get_file_map(file_infos)
