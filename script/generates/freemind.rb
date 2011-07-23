@@ -108,8 +108,12 @@ module KnowledgeUtils
             RICHCONTENT_TAGS.each do |t|
               tag_value.gsub!(t[:tag],t[:value])
             end
-            res = "\n<blockquote>"+tag_value+"</blockquote>"
-            res.gsub!("\n","\n"+pre_spaces(level))
+            if tag_value=~/\{\{\{.+\}\}\}/m
+              res = tag_value
+            else
+              res = "\n<blockquote>"+tag_value+"</blockquote>"
+              res.gsub!("\n","\n"+pre_spaces(level))
+            end
           end
         end
         res
