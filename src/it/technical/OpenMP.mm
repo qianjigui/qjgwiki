@@ -254,14 +254,14 @@
 <node CREATED="1311372507277" ID="ID_165335805" MODIFIED="1311372576495" TEXT="`||`:0"/>
 </node>
 <node CREATED="1311442305143" ID="ID_1480502092" MODIFIED="1311442318763" TEXT="&#x5bf9;&#x4e8e;&#x7279;&#x6b8a;&#x7c7b;&#x578b;&#x8fd8;&#x662f;&#x5f97;&#x501f;&#x52a9;critical">
-<node CREATED="1311442322924" ID="ID_830233061" MODIFIED="1311453391222">
+<node CREATED="1311442322924" ID="ID_830233061" MODIFIED="1311453471371">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      {{{
+      &lt;code language=&quot;c++&quot;&gt;
     </p>
     <p>
       sum=0;
@@ -306,7 +306,7 @@
       &#160;&#160;}
     </p>
     <p>
-      }}}
+      &lt;/code&gt;
     </p>
   </body>
 </html>
