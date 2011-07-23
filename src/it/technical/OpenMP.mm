@@ -254,7 +254,7 @@
 <node CREATED="1311372507277" ID="ID_165335805" MODIFIED="1311372576495" TEXT="`||`:0"/>
 </node>
 <node CREATED="1311442305143" ID="ID_1480502092" MODIFIED="1311442318763" TEXT="&#x5bf9;&#x4e8e;&#x7279;&#x6b8a;&#x7c7b;&#x578b;&#x8fd8;&#x662f;&#x5f97;&#x501f;&#x52a9;critical">
-<node CREATED="1311442322924" ID="ID_830233061" MODIFIED="1311447131034">
+<node CREATED="1311442322924" ID="ID_830233061" MODIFIED="1311449765264">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -264,10 +264,10 @@
       sum = 0;
     </p>
     <p>
-      <b>#pragma</b>&#160;<b>omp</b>&#160;<b>parallel</b>&#160;<i>shared(n,a,sum)</i>&#160;<i>private(TID, sumLocal)</i>
+      <b>&#160;#pragma</b>&#160;<b>omp</b>&#160;<b>parallel</b>&#160;<i>shared(n,a,sum)</i>&#160;<i>private(TID, sumLocal)</i>
     </p>
     <p>
-      {
+      &#160;{
     </p>
     <p>
       &#160;&#160;&#160;&#160;TID = <b><i>omp_get_thread_num</i></b>();
@@ -300,7 +300,7 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
     </p>
     <p>
-      }
+      &#160;}
     </p>
   </body>
 </html>
