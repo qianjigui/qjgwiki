@@ -253,6 +253,60 @@
 <node CREATED="1311372507277" ID="ID_650874343" MODIFIED="1311372571373" TEXT="`&amp;&amp;`:1"/>
 <node CREATED="1311372507277" ID="ID_165335805" MODIFIED="1311372576495" TEXT="`||`:0"/>
 </node>
+<node CREATED="1311442305143" ID="ID_1480502092" MODIFIED="1311442318763" TEXT="&#x5bf9;&#x4e8e;&#x7279;&#x6b8a;&#x7c7b;&#x578b;&#x8fd8;&#x662f;&#x5f97;&#x501f;&#x52a9;critical">
+<node CREATED="1311442322924" ID="ID_830233061" MODIFIED="1311442448224">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      sum = 0;
+    </p>
+    <p>
+      #pragma omp parallel shared(n,a,sum) private(TID, sumLocal)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;TID = omp_get_thread_num();
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;sumLocal = 0;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;#pragma omp for
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;for(int i=0;i&lt;n;i++)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;sumLocal += a[i];
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;#pragma omp critical (update_sum)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;sum += sumLocal;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;printf(&quot;TID=%d: sumLocal=%d sum = %d \n&quot;, TID, sumLocal, sum);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
 </node>
 </node>
 </node>
