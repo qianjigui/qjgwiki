@@ -254,7 +254,7 @@
 <node CREATED="1311372507277" ID="ID_165335805" MODIFIED="1311372576495" TEXT="`||`:0"/>
 </node>
 <node CREATED="1311442305143" ID="ID_1480502092" MODIFIED="1311442318763" TEXT="&#x5bf9;&#x4e8e;&#x7279;&#x6b8a;&#x7c7b;&#x578b;&#x8fd8;&#x662f;&#x5f97;&#x501f;&#x52a9;critical">
-<node CREATED="1311442322924" ID="ID_830233061" MODIFIED="1311442448224">
+<node CREATED="1311442322924" ID="ID_830233061" MODIFIED="1311447131034">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -264,19 +264,19 @@
       sum = 0;
     </p>
     <p>
-      #pragma omp parallel shared(n,a,sum) private(TID, sumLocal)
+      <b>#pragma</b>&#160;<b>omp</b>&#160;<b>parallel</b>&#160;<i>shared(n,a,sum)</i>&#160;<i>private(TID, sumLocal)</i>
     </p>
     <p>
       {
     </p>
     <p>
-      &#160;&#160;&#160;&#160;TID = omp_get_thread_num();
+      &#160;&#160;&#160;&#160;TID = <b><i>omp_get_thread_num</i></b>();
     </p>
     <p>
       &#160;&#160;&#160;&#160;sumLocal = 0;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;#pragma omp for
+      &#160;&#160;&#160;&#160;<b>#pragma</b>&#160;<b>omp</b>&#160;<b>for</b>
     </p>
     <p>
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;for(int i=0;i&lt;n;i++)
@@ -285,7 +285,7 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;sumLocal += a[i];
     </p>
     <p>
-      &#160;&#160;&#160;&#160;#pragma omp critical (update_sum)
+      &#160;&#160;&#160;&#160;<b>#pragma</b>&#160;<b>omp</b>&#160;<b>critical</b>&#160;<i>(update_sum)</i>
     </p>
     <p>
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{
