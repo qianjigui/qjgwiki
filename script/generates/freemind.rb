@@ -105,10 +105,12 @@ module KnowledgeUtils
             body.elements.each do |tag|
               tag_value += tag.to_s
             end
+            #做GoogleWiki代码格式类判断
             is_code = tag_value=~/\{\{\{.+\}\}\}/m
             RICHCONTENT_TAGS.each do |t|
               tag_value.gsub!(t[:tag],t[:value]) unless (t[:codeignore] and is_code)
             end
+            #如果是代码，就需要对HTML做转义
             if is_code
               require 'cgi'
               res = CGI.unescapeHTML(tag_value)
