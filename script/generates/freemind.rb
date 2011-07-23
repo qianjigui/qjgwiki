@@ -95,7 +95,7 @@ module KnowledgeUtils
         {:tag=>'<p>',:value=>"\n"},
         {:tag=>'</p>',:value=>"\n"},
         {:tag=>'&#160;',:value=>' '},
-        {:tag=>/[\n\r]\s*[\n\r]/,:value=>"\n\n"},
+        {:tag=>/[\n\r]\s*[\n\r]/,:value=>"\n"},
       ]
       def richcontent(node, level)
         res = ''
