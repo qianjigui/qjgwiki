@@ -90,8 +90,8 @@ module KnowledgeUtils
       end
 
       RICHCONTENT_TAGS = [
-        {:tag=>'[', :value=>'`[`'},
-        {:tag=>']', :value=>'`]`'},
+        {:tag=>'[', :value=>'`[`', :codeignore => true},
+        {:tag=>']', :value=>'`]`', :codeignore => true},
         {:tag=>'<p>',:value=>"\n"},
         {:tag=>'</p>',:value=>"\n"},
         {:tag=>'&#160;',:value=>' '},
@@ -105,10 +105,15 @@ module KnowledgeUtils
             body.elements.each do |tag|
               tag_value += tag.to_s
             end
-            RICHCONTENT_TAGS.each do |t|
-              tag_value.gsub!(t[:tag],t[:value])
+            is_code = tag_value=~/\{\{\{.+\}\}\}/m
+            if is_code
+              require 'cgi'
+              tag_value = CGI.unescapeHTML(tag_value)
             end
-            if tag_value=~/\{\{\{.+\}\}\}/m
+            RICHCONTENT_TAGS.each do |t|
+              tag_value.gsub!(t[:tag],t[:value]) unless (t[:codeignore] and is_code)
+            end
+            if is_code
               res = tag_value
             else
               res = "\n<blockquote>"+tag_value+"</blockquote>"
