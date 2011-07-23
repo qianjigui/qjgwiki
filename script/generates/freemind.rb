@@ -106,15 +106,12 @@ module KnowledgeUtils
               tag_value += tag.to_s
             end
             is_code = tag_value=~/\{\{\{.+\}\}\}/m
-            if is_code
-              require 'cgi'
-              tag_value = CGI.unescapeHTML(tag_value)
-            end
             RICHCONTENT_TAGS.each do |t|
               tag_value.gsub!(t[:tag],t[:value]) unless (t[:codeignore] and is_code)
             end
             if is_code
-              res = tag_value
+              require 'cgi'
+              res = CGI.unescapeHTML(tag_value)
             else
               res = "\n<blockquote>"+tag_value+"</blockquote>"
               res.gsub!("\n","\n"+pre_spaces(level))
