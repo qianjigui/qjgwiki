@@ -18,6 +18,8 @@
   * [http://blog.csdn.net/frozen_fish/article/details/1679491 手把手教你Linux下的多线程设计－－Linux下多线程编程详解(一) ]
   * [http://hi.baidu.com/ivy_jing/blog/item/abe56f123ecab414213f2e1c.html 类成员函数作pthread_create的函数参数]
   * [http://hi.baidu.com/jiaju111/blog/item/f896ba2a1049e43f5343c180.html Linux多线程模型]
+  * [http://www.searchtb.com/2011/01/pthreads-mutex-vs-pthread-spinlock.html Pthread互斥量与自旋锁的比较]
+  * [http://www.cnblogs.com/motadou/archive/2010/02/13/1668075.html Pthread条件变量的调用关系]
 
 感觉问题的关键是了解专用API，在毕业设计时苦于向Erlang的迁移而发现了Erlang自带的线程API，觉得还是值得尝试的。
   * Fork/Join模型
@@ -26,6 +28,7 @@
   * thread_join() 阻塞挂起，等待依赖线程退出
   * 利用互斥、信号量做调度
   * 在老API的基础上，参数是类成员函数建议使用static方法
+
 
 ===OpenMP===
 当我们正在自己组建具有一定通用效果的多线程模型时，已经有了专业的工具帮助我们做并行化处理。这就是[ItTechnicalOpenmp OpenMP].
