@@ -12,14 +12,9 @@ time指令中的标准输出就是由：墙上时间、用户态调用、内核�
 ==基本操作==
 
 ==Mercurial SCM==
-===Add a footprint for a url===
-  # 获取fingerprint(注意空格位置等):
-{{{
-openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 -fingerprint -noout -in /dev/stdin
-}}}
-  # 在~/.hgrc文件的[hostfingerprints]部分添加一行: host=fingerprint
+[ItTechnicalMercurial MercurialSCM使用知识]
 
-===Firefox打印问题===
+==Firefox打印问题==
 很多时候，页面被不正常的分页或者打印内容不全等一系列问题的时候，可以考虑检查css代码。
   * overflow 需要关闭
   * padding/margin 需要调节

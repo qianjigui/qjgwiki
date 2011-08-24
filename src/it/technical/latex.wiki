@@ -2,6 +2,20 @@
 <wiki:toc max_depth="3" />
 =Latex=
 
+==页面布局==
+====How do I vertically center the text on a page?====
+纵向居中:
+{{{
+\begin{document}
+%
+\vspace*{\fill}
+text
+\vspace*{\fill}
+%
+\end{document}
+}}}
+
+
 ==字号字体==
 [http://qianjigui.iteye.com/blog/841052 字体大小对照表]
 
@@ -39,6 +53,9 @@
 || 小六号    ||   6.875 ||     2.416   很好匹配  ||
 || 七号      ||    5.25 ||      1.845            ||
 || 八号      ||    4.5  ||       1.581           ||
+
+==Counter设置==
+http://www.personal.ceu.hu/tex/counters.htm
 
 ==IEEE模板常见问题==
 ===IEEE模板的尾页如何平衡===
