@@ -2,8 +2,143 @@
 <wiki:toc max_depth="3" />
 =Latex=
 
+==目录控制==
+===经典用例===
+充分利用自定义目录、标号和修正。
+
+{{{
+\documentclass[a4paper,jounral]{report}
+\usepackage{../paper/sty/dcuappendices}
+\input{../paper/src/config}
+\usepackage[top=\finalReporttoptextmargin, bottom=\finalReportbottomtextmargin, left=\finalReportinnersidemargin, right=\finalReportoutersidemargin]{geometry}
+\usepackage{pdfpages}
+\input{src/global}
+\input{src/config}
+
+% Set link in the document
+\usepackage{hyperref}
+\hypersetup{colorlinks,%
+            citecolor=black,%
+            filecolor=black,%
+            linkcolor=black,%
+            urlcolor=black,%
+            pdfauthor={\finalReportAuthor},
+            pdftitle={\finalReportTitle},
+            pdfsubject={xxx},
+            pdfkeywords={xxx},
+            pdftex
+}
+\usepackage{appendix}
+
+
+\begin{document}
+\pagenumbering{Roman}
+\setcounter{page}{1}
+\input{coversheet/coversheet}
+
+\newpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+\pagestyle{ieeeheadings}
+
+\input{coversheet/acknowledgements}
+
+\newpage
+\input{coversheet/declaration}
+
+\newpage
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\finalPaperBaseTitle}
+\includepdf[pages=1-5]{../paper/output/main.pdf}
+
+\appendix
+\noappendicestocpagenum
+
+\newpage
+\setcounter{page}{0}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Appendices}
+
+\renewcommand{\thepage}{A}
+\phantomsection
+\addcontentsline{toc}{section}{\finalPaperAppATitle}
+\includepdf[pages=7]{../paper/output/main.pdf}
+
+\renewcommand{\thepage}{A-\arabic{page}}
+\includepdf[pages=-]{../../report/output/main-final.pdf}
+
+\newpage
+\setcounter{page}{0}
+
+\renewcommand{\thepage}{B}
+\phantomsection
+\addcontentsline{toc}{section}{\finalPaperAppBTitle}
+\includepdf[pages=9]{../paper/output/main.pdf}
+
+\renewcommand{\thepage}{B-\arabic{page}}
+\includepdf[pages=10-11]{../paper/output/main.pdf}
+
+\newpage
+\setcounter{page}{0}
+
+\renewcommand{\thepage}{C}
+\phantomsection
+\addcontentsline{toc}{section}{\finalPaperAppCTitle}
+\includepdf[pages=13]{../paper/output/main.pdf}
+
+\renewcommand{\thepage}{C-\arabic{page}}
+\includepdf[pages=14-16]{../paper/output/main.pdf}
+
+\end{document}
+}}}
+
 ==页面布局==
-====How do I vertically center the text on a page?====
+===自定义布局===
+{{{
+\ProvidesPackage{dcuappendices}
+
+%Set Header & Footer
+\def\ps@ieeeheadings{%
+\def\@oddhead{\mbox{}\scriptsize\MakeUppercase{\finalReportLeftheaderTitle} \hfil \thepage}%
+\def\@evenhead{\mbox{}\scriptsize\MakeUppercase{\finalReportLeftheaderTitle} \hfil \thepage}%
+\def\@oddfoot{}%
+\def\@evenfoot{}}
+}}}
+
+===页面边距设置===
+{{{
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+}}}
+
+===强制figure,table进行放置停止float===
+Try the placeins package: it defines a \FloatBarrier command beyond which floats may not pass.
+A package option allows you to declare that floats may not pass a \section command, but you can place \FloatBarriers wherever you choose.
+
+{{{
+\usepackage[section]{placeins}
+% Let the subsection can FloatBarrier
+\let \oldsubsection \subsection
+\renewcommand{\subsection}[2][]{
+  \FloatBarrier
+  \oldsubsection#1{#2}
+}
+
+% Let the subsubsection can FloatBarrier
+\let \oldsubsubsection \subsubsection
+\renewcommand{\subsubsection}[2][]{
+  \FloatBarrier
+  \oldsubsubsection#1{#2}
+}
+}}}
+
+===How do I vertically center the text on a page?===
 纵向居中:
 {{{
 \begin{document}
@@ -15,6 +150,14 @@ text
 \end{document}
 }}}
 
+==合并PDF==
+{{{
+\usepackage{pdfpages}
+\includepdf[pages=1-5]{../paper/output/main.pdf}
+\includepdf[pages=-]{../paper/output/main.pdf}
+\includepdf[pages=3-]{../paper/output/main.pdf}
+\includepdf[pages=13]{../paper/output/main.pdf}
+}}}
 
 ==字号字体==
 [http://qianjigui.iteye.com/blog/841052 字体大小对照表]
