@@ -19,6 +19,39 @@ time指令中的标准输出就是由：墙上时间、用户态调用、内核�
   * overflow 需要关闭
   * padding/margin 需要调节
 
+==网络设置==
+===VPN===
+[http://ubuntuforums.org/showthread.php?p=7002673 需要设置个把属性]
+
+{{{
+pppd[5094]: pppd 2.4.5 started by root, uid 0
+pppd[5094]: Using interface ppp0
+pppd[5094]: Connect: ppp0 <--> /dev/pts/2
+pppd[5094]: LCP terminated by peer (WM--^Al^@<M-Mt^@^@^CM-")
+pppd[5094]: Connection terminated.
+pppd[5094]: Modem hangup
+pppd[5094]: Exit.
+pppd[5238]: Plugin /usr/lib/pppd/2.4.5//nm-pptp-pppd-plugin.so loaded.
+pppd[5238]: pppd 2.4.5 started by root, uid 0
+pppd[5238]: Using interface ppp0
+pppd[5238]: Connect: ppp0 <--> /dev/pts/2
+pppd[5238]: LCP: timeout sending Config-Requests
+pppd[5238]: Connection terminated.
+pppd[5238]: Modem hangup
+pppd[5238]: Exit.
+pppd[5427]: Plugin /usr/lib/pppd/2.4.5//nm-pptp-pppd-plugin.so loaded.
+pppd[5427]: pppd 2.4.5 started by root, uid 0
+pppd[5427]: Using interface ppp0
+pppd[5427]: Connect: ppp0 <--> /dev/pts/2
+pppd[5427]: CHAP authentication succeeded
+kernel: [20287.732748] PPP BSD Compression module registered
+kernel: [20287.768881] PPP Deflate Compression module registered
+pppd[5427]: local  IP address 172.0.0.18
+pppd[5427]: remote IP address 172.0.0.1
+pppd[5427]: primary   DNS address 20x.1x5.xxx.xxx
+pppd[5427]: secondary DNS address 20x.1x5.xxx.xxx
+}}}
+
 ==屏幕问题==
 
 ===开机黑屏/中途使用突然黑屏===

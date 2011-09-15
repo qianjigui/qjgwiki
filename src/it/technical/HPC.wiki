@@ -14,7 +14,7 @@
 另外可以考虑选用线程模型来做局部的并行处理。
 
 ===多线程模型===
-入门阅读:
+====入门阅读====
   * [http://blog.csdn.net/frozen_fish/article/details/1679491 手把手教你Linux下的多线程设计－－Linux下多线程编程详解(一) ]
   * [http://hi.baidu.com/ivy_jing/blog/item/abe56f123ecab414213f2e1c.html 类成员函数作pthread_create的函数参数]
   * [http://hi.baidu.com/jiaju111/blog/item/f896ba2a1049e43f5343c180.html Linux多线程模型]
@@ -29,9 +29,16 @@
   * 利用互斥、信号量做调度
   * 在老API的基础上，参数是类成员函数建议使用static方法
 
+====同步====
+Futex原语
+
+http://randu.org/tutorials/threads/
 
 ===OpenMP===
 当我们正在自己组建具有一定通用效果的多线程模型时，已经有了专业的工具帮助我们做并行化处理。这就是[ItTechnicalOpenmp OpenMP].
+
+===OpenMPI===
+利用多线程进行分布式运算的推荐框架[ItTechnicalOpenmpi OpenMPI].
 
 ==总结与教训==
 
@@ -47,6 +54,8 @@
   * 如果在已经模块划分好的计算逻辑上做修改，由于Erlang的NIF、Driver、Port等接口的限制，很难只利用Erlang的消息传递、进程管理模块。
 
 如果结合协议业务的编程思路，可以硬性规定数值计算数据摆放格式，通过强制类型转换等手法做到简化接口，整合NIF扩展的问题。不过改动复杂，一旦数据集发生变化都需要大范围更改。
+
+其Driver PThread的实现多半是基于PThread的底层Library，在利用NIF做pthread构建时可以很好地连接C扩展与Erlang。
 
 附:
   * [http://www.mikespook.com/2010/02/扯淡-erlang-的“适合”和“不适合”/ 扯淡-erlang-的“适合”和“不适合”]
