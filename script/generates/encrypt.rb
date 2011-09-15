@@ -39,7 +39,7 @@ module KnowledgeUtils
 
       def prepare_imp
         @enc = DesEncrypt.new(@conf[:enc][:key], @conf[:enc][:iv])
-        clean
+        #clean
       end
 
       def generate_imp
@@ -47,7 +47,11 @@ module KnowledgeUtils
         encfiles.each do |file|
           enc_file =file.gsub(@encrypt_dir,'')+@encrypt_suffix
           begin
-            @enc.encrypt(file,enc_file)
+            if refresh?(file,enc_file)
+              File.delete(enc_file) if File.exist?(enc_file)
+              @enc.encrypt(file,enc_file)
+              @conf.log('Encrypt',file)
+            end
           rescue ArgumentError
             @conf.warn(file, 'is Empty.', 'Ignore!')
           end

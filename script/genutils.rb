@@ -60,9 +60,13 @@ module KnowledgeUtils
       end
 
       def refresh?(file,dest)
-        fm = get_mtime(file)
-        dm = get_mtime(dest)
-        fm>dm
+        if File.exist?(dest)
+          fm = get_mtime(file)
+          dm = get_mtime(dest)
+          fm>dm
+        else
+          true
+        end
       end
 
       def touch_mtime(dest, time)
