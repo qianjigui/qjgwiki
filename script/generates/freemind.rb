@@ -78,7 +78,7 @@ module KnowledgeUtils
           traver(root, 1, f)
         end
         touch_mtime newfile, file
-        @conf.debug('Freemind to Wiki:', file)
+        @conf.log('Freemind to Wiki:', file)
       end
 
       def process_text(value, node=nil, level=1)
