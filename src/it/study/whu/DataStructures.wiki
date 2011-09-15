@@ -69,5 +69,64 @@ BUBBLE-SORT(A)
 ====O(nlog(n))排序方法====
 
 =====归并排序=====
+{{{
+#include <stdio.h>
+
+#define MAX (5)
+
+int data[MAX];
+int tmp[MAX];
+
+void merge(int b,int e)
+{
+  printf("[%d,%d)\n",b,e);
+  int m = (b+e)/2;
+  int p = b;
+  int q = m;
+  int i = 0;
+  while((p<m)&&(q<e)&&(i<e-b+1)){
+    if(data[p]<=data[q]) {
+      tmp[i]=data[p];
+      p++;
+    }else{
+      tmp[i]=data[q];
+      q++;
+    }
+    i++;
+  }
+  while(p<m)tmp[i++]=data[p++];
+  while(q<e)tmp[i++]=data[q++];
+  for(i=b;i<e;i++)
+    data[i]=tmp[i-b];
+}
+
+void merge_sort(int b,int e)
+{
+  if(e-b>1){
+    int m = (e+b)/2;
+    merge_sort(b,m);
+    merge_sort(m,e);
+    merge(b,e);
+  }
+}
+
+void msort(int length)
+{
+  merge_sort(0,length);
+}
+
+int main()
+{
+  int i;
+  for(i=0;i<MAX;i++)
+    data[i]=MAX-i;
+  msort(MAX);
+  for(i=0;i<MAX;i++)
+    printf("%d,",data[i]);
+  printf("\n");
+  return 0;
+}
+}}}
+
 =====堆排序=====
 =====快速排序=====
