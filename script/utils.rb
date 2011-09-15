@@ -2,7 +2,7 @@ require 'rake'
 require 'yaml'
 
 module KnowledgeUtils
-  IS_DEBUG = false
+  IS_DEBUG = true
 
   MODULE_PATH = File.dirname(File.expand_path(__FILE__))
 

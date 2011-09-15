@@ -11,7 +11,7 @@ module KnowledgeUtils
         @wiki_suffix = @wiki[:suffix]
         @dir_index = /\A#{@conf[:build][:src][:index]}/i
 
-        clean
+        #clean
       end
 
       def generate_imp
@@ -22,8 +22,10 @@ module KnowledgeUtils
           FileSet.files(@src+'/**/**'+k[:type], /\/#{@encrypt_dir}\//).each do |file|
             dest = dest_name(file, @src, @dir_index, k[:type], @wiki_suffix, @wiki_dir)
             if k[:cp]
-              cp_files(file, dest)
-              touch_mtime dest, file
+              if refresh?(file,dest)
+                cp_files(file, dest)
+                touch_mtime dest, file
+              end
             else
               mv_files(file, dest)
             end
@@ -38,10 +40,6 @@ module KnowledgeUtils
         end
       end
 
-      private
-      def dest_name(file,src,dir_index,suffix,new_suffix, dest)
-        dest+File.dirname(file).sub(src,'').split('/').map{|path| path.capitalize}.join('')+File.basename(file).sub(dir_index,'').capitalize.sub(suffix, new_suffix)
-      end
     end
   end
 end

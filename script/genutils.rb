@@ -51,6 +51,19 @@ module KnowledgeUtils
       def clean_imp
       end
 
+      def get_mtime(file)
+        File.mtime(file)
+      end
+
+      def dest_name(file,src,dir_index,suffix,new_suffix, dest)
+        dest+File.dirname(file).sub(src,'').split('/').map{|path| path.capitalize}.join('')+File.basename(file).sub(dir_index,'').capitalize.sub(suffix, new_suffix)
+      end
+
+      def refresh?(file,dest)
+        fm = get_mtime(file)
+        dm = get_mtime(dest)
+        fm>dm
+      end
 
       def touch_mtime(dest, time)
         time = File.mtime(time) if time.class==String

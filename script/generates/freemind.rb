@@ -11,7 +11,7 @@ module KnowledgeUtils
       def prepare_imp
         @wiki_dir = @wiki[:dir]+'/'
         @wiki_suffix = @wiki[:suffix]
-        @dir_index = @conf[:build][:src][:index]
+        @dir_index = /\A#{@conf[:build][:src][:index]}/i
 
         @mm = @types[:mm]
         @twi= @types[:twi]
@@ -21,7 +21,8 @@ module KnowledgeUtils
 
       def generate_imp
         FileSet.files(@src+'/**/**'+@mm, /\/#{@encrypt_dir}\//).each do |file|
-          to_wiki(file, @mm, @twi)
+          dest = dest_name(file, @src, @dir_index, @mm, @wiki_suffix, @wiki_dir)
+          to_wiki(file, @mm, @twi) if refresh?(file,dest)
         end
       end
 
@@ -77,6 +78,7 @@ module KnowledgeUtils
           traver(root, 1, f)
         end
         touch_mtime newfile, file
+        @conf.debug('Freemind to Wiki:', file)
       end
 
       def process_text(value, node=nil, level=1)
