@@ -129,4 +129,173 @@ int main()
 }}}
 
 =====堆排序=====
+{{{
+
+#include <stdio.h>
+
+#define MAX (2000)
+
+int data[MAX];
+int length;
+int heapsize;
+
+inline int left(int i)
+{
+  return 2*i;
+}
+
+inline int right(int i)
+{
+  return 2*i+1;
+}
+
+inline int parent(int i)
+{
+  return i/2;
+}
+
+void swap(int &a , int &b)
+{
+  int tmp = a;
+  a = b;
+  b = tmp;
+}
+
+void max_heapity(int i)
+{
+  int l=left(i);
+  int r=right(i);
+  int largest = i;
+  if((l<heapsize)&&(data[largest]<data[l]))largest=l;
+  if((r<heapsize)&&(data[largest]<data[r]))largest=r;
+  if(i!=largest){
+    swap(data[i],data[largest]);
+    max_heapity(largest);
+  }
+}
+
+void build_heap(int len)
+{
+  int i;
+  length = len;
+  heapsize=length;
+  for(i=length/2;i>=1;i--)
+    max_heapity(i);
+}
+
+void heap_sort(int len)
+{
+  int i;
+  build_heap(len);
+  for(i=len-1;i>=1;i--){
+    swap(data[0],data[i]);
+    heapsize--;
+    max_heapity(0);
+  }
+}
+
+int extract()
+{
+  if(heapsize<=0){
+    printf("Heap Empty.\n");
+    return -1;
+  }
+  int value = data[0];
+  data[0] = data[heapsize-1];
+  heapsize--;
+  max_heapity(0);
+  return value;
+}
+
+void increase(int i,int key)
+{
+  data[i] = key;
+  int p = parent(i);
+  while(data[p]<data[i]){
+    swap(data[p],data[i]);
+    i=p;
+    p = parent(i);
+  }
+}
+
+void insert(int key)
+{
+  if(heapsize>=MAX){
+    printf("Heap Full.\n");
+    return;
+  }
+  increase(heapsize,key);
+  heapsize++;
+}
+
+int main()
+{
+  int i;
+  int value;
+  for(i=0;i<MAX;i++)
+    data[i]=MAX-i;
+  heap_sort(MAX);
+  for(i=0;i<MAX;i++)
+    if(i+1!=data[i])
+      printf("%d,",data[i]);
+  printf("Finish Sort\n");
+  heapsize = 0;
+  printf("%d\n",extract());
+  for(i=0;i<10;i++)
+    insert(i);
+  for(i=0;i<11;i++)
+    if(9-i!=(value=extract()))
+      printf("Er:%d,",value);
+  printf("Finish IO\n");
+
+  return 0;
+}
+}}}
+
 =====快速排序=====
+{{{
+
+#include <stdio.h>
+
+#define MAX (2000000)
+
+int data[MAX];
+void swap(int &a , int &b)
+{
+  int tmp = a;
+  a = b;
+  b = tmp;
+}
+
+void qsort(int l,int r)
+{
+  int mid = (l+r)/2;
+  int m=l;
+  int n=r;
+  while(m<=n){
+    while(data[m]<data[mid])m++;
+    while(data[n]>data[mid])n--;
+    if(m<=n){
+      swap(data[m],data[n]);
+      m++;
+      n--;
+    }
+  }
+  if(m<r) qsort(m,r);
+  if(l<n) qsort(l,n);
+}
+
+int main()
+{
+  int i;
+  for(i=0;i<MAX;i++)
+    data[i]=MAX-i;
+  qsort(0,MAX-1);
+  for(i=0;i<MAX;i++)
+    if(i+1!=data[i])
+      printf("%d,",data[i]);
+  printf("Finish Sort\n");
+  return 0;
+}
+
+}}}
