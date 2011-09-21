@@ -1,0 +1,64 @@
+#summary 设计模式
+<wiki:toc max_depth="3" />
+
+=设计模式=
+
+以下图片多来自[http://www.riabook.cn/doc/designpattern/  非关语言: 设计模式].
+
+==Creational 模式==
+
+物件的产生需要消耗系统资源，所以如何有效率的产生、管理与操作物件，一直都是值得讨论的课题， Creational 模式即与物件的建立相关，在这个分类下的模式给出了一些指导原则及设计的方向。
+
+===Simple Factory 模式===
+http://qjg-wiki.googlecode.com/files/SimpleFactoryDP.jpg
+
+===Abstract Factory 模式===
+http://qjg-wiki.googlecode.com/files/AbstractFactoryDP.jpg
+
+===Builder 模式===
+http://qjg-wiki.googlecode.com/files/BuilderDP.jpg
+
+===Factory Method 模式===
+http://qjg-wiki.googlecode.com/files/FactoryMethodDP.jpg
+
+===Prototype 模式===
+http://qjg-wiki.googlecode.com/files/ProtoTypeDP.jpg
+
+===Singleton 模式===
+{{{
+public class Singleton {
+    private static Singleton instance = new Singleton();
+
+    private Singleton() {
+        // ....
+    }
+
+    public static Singleton getInstance() {
+        return instance;
+    }
+
+    // 其它实作
+}
+}}}
+
+{{{
+public class Singleton {
+    private static Singleton instance = null;
+    private Singleton(){}
+    public static Singleton getInstance() {
+        if (instance == null){
+            synchronized(Singleton.class){
+                if(instance == null) {
+                     instance = new Singleton();
+                }
+            }
+        }
+        return instance;
+    }
+}
+}}}
+
+http://qjg-wiki.googlecode.com/files/SingletonDP.jpg
+
+===Registry of Singleton 模式===
+
