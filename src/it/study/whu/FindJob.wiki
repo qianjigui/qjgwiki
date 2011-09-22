@@ -1,0 +1,28 @@
+#summary 笔试面试杂题汇总
+<wiki:toc max_depth="4" />
+
+=设计模式=
+  # 观察者
+  # 策略
+  # 装饰者
+  # 工厂
+  # 单例
+  # 命令
+  # 适配器
+  # 模板
+  # 迭代器
+  # 状态
+  # 代理
+
+=数据结构=
+  # 寻找公共祖先: [http://www.cppblog.com/myjfm/archive/2011/05/12/146282.aspx 寻找最近公共祖先]
+  # 树的层次遍历: 前序、中序、后序、层次
+
+=语言相关=
+==Java==
+  # ArrayList, LinkedList, HashSet, HashMap
+  # 动态代理
+  # 框架区别与联系
+
+=硬件=
+  # 硬盘到四种接口: SATA(串口), SCSI，FC，SAS

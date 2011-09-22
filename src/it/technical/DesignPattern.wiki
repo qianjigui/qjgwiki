@@ -10,6 +10,9 @@
 物件的产生需要消耗系统资源，所以如何有效率的产生、管理与操作物件，一直都是值得讨论的课题， Creational 模式即与物件的建立相关，在这个分类下的模式给出了一些指导原则及设计的方向。
 
 ===Simple Factory 模式===
+
+所有对象到生成都是通过普通工厂进行，消除和屏蔽大面积到New方法。
+
 http://qjg-wiki.googlecode.com/files/SimpleFactoryDP.jpg
 
 ===Abstract Factory 模式===
@@ -61,4 +64,20 @@ public class Singleton {
 http://qjg-wiki.googlecode.com/files/SingletonDP.jpg
 
 ===Registry of Singleton 模式===
+
+==Structural 模式==
+
+如何设计物件之间的静态结构，如何完成物件之间的继承、实现与依赖关系，这关乎着系统设计出来是否健壮（robust）：像是易懂、易维护、易修改、耦合度低等等议题。
+Structural 模式正如其名，其分类下的模式给出了在不同场合下所适用的各种物件关系结构。
+
+===Default Adapter 模式===
+===Adapter 模式 - Object Adapter===
+===Adapter 模式 - Class Adapter===
+===Bridge 模式===
+===Composite 模式===
+===Decorator 模式===
+===Facade 模式===
+===Flyweight 模式===
+===Proxy 模式（一）===
+===Proxy 模式（二）===
 
