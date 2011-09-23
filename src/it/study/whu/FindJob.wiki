@@ -3,16 +3,64 @@
 
 =设计模式=
   # 观察者
+http://www.riabook.cn/doc/designpattern/images/observer-1.jpg
   # 策略
+http://www.riabook.cn/doc/designpattern/images/strategy-2.jpg
   # 装饰者
+http://www.riabook.cn/doc/designpattern/images/decorator-3.jpg
   # 工厂
+http://qjg-wiki.googlecode.com/files/AbstractFactoryDP.jpg
   # 单例
+{{{
+public class Singleton {
+    private static Singleton instance = new Singleton();
+
+    private Singleton() {
+        // ....
+    }
+
+    public static Singleton getInstance() {
+        return instance;
+    }
+
+    // 其它实作
+}
+}}}
+
+{{{
+public class Singleton {
+    private static Singleton instance = null;
+    private Singleton(){}
+    public static Singleton getInstance() {
+        if (instance == null){
+            synchronized(Singleton.class){
+                if(instance == null) {
+                     instance = new Singleton();
+                }
+            }
+        }
+        return instance;
+    }
+}
+}}}
+
+http://qjg-wiki.googlecode.com/files/SingletonDP.jpg
   # 命令
+http://www.riabook.cn/doc/designpattern/images/command-2.jpg
   # 适配器
+http://www.riabook.cn/doc/designpattern/images/adapter-2.jpg
+
+http://www.riabook.cn/doc/designpattern/images/adapter-4.jpg
   # 模板
+http://www.riabook.cn/doc/designpattern/images/templateMethod-1.jpg
   # 迭代器
+http://www.riabook.cn/doc/designpattern/images/iterator-2.jpg
   # 状态
+http://www.riabook.cn/doc/designpattern/images/state-1.jpg
   # 代理
+http://www.riabook.cn/doc/designpattern/images/proxy-2.jpg
+
+http://www.riabook.cn/doc/designpattern/images/proxy-3.jpg
 
 =数据结构=
   # 寻找公共祖先: [http://www.cppblog.com/myjfm/archive/2011/05/12/146282.aspx 寻找最近公共祖先]
@@ -23,6 +71,7 @@
   # ArrayList, LinkedList, HashSet, HashMap
   # 动态代理
   # 框架区别与联系
+  # ArrayList, Vector, HashMap, HashTable
 
 =硬件=
   # 硬盘到四种接口: SATA(串口), SCSI，FC，SAS
