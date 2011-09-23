@@ -298,4 +298,63 @@ int main()
   return 0;
 }
 
+int partition(int l, int r)
+{
+  int i,j;
+  int key = data[r-1];
+  i = l-1;
+  for(j=l;j<r-1;j++){
+    if(data[j]<key){
+      i++;
+      swap(data[i],data[j]);
+    }
+  }
+  swap(data[i+1],data[r-1]);
+  return i+1;
+}
+
+void qpsort(int l, int r)
+{
+  int i;
+  if(l<r){
+    i = partition(l,r);
+    qpsort(l,i);
+    qpsort(i+1,r);
+  }
+}
+
+void random_qsort(int l,int r)
+{
+  int i;
+  if(l<r){
+    i = rand()%(r-l)+l;
+    swap(data[i],data[r-1]);
+    i = partition(l,r);
+    qpsort(l,i);
+    qpsort(i+1,r);
+  }
+}
+
+}}}
+
+
+=====线性查找=====
+{{{
+int select(int index, int l, int r)
+{
+  int i;
+  if(l==r-1)
+    return data[l];
+  i = random_partition(l,r);
+  if(index<i)
+    return select(index,l,i);
+  else if(index==i)
+    return data[i];
+  else return select(index,i+1,r);
+}
+
+int select(int index)
+{
+  return select(index, 0, MAX);
+}
 }}}

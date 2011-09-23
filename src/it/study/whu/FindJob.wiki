@@ -69,9 +69,10 @@ http://www.riabook.cn/doc/designpattern/images/proxy-3.jpg
 =语言相关=
 ==Java==
   # ArrayList, LinkedList, HashSet, HashMap
+  # ArrayList, Vector, HashMap, HashTable: http://hi.baidu.com/whufengchen/blog/item/7e9c59ffd2b7e00708244d48.html
   # 动态代理
   # 框架区别与联系
-  # ArrayList, Vector, HashMap, HashTable
 
 =硬件=
   # 硬盘到四种接口: SATA(串口), SCSI，FC，SAS
+
