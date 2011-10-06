@@ -64,10 +64,20 @@ http://www.riabook.cn/doc/designpattern/images/proxy-3.jpg
 
 =数据结构=
   # 寻找公共祖先: [http://www.cppblog.com/myjfm/archive/2011/05/12/146282.aspx 寻找最近公共祖先]
-  # 树的层次遍历: 前序、中序、后序、层次
-  # 单向链表的环寻找法
-  # 实现一个支持O(1)时间push,pop,min,max的Stack: 在每个节点中添加数据项:目前的min、max
+  # 树的层次遍历: 前序、中序、后序、层次(利用队列)
+  # 单向链表的环寻找法: 互质遍历
+  # 实现一个支持O(1)时间push,pop,min,max的Stack: 在每个节点中添加数据项(目前的min、max)
   # 堆结构以及在操作系统中的应用
+  # 有向图求环、直径、割点: 环---拓扑排序，直径---？，割点---去掉后图不再连通的点
+  # 贝叶斯分类: http://www.cnblogs.com/leoo2sk/archive/2010/09/17/naive-bayesian-classifier.html
+  # 语义网
+  # Lucence
+  # 字符串处理: 大小比较、最长公共子串、排序、Hash
+  # 给字符串s1、s2,在s1中找包含s2里所有字符的最小子串: <编程之美>, http://topic.csdn.net/u/20101017/12/3b1dcc05-3ba0-4220-aca6-1775bff0f0b1.html
+  # 背包问题
+  # 二分搜索: [http://blog.csdn.net/cxh342968816/article/details/6672537 递减偏移数组]
+  # 栈与队列: [http://daimajishu.iteye.com/blog/1091066 用两个栈实现一个队列的功能&&两个队列实现一个栈的功能]
+  # 从尾到头输出单链表: 借助栈结构、翻转、递归、借助数组结构
 
 =数据库=
   # MySQL 调优、索引
@@ -80,6 +90,14 @@ http://www.riabook.cn/doc/designpattern/images/proxy-3.jpg
   # 框架区别与联系
   # 线程池
 
+===Java IO===
+{{{
+  BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(new File("abc"))));
+  reader.close();
+  BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File("bb"))));
+  writer.close();
+}}}
+
 =操作系统=
   # 内存管理
   # 任务调度
@@ -89,6 +107,10 @@ http://www.riabook.cn/doc/designpattern/images/proxy-3.jpg
 
 =专题=
 ==常见的海量数据处理方法==
+
+从思路上考虑，首先是普通内存空间是否可以存储。
+可以存储则可以考虑使用平衡树/Hash等进行处理，如果不行则需要利用检索的数据处理思路。
+将数据通过Hash存储到相对较小的空间单元(可以放在内存中)，然后通过进一步的二叉树进行处理。
 
 ===给定a、b两个文件，各存放50亿个url，每个url各占64字节，内存限制是4G，让你找出a、b文件共同的url？===
 方案1：
