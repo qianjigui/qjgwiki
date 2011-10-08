@@ -98,6 +98,22 @@ http://www.riabook.cn/doc/designpattern/images/proxy-3.jpg
   writer.close();
 }}}
 
+==C/C++==
+===二进制1的个数===
+主要是需要考虑各种类型，负数:
+{{{
+template<typename T>
+int countbits1(T x)
+{
+  int count = 0;
+  while(x){
+    count++;
+    x &= (x- ((T)1));
+  }
+  return count;
+}
+}}}
+
 =操作系统=
   # 内存管理
   # 任务调度
