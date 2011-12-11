@@ -16,4 +16,4 @@ system 'rake','hg:push'
 Dir.chdir('./wiki')
 system 'hg','addremove'
 system 'rake','hg:ci'+args
-system 'rake','hg:push','--insecure'
+system 'rake','hg:push --insecure'
