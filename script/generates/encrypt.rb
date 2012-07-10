@@ -65,6 +65,46 @@ module KnowledgeUtils
         end
       end
     end
+
+    class DecryptGenerator < GenerateBase
+
+      def set_tags
+        @conf.log_tag = 'DecryptGenerator'
+      end
+
+      def prepare_imp
+        @enc = DesEncrypt.new(@conf[:enc][:key], @conf[:enc][:iv])
+        #clean
+      end
+
+      def generate_imp
+        encfiles = FileSet.files(@src+'/**/*'+@encrypt_suffix)
+        @conf.debug(encfiles)
+        encfiles.each do |file|
+          fullname=file.gsub(@encrypt_suffix,'')
+          dirname=File.dirname(fullname)+'/'+@encrypt_dir
+          @conf.debug('dirname',dirname)
+          FileUtils.mkdir(dirname) unless File.exist?(dirname)
+          dec_file = dirname+'/'+File.basename(fullname)
+          begin
+            if refresh?(file,dec_file)
+              File.delete(dec_file) if File.exist?(dec_file)
+              @enc.decrypt(file,dec_file)
+              @conf.log('Decrypt',dec_file)
+            end
+          rescue ArgumentError
+            @conf.warn(file, 'is Empty.', 'Ignore!')
+          end
+        end
+      end
+
+      def clean_imp
+        FileSet.files(@src+'/**/**'+@encrypt_suffix).each do |file|
+          @conf.debug('Delete',file)
+          File.delete(file)
+        end
+      end
+    end
   end
 end
 

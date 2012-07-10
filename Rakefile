@@ -10,6 +10,7 @@ require 'script/utils'
 include KnowledgeUtils::Generate
 include KnowledgeUtils
 generators = [ EncryptGenerator.new(CONFS), FreemindGenerator.new(CONFS), GoogleWikiGenerator.new(CONFS), IndexGenerator.new(CONFS) ]
+unpacks=[DecryptGenerator.new(CONFS)]
 
 task :gen_make do
   generators.each do |g|
@@ -33,3 +34,12 @@ task :clean do
   end
 end
 
+desc 'Unpack the Data to directory'
+task :unpack do
+  unpacks.each do |g|
+    g.prepare
+  end
+  unpacks.each do |g|
+    g.generate
+  end
+end

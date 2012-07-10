@@ -1,5 +1,6 @@
 require 'rake'
 require 'yaml'
+require 'fileutils'
 
 module KnowledgeUtils
   IS_DEBUG = false
