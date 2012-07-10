@@ -6,7 +6,6 @@
 $KCODE = 'utf8'
 
 require 'script/utils'
-require 'script/hgrake'
 
 include KnowledgeUtils::Generate
 include KnowledgeUtils

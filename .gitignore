@@ -6,7 +6,7 @@
 *.swp
 *.twi
 
-wiki/*
+wiki/
 
 .gpg.yml
 
