@@ -34,5 +34,5 @@
 
 =相关材料=
   # [ItStudyWhuFindjob 笔试面试题汇总]
-  # [ItStudyWhuDatastructures 数据结构代码]
-  # [ItTechnicalDesignpattern 设计模式相关]
+  # [ItTechnicalAlgorithmDatastructures 数据结构代码]
+  # [ItTechnicalDesignDesignpattern 设计模式相关]
