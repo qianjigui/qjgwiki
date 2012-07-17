@@ -2,8 +2,7 @@
 #labels algorithm
 <wiki:toc max_depth="4" />
 
-=HashTable=
-
+=散列表=
 ==数据组织方法==
     * 直接寻址法:避免碰撞的方法:链接法
     * 全域散列
