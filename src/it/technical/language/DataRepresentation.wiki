@@ -53,3 +53,66 @@
 
 == 浮点数据表示 ==
 [http://www.cnblogs.com/FlyingBread/archive/2009/02/15/660206.html 浮点数表示和基本运算]
+
+== 基于数据位的操作 ==
+[http://graphics.stanford.edu/~seander/bithacks.html Bit Twiddling Hacks] :
+    * 基于最高位的符号数判断
+{{{
+int v;
+int sign;
+sign = v >> (sizeof(int)*CHAR_BIT-1);//v>>31
+}}}
+    * 判断符号位是否相同
+{{{
+int x,y;
+bool f = ((x^y)<0);
+}}}
+
+===不需要跳转===
+    * 语句处理绝对值
+{{{ 
+int v;
+unsigned int r;
+int const mask = v >> sizeof(int)*CHAR_BIT - 1;
+r = (v+mask) ^ mask;
+r = (v^mask) - mask;
+}}}
+    * 计算两个数的较大者/较小者
+{{{ 
+int x;
+int y;
+int r;
+r = y^((x^y)&-(x<y));//min(x,y)
+r = x^((x^y)&-(x<y));//max(x,y)
+
+r = y + ((x - y) & ((x - y) >> (sizeof(int) * CHAR_BIT - 1))); // min(x, y)
+r = x - ((x - y) & ((x - y) >> (sizeof(int) * CHAR_BIT - 1))); // max(x, y)
+}}}
+    * 判断一个数是否为2的幂
+{{{ 
+unsigned int v;
+bool f;
+f = (v&(v-1))==0;//v==0时有问题，0不是2的幂次
+f = v && !(v & (v - 1));
+}}}
+    * 位标识处理
+{{{ 
+bool f;         // conditional flag
+unsigned int m; // the bit mask
+unsigned int w; // the word to modify:  if (f) w |= m; else w &= ~m;
+
+w ^= (-f ^ w) & m;
+}}}
+    * 统计1-bit的个数
+{{{ 
+unsigned int v; // count the number of bits set in v
+unsigned int c; // c accumulates the total bits set in v
+for (c = 0; v; c++)
+{
+  v &= v - 1; // clear the least significant bit set
+}
+}}}
+    * 数据交换
+{{{ 
+#define SWAP(a, b) (((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b)))
+}}}
