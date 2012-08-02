@@ -47,6 +47,28 @@ Makefile 详细指南 [http://blog.csdn.net/liang13664759/archive/2007/09/04/177
 ==struct==
 [http://stackoverflow.com/questions/612328/difference-between-struct-and-typedef-struct-in-c]
 
+==Macro==
+宏的概念在C中运用最为普遍，普通的替换和联接就不再多说。
+关键是字符中的替换：
+{{{
+
+//字符串连接
+#define DEFINE_EQ(_name)\
+    equal##_name##To
+
+...
+DEFINE_EQ(Integer)   // => equalIntegerTo
+...
+
+//字符串化
+#define PRINT_FUN(_name)\
+    printf("%s: %d\n", #_name, _name)
+
+...
+PRINT_FUN(var) //printf("%s: %d\n", "var", var)
+...
+}}}
+
 =C++ Programming language=
 ==命名空间==
 {{{
