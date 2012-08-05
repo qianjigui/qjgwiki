@@ -21,6 +21,7 @@ module KnowledgeUtils
         opts.each do |k|
           FileSet.files(@src+'/**/**'+k[:type], /\/#{@encrypt_dir}\//).each do |file|
             dest = dest_name(file, @src, @dir_index, k[:type], @wiki_suffix, @wiki_dir)
+            @conf.add_tag_file(dest, @wiki_suffix)
             if k[:cp]
               if refresh?(file,dest)
                 @conf.log('Refresh Wiki', file)

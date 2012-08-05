@@ -22,6 +22,7 @@ module KnowledgeUtils
       def generate_imp
         FileSet.files(@src+'/**/**'+@mm, /\/#{@encrypt_dir}\//).each do |file|
           dest = dest_name(file, @src, @dir_index, @mm, @wiki_suffix, @wiki_dir)
+          @conf.add_tag_file(dest, @wiki_suffix)
           to_wiki(file, @mm, @twi) if refresh?(file,dest)
         end
       end

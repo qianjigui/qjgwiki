@@ -46,6 +46,7 @@ module KnowledgeUtils
         encfiles = FileSet.files(@src+'/**/'+@encrypt_dir+'/**')
         encfiles.each do |file|
           enc_file =file.gsub(@encrypt_dir,'')+@encrypt_suffix
+          @conf.add_tag_file(enc_file, @encrypt_suffix)
           begin
             if refresh?(file,enc_file)
               File.delete(enc_file) if File.exist?(enc_file)
@@ -87,6 +88,7 @@ module KnowledgeUtils
           FileUtils.mkdir(dirname) unless File.exist?(dirname)
           dec_file = dirname+'/'+File.basename(fullname)
           begin
+            @conf.add_tag_file(dec_file, @encrypt_suffix)
             if refresh?(file,dec_file)
               File.delete(dec_file) if File.exist?(dec_file)
               @enc.decrypt(file,dec_file)

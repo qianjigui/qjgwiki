@@ -9,8 +9,18 @@ require 'script/utils'
 
 include KnowledgeUtils::Generate
 include KnowledgeUtils
-generators = [ EncryptGenerator.new(CONFS), FreemindGenerator.new(CONFS), GoogleWikiGenerator.new(CONFS), IndexGenerator.new(CONFS) ]
-unpacks=[DecryptGenerator.new(CONFS)]
+
+src = CONFS[:build][:src]
+dir = src[:dir]
+wiki = CONFS[:build][:wiki]
+wiki_dir=wiki[:dir]
+wiki_suf=wiki[:suffix]
+encrypt= CONFS[:build][:encrypt]
+crypt_dir=encrypt[:dir]
+crypt_suf=encrypt[:suffix]
+
+generators = [ EncryptGenerator.new(CONFS), CleanLostGenerator.new(CONFS,dir+'/**/**'+crypt_suf,crypt_suf), FreemindGenerator.new(CONFS), GoogleWikiGenerator.new(CONFS), CleanLostGenerator.new(CONFS, wiki_dir+'/**/**'+wiki_suf, wiki_suf), IndexGenerator.new(CONFS) ]
+unpacks=[DecryptGenerator.new(CONFS), CleanLostGenerator.new(CONFS, dir+'/**/'+crypt_dir+'/**', crypt_suf)]
 
 task :gen_make do
   generators.each do |g|

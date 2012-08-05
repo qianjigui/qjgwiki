@@ -36,7 +36,25 @@ module KnowledgeUtils
         @confs.merge! YAML.load_file(yml)
       end
       @log_tag = ''
+      @tag_files = {}
     end
+
+    def add_tag_file(file, *tags)
+        tags.each do |tag|
+            @tag_files[tag] ||=[]
+            @tag_files[tag] << file
+        end
+    end
+    def tag_files(*tags)
+        res = []
+        tags.each do |tag|
+            res += @tag_files[tag]
+        end
+        res.uniq.collect do |file|
+          file.gsub(/\/+/, '/')
+        end
+    end
+
     def [] (arg)
       @confs[arg]
     end

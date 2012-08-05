@@ -81,6 +81,9 @@ module KnowledgeUtils
       def mv_files(from, dest)
         FileUtils.mv(from, dest)
       end
+      def rm_file(file)
+        FileUtils.rm(file)
+      end
     end
     Dir[MODULE_PATH+'/'+GenerateBase::DIRECTORY+'/*.rb'].each do |gfile|
       require gfile
