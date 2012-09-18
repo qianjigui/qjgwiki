@@ -210,4 +210,42 @@
 
 借助三色方案~
 
+===MarkSweep===
+    * Dalvik MarkSweep
+    * Write-Barrier
+        * dvmWriteBarrierField
+             * dvmSetFieldObject
+                 * createArrayClass
+                 * loadClassFromDex0
+                 * dvmLinkClass
+                 * dvmInitClass
+                 * setInstFieldValue
+                 * SET_TYPE_FIELD(Jni.cpp)
+                 * enqueuePendingReference
+                 * dequeuePendingReference
+                 * clearReference
+                 * enqueueFinalizerReferences
+                 * DVM_OBJECT_INIT
+                 * dvmGenerateProxyClass
+                 * proxyConstructor
+                 * dvmPrepMainThread
+                 * dvmCreateInterpThread
+                 * dvmAttachCurrentThread
+                 * dvmDetachCurrentThread
+                 * makeStringObject
+             * dvmSetFieldObjectVolatile
+                 * setInstFieldValue
+                 * SET_TYPE_FIELD(Jni.cpp)
+             * dvmSetFieldStaticObject
+             * dvmSetFieldStaticObjectVolatile
 
+             * Dalvik_sun_misc_Unsafe_compareAndSwapObject
+             * Dalvik_sun_misc_Unsafe_putObjectVolatile
+             * Dalvik_sun_misc_Unsafe_putObject
+             * Dalvik_sun_misc_Unsafe_putOrderedObject
+        * dvmWriteBarrierObject
+        * dvmWriteBarrierArray
+             * goto_target
+             * Dalvik_java_lang_System_arraycopy
+             * dvmSetObjectArrayElement
+        * dvmGetInterfaces
