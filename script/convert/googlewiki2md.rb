@@ -18,6 +18,27 @@ GoogleWikiFormat to MarkdownFormat Convert
                     @conf = conf
                     @filemap = {}
                     @metas = {}
+                    @isWiki = false
+                    @ismm = false
+                end
+
+                def to_wiki
+                    @isWiki = true
+                end
+                def wiki?
+                    @isWiki
+                end
+                def to_mm
+                    @ismm = true
+                end
+                def mm?
+                    @ismm
+                end
+
+                def reset
+                    reset_meta
+                    @ismm = false
+                    @isWiki =false
                 end
 
                 def reset_meta
@@ -266,6 +287,42 @@ STRING
 || xxxx || xxxxx || xxxxxx
 =end
             class TableConvert
+                IS_FIRST_ROW = :TableConvertIsFirstRow
+                def initialize(ctx)
+                    @key = :TableConvert
+                    ctx[@key] = false
+                    ctx[IS_FIRST_ROW] = false
+                end
+                def prepare(ctx, line)
+                    return if ctx[ProgramCodeConvert::IN_CODE_PART]
+                    if line=~/\|\|.+\|\|/
+                        ctx[@key] = true
+                        if ctx[IS_FIRST_ROW]
+                            ctx[IS_FIRST_ROW] = false
+                        else
+                            ctx[IS_FIRST_ROW] = true
+                            newline = line.gsub('||','|')
+                            line = ['|'] * (line.length - newline.length)
+                            @headerline = "\n"+line.join('------')
+                        end
+                    else
+                        ctx[IS_FIRST_ROW] = false
+                    end
+                end
+                def process(ctx, line)
+                    newline = line
+                    if ctx[@key]
+                        newline  = newline.gsub('||', '|')
+                        if ctx[IS_FIRST_ROW]
+                            newline += @headerline
+                            ctx.conf.warn(ctx.file,'have table')
+                        end
+                    end
+                    newline
+                end
+                def finish(ctx, line)
+                    ctx[@key] = false
+                end
             end
 
             class Convert
@@ -276,18 +333,23 @@ STRING
                     @code = ProgramCodeConvert.new(@ctx)
                     @url = URLConvert.new(@ctx)
                     @meta = MetaDataConvert.new(@ctx)
-                    @list = [@code, @order, @header, @url, @meta]
+                    @table = TableConvert.new(@ctx)
+                    @list = [@code, @order, @header, @url, @table, @meta]
                     @list_mm = [@code, @url]
                 end
                 def add_file_map(file,dest)
                     @ctx.add_file_map(file,dest)
                 end
                 def run_wiki(path)
+                    @ctx.reset
+                    @ctx.to_wiki
                     res = run(path, @list)
                     @ctx.conf.debug @ctx.header
                     #generate_res(path, [@ctx.header, res.join("\n")])
                 end
                 def run_mm(path)
+                    @ctx.reset
+                    @ctx.to_mm
                     res = run(path, @list_mm)
                     @ctx.conf.debug @ctx.header
                     #generate_res(path, res)
@@ -299,7 +361,6 @@ STRING
                     end
                 end
                 def run(path, list)
-                    @ctx.reset_meta
                     @ctx.file = path
                     data = File.read(path)
                     res = []

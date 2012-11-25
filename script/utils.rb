@@ -3,7 +3,7 @@ require 'yaml'
 require 'fileutils'
 
 module KnowledgeUtils
-  IS_DEBUG = true
+  IS_DEBUG = false
 
   MODULE_PATH = File.dirname(File.expand_path(__FILE__))
 
