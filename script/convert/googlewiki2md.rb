@@ -42,8 +42,8 @@ GoogleWikiFormat to MarkdownFormat Convert
                 end
 
                 def reset_meta
-                    page_title=('UNKNOWN')
-                    page_tags=('unknown')
+                    @metas[:title] = 'UNKNOW'
+                    @metas[:tags] ='undefine'
                 end
 
                 def page_title=(value)
