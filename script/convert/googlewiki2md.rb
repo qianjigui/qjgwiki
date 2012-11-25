@@ -16,6 +16,15 @@ GoogleWikiFormat to MarkdownFormat Convert
                     #for table first line
                     @context[:firstrow] = true
                     @conf = conf
+                    @filemap = {}
+                end
+
+                def add_file_map(file,dest)
+                    @filemap[dest] = file
+                end
+
+                def get_file_path(dest)
+                    @filemap[dest]
                 end
 
                 def reset_row
@@ -48,6 +57,7 @@ GoogleWikiFormat to MarkdownFormat Convert
                     ctx[@key] = false
                 end
                 def prepare(ctx, line)
+                    return if ctx[ProgramCodeConvert::IN_CODE_PART]
                     ctx[@key] = true if line=~/\A *# +/
                 end
                 def process(ctx, line)
@@ -65,6 +75,7 @@ GoogleWikiFormat to MarkdownFormat Convert
                     ctx[@key] = false
                 end
                 def prepare(ctx, line)
+                    return if ctx[ProgramCodeConvert::IN_CODE_PART]
                     ctx[@key] = true if line=~/\A *=+.+=+/
                 end
                 def process(ctx, line)
@@ -139,8 +150,17 @@ GoogleWikiFormat to MarkdownFormat Convert
                 def process(ctx, line)
                     newline=line
                     if ctx[@key]
+                        #process url
+                        if @url=~/\A[A-Z]\w+/
+                            path =ctx.get_file_path(@url)
+                            if path.nil?
+                                ctx.conf.debug("Wrong link %s @ %s" % [@url, ctx.file])
+                            else
+                                ctx.conf.debug("From %s to %s" % [@url, path])
+                            end
+                        end
                         newline= ("[%s](%s title='url')" % [@linkword, @url])
-                        ctx.conf.debug( "%s: %s" % [ctx.file, @url] )
+                        #ctx.conf.debug( "%s: %s" % [ctx.file, @url] )
                     end
                     newline
                 end
@@ -156,7 +176,10 @@ GoogleWikiFormat to MarkdownFormat Convert
                     @header=HeaderLineConvert.new(@ctx)
                     @code = ProgramCodeConvert.new(@ctx)
                     @url = URLConvert.new(@ctx)
-                    @list = [@order, @header, @code, @url]
+                    @list = [@code, @order, @header, @url]
+                end
+                def add_file_map(file,dest)
+                    @ctx.add_file_map(file,dest)
                 end
                 def run(path)
                     @ctx.file = path
@@ -183,9 +206,18 @@ GoogleWikiFormat to MarkdownFormat Convert
             def prepare_imp
                 @wiki_dir = @wiki[:dir]+'/'
                 @wiki_suffix = @wiki[:suffix]
+                @dir_index = /\A#{@conf[:build][:src][:index]}/i
                 @conv = G2MHelper::Convert.new(@conf)
             end
             def generate_imp
+                FileSet.files(@src+'/**/**'+@types[:wiki], /\/#{@encrypt_dir}\//).each do |file|
+                    dest = dest_name(file, @src, @dir_index, @types[:wiki] , '', '')
+                    @conv.add_file_map(file, dest)
+                end
+                FileSet.files(@src+'/**/**'+@types[:mm], /\/#{@encrypt_dir}\//).each do |file|
+                    dest = dest_name(file, @src, @dir_index, @types[:mm] , '', '')
+                    @conv.add_file_map(file, dest)
+                end
                 FileSet.files(@src+'/**/**'+@types[:wiki], /\/#{@encrypt_dir}\//).each do |file|
                     #@conf.debug('check:'+file)
                     @conv.run(file)

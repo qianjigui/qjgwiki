@@ -35,10 +35,10 @@ Futex原语
 http://randu.org/tutorials/threads/
 
 ===OpenMP===
-当我们正在自己组建具有一定通用效果的多线程模型时，已经有了专业的工具帮助我们做并行化处理。这就是[ItTechnicalOpenmp OpenMP].
+当我们正在自己组建具有一定通用效果的多线程模型时，已经有了专业的工具帮助我们做并行化处理。这就是[ItTechnicalMulticoresOpenmp OpenMP].
 
 ===OpenMPI===
-利用多线程进行分布式运算的推荐框架[ItTechnicalOpenmpi OpenMPI].
+利用多线程进行分布式运算的推荐框架[ItTechnicalMulticoresOpenmpi OpenMPI].
 
 ==总结与教训==
 

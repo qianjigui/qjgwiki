@@ -9,6 +9,12 @@
 wiki/
 
 .gpg.yml
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+tags
+
 
 # switch to regexp syntax.
 gpg/
