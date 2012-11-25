@@ -17,6 +17,19 @@ GoogleWikiFormat to MarkdownFormat Convert
                     @context[:firstrow] = true
                     @conf = conf
                     @filemap = {}
+                    @metas = {}
+                end
+
+                def reset_meta
+                    page_title=('UNKNOWN')
+                    page_tags=('unknown')
+                end
+
+                def page_title=(value)
+                    @metas[:title] = value
+                end
+                def page_tags=(value)
+                    @metas[:tags] = value
                 end
 
                 def add_file_map(file,dest)
@@ -42,6 +55,15 @@ GoogleWikiFormat to MarkdownFormat Convert
                 end
                 def file
                     @file
+                end
+
+                def header
+<<STRING
+---
+title: #{@metas[:title]}
+tags: #{@metas[:tags]}
+---
+STRING
                 end
 
                 def [](key)
@@ -132,7 +154,7 @@ GoogleWikiFormat to MarkdownFormat Convert
                         r = Regexp.last_match
                         data = r[1]
                         #What a fuck ,there are some [] in wiki, so we should skip it
-                        if data=~/\A[A-Z]|http/
+                        if data=~/\A[A-Z][a-z_]|http/
                             case data
                             when /\A(\S+) (.+)/
                                 r = Regexp.last_match
@@ -150,23 +172,100 @@ GoogleWikiFormat to MarkdownFormat Convert
                 def process(ctx, line)
                     newline=line
                     if ctx[@key]
+                        @newurl = @url
+                        isPicture= false
+                        isInternal=false
                         #process url
-                        if @url=~/\A[A-Z]\w+/
+                        case @url
+                        when /\A[A-Z]\w+/
+                            isInternal=true
                             path =ctx.get_file_path(@url)
                             if path.nil?
-                                ctx.conf.debug("Wrong link %s @ %s" % [@url, ctx.file])
+                                ctx.conf.warn("Wrong link %s @ %s" % [@url, ctx.file])
                             else
-                                ctx.conf.debug("From %s to %s" % [@url, path])
+                                @newurl=relative_path(ctx.file, path)
+                                @newurl = @newurl.chomp(File.extname(@newurl)) 
+                                ctx.conf.debug("From %s to %s with new url=%s" % [@url, path, @newurl])
                             end
+                        when /gif|jpeg|jpg|png\Z/
+                            @newurl = @url
+                            isPicture= true
+                            ctx.conf.debug('Picture:'+@newurl)
                         end
-                        newline= ("[%s](%s title='url')" % [@linkword, @url])
-                        #ctx.conf.debug( "%s: %s" % [ctx.file, @url] )
+                        unless isPicture
+                            unless isInternal
+                                newline = ("[%s](%s title='urlpage')" % [@linkword, @newurl])
+                            else
+                                #TODO Define the internal url process
+                                newline = ("[%s](=%s title='urlpage')" % [@linkword, @newurl])
+                            end
+                        else
+                            newline = ("![%s](%s title='urlpicture')" % [@linkword, @newurl])
+                        end
                     end
                     newline
                 end
                 def finish(ctx, line)
                     ctx[@key] = false
                 end
+                def relative_path(from, to)
+                    len = [from.length, to.length].min
+                    diffi=0
+                    while from[diffi]==to[diffi]
+                        diffi +=1
+                    end
+                    parent_dis=0
+                    i = diffi
+                    while i<from.length
+                        parent_dis +=1 if '/'[0]==from[i]
+                        i+=1
+                    end
+                    res = ''
+                    res += '../' * parent_dis
+                    res += to[diffi..-1]
+                    res
+                end
+            end
+
+=begin
+    #summary	 One-line summary of the page
+    #labels	     Comma-separated list of labels (filled in automatically via the web UI)
+    #sidebar	 See Side navigation
+    <wiki:toc max_depth="1" />
+=end
+            class MetaDataConvert
+                def initialize(ctx)
+                    @key = :MetaDataConvert
+                    ctx[@key] = false
+                end
+                def prepare(ctx, line)
+                    return if ctx[ProgramCodeConvert::IN_CODE_PART]
+                    ctx[@key] =true
+                    case line
+                    when /\A *#summary (.+)\Z/
+                        ctx.page_title = Regexp.last_match[1]
+                    when /\A *#labels (.+)\Z/
+                        ctx.page_tags = Regexp.last_match[1]
+                    when /\A *#sidebar (.+)\Z/
+                    when /\A *<wiki:toc/
+                    else
+                        ctx[@key] = false
+                    end
+                end
+                def process(ctx, line)
+                    newline = line
+                    newline='' if ctx[@key]
+                    newline
+                end
+                def finish(ctx, line)
+                    ctx[@key] = false
+                end
+            end
+
+=begin
+|| xxxx || xxxxx || xxxxxx
+=end
+            class TableConvert
             end
 
             class Convert
@@ -176,25 +275,48 @@ GoogleWikiFormat to MarkdownFormat Convert
                     @header=HeaderLineConvert.new(@ctx)
                     @code = ProgramCodeConvert.new(@ctx)
                     @url = URLConvert.new(@ctx)
-                    @list = [@code, @order, @header, @url]
+                    @meta = MetaDataConvert.new(@ctx)
+                    @list = [@code, @order, @header, @url, @meta]
+                    @list_mm = [@code, @url]
                 end
                 def add_file_map(file,dest)
                     @ctx.add_file_map(file,dest)
                 end
-                def run(path)
+                def run_wiki(path)
+                    res = run(path, @list)
+                    @ctx.conf.debug @ctx.header
+                    #generate_res(path, [@ctx.header, res.join("\n")])
+                end
+                def run_mm(path)
+                    res = run(path, @list_mm)
+                    @ctx.conf.debug @ctx.header
+                    #generate_res(path, res)
+                end
+                def generate_res(path, res)
+                    FileUtils.rm(path)
+                    File.open(path,'w') do |f|
+                        f.puts res.join("\n")
+                    end
+                end
+                def run(path, list)
+                    @ctx.reset_meta
                     @ctx.file = path
                     data = File.read(path)
+                    res = []
                     data.split("\n").each do |line|
-                        @list.each do |c|
-                            c.prepare(@ctx, line)
+                        newline = line
+                        list.each do |c|
+                            c.prepare(@ctx, newline)
                         end
-                        @list.each do |c|
-                            c.process(@ctx, line)
+                        list.each do |c|
+                            newline = c.process(@ctx, newline)
                         end
-                        @list.each do |c|
-                            c.finish(@ctx, line)
+                        list.each do |c|
+                            c.finish(@ctx, newline)
                         end
+                        res << newline
                     end
+                    res
                 end
             end
         end
@@ -208,8 +330,6 @@ GoogleWikiFormat to MarkdownFormat Convert
                 @wiki_suffix = @wiki[:suffix]
                 @dir_index = /\A#{@conf[:build][:src][:index]}/i
                 @conv = G2MHelper::Convert.new(@conf)
-            end
-            def generate_imp
                 FileSet.files(@src+'/**/**'+@types[:wiki], /\/#{@encrypt_dir}\//).each do |file|
                     dest = dest_name(file, @src, @dir_index, @types[:wiki] , '', '')
                     @conv.add_file_map(file, dest)
@@ -218,9 +338,15 @@ GoogleWikiFormat to MarkdownFormat Convert
                     dest = dest_name(file, @src, @dir_index, @types[:mm] , '', '')
                     @conv.add_file_map(file, dest)
                 end
+            end
+            def generate_imp
                 FileSet.files(@src+'/**/**'+@types[:wiki], /\/#{@encrypt_dir}\//).each do |file|
-                    #@conf.debug('check:'+file)
-                    @conv.run(file)
+                    @conf.debug('convert:'+file)
+                    @conv.run_wiki(file)
+                end
+                FileSet.files(@src+'/**/**'+@types[:mm], /\/#{@encrypt_dir}\//).each do |file|
+                    @conf.debug('convert:'+file)
+                    @conv.run_mm(file)
                 end
             end
         end
