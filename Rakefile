@@ -21,6 +21,7 @@ crypt_suf=encrypt[:suffix]
 
 generators = [ EncryptGenerator.new(CONFS), CleanLostGenerator.new(CONFS,dir+'/**/**'+crypt_suf,crypt_suf), FreemindGenerator.new(CONFS), GoogleWikiGenerator.new(CONFS), CleanLostGenerator.new(CONFS, wiki_dir+'/**/**'+wiki_suf, wiki_suf), IndexGenerator.new(CONFS) ]
 unpacks=[DecryptGenerator.new(CONFS), CleanLostGenerator.new(CONFS, dir+'/**/'+crypt_dir+'/**', crypt_suf)]
+conv=[GoogleWikiFormat2MarkdownFormat.new(CONFS)]
 
 task :gen_make do
   generators.each do |g|
@@ -31,10 +32,20 @@ task :gen_make do
   end
 end
 
-task :default => :compile
+task :default => :g2m
 
 desc 'Compile All files'
 task :compile => :gen_make do
+end
+
+desc 'Convert G2M'
+task :g2m do
+  conv.each do |g|
+    g.prepare
+  end
+  conv.each do |g|
+    g.generate
+  end
 end
 
 desc 'Clean all Generated files'
