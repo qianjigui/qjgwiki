@@ -170,12 +170,13 @@ STRING
                     # [url] without a word
                     # And the url may be inside or outside
                     return if ctx[ProgramCodeConvert::IN_CODE_PART]
+                    # TODO There is a bug, if there are more than one link in one line
                     if line=~/\[(.+)?\]/
-                        ctx[@key] = true
                         r = Regexp.last_match
                         data = r[1]
                         #What a fuck ,there are some [] in wiki, so we should skip it
                         if data=~/\A[A-Z][a-z_]|http/
+                            ctx[@key] = true
                             case data
                             when /\A(\S+) (.+)/
                                 r = Regexp.last_match
@@ -215,13 +216,13 @@ STRING
                         end
                         unless isPicture
                             unless isInternal
-                                newline = ("[%s](%s title='urlpage')" % [@linkword, @newurl])
+                                newline = newline.sub(/\[(.+)?\]/,("[%s](%s title='urlpage')" % [@linkword, @newurl]))
                             else
                                 #TODO Define the internal url process
-                                newline = ("[%s](=%s title='urlpage')" % [@linkword, @newurl])
+                                newline = newline.sub(/\[(.+)?\]/,("[%s](=%s title='urlpage')" % [@linkword, @newurl]))
                             end
                         else
-                            newline = ("![%s](%s title='urlpicture')" % [@linkword, @newurl])
+                            newline = newline.sub(/\[(.+)?\]/,("![%s](%s title='urlpicture')" % [@linkword, @newurl]))
                         end
                     end
                     newline
@@ -288,10 +289,12 @@ STRING
 =end
             class TableConvert
                 IS_FIRST_ROW = :TableConvertIsFirstRow
+                IS_IN_TABLE = :TableConvertIsInTable
                 def initialize(ctx)
                     @key = :TableConvert
                     ctx[@key] = false
                     ctx[IS_FIRST_ROW] = false
+                    ctx[IS_IN_TABLE] = false
                 end
                 def prepare(ctx, line)
                     return if ctx[ProgramCodeConvert::IN_CODE_PART]
@@ -299,14 +302,16 @@ STRING
                         ctx[@key] = true
                         if ctx[IS_FIRST_ROW]
                             ctx[IS_FIRST_ROW] = false
-                        else
+                        elsif not ctx[IS_IN_TABLE]
                             ctx[IS_FIRST_ROW] = true
                             newline = line.gsub('||','|')
                             line = ['|'] * (line.length - newline.length)
                             @headerline = "\n"+line.join('------')
                         end
+                        ctx[IS_IN_TABLE] = true
                     else
                         ctx[IS_FIRST_ROW] = false
+                        ctx[IS_IN_TABLE] = false
                     end
                 end
                 def process(ctx, line)
@@ -345,19 +350,26 @@ STRING
                     @ctx.to_wiki
                     res = run(path, @list)
                     @ctx.conf.debug @ctx.header
-                    #generate_res(path, [@ctx.header, res.join("\n")])
+                    mode = 0644
+                    generate_res(path, [@ctx.header, res.join("\n")], mode)
                 end
                 def run_mm(path)
                     @ctx.reset
                     @ctx.to_mm
                     res = run(path, @list_mm)
                     @ctx.conf.debug @ctx.header
-                    #generate_res(path, res)
+                    mode = 0755
+                    generate_res(path, res, mode)
                 end
-                def generate_res(path, res)
-                    FileUtils.rm(path)
-                    File.open(path,'w') do |f|
-                        f.puts res.join("\n")
+                def generate_res(path, res, mode)
+                    data =File.read(path)
+                    newdata=res.join("\n")+"\n"
+                    unless data==newdata
+                        FileUtils.rm(path)
+                        File.open(path,'w') do |f|
+                            f.chmod(mode)
+                            f.puts newdata
+                        end
                     end
                 end
                 def run(path, list)
