@@ -6,7 +6,7 @@
     :dir: wiki
     :suffix: .wiki
   :src:
-    :dir: 'src'
+    :dir: 'test'
     :index: index
     :img: '_image'
   :template: template

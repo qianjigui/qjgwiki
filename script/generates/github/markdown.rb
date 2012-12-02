@@ -14,7 +14,7 @@ module KnowledgeUtils
             def prepare_img
                 @env = @conf
                 @mdtype = @env[:types][:md]
-                @ctx = MDContext.new(@env, @mdtype, @env[:types][:html])
+                @ctx = MDContext.new(@env, @mdtype, @mdtype)
             end
 
             def generate_img
@@ -22,6 +22,10 @@ module KnowledgeUtils
                 FileSet.files(@src+'/**/**'+@mdtype, /\/#{@encrypt_dir}\//).each do |file|
                     info = MDInfo.new(file,@ctx)
                     res = gen.generate(info, file)
+                    path=@src+'/'+info.dstpath
+                    File.open(path,'a') do |f|
+                        f.puts res
+                    end
                 end
             end
 

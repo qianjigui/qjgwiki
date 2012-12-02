@@ -88,6 +88,9 @@ module KnowledgeUtils
     Dir[MODULE_PATH+'/'+GenerateBase::DIRECTORY+'/*.rb'].each do |gfile|
       require gfile
     end
+    Dir[MODULE_PATH+'/'+GenerateBase::DIRECTORY+'/github/*.rb'].each do |gfile|
+      require gfile
+    end
     Dir[MODULE_PATH+'/'+'convert'+'/*.rb'].each do |gfile|
       require gfile
     end
