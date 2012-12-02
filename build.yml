@@ -19,7 +19,7 @@
   :html: .html
   :imgs:
     # To protect the use use the link with the type
-    - ' '
+    - ""
     - .jpg
     - .jepg
     - .png

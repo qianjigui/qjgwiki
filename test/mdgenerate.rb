@@ -6,8 +6,10 @@ class ScannerForMarkdownExtension
         link_url = nil
         metadata = ''
         bodydata = ''
+        isInternalLink = false
+        isGeneratedLink = false
         
-# line 11 "mdgenerate.rb"
+# line 13 "mdgenerate.rb"
 class << self
 	attr_accessor :__ScannerForMarkdownExtension_actions
 	private :__ScannerForMarkdownExtension_actions, :__ScannerForMarkdownExtension_actions=
@@ -15,10 +17,10 @@ end
 self.__ScannerForMarkdownExtension_actions = [
 	0, 1, 1, 2, 1, 0, 2, 1, 
 	2, 3, 1, 0, 2, 3, 1, 3, 
-	2, 3, 1, 4, 2, 4, 1, 0, 
-	4, 2, 4, 1, 3, 4, 2, 4, 
-	1, 4, 5, 2, 4, 1, 4, 6, 
-	2, 4, 1, 4, 7, 2
+	2, 3, 1, 4, 2, 3, 1, 5, 
+	2, 3, 1, 6, 2, 3, 1, 7, 
+	2, 4, 1, 0, 4, 2, 4, 1, 
+	3, 4, 2
 ]
 
 class << self
@@ -28,8 +30,8 @@ end
 self.__ScannerForMarkdownExtension_key_offsets = [
 	0, 0, 1, 2, 3, 4, 5, 7, 
 	9, 11, 13, 15, 18, 21, 24, 27, 
-	30, 33, 35, 38, 42, 47, 51, 55, 
-	59, 63, 67, 71
+	30, 33, 36, 39, 43, 47, 50, 53, 
+	57, 61, 65, 69
 ]
 
 class << self
@@ -41,12 +43,12 @@ self.__ScannerForMarkdownExtension_trans_keys = [
 	45, 10, 45, 10, 60, 10, 60, 10, 
 	45, 60, 10, 45, 60, 10, 45, 60, 
 	10, 37, 60, 10, 60, 61, 10, 40, 
-	60, 10, 60, 10, 41, 60, 10, 41, 
-	45, 60, 10, 41, 60, 105, 108, 10, 
-	37, 41, 60, 10, 41, 60, 61, 10, 
-	40, 41, 60, 10, 37, 41, 60, 10, 
-	41, 60, 62, 10, 41, 45, 60, 10, 
-	41, 45, 60, 0
+	60, 10, 41, 60, 10, 41, 60, 10, 
+	41, 45, 60, 10, 60, 105, 108, 10, 
+	37, 60, 10, 60, 62, 10, 41, 45, 
+	60, 10, 41, 45, 60, 10, 37, 41, 
+	60, 10, 41, 60, 61, 10, 40, 41, 
+	60, 0
 ]
 
 class << self
@@ -56,7 +58,7 @@ end
 self.__ScannerForMarkdownExtension_single_lengths = [
 	0, 1, 1, 1, 1, 1, 2, 2, 
 	2, 2, 2, 3, 3, 3, 3, 3, 
-	3, 2, 3, 4, 5, 4, 4, 4, 
+	3, 3, 3, 4, 4, 3, 3, 4, 
 	4, 4, 4, 4
 ]
 
@@ -78,8 +80,8 @@ end
 self.__ScannerForMarkdownExtension_index_offsets = [
 	0, 0, 2, 4, 6, 8, 10, 13, 
 	16, 19, 22, 25, 29, 33, 37, 41, 
-	45, 49, 52, 56, 61, 67, 72, 77, 
-	82, 87, 92, 97
+	45, 49, 53, 57, 62, 67, 71, 75, 
+	80, 85, 90, 95
 ]
 
 class << self
@@ -93,13 +95,13 @@ self.__ScannerForMarkdownExtension_indicies = [
 	10, 11, 13, 12, 10, 11, 14, 12, 
 	10, 11, 15, 12, 10, 11, 16, 12, 
 	10, 11, 12, 17, 10, 11, 18, 12, 
-	10, 20, 21, 19, 20, 22, 21, 19, 
-	20, 22, 23, 21, 19, 20, 22, 21, 
-	24, 25, 19, 20, 26, 22, 21, 19, 
-	20, 22, 21, 27, 19, 20, 28, 22, 
-	21, 19, 20, 29, 22, 21, 19, 20, 
-	22, 21, 30, 19, 20, 22, 31, 21, 
-	19, 20, 22, 32, 21, 19, 0
+	10, 20, 10, 21, 19, 20, 22, 21, 
+	19, 20, 22, 23, 21, 19, 11, 12, 
+	24, 25, 10, 11, 26, 12, 10, 11, 
+	12, 27, 10, 20, 22, 28, 21, 19, 
+	20, 22, 29, 21, 19, 20, 30, 22, 
+	21, 19, 20, 22, 21, 31, 19, 20, 
+	32, 22, 21, 19, 0
 ]
 
 class << self
@@ -109,8 +111,8 @@ end
 self.__ScannerForMarkdownExtension_trans_targs = [
 	2, 0, 3, 4, 5, 5, 6, 7, 
 	8, 9, 10, 11, 14, 12, 13, 10, 
-	15, 16, 17, 18, 19, 21, 20, 26, 
-	24, 24, 22, 23, 18, 25, 18, 27, 
+	15, 16, 17, 18, 19, 25, 20, 23, 
+	21, 21, 22, 10, 24, 18, 26, 27, 
 	18
 ]
 
@@ -121,9 +123,9 @@ end
 self.__ScannerForMarkdownExtension_trans_actions = [
 	0, 0, 0, 0, 0, 1, 1, 1, 
 	1, 3, 6, 6, 6, 6, 6, 9, 
-	6, 6, 13, 17, 17, 17, 17, 17, 
-	41, 36, 17, 17, 26, 17, 31, 17, 
-	21
+	6, 6, 13, 17, 17, 17, 6, 17, 
+	29, 25, 6, 21, 17, 33, 17, 17, 
+	38
 ]
 
 class << self
@@ -145,14 +147,14 @@ end
 self._ScannerForMarkdownExtension_en_main = 1;
 
 
-# line 149 "mdgenerate.rb"
+# line 151 "mdgenerate.rb"
 begin
 	p ||= 0
 	pe ||= data.length
 	cs = _ScannerForMarkdownExtension_start
 end
 
-# line 156 "mdgenerate.rb"
+# line 158 "mdgenerate.rb"
 begin
 	_klen, _trans, _keys, _acts, _nacts = nil
 	_goto_level = 0
@@ -234,9 +236,10 @@ begin
 			_acts += 1
 			case __ScannerForMarkdownExtension_actions[_acts - 1]
 when 0 then
-# line 10 "mdgenerate.rl"
+# line 12 "mdgenerate.rl"
 		begin
 
+            metadata = metadata[0...-4]
             p metadata
 @header=<<HEADER
 ---
@@ -245,57 +248,67 @@ category: #{info.category}
 ---
 HEADER
             		end
-# line 10 "mdgenerate.rl"
+# line 12 "mdgenerate.rl"
 when 1 then
-# line 19 "mdgenerate.rl"
+# line 22 "mdgenerate.rl"
 		begin
 
                 metadata += data[p].chr
             		end
-# line 19 "mdgenerate.rl"
+# line 22 "mdgenerate.rl"
 when 2 then
-# line 22 "mdgenerate.rl"
+# line 25 "mdgenerate.rl"
 		begin
 
-                bodydata += data[p].chr
+                unless isInternalLink
+                    if isGeneratedLink
+                        isGeneratedLink=false
+                    else
+                        bodydata += data[p].chr 
+                    end
+                end
             		end
-# line 22 "mdgenerate.rl"
+# line 25 "mdgenerate.rl"
 when 3 then
-# line 26 "mdgenerate.rl"
+# line 35 "mdgenerate.rl"
 		begin
 
+                isInternalLink = true
+                bodydata = bodydata[0...-4]
                 relative_url = ''
             		end
-# line 26 "mdgenerate.rl"
+# line 35 "mdgenerate.rl"
 when 4 then
-# line 29 "mdgenerate.rl"
+# line 40 "mdgenerate.rl"
 		begin
 
                 relative_url += data[p].chr
             		end
-# line 29 "mdgenerate.rl"
+# line 40 "mdgenerate.rl"
 when 5 then
-# line 32 "mdgenerate.rl"
+# line 43 "mdgenerate.rl"
 		begin
 
                 bodydata+=link_url
+                isInternalLink = false
+                isGeneratedLink= true
             		end
-# line 32 "mdgenerate.rl"
+# line 43 "mdgenerate.rl"
 when 6 then
-# line 36 "mdgenerate.rl"
+# line 49 "mdgenerate.rl"
 		begin
 
                 link_url = info.link_to(relative_url)
             		end
-# line 36 "mdgenerate.rl"
+# line 49 "mdgenerate.rl"
 when 7 then
-# line 39 "mdgenerate.rl"
+# line 52 "mdgenerate.rl"
 		begin
 
                 link_url = info.img_to(relative_url)
             		end
-# line 39 "mdgenerate.rl"
-# line 299 "mdgenerate.rb"
+# line 52 "mdgenerate.rl"
+# line 312 "mdgenerate.rb"
 			end # action switch
 		end
 	end
@@ -322,7 +335,7 @@ when 7 then
 	end
 	end
 
-# line 68 "mdgenerate.rl"
+# line 79 "mdgenerate.rl"
 
         @header+bodydata
     end

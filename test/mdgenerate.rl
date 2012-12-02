@@ -4,10 +4,13 @@ class ScannerForMarkdownExtension
         link_url = nil
         metadata = ''
         bodydata = ''
+        isInternalLink = false
+        isGeneratedLink = false
         %%{
             machine _ScannerForMarkdownExtension;
             write data;
             action header_def{
+            metadata = metadata[0...-4]
             p metadata
 @header=<<HEADER
 ---
@@ -20,10 +23,18 @@ HEADER
                 metadata += fc.chr
             }
             action add_body{
-                bodydata += fc.chr
+                unless isInternalLink
+                    if isGeneratedLink
+                        isGeneratedLink=false
+                    else
+                        bodydata += fc.chr 
+                    end
+                end
             }
 
             action init_link{
+                isInternalLink = true
+                bodydata = bodydata[0...-4]
                 relative_url = ''
             }
             action add_link{
@@ -31,6 +42,8 @@ HEADER
             }
             action gen_link{
                 bodydata+=link_url
+                isInternalLink = false
+                isGeneratedLink= true
             }
 
             action link_to{
@@ -43,21 +56,19 @@ HEADER
             main :=
                     '---\n'
 
-                    (any @add_header)*
+                    (any >add_header)*
 
-                    '\n---'
-
-                    @header_def
+                    ('\n---') @header_def
 
                     (
                         (
-                            '<%=('
-                                @init_link
-                                (any @add_link)+
-                            ')'
-                            ('l'@link_to|'i'@img_to)
-                            '%>'
-                            @gen_link
+                            ('<%=(') @init_link
+
+                            ( (any-')')+ $add_link )
+
+                            (')l'@link_to | ')i'@img_to)
+
+                            ('%>') @gen_link
                         )
                         |
                         (any @add_body)

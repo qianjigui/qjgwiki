@@ -4,4 +4,4 @@ title: ?skdjf
 
 # wokao
 
-<%=(Test1)l%>
+<%=(../a/Test1)l%> 

@@ -10,3 +10,5 @@ tags: test
     * b
 
 ## Header 2
+
+<%=(../a.gif)i%>
