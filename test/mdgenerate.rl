@@ -1,17 +1,14 @@
-%%{
-    machine MarkdownFileGenerate;
-    write data;
-}%%
-
 class ScannerForMarkdownExtension
     def generate(info, file)
         data = File.read(file)
         link_url = nil
         metadata = ''
-        val = ''
         bodydata = ''
         %%{
+            machine _ScannerForMarkdownExtension;
+            write data;
             action header_def{
+            p metadata
 @header=<<HEADER
 ---
 category: #{info.category}
@@ -20,17 +17,17 @@ category: #{info.category}
 HEADER
             }
             action add_header{
-                metadata += val
+                metadata += fc.chr
             }
             action add_body{
-                bodydata += val
+                bodydata += fc.chr
             }
 
             action init_link{
                 relative_url = ''
             }
             action add_link{
-                relative_url += val
+                relative_url += fc.chr
             }
             action gen_link{
                 bodydata+=link_url
@@ -44,11 +41,14 @@ HEADER
             }
 
             main :=
-                (
                     '---\n'
+
                     (any @add_header)*
-                    '---\n'
+
+                    '\n---'
+
                     @header_def
+
                     (
                         (
                             '<%=('
@@ -58,11 +58,11 @@ HEADER
                             ('l'@link_to|'i'@img_to)
                             '%>'
                             @gen_link
-                        )*
+                        )
                         |
-                        ( any @add_body)*
-                    )
-                );
+                        (any @add_body)
+                    )+
+                ;
             write init;
             write exec;
         }%%

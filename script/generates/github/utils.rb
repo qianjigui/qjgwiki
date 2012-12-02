@@ -66,7 +66,7 @@ module KnowledgeUtils
                 # This path is equal to ( localpath + relative_url)
                 def link_to(relative_url)
                     dst = dst_localpath(relative_url)
-                    res = @@urlmap(dst)
+                    res = @@urlmap[dst]
                     unless res
                         @ctx.env.warn('internal link', dst, 'is error')
                     end
