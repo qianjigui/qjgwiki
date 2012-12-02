@@ -32,6 +32,7 @@ module KnowledgeUtils
                 #            the path in dest directory without the suffix
                 @@urlmap = {}
 
+                attr_reader :category
                 def initialize(path, ctx)
                     #file path in src
                     @srcpath = path
