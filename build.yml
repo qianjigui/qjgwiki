@@ -9,6 +9,8 @@
     :dir: 'src'
     :index: index
     :img: '_image'
+  :output:
+    :dir: 'githubwiki/fullarts/_posts'
   :template: template
 
 :types:

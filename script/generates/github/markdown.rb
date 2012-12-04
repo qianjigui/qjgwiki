@@ -5,6 +5,7 @@ module KnowledgeUtils
     module Generate
         class MarkdownGenerator < GenerateBase
 
+            require "#{File.dirname(__FILE__)}/utils.rb"
             include MarkdownHelper
 
             def set_tags
@@ -14,13 +15,16 @@ module KnowledgeUtils
             def prepare_imp
                 @env = @conf
                 @mdtype = @env[:types][:md]
-                @ctx = MDContext.new(@env, @mdtype, @mdtype)
+                @wikitype=@env[:types][:wiki]
+                @outputconf=@env[:build][:output]
+                @outdir = @outputconf[:dir]
+                @ctx = MDContext.new(@env, @wikitype, @mdtype)
             end
 
             def generate_imp
                 gen = ScannerForMarkdownExtension.new
                 list = []
-                FileSet.files(@src+'/**/**'+@mdtype, /\/#{@encrypt_dir}\//).each do |file|
+                FileSet.files(@src+'/**/**'+@wikitype, /\/#{@encrypt_dir}\//).each do |file|
                     @env.warn(file)
                     info = MDInfo.new(file,@ctx)
                     list << [info,file]
@@ -28,7 +32,8 @@ module KnowledgeUtils
                 list.each do |f|
                     info,file = f
                     res = gen.generate(info, file)
-                    path=@src+'/'+info.dstpath
+                    path=@outdir+'/'+info.dstpath
+                    FileUtils.mkdir_p(File.dirname(path))
                     File.open(path,'a') do |f|
                         f.puts res
                     end
