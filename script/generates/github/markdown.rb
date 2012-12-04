@@ -31,6 +31,7 @@ module KnowledgeUtils
                 end
                 list.each do |f|
                     info,file = f
+                    @env.warn(file)
                     res = gen.generate(info, file)
                     path=@outdir+'/'+info.dstpath
                     FileUtils.mkdir_p(File.dirname(path))

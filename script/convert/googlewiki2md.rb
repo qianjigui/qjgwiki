@@ -81,7 +81,7 @@ GoogleWikiFormat to MarkdownFormat Convert
                 def header
 <<STRING
 ---
-title: #{@metas[:title]}
+title: "#{@metas[:title]}"
 tags: #{@metas[:tags]}
 ---
 STRING
@@ -216,13 +216,13 @@ STRING
                         end
                         unless isPicture
                             unless isInternal
-                                newline = newline.sub(/\[(.+)?\]/,("[%s](%s title='urlpage')" % [@linkword, @newurl]))
+                                newline = newline.sub(/\[(.+)?\]/,("[%s](%s)" % [@linkword, @newurl]))
                             else
                                 #TODO Define the internal url process
-                                newline = newline.sub(/\[(.+)?\]/,("[%s](=%s title='urlpage')" % [@linkword, @newurl]))
+                                newline = newline.sub(/\[(.+)?\]/,("[%s](<%%=(%s)l%%>)" % [@linkword, @newurl]))
                             end
                         else
-                            newline = newline.sub(/\[(.+)?\]/,("![%s](%s title='urlpicture')" % [@linkword, @newurl]))
+                            newline = newline.sub(/\[(.+)?\]/,("![%s](%s)" % [@linkword, @newurl]))
                         end
                     end
                     newline
@@ -317,7 +317,7 @@ STRING
                 def process(ctx, line)
                     newline = line
                     if ctx[@key]
-                        newline  = newline.gsub('||', '|')
+                        newline  = newline.gsub('||', '| ')
                         if ctx[IS_FIRST_ROW]
                             newline += @headerline
                             ctx.conf.warn(ctx.file,'have table')

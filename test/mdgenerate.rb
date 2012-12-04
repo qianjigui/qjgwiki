@@ -248,14 +248,12 @@ category: #{info.category}
 ---
 HEADER
             		end
-# line 12 "mdgenerate.rl"
 when 1 then
 # line 22 "mdgenerate.rl"
 		begin
 
                 metadata += data[p].chr
             		end
-# line 22 "mdgenerate.rl"
 when 2 then
 # line 25 "mdgenerate.rl"
 		begin
@@ -268,23 +266,20 @@ when 2 then
                     end
                 end
             		end
-# line 25 "mdgenerate.rl"
 when 3 then
 # line 35 "mdgenerate.rl"
 		begin
 
                 isInternalLink = true
-                bodydata = bodydata[0...-4]
+                bodydata = bodydata[0...-3]
                 relative_url = ''
             		end
-# line 35 "mdgenerate.rl"
 when 4 then
 # line 40 "mdgenerate.rl"
 		begin
 
                 relative_url += data[p].chr
             		end
-# line 40 "mdgenerate.rl"
 when 5 then
 # line 43 "mdgenerate.rl"
 		begin
@@ -293,22 +288,19 @@ when 5 then
                 isInternalLink = false
                 isGeneratedLink= true
             		end
-# line 43 "mdgenerate.rl"
 when 6 then
 # line 49 "mdgenerate.rl"
 		begin
 
                 link_url = info.link_to(relative_url)
             		end
-# line 49 "mdgenerate.rl"
 when 7 then
 # line 52 "mdgenerate.rl"
 		begin
 
                 link_url = info.img_to(relative_url)
             		end
-# line 52 "mdgenerate.rl"
-# line 312 "mdgenerate.rb"
+# line 304 "mdgenerate.rb"
 			end # action switch
 		end
 	end

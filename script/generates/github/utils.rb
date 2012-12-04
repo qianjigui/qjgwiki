@@ -69,6 +69,7 @@ module KnowledgeUtils
                     res = @@urlmap[dst]
                     unless res
                         @ctx.env.warn('internal link', dst, 'is error')
+                        res='undefine'
                     end
                     res
                 end
@@ -87,6 +88,7 @@ module KnowledgeUtils
                     end
                     unless res
                         @ctx.env.warn('internal link image', img_path, 'is error')
+                        res='undefine'
                     end
                     Pathname.new(res).cleanpath.to_s
                 end

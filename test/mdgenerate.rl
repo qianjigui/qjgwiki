@@ -34,7 +34,7 @@ HEADER
 
             action init_link{
                 isInternalLink = true
-                bodydata = bodydata[0...-4]
+                bodydata = bodydata[0...-3]
                 relative_url = ''
             }
             action add_link{
