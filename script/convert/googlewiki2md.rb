@@ -150,8 +150,8 @@ STRING
                 def process(ctx, line)
                     newline = line
                     if ctx[@key]
-                        newline = newline.sub('{{{', '~~~~')
-                        newline = newline.sub('}}}', '~~~~')
+                        newline = newline.sub('{{{', '{% highlight none %}')
+                        newline = newline.sub('}}}', '{% endhighlight %}')
                     end
                     newline
                 end

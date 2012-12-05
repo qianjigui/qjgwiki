@@ -14,6 +14,7 @@ class ScannerForMarkdownExtension
             p metadata
 @header=<<HEADER
 ---
+layout: default
 category: #{info.category}
 #{metadata}
 ---

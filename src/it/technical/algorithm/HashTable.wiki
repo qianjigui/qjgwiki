@@ -20,7 +20,7 @@
 [http://www.byvoid.com/blog/string-hash-compare/ 各种字符串hash函数比较]
 
 ====BKDRH====
-<code language="c">
+{%highlight c%}
 //BKDR Hash Function
 unsigned int BKDRHash(char *str)
 {
@@ -33,4 +33,4 @@ unsigned int BKDRHash(char *str)
 
     return (hash & 0x7FFFFFFF);
 }
-</code>
+{%endhighlight%}
