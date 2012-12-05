@@ -7,7 +7,7 @@
 {{{
 openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 -fingerprint -noout -in /dev/stdin
 }}}
-  # 在~/.hgrc文件的[hostfingerprints]部分添加一行: host=fingerprint
+  # 在~/.hgrc文件的hostfingerprints部分添加一行: host=fingerprint
 
 ==Ubuntu hg-git plugin 配置==
 [https://bugs.launchpad.net/ubuntu/+source/hg-git/+bug/666292 修复方法]
@@ -27,6 +27,7 @@ hggit = /usr/share/pyshared/hgext/git
 认真利用:
   # .hg/hgrc
   # 缩写路径，存储登录帐号与密码:
+
 {{{
 [paths]
 default = https://code.google.com/p/project/default

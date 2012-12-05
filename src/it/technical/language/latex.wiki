@@ -105,7 +105,7 @@
 \ProvidesPackage{dcuappendices}
 
 %Set Header & Footer
-\def\ps@ieeeheadings{%
+\def\ps@ieeeheadings{
 \def\@oddhead{\mbox{}\scriptsize\MakeUppercase{\finalReportLeftheaderTitle} \hfil \thepage}%
 \def\@evenhead{\mbox{}\scriptsize\MakeUppercase{\finalReportLeftheaderTitle} \hfil \thepage}%
 \def\@oddfoot{}%

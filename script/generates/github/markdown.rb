@@ -35,7 +35,7 @@ module KnowledgeUtils
                     res = gen.generate(info, file)
                     path=@outdir+'/'+info.dstpath
                     FileUtils.mkdir_p(File.dirname(path))
-                    File.open(path,'a') do |f|
+                    File.open(path,'w') do |f|
                         f.puts res
                     end
                 end
