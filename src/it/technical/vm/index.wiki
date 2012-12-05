@@ -1,8 +1,12 @@
-#summary 虚拟机技术
-<wiki:toc max_depth="3" />
-=虚拟机(Virtual Machines)=
+---
+title: "虚拟机技术"
+tags: undefine
+---
 
-==介绍(Introduction)==
 
-===计算机体系结构(Computer Architecture)===
 
+#虚拟机(Virtual Machines)#
+
+##介绍(Introduction)##
+
+###计算机体系结构(Computer Architecture)###

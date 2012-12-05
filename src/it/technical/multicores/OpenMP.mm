@@ -261,7 +261,7 @@
   </head>
   <body>
     <p>
-      {{{
+      {% highlight none %}
     </p>
     <p>
       sum=0;
@@ -312,7 +312,7 @@
       }
     </p>
     <p>
-      }}}
+      {% endhighlight %}
     </p>
   </body>
 </html>
@@ -323,9 +323,9 @@
 </node>
 </node>
 <node CREATED="1311275364328" ID="ID_153449745" MODIFIED="1311275368396" POSITION="right" TEXT="&#x5b66;&#x4e60;&#x8d44;&#x6e90;">
-<node CREATED="1311275385907" ID="ID_1706241026" MODIFIED="1311373819667" TEXT="[http://kheresy.wordpress.com/2006/06/09/&#x7c21;&#x6613;&#x7684;&#x7a0b;&#x5f0f;&#x5e73;&#x884c;&#x5316;&#x65b9;&#x6cd5;&#xff0d;openmp&#xff08;&#x4e00;&#xff09;&#x7c21;&#x4ecb;/ OpenMP&#x7b80;&#x4ecb;&#x4e0e;&#x8bed;&#x6cd5;&#x8be6;&#x7ec6;&#x5217;&#x8868;]"/>
-<node CREATED="1311373252066" ID="ID_1842661791" MODIFIED="1311373830872" TEXT="[http://www.cnblogs.com/me115/archive/2011/01/25/1944567.html OpenMp&#x7f16;&#x7a0b;&#x6750;&#x6599;&#x96c6;&#x5408;]"/>
-<node CREATED="1311373276300" ID="ID_1975021489" MODIFIED="1311373842891" TEXT="[http://cobweb.ecn.purdue.edu/ParaMount/iwomp2008/documents/chapman-underthehood OpenMP&#x5de5;&#x4f5c;&#x539f;&#x7406;]"/>
+<node CREATED="1311275385907" ID="ID_1706241026" MODIFIED="1311373819667" TEXT="[OpenMP&#x7b80;&#x4ecb;&#x4e0e;&#x8bed;&#x6cd5;&#x8be6;&#x7ec6;&#x5217;&#x8868;](http://kheresy.wordpress.com/2006/06/09/&#x7c21;&#x6613;&#x7684;&#x7a0b;&#x5f0f;&#x5e73;&#x884c;&#x5316;&#x65b9;&#x6cd5;&#xff0d;openmp&#xff08;&#x4e00;&#xff09;&#x7c21;&#x4ecb;/)"/>
+<node CREATED="1311373252066" ID="ID_1842661791" MODIFIED="1311373830872" TEXT="[OpenMp&#x7f16;&#x7a0b;&#x6750;&#x6599;&#x96c6;&#x5408;](http://www.cnblogs.com/me115/archive/2011/01/25/1944567.html)"/>
+<node CREATED="1311373276300" ID="ID_1975021489" MODIFIED="1311373842891" TEXT="[OpenMP&#x5de5;&#x4f5c;&#x539f;&#x7406;](http://cobweb.ecn.purdue.edu/ParaMount/iwomp2008/documents/chapman-underthehood)"/>
 </node>
 </node>
 </map>

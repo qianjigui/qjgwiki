@@ -11,27 +11,27 @@
 <node CREATED="1344416322189" ID="ID_45574720" MODIFIED="1344416356744" TEXT="ABI(Application Binary Interface)&#x5e94;&#x7528;&#x4e8c;&#x8fdb;&#x5236;&#x63a5;&#x53e3;"/>
 <node CREATED="1344416357817" ID="ID_563151424" MODIFIED="1344416380404" TEXT="API(Application Program Interface)&#x5e94;&#x7528;&#x7f16;&#x7a0b;&#x63a5;&#x53e3;"/>
 </node>
-<node CREATED="1344417881301" ID="ID_1558441587" MODIFIED="1344417884117" TEXT="[http://pic.yupoo.com/qianjigui/CaVbCW9i/medish.jpg]"/>
-<node CREATED="1344417978447" ID="ID_842263504" MODIFIED="1344417980149" TEXT="[http://pic.yupoo.com/qianjigui/CaVcUY2N/medish.jpg]"/>
+<node CREATED="1344417881301" ID="ID_1558441587" MODIFIED="1344417884117" TEXT="![http://pic.yupoo.com/qianjigui/CaVbCW9i/medish.jpg](http://pic.yupoo.com/qianjigui/CaVbCW9i/medish.jpg)"/>
+<node CREATED="1344417978447" ID="ID_842263504" MODIFIED="1344417980149" TEXT="![http://pic.yupoo.com/qianjigui/CaVcUY2N/medish.jpg](http://pic.yupoo.com/qianjigui/CaVcUY2N/medish.jpg)"/>
 </node>
 <node CREATED="1344418002762" ID="ID_139463876" MODIFIED="1344418005578" TEXT="VM-base">
-<node CREATED="1344418060365" ID="ID_1972677668" MODIFIED="1344418062407" TEXT="[http://pic.yupoo.com/qianjigui/CaVbEzly/medish.jpg]"/>
-<node CREATED="1344418067982" ID="ID_902620654" MODIFIED="1344418073483" TEXT="[http://pic.yupoo.com/qianjigui/CaVbHPeS/medish.jpg]"/>
-<node CREATED="1344418078478" ID="ID_1171667935" MODIFIED="1344418080863" TEXT="[http://pic.yupoo.com/qianjigui/CaVbMx2U/medish.jpg]"/>
+<node CREATED="1344418060365" ID="ID_1972677668" MODIFIED="1344418062407" TEXT="![http://pic.yupoo.com/qianjigui/CaVbEzly/medish.jpg](http://pic.yupoo.com/qianjigui/CaVbEzly/medish.jpg)"/>
+<node CREATED="1344418067982" ID="ID_902620654" MODIFIED="1344418073483" TEXT="![http://pic.yupoo.com/qianjigui/CaVbHPeS/medish.jpg](http://pic.yupoo.com/qianjigui/CaVbHPeS/medish.jpg)"/>
+<node CREATED="1344418078478" ID="ID_1171667935" MODIFIED="1344418080863" TEXT="![http://pic.yupoo.com/qianjigui/CaVbMx2U/medish.jpg](http://pic.yupoo.com/qianjigui/CaVbMx2U/medish.jpg)"/>
 </node>
 <node CREATED="1344418102588" ID="ID_1786339295" MODIFIED="1344418107890" TEXT="&#x8fdb;&#x7a0b;VM">
 <node CREATED="1344418108989" ID="ID_404906330" MODIFIED="1344418117530" TEXT="&#x591a;&#x8fdb;&#x7a0b;&#x652f;&#x6301;&#x7ea7;&#x522b;"/>
 <node CREATED="1344418118601" ID="ID_1067630978" MODIFIED="1344418134339" TEXT="&#x4eff;&#x771f;&#x5668;&#x548c;&#x52a8;&#x6001;&#x4e8c;&#x8fdb;&#x5236;&#x7ffb;&#x8bd1;&#x5668;">
-<node CREATED="1344418172979" ID="ID_572227117" MODIFIED="1344418174828" TEXT="[http://pic.yupoo.com/qianjigui/CaVbFSZm/medish.jpg]"/>
+<node CREATED="1344418172979" ID="ID_572227117" MODIFIED="1344418174828" TEXT="![http://pic.yupoo.com/qianjigui/CaVbFSZm/medish.jpg](http://pic.yupoo.com/qianjigui/CaVbFSZm/medish.jpg)"/>
 </node>
 <node CREATED="1344418135602" ID="ID_1541236129" MODIFIED="1344418154769" TEXT="&#x76f8;&#x540c;ISA&#x4e0b;&#x7684;&#x4e8c;&#x8fdb;&#x5236;&#x4f18;&#x5316;&#x5668;"/>
 <node CREATED="1344418183817" ID="ID_89682584" MODIFIED="1344418186016" TEXT="HLL-VM">
-<node CREATED="1344418206410" ID="ID_941969132" MODIFIED="1344418208490" TEXT="[http://pic.yupoo.com/qianjigui/CaVbE2FD/medish.jpg]"/>
+<node CREATED="1344418206410" ID="ID_941969132" MODIFIED="1344418208490" TEXT="![http://pic.yupoo.com/qianjigui/CaVbE2FD/medish.jpg](http://pic.yupoo.com/qianjigui/CaVbE2FD/medish.jpg)"/>
 </node>
 </node>
 <node CREATED="1344418235260" ID="ID_1413023518" MODIFIED="1344418237790" TEXT="&#x7cfb;&#x7edf;VM">
-<node CREATED="1344418256583" ID="ID_1015892545" MODIFIED="1344418258546" TEXT="[http://pic.yupoo.com/qianjigui/CaVbIPjz/medish.jpg]"/>
-<node CREATED="1344418262446" ID="ID_251216962" MODIFIED="1344418264127" TEXT="[http://pic.yupoo.com/qianjigui/CaVbBtBs/medish.jpg]"/>
+<node CREATED="1344418256583" ID="ID_1015892545" MODIFIED="1344418258546" TEXT="![http://pic.yupoo.com/qianjigui/CaVbIPjz/medish.jpg](http://pic.yupoo.com/qianjigui/CaVbIPjz/medish.jpg)"/>
+<node CREATED="1344418262446" ID="ID_251216962" MODIFIED="1344418264127" TEXT="![http://pic.yupoo.com/qianjigui/CaVbBtBs/medish.jpg](http://pic.yupoo.com/qianjigui/CaVbBtBs/medish.jpg)"/>
 </node>
 <node CREATED="1344418306914" ID="ID_1168742069" MODIFIED="1344418310375" TEXT="&#x5206;&#x7c7b;">
 <node CREATED="1344418311448" ID="ID_1437108502" MODIFIED="1344418316393" TEXT="&#x8fdb;&#x7a0b;VM">
@@ -91,8 +91,8 @@
 <node CREATED="1344419034872" ID="ID_1394448159" MODIFIED="1344419050125" TEXT="&#x4e0d;&#x53ef;&#x80fd;&#x5c06;&#x6bcf;&#x4e2a;&#x4f8b;&#x7a0b;&#x90fd;&#x7ebf;&#x7d22;&#x5316;"/>
 <node CREATED="1344419050413" ID="ID_1260547932" MODIFIED="1344419068294" TEXT="&#x591a;&#x4e2a;&#x6307;&#x4ee4;&#x53ef;&#x80fd;&#x5c31;&#x662f;&#x53c2;&#x6570;&#x91cf;&#x4e0d;&#x540c;&#xff0c;&#x5927;&#x91cf;&#x5904;&#x7406;&#x903b;&#x8f91;&#x4e00;&#x81f4;"/>
 <node CREATED="1344419070901" ID="ID_1719321999" MODIFIED="1344419132215" TEXT="&#x591a;&#x6b21;&#x5206;&#x6d3e;&#x4e0e;&#x5171;&#x4eab;&#x4f8b;&#x7a0b;&#x5904;&#x7406;">
-<node CREATED="1344421620580" ID="ID_1664201767" MODIFIED="1344421622390" TEXT="[http://pic.yupoo.com/qianjigui/CaVDjup9/medish.jpg]"/>
-<node CREATED="1344421641817" ID="ID_1671295852" MODIFIED="1344421643686" TEXT="[http://pic.yupoo.com/qianjigui/CaVDjpvO/medish.jpg]"/>
+<node CREATED="1344421620580" ID="ID_1664201767" MODIFIED="1344421622390" TEXT="![http://pic.yupoo.com/qianjigui/CaVDjup9/medish.jpg](http://pic.yupoo.com/qianjigui/CaVDjup9/medish.jpg)"/>
+<node CREATED="1344421641817" ID="ID_1671295852" MODIFIED="1344421643686" TEXT="![http://pic.yupoo.com/qianjigui/CaVDjpvO/medish.jpg](http://pic.yupoo.com/qianjigui/CaVDjpvO/medish.jpg)"/>
 </node>
 <node CREATED="1344419290549" ID="ID_1470151884" MODIFIED="1344419898732" TEXT="&#x901a;&#x8fc7;&#x8f6f;&#x4ef6;&#x6d41;&#x6c34;&#x7684;&#x65b9;&#x5f0f;&#x6765;&#x7ec4;&#x7ec7;&#x5206;&#x6d3e;&#x5faa;&#x73af;&#x7684;&#x5173;&#x952e;&#x70b9;&#x662f;&#xff1a;&#x4e0e;&#x5c06;&#x6765;&#x7684;&#x6e90;&#x6307;&#x4ee4;&#x76f8;&#x5173;&#x7684;&#x52a0;&#x8f7d;&#x64cd;&#x4f5c;&#x4e0e;&#x5f53;&#x524d;&#x6307;&#x4ee4;&#x7684;&#x89e3;&#x91ca;&#x76f8;&#x4e92;&#x91cd;&#x53e0;">
 <icon BUILTIN="idea"/>
@@ -142,12 +142,12 @@
 <icon BUILTIN="idea"/>
 <node CREATED="1344420965469" ID="ID_1993703266" MODIFIED="1344421050135" TEXT="&#x5728;&#x7ffb;&#x8bd1;&#x65f6;&#x53d1;&#x751f;&#x4ece;&#x7ffb;&#x8bd1;&#x4ee3;&#x7801;&#x5230;&#x76ee;&#x6807;&#x4e8c;&#x8fdb;&#x5236;&#x4ee3;&#x7801;&#x95f4;&#x63a5;&#x8df3;&#x8f6c;&#x65f6;&#xff0c;&#x9700;&#x8981;&#x7eaa;&#x5f55;&#x6e90;&#x7a0b;&#x5e8f;&#x7684;PC&#x503c;&#xff08;SPC&#xff09;&#xff0c;&#x7136;&#x540e;&#x8c03;&#x7528;&#x7ed3;&#x675f;&#x540e;&#x901a;&#x8fc7;SPC&#x8ba1;&#x7b97;&#x6e90;&#x7a0b;&#x5e8f;&#x7684;&#x5730;&#x5740;&#x3002;&#x8fd9;&#x6837;&#x5b58;&#x5728;&#x4e00;&#x6b21;&#x67e5;&#x8868;"/>
 <node CREATED="1344421054022" ID="ID_120397388" MODIFIED="1344421240197" TEXT="&#x5c06;&#x6e90;&#x7a0b;&#x5e8f;&#x7ffb;&#x8bd1;&#x65f6;&#xff0c;&#x53d1;&#x751f;&#x8c03;&#x7528;&#x65f6;&#x5019;&#x7684;&#x5730;&#x5740;&#x7eaa;&#x5f55;&#x653e;&#x5165;&#x5f71;&#x5b50;&#x6808;&#x4e2d;&#x3002;&#x5728;&#x76ee;&#x6807;&#x4e8c;&#x8fdb;&#x5236;&#x4ee3;&#x7801;&#x8c03;&#x7528;&#x8fd4;&#x56de;&#x65f6;&#xff0c;&#x76ee;&#x6807;&#x4e8c;&#x8fdb;&#x5236;&#x6709;&#x4e2a;&#x7ed3;&#x679c;PC&#x503c;&#xff08;DPC&#xff09;&#xff0c;&#x5982;&#x679c;&#x72b6;&#x6001;&#x6b63;&#x5e38;&#xff0c;&#x5219;&#x8fd9;&#x4e2a;DPC&#x53ef;&#x4ee5;&#x76f4;&#x63a5;&#x88ab;&#x4f7f;&#x7528;&#xff08;&#x4e0a;&#x6b21;&#x52a8;&#x6001;&#x4e8c;&#x8fdb;&#x5236;&#x7ffb;&#x8bd1;&#x65f6;&#xff0c;&#x8fd9;&#x4e2a;DPC&#x53ef;&#x80fd;&#x662f;&#x4e2a;&#x9677;&#x9631;&#x503c;&#xff1a;&#x9700;&#x8981;&#x518d;&#x6b21;&#x89e3;&#x6790;&#xff0c;&#x4e5f;&#x53ef;&#x80fd;&#x5df2;&#x7ecf;&#x94fe;&#x63a5;&#x5b8c;&#x6210;&#xff09;"/>
-<node CREATED="1344421602116" ID="ID_751163255" MODIFIED="1344421604349" TEXT="[http://pic.yupoo.com/qianjigui/CaVDjvhm/medish.jpg]"/>
+<node CREATED="1344421602116" ID="ID_751163255" MODIFIED="1344421604349" TEXT="![http://pic.yupoo.com/qianjigui/CaVDjvhm/medish.jpg](http://pic.yupoo.com/qianjigui/CaVDjvhm/medish.jpg)"/>
 </node>
 </node>
 </node>
 <node CREATED="1344738453241" ID="ID_495873538" MODIFIED="1344862964716" POSITION="right" TEXT="&#x8fdb;&#x7a0b;&#x865a;&#x62df;&#x673a;">
-<node CREATED="1344864040031" ID="ID_750569647" MODIFIED="1344864047829" TEXT="[http://pic.yupoo.com/qianjigui/CbHVlKve/medish.jpg]"/>
+<node CREATED="1344864040031" ID="ID_750569647" MODIFIED="1344864047829" TEXT="![http://pic.yupoo.com/qianjigui/CbHVlKve/medish.jpg](http://pic.yupoo.com/qianjigui/CbHVlKve/medish.jpg)"/>
 <node CREATED="1344738605260" ID="ID_872115259" MODIFIED="1344738610752" TEXT="&#x517c;&#x5bb9;&#x6027;">
 <node CREATED="1344738464380" ID="ID_985848713" MODIFIED="1344738637447" TEXT="&#x6982;&#x5ff5;">
 <node CREATED="1344738475243" ID="ID_582229725" MODIFIED="1344738481258" TEXT="&#x5185;&#x5728;&#x517c;&#x5bb9;&#x6027;">
@@ -267,8 +267,8 @@
 <node CREATED="1344862703616" ID="ID_394947078" MODIFIED="1344862707263" TEXT="&#x7ffb;&#x8bd1;&#x5668;"/>
 </node>
 <node CREATED="1344862708409" ID="ID_565032109" MODIFIED="1344862721402" TEXT="&#x5206;&#x9636;&#x6bb5;&#x6307;&#x4ee4;&#x4eff;&#x771f;">
-<node CREATED="1344864067241" ID="ID_1587536958" MODIFIED="1344864076536" TEXT="[http://pic.yupoo.com/qianjigui/CbHVjx12/medish.jpg]"/>
-<node CREATED="1344864083141" ID="ID_156204708" MODIFIED="1344864089952" TEXT="[http://pic.yupoo.com/qianjigui/CbHVkIq0/medish.jpg]"/>
+<node CREATED="1344864067241" ID="ID_1587536958" MODIFIED="1344864076536" TEXT="![http://pic.yupoo.com/qianjigui/CbHVjx12/medish.jpg](http://pic.yupoo.com/qianjigui/CbHVjx12/medish.jpg)"/>
+<node CREATED="1344864083141" ID="ID_156204708" MODIFIED="1344864089952" TEXT="![http://pic.yupoo.com/qianjigui/CbHVkIq0/medish.jpg](http://pic.yupoo.com/qianjigui/CbHVkIq0/medish.jpg)"/>
 </node>
 </node>
 <node CREATED="1344862964684" ID="ID_1237778802" MODIFIED="1344862971502" TEXT="&#x5f02;&#x5e38;&#x5904;&#x7406;">
@@ -463,8 +463,8 @@
 <node CREATED="1345341447706" ID="ID_868336706" MODIFIED="1345341482423" TEXT="&#x4f18;&#x5316;&#x6846;&#x67b6;">
 <node CREATED="1345341496324" ID="ID_1777489515" MODIFIED="1345341757140" TEXT="&#x603b;&#x7684;&#x539f;&#x5219;&#x662f;&#x5e94;&#x8be5;&#x4f7f;&#x7528;&#x5feb;&#x901f;&#x3001;&#x4f4e;&#x5f00;&#x9500;&#x7684;&#x4f18;&#x5316;&#x6765;&#x6536;&#x96c6;&#x90a3;&#x4e9b;&#x201c;&#x53ef;&#x8f7b;&#x677e;&#x5b9e;&#x73b0;&#x7684;&#x76ee;&#x6807;&#x201d;"/>
 <node CREATED="1345341790818" ID="ID_1659581452" MODIFIED="1345341804053" TEXT="&#x65b9;&#x6cd5;">
-<node CREATED="1345342967053" ID="ID_1736901394" MODIFIED="1345342976610" TEXT="[http://pic.yupoo.com/qianjigui/CcycBiL4/medish.jpg]"/>
-<node CREATED="1345342987127" ID="ID_571101949" MODIFIED="1345342994961" TEXT="[http://pic.yupoo.com/qianjigui/CcycB3n2/medish.jpg]"/>
+<node CREATED="1345342967053" ID="ID_1736901394" MODIFIED="1345342976610" TEXT="![http://pic.yupoo.com/qianjigui/CcycBiL4/medish.jpg](http://pic.yupoo.com/qianjigui/CcycBiL4/medish.jpg)"/>
+<node CREATED="1345342987127" ID="ID_571101949" MODIFIED="1345342994961" TEXT="![http://pic.yupoo.com/qianjigui/CcycB3n2/medish.jpg](http://pic.yupoo.com/qianjigui/CcycB3n2/medish.jpg)"/>
 </node>
 <node CREATED="1345341853060" ID="ID_1344977837" MODIFIED="1345342025294" TEXT="&#x517c;&#x5bb9;&#x6027;">
 <node CREATED="1345342036814" ID="ID_104845160" MODIFIED="1345342049226" TEXT="&#x9677;&#x9631;"/>
@@ -474,11 +474,11 @@
 </node>
 <node CREATED="1345343191597" ID="ID_970019795" MODIFIED="1345343203969" TEXT="&#x4ee3;&#x7801;&#x91cd;&#x6392;">
 <node CREATED="1345342309997" ID="ID_1505459585" MODIFIED="1345343282398" TEXT="&#x57fa;&#x672c;&#x6307;&#x4ee4;&#x91cd;&#x6392;">
-<node CREATED="1345343019106" ID="ID_349687188" MODIFIED="1345343026251" TEXT="[http://pic.yupoo.com/qianjigui/CcycADFb/medish.jpg]"/>
-<node CREATED="1345343054813" ID="ID_1864751753" MODIFIED="1345343058048" TEXT="[http://pic.yupoo.com/qianjigui/CcyczZ27/medish.jpg]"/>
-<node CREATED="1345343067186" ID="ID_548828279" MODIFIED="1345343069401" TEXT="[http://pic.yupoo.com/qianjigui/Ccyczqav/medish.jpg]"/>
-<node CREATED="1345343077450" ID="ID_1208536560" MODIFIED="1345343079326" TEXT="[http://pic.yupoo.com/qianjigui/Ccycz2bn/medish.jpg]"/>
-<node CREATED="1345343043149" ID="ID_981114334" MODIFIED="1345343045834" TEXT="[http://pic.yupoo.com/qianjigui/CcycAvM7/medish.jpg]"/>
+<node CREATED="1345343019106" ID="ID_349687188" MODIFIED="1345343026251" TEXT="![http://pic.yupoo.com/qianjigui/CcycADFb/medish.jpg](http://pic.yupoo.com/qianjigui/CcycADFb/medish.jpg)"/>
+<node CREATED="1345343054813" ID="ID_1864751753" MODIFIED="1345343058048" TEXT="![http://pic.yupoo.com/qianjigui/CcyczZ27/medish.jpg](http://pic.yupoo.com/qianjigui/CcyczZ27/medish.jpg)"/>
+<node CREATED="1345343067186" ID="ID_548828279" MODIFIED="1345343069401" TEXT="![http://pic.yupoo.com/qianjigui/Ccyczqav/medish.jpg](http://pic.yupoo.com/qianjigui/Ccyczqav/medish.jpg)"/>
+<node CREATED="1345343077450" ID="ID_1208536560" MODIFIED="1345343079326" TEXT="![http://pic.yupoo.com/qianjigui/Ccycz2bn/medish.jpg](http://pic.yupoo.com/qianjigui/Ccycz2bn/medish.jpg)"/>
+<node CREATED="1345343043149" ID="ID_981114334" MODIFIED="1345343045834" TEXT="![http://pic.yupoo.com/qianjigui/CcycAvM7/medish.jpg](http://pic.yupoo.com/qianjigui/CcycAvM7/medish.jpg)"/>
 </node>
 <node CREATED="1345343287068" ID="ID_415032831" MODIFIED="1345343302789" TEXT="&#x8c03;&#x5ea6;&#x7b97;&#x6cd5;">
 <node CREATED="1345343320457" ID="ID_836133529" MODIFIED="1345343389343" TEXT="1. &#x7ffb;&#x8bd1;&#x5230;&#x5355;&#x6307;&#x4ee4;&#x5f62;&#x5f0f;"/>
@@ -541,7 +541,7 @@
 <node CREATED="1345345435864" ID="ID_1400744860" MODIFIED="1345345449892" TEXT="&#x5168;&#x5c40;&#x5185;&#x5b58;"/>
 <node CREATED="1345345450201" ID="ID_1334367294" MODIFIED="1345345490423" TEXT="&#x5e38;&#x91cf;&#x6c60;"/>
 <node COLOR="#ff0000" CREATED="1345345492471" ID="ID_1397200827" MODIFIED="1345345521892" TEXT="&#x5c42;&#x6b21;">
-<node CREATED="1345345637993" ID="ID_220073411" MODIFIED="1345345643889" TEXT="[http://pic.yupoo.com/qianjigui/CcyuP9pa/medish.jpg]"/>
+<node CREATED="1345345637993" ID="ID_220073411" MODIFIED="1345345643889" TEXT="![http://pic.yupoo.com/qianjigui/CcyuP9pa/medish.jpg](http://pic.yupoo.com/qianjigui/CcyuP9pa/medish.jpg)"/>
 </node>
 </node>
 </node>
@@ -569,7 +569,7 @@
 </node>
 <node CREATED="1345344659470" ID="ID_1570647031" MODIFIED="1345344665036" TEXT="&#x5b9e;&#x73b0;">
 <node CREATED="1345365312340" ID="ID_1706521113" MODIFIED="1345365320458" TEXT="&#x7ed3;&#x6784;">
-<node CREATED="1345368543161" ID="ID_726502604" MODIFIED="1345368544609" TEXT="[http://pic.yupoo.com/qianjigui/CcAYoNH5/medish.jpg]"/>
+<node CREATED="1345368543161" ID="ID_726502604" MODIFIED="1345368544609" TEXT="![http://pic.yupoo.com/qianjigui/CcAYoNH5/medish.jpg](http://pic.yupoo.com/qianjigui/CcAYoNH5/medish.jpg)"/>
 </node>
 <node CREATED="1345365325724" ID="ID_1546652889" MODIFIED="1345365362586" TEXT="&#x52a8;&#x6001;&#x7c7b;&#x52a0;&#x8f7d;">
 <node CREATED="1345365539001" ID="ID_1605549238" MODIFIED="1345365627082" TEXT="&#x7528;&#x4e8e;&#x7edf;&#x4e00;&#x5b57;&#x8282;&#x7801;"/>
@@ -604,18 +604,18 @@
 <node CREATED="1345366361694" ID="ID_1013630639" MODIFIED="1345366389768" TEXT="&#x589e;&#x5f3a;&#x7684;&#x5b89;&#x5168;&#x6a21;&#x578b;">
 <node CREATED="1345366391226" ID="ID_1802457295" MODIFIED="1345366537067" TEXT="&#x8eab;&#x4efd;"/>
 <node CREATED="1345366537461" ID="ID_657986914" MODIFIED="1345366545616" TEXT="&#x7b7e;&#x540d;">
-<node CREATED="1345368516758" ID="ID_422344432" MODIFIED="1345368518181" TEXT="[http://pic.yupoo.com/qianjigui/CcAYtdh1/medish.jpg]"/>
+<node CREATED="1345368516758" ID="ID_422344432" MODIFIED="1345368518181" TEXT="![http://pic.yupoo.com/qianjigui/CcAYtdh1/medish.jpg](http://pic.yupoo.com/qianjigui/CcAYtdh1/medish.jpg)"/>
 </node>
 <node CREATED="1345366548415" ID="ID_1323166028" MODIFIED="1345366646809" TEXT="&#x5229;&#x7528;&#x8c03;&#x7528;&#x6808;&#x505a;&#x5206;&#x6790;">
-<node CREATED="1345368444386" ID="ID_1541626541" MODIFIED="1345368446576" TEXT="[http://pic.yupoo.com/qianjigui/CcAYENvY/medish.jpg]"/>
+<node CREATED="1345368444386" ID="ID_1541626541" MODIFIED="1345368446576" TEXT="![http://pic.yupoo.com/qianjigui/CcAYENvY/medish.jpg](http://pic.yupoo.com/qianjigui/CcAYENvY/medish.jpg)"/>
 </node>
 </node>
 </node>
 <node CREATED="1345366653525" ID="ID_1024231044" MODIFIED="1345366681349" TEXT="&#x5783;&#x573e;&#x6536;&#x96c6;">
-<node CREATED="1345368504718" ID="ID_3876250" MODIFIED="1345368506463" TEXT="[http://pic.yupoo.com/qianjigui/CcAYtokN/medish.jpg]"/>
+<node CREATED="1345368504718" ID="ID_3876250" MODIFIED="1345368506463" TEXT="![http://pic.yupoo.com/qianjigui/CcAYtokN/medish.jpg](http://pic.yupoo.com/qianjigui/CcAYtokN/medish.jpg)"/>
 </node>
 <node CREATED="1345366696684" ID="ID_1367962301" MODIFIED="1345366698587" TEXT="JNI">
-<node CREATED="1345368527876" ID="ID_1129599392" MODIFIED="1345368529235" TEXT="[http://pic.yupoo.com/qianjigui/CcAYstmG/medish.jpg]"/>
+<node CREATED="1345368527876" ID="ID_1129599392" MODIFIED="1345368529235" TEXT="![http://pic.yupoo.com/qianjigui/CcAYstmG/medish.jpg](http://pic.yupoo.com/qianjigui/CcAYstmG/medish.jpg)"/>
 </node>
 <node CREATED="1345367190492" ID="ID_119347074" MODIFIED="1345367205135" TEXT="&#x4eff;&#x771f;">
 <node CREATED="1345367213305" ID="ID_1668878679" MODIFIED="1345367215411" TEXT="Interp"/>
@@ -625,24 +625,24 @@
 <node CREATED="1345367308590" ID="ID_284005880" MODIFIED="1345367322638" TEXT="&#x65b9;&#x6cd5;&#x5185;&#x8054;"/>
 <node CREATED="1345367340624" ID="ID_715069171" MODIFIED="1345367349343" TEXT="VirtualMethodInvoke">
 <node CREATED="1345367350017" ID="ID_111393139" MODIFIED="1345367366650" TEXT="Polymorphic Inline Caching(PIC)">
-<node CREATED="1345368461925" ID="ID_1504114708" MODIFIED="1345368464015" TEXT="[http://pic.yupoo.com/qianjigui/CcAYEka1/medish.jpg]"/>
+<node CREATED="1345368461925" ID="ID_1504114708" MODIFIED="1345368464015" TEXT="![http://pic.yupoo.com/qianjigui/CcAYEka1/medish.jpg](http://pic.yupoo.com/qianjigui/CcAYEka1/medish.jpg)"/>
 </node>
 <node CREATED="1345367961752" ID="ID_595109654" MODIFIED="1345367971813" TEXT="&#x5b88;&#x62a4;&#x6307;&#x4ee4;">
-<node CREATED="1345368398759" ID="ID_833858052" MODIFIED="1345368401824" TEXT="[http://pic.yupoo.com/qianjigui/CcAYQjf0/medish.jpg]"/>
+<node CREATED="1345368398759" ID="ID_833858052" MODIFIED="1345368401824" TEXT="![http://pic.yupoo.com/qianjigui/CcAYQjf0/medish.jpg](http://pic.yupoo.com/qianjigui/CcAYQjf0/medish.jpg)"/>
 </node>
 </node>
 <node CREATED="1345367375847" ID="ID_701899168" MODIFIED="1345367437953" TEXT="&#x591a;&#x7248;&#x672c;&#x548c;&#x4e13;&#x95e8;&#x5316;">
-<node CREATED="1345368431728" ID="ID_74142001" MODIFIED="1345368433647" TEXT="[http://pic.yupoo.com/qianjigui/CcAYFHc2/medish.jpg]"/>
+<node CREATED="1345368431728" ID="ID_74142001" MODIFIED="1345368433647" TEXT="![http://pic.yupoo.com/qianjigui/CcAYFHc2/medish.jpg](http://pic.yupoo.com/qianjigui/CcAYFHc2/medish.jpg)"/>
 </node>
 <node CREATED="1345367441776" ID="ID_400632572" MODIFIED="1345367515765" TEXT="&#x6808;&#x66ff;&#x6362;">
-<node CREATED="1345368418381" ID="ID_538074130" MODIFIED="1345368421123" TEXT="[http://pic.yupoo.com/qianjigui/CcAYIV5g/medish.jpg]"/>
+<node CREATED="1345368418381" ID="ID_538074130" MODIFIED="1345368421123" TEXT="![http://pic.yupoo.com/qianjigui/CcAYIV5g/medish.jpg](http://pic.yupoo.com/qianjigui/CcAYIV5g/medish.jpg)"/>
 </node>
 <node CREATED="1345367534260" ID="ID_533498367" MODIFIED="1345367565368" TEXT="&#x5806;&#x5206;&#x914d;&#x5bf9;&#x8c61;">
 <node CREATED="1345367576763" ID="ID_1562868464" MODIFIED="1345367599858" TEXT="&#x6807;&#x91cf;&#x66ff;&#x6362;">
 <node CREATED="1345367600702" ID="ID_1735447840" MODIFIED="1345367682296" TEXT="&#x9003;&#x9038;&#x5206;&#x6790;"/>
 </node>
 <node CREATED="1345367701208" ID="ID_717202377" MODIFIED="1345367725341" TEXT="&#x5bf9;&#x8c61;&#x57df;&#x6392;&#x5217;">
-<node CREATED="1345368475999" ID="ID_446688575" MODIFIED="1345368478130" TEXT="[http://pic.yupoo.com/qianjigui/CcAYDAGo/medish.jpg]"/>
+<node CREATED="1345368475999" ID="ID_446688575" MODIFIED="1345368478130" TEXT="![http://pic.yupoo.com/qianjigui/CcAYDAGo/medish.jpg](http://pic.yupoo.com/qianjigui/CcAYDAGo/medish.jpg)"/>
 </node>
 </node>
 <node CREATED="1345367754625" ID="ID_1016145885" MODIFIED="1345367861375" TEXT="&#x4f4e;&#x7ea7;&#x522b;">
@@ -651,7 +651,7 @@
 <node CREATED="1345367883675" ID="ID_976562948" MODIFIED="1345367888220" TEXT="Range-Check"/>
 </node>
 <node CREATED="1345367889023" ID="ID_783727934" MODIFIED="1345367929771" TEXT="&#x5faa;&#x73af;&#x5265;&#x79bb;">
-<node CREATED="1345368490774" ID="ID_1968673943" MODIFIED="1345368492829" TEXT="[http://pic.yupoo.com/qianjigui/CcAYzvb7/medish.jpg]"/>
+<node CREATED="1345368490774" ID="ID_1968673943" MODIFIED="1345368492829" TEXT="![http://pic.yupoo.com/qianjigui/CcAYzvb7/medish.jpg](http://pic.yupoo.com/qianjigui/CcAYzvb7/medish.jpg)"/>
 </node>
 </node>
 </node>
@@ -663,32 +663,32 @@
 <node CREATED="1346554355483" ID="ID_1384395483" MODIFIED="1346554429690" POSITION="left" TEXT="&#x534f;&#x540c;&#x8bbe;&#x8ba1;&#x865a;&#x62df;&#x673a;">
 <node CREATED="1346554453133" ID="ID_256655208" MODIFIED="1346554456780" TEXT="Structure">
 <node CREATED="1346554457674" ID="ID_12645174" MODIFIED="1346554670804" TEXT="&#x901a;&#x8fc7;&#x7ed3;&#x5408;&#x4f7f;&#x7528;&#x4e13;&#x7528;&#x786c;&#x4ef6;&#x548c;&#x8f6f;&#x4ef6;&#x534f;&#x540c;&#x5b9e;&#x73b0;VMM"/>
-<node CREATED="1346556508779" ID="ID_1072644125" MODIFIED="1346556511676" TEXT="[http://pic.yupoo.com/qianjigui/CeGFosAw/medish.jpg]"/>
+<node CREATED="1346556508779" ID="ID_1072644125" MODIFIED="1346556511676" TEXT="![http://pic.yupoo.com/qianjigui/CeGFosAw/medish.jpg](http://pic.yupoo.com/qianjigui/CeGFosAw/medish.jpg)"/>
 </node>
 <node CREATED="1346554678905" ID="ID_1998368313" MODIFIED="1346554759584" TEXT="&#x5bc4;&#x5b58;&#x5668;&#x548c;&#x5b58;&#x50a8;&#x5668;">
 <node CREATED="1346554761509" ID="ID_1798907066" MODIFIED="1346554768664" TEXT="&#x6620;&#x5c04;">
-<node CREATED="1346556574350" ID="ID_532293482" MODIFIED="1346556576114" TEXT="[http://pic.yupoo.com/qianjigui/CeGFkd7j/medish.jpg]"/>
+<node CREATED="1346556574350" ID="ID_532293482" MODIFIED="1346556576114" TEXT="![http://pic.yupoo.com/qianjigui/CeGFkd7j/medish.jpg](http://pic.yupoo.com/qianjigui/CeGFkd7j/medish.jpg)"/>
 </node>
 <node CREATED="1346554769006" ID="ID_966694521" MODIFIED="1346554794695" TEXT="VMM&#x90e8;&#x5206;&#x9690;&#x85cf;">
-<node CREATED="1346556609847" ID="ID_1630227845" MODIFIED="1346556612162" TEXT="[http://pic.yupoo.com/qianjigui/CeGFh4If/medish.jpg]"/>
+<node CREATED="1346556609847" ID="ID_1630227845" MODIFIED="1346556612162" TEXT="![http://pic.yupoo.com/qianjigui/CeGFh4If/medish.jpg](http://pic.yupoo.com/qianjigui/CeGFh4If/medish.jpg)"/>
 </node>
 </node>
 <node CREATED="1346554831399" ID="ID_1172532351" MODIFIED="1346554866695" TEXT="&#x81ea;&#x4fee;&#x6539;&#x548c;&#x81ea;&#x5f15;&#x7528;&#x4ee3;&#x7801;">
 <node CREATED="1346554903032" ID="ID_1733548350" MODIFIED="1346554904341" TEXT="TLB"/>
-<node CREATED="1346556561536" ID="ID_1930841745" MODIFIED="1346556563795" TEXT="[http://pic.yupoo.com/qianjigui/CeGFmgFA/medish.jpg]"/>
+<node CREATED="1346556561536" ID="ID_1930841745" MODIFIED="1346556563795" TEXT="![http://pic.yupoo.com/qianjigui/CeGFmgFA/medish.jpg](http://pic.yupoo.com/qianjigui/CeGFmgFA/medish.jpg)"/>
 </node>
 <node CREATED="1346554906327" ID="ID_1816334353" MODIFIED="1346554917768" TEXT="&#x4ee3;&#x7801;cache&#x652f;&#x6301;">
 <node CREATED="1346554920754" ID="ID_1153084792" MODIFIED="1346555173750" TEXT="&#x8df3;&#x8f6c;TLB(JTLB)">
-<node CREATED="1346556625675" ID="ID_1332393876" MODIFIED="1346556627964" TEXT="[http://pic.yupoo.com/qianjigui/CeGFefHN/medish.jpg]"/>
-<node CREATED="1346556713540" ID="ID_1734969018" MODIFIED="1346556717545" TEXT="[http://pic.yupoo.com/qianjigui/CeGF8NrK/medish.jpg]"/>
+<node CREATED="1346556625675" ID="ID_1332393876" MODIFIED="1346556627964" TEXT="![http://pic.yupoo.com/qianjigui/CeGFefHN/medish.jpg](http://pic.yupoo.com/qianjigui/CeGFefHN/medish.jpg)"/>
+<node CREATED="1346556713540" ID="ID_1734969018" MODIFIED="1346556717545" TEXT="![http://pic.yupoo.com/qianjigui/CeGF8NrK/medish.jpg](http://pic.yupoo.com/qianjigui/CeGF8NrK/medish.jpg)"/>
 </node>
 <node CREATED="1346555185018" ID="ID_1401513" MODIFIED="1346555206252" TEXT="&#x53cc;&#x5730;&#x5740;&#x7684;&#x8fd4;&#x56de;&#x5730;&#x5740;&#x6808;">
-<node CREATED="1346556539526" ID="ID_1607569940" MODIFIED="1346556541865" TEXT="[http://pic.yupoo.com/qianjigui/CeGFnBbX/medish.jpg]"/>
+<node CREATED="1346556539526" ID="ID_1607569940" MODIFIED="1346556541865" TEXT="![http://pic.yupoo.com/qianjigui/CeGFnBbX/medish.jpg](http://pic.yupoo.com/qianjigui/CeGFnBbX/medish.jpg)"/>
 </node>
 </node>
 <node CREATED="1346554996620" ID="ID_81753538" MODIFIED="1346555011473" TEXT="&#x5b9e;&#x73b0;&#x7cbe;&#x786e;&#x9677;&#x9631;">
 <node CREATED="1346555235122" ID="ID_1363125317" MODIFIED="1346555259969" TEXT="&#x68c0;&#x67e5;&#x70b9;&#x786c;&#x4ef6;&#x652f;&#x6301;">
-<node CREATED="1346556686257" ID="ID_364056147" MODIFIED="1346556688510" TEXT="[http://pic.yupoo.com/qianjigui/CeGFbe1C/medish.jpg]"/>
+<node CREATED="1346556686257" ID="ID_364056147" MODIFIED="1346556688510" TEXT="![http://pic.yupoo.com/qianjigui/CeGFbe1C/medish.jpg](http://pic.yupoo.com/qianjigui/CeGFbe1C/medish.jpg)"/>
 </node>
 <node CREATED="1346555274542" ID="ID_1240401941" MODIFIED="1346555308862" TEXT="&#x9875;&#x9519;&#x8bef;&#x517c;&#x5bb9;">
 <node CREATED="1346555314699" ID="ID_284816163" MODIFIED="1346555334845" TEXT="&#x79ef;&#x6781;&#x9875;&#x9519;&#x8bef;&#x68c0;&#x6d4b;">
@@ -697,11 +697,11 @@
 <node CREATED="1346555363705" ID="ID_940429159" MODIFIED="1346555548598" TEXT="&#x61d2;&#x60f0;&#x9875;&#x9519;&#x8bef;&#x68c0;&#x6d4b;">
 <node CREATED="1346555608123" ID="ID_1933831480" MODIFIED="1346555619968" TEXT="CodeCacheUsedReflesh"/>
 </node>
-<node CREATED="1346556648200" ID="ID_1292944942" MODIFIED="1346556650560" TEXT="[http://pic.yupoo.com/qianjigui/CeGFd4qE/medish.jpg]"/>
+<node CREATED="1346556648200" ID="ID_1292944942" MODIFIED="1346556650560" TEXT="![http://pic.yupoo.com/qianjigui/CeGFd4qE/medish.jpg](http://pic.yupoo.com/qianjigui/CeGFd4qE/medish.jpg)"/>
 </node>
 </node>
 <node CREATED="1346555037171" ID="ID_1586572759" MODIFIED="1346555038166" TEXT="IO">
-<node CREATED="1346556593592" ID="ID_1988110423" MODIFIED="1346556595908" TEXT="[http://pic.yupoo.com/qianjigui/CeGFiabB/medish.jpg]"/>
+<node CREATED="1346556593592" ID="ID_1988110423" MODIFIED="1346556595908" TEXT="![http://pic.yupoo.com/qianjigui/CeGFiabB/medish.jpg](http://pic.yupoo.com/qianjigui/CeGFiabB/medish.jpg)"/>
 </node>
 </node>
 <node CREATED="1346556902082" ID="ID_1492397935" MODIFIED="1346556912342" POSITION="left" TEXT="&#x7cfb;&#x7edf;&#x865a;&#x62df;&#x673a;">
@@ -722,16 +722,16 @@
 </node>
 <node CREATED="1346557568074" ID="ID_793133262" MODIFIED="1346557581494" TEXT="&#x5173;&#x952e;&#x6982;&#x5ff5;">
 <node CREATED="1346557582546" ID="ID_108769909" MODIFIED="1346557586981" TEXT="&#x5916;&#x89c2;">
-<node CREATED="1346559083381" ID="ID_1203593311" MODIFIED="1346559085580" TEXT="[http://pic.yupoo.com/qianjigui/CeGWMr2z/medish.jpg]"/>
+<node CREATED="1346559083381" ID="ID_1203593311" MODIFIED="1346559085580" TEXT="![http://pic.yupoo.com/qianjigui/CeGWMr2z/medish.jpg](http://pic.yupoo.com/qianjigui/CeGWMr2z/medish.jpg)"/>
 </node>
 <node CREATED="1346557589044" ID="ID_1300782052" MODIFIED="1346557627124" TEXT="&#x72b6;&#x6001;&#x7ba1;&#x7406;">
-<node CREATED="1346559092308" ID="ID_1864952609" MODIFIED="1346559093542" TEXT="[http://pic.yupoo.com/qianjigui/CeGWKs3X/medish.jpg]"/>
+<node CREATED="1346559092308" ID="ID_1864952609" MODIFIED="1346559093542" TEXT="![http://pic.yupoo.com/qianjigui/CeGWKs3X/medish.jpg](http://pic.yupoo.com/qianjigui/CeGWKs3X/medish.jpg)"/>
 </node>
 <node CREATED="1346557628489" ID="ID_525779070" MODIFIED="1346557644473" TEXT="&#x8d44;&#x6e90;&#x63a7;&#x5236;">
-<node CREATED="1346559100793" ID="ID_422493885" MODIFIED="1346559104181" TEXT="[http://pic.yupoo.com/qianjigui/CeGWG36A/medish.jpg]"/>
+<node CREATED="1346559100793" ID="ID_422493885" MODIFIED="1346559104181" TEXT="![http://pic.yupoo.com/qianjigui/CeGWG36A/medish.jpg](http://pic.yupoo.com/qianjigui/CeGWG36A/medish.jpg)"/>
 </node>
 <node CREATED="1346557666415" ID="ID_1351871599" MODIFIED="1346557692384" TEXT="&#x672c;&#x5730;&#x865a;&#x62df;&#x673a;&#x548c;&#x5bbf;&#x4e3b;&#x865a;&#x62df;&#x673a;">
-<node CREATED="1346559072832" ID="ID_473411956" MODIFIED="1346559076446" TEXT="[http://pic.yupoo.com/qianjigui/CeGWO13S/medish.jpg]"/>
+<node CREATED="1346559072832" ID="ID_473411956" MODIFIED="1346559076446" TEXT="![http://pic.yupoo.com/qianjigui/CeGWO13S/medish.jpg](http://pic.yupoo.com/qianjigui/CeGWO13S/medish.jpg)"/>
 </node>
 </node>
 <node CREATED="1346557722103" ID="ID_1201845492" MODIFIED="1346557739477" TEXT="&#x8d44;&#x6e90;&#x865a;&#x62df;&#x5316;">
@@ -797,16 +797,16 @@
 </node>
 <node CREATED="1346578740046" ID="ID_475922873" MODIFIED="1346578747199" POSITION="right" TEXT="&#x5b9e;&#x9645;&#x673a;&#x5668;">
 <node CREATED="1346578752681" ID="ID_729156904" MODIFIED="1346578755420" TEXT="Hardware">
-<node CREATED="1346582275948" ID="ID_1268577974" MODIFIED="1346582278503" TEXT="[http://pic.yupoo.com/qianjigui/CeJsprNf/medish.jpg]"/>
+<node CREATED="1346582275948" ID="ID_1268577974" MODIFIED="1346582278503" TEXT="![http://pic.yupoo.com/qianjigui/CeJsprNf/medish.jpg](http://pic.yupoo.com/qianjigui/CeJsprNf/medish.jpg)"/>
 <node CREATED="1346578772151" ID="ID_1238702778" MODIFIED="1346578773627" TEXT="CPU">
-<node CREATED="1346582261410" ID="ID_1223644338" MODIFIED="1346582263733" TEXT="[http://pic.yupoo.com/qianjigui/CeJsrljX/medish.jpg]"/>
+<node CREATED="1346582261410" ID="ID_1223644338" MODIFIED="1346582263733" TEXT="![http://pic.yupoo.com/qianjigui/CeJsrljX/medish.jpg](http://pic.yupoo.com/qianjigui/CeJsrljX/medish.jpg)"/>
 </node>
 <node CREATED="1346578773946" ID="ID_894437549" MODIFIED="1346578776369" TEXT="Storage">
-<node CREATED="1346582113255" ID="ID_949563616" MODIFIED="1346582116547" TEXT="[http://pic.yupoo.com/qianjigui/CeJsxZtb/medish.jpg]"/>
-<node CREATED="1346582151902" ID="ID_250892317" MODIFIED="1346582153861" TEXT="[http://pic.yupoo.com/qianjigui/CeJsvSNl/medish.jpg]"/>
+<node CREATED="1346582113255" ID="ID_949563616" MODIFIED="1346582116547" TEXT="![http://pic.yupoo.com/qianjigui/CeJsxZtb/medish.jpg](http://pic.yupoo.com/qianjigui/CeJsxZtb/medish.jpg)"/>
+<node CREATED="1346582151902" ID="ID_250892317" MODIFIED="1346582153861" TEXT="![http://pic.yupoo.com/qianjigui/CeJsvSNl/medish.jpg](http://pic.yupoo.com/qianjigui/CeJsvSNl/medish.jpg)"/>
 </node>
 <node CREATED="1346578776693" ID="ID_438183430" MODIFIED="1346578777361" TEXT="IO">
-<node CREATED="1346582225593" ID="ID_1383018235" MODIFIED="1346582227816" TEXT="[http://pic.yupoo.com/qianjigui/CeJstqED/medish.jpg]"/>
+<node CREATED="1346582225593" ID="ID_1383018235" MODIFIED="1346582227816" TEXT="![http://pic.yupoo.com/qianjigui/CeJstqED/medish.jpg](http://pic.yupoo.com/qianjigui/CeJstqED/medish.jpg)"/>
 </node>
 </node>
 <node CREATED="1346578788852" ID="ID_1979162867" MODIFIED="1346578790847" TEXT="ISA">
@@ -845,7 +845,7 @@
 <node CREATED="1346579161120" ID="ID_1000238138" MODIFIED="1346579163729" TEXT="PageTable">
 <node CREATED="1346579165096" ID="ID_997460219" MODIFIED="1346579167021" TEXT="TLB"/>
 <node CREATED="1346579170847" ID="ID_1910896529" MODIFIED="1346579172235" TEXT="prot"/>
-<node CREATED="1346582132889" ID="ID_822787949" MODIFIED="1346582135699" TEXT="[http://pic.yupoo.com/qianjigui/CeJsxG80/medish.jpg]"/>
+<node CREATED="1346582132889" ID="ID_822787949" MODIFIED="1346582135699" TEXT="![http://pic.yupoo.com/qianjigui/CeJsxG80/medish.jpg](http://pic.yupoo.com/qianjigui/CeJsxG80/medish.jpg)"/>
 </node>
 </node>
 <node CREATED="1346579179833" ID="ID_1632814430" MODIFIED="1346579181470" TEXT="IO">
@@ -857,11 +857,11 @@
 </node>
 <node CREATED="1346579206432" ID="ID_312543755" MODIFIED="1346579207460" TEXT="OS">
 <node CREATED="1346579208170" ID="ID_284241339" MODIFIED="1346579209977" TEXT="Structure">
-<node CREATED="1346582213807" ID="ID_1196771596" MODIFIED="1346582215055" TEXT="[http://pic.yupoo.com/qianjigui/CeJsvf75/medish.jpg] "/>
+<node CREATED="1346582213807" ID="ID_1196771596" MODIFIED="1346582215055" TEXT="![http://pic.yupoo.com/qianjigui/CeJsvf75/medish.jpg](http://pic.yupoo.com/qianjigui/CeJsvf75/medish.jpg) "/>
 <node CREATED="1346579216973" ID="ID_1964555178" MODIFIED="1346579226557" TEXT="CPUManagement"/>
 <node CREATED="1346579218897" ID="ID_1167598177" MODIFIED="1346579222621" TEXT="StorageManagement"/>
 <node CREATED="1346579228131" ID="ID_1155744064" MODIFIED="1346579231344" TEXT="IOManagement">
-<node CREATED="1346582206659" ID="ID_583659828" MODIFIED="1346582208961" TEXT="[http://pic.yupoo.com/qianjigui/CeJsuM6X/medish.jpg]"/>
+<node CREATED="1346582206659" ID="ID_583659828" MODIFIED="1346582208961" TEXT="![http://pic.yupoo.com/qianjigui/CeJsuM6X/medish.jpg](http://pic.yupoo.com/qianjigui/CeJsuM6X/medish.jpg)"/>
 </node>
 </node>
 <node CREATED="1346579234183" ID="ID_1086833534" MODIFIED="1346579237605" TEXT="Interface">
@@ -883,7 +883,7 @@
 <node CREATED="1346579295107" ID="ID_1191768099" MODIFIED="1346579297097" TEXT="shmget"/>
 </node>
 <node CREATED="1346579300581" ID="ID_423284528" MODIFIED="1346579301608" TEXT="IO">
-<node CREATED="1346582244422" ID="ID_1463033732" MODIFIED="1346582248094" TEXT="[http://pic.yupoo.com/qianjigui/CeJssy1x/medish.jpg]"/>
+<node CREATED="1346582244422" ID="ID_1463033732" MODIFIED="1346582248094" TEXT="![http://pic.yupoo.com/qianjigui/CeJssy1x/medish.jpg](http://pic.yupoo.com/qianjigui/CeJssy1x/medish.jpg)"/>
 <node CREATED="1346579302207" ID="ID_1936733094" MODIFIED="1346579304512" TEXT="read"/>
 <node CREATED="1346579304829" ID="ID_1683339524" MODIFIED="1346579305683" TEXT="open"/>
 <node CREATED="1346579305977" ID="ID_1756388339" MODIFIED="1346579307936" TEXT="close"/>

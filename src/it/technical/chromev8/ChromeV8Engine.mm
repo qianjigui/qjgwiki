@@ -2,7 +2,7 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1323528772151" ID="ID_1191169047" MODIFIED="1323574872550" TEXT="JS-V8&#x5f15;&#x64ce;">
 <node CREATED="1323528848463" ID="ID_1516847118" MODIFIED="1323574089535" POSITION="right" TEXT="&#x8bbe;&#x8ba1;&#x7406;&#x5ff5;">
-<node CREATED="1323574077969" ID="ID_1644921126" MODIFIED="1323574120768" TEXT="&#x8bd1;&#x6587;&#x5730;&#x5740; [http://blog.pluskid.org/?p=186 V8 Javascript &#x5f15;&#x64ce;&#x8bbe;&#x8ba1;&#x7406;&#x5ff5;]"/>
+<node CREATED="1323574077969" ID="ID_1644921126" MODIFIED="1323574120768" TEXT="&#x8bd1;&#x6587;&#x5730;&#x5740; [V8 Javascript &#x5f15;&#x64ce;&#x8bbe;&#x8ba1;&#x7406;&#x5ff5;](http://blog.pluskid.org/?p=186)"/>
 <node CREATED="1323528879734" ID="ID_811824292" MODIFIED="1323528880350" TEXT="&#x5feb;&#x901f;&#x5c5e;&#x6027;&#x8bbf;&#x95ee;">
 <node CREATED="1323528896773" ID="ID_1328454023" MODIFIED="1323528897808" TEXT="&#x52a8;&#x6001;&#x5730;&#x4e3a;&#x5bf9;&#x8c61;&#x521b;&#x5efa;&#x9690;&#x85cf;&#x7c7b;">
 <node CREATED="1323528914376" ID="ID_622807197" MODIFIED="1323528918794" TEXT="&#x5f53;&#x4e00;&#x4e2a;&#x65b0;&#x7684;&#x5c5e;&#x6027;&#x88ab;&#x6dfb;&#x52a0;&#x5230;&#x5bf9;&#x8c61;&#x4e2d;&#x65f6;&#xff0c;&#x5bf9;&#x8c61;&#x6240;&#x5bf9;&#x5e94;&#x7684;&#x9690;&#x85cf;&#x7c7b;&#x4f1a;&#x968f;&#x4e4b;&#x6539;&#x53d8;&#x3002;"/>

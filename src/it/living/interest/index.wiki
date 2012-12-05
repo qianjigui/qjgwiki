@@ -1,7 +1,12 @@
-#summary 个人兴趣爱好
-<wiki:toc max_depth="3" />
+---
+title: "个人兴趣爱好"
+tags: undefine
+---
 
-=个人兴趣爱好=
+
+
+
+#个人兴趣爱好#
   * 读书
   * 旅行
-  * [ItLivingInterestHarmonica 口琴]
+  * [口琴](<%=(harmonica)l%>)

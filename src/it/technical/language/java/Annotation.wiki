@@ -1,10 +1,15 @@
-#summary Java 标注
-#labels Java
-<wiki:toc max_depth="3" />
+---
+title: "Java 标注"
+tags: Java
+---
 
-=Java Annotations=
 
-==Class Annotations==
+
+
+
+#Java Annotations#
+
+##Class Annotations##
 <code language="java">
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
@@ -39,7 +44,7 @@ if(annotation instanceof MyAnnotation){
     System.out.println("value: " + myAnnotation.value());
 }
 </code>
-==Method Annotations==
+##Method Annotations##
 <code language="java">
 public class TheClass {
   @MyAnnotation(name="someName",  value = "Hello World")
@@ -66,7 +71,7 @@ if(annotation instanceof MyAnnotation){
     System.out.println("value: " + myAnnotation.value());
 }
 </code>
-==Paramenter Annotations==
+##Paramenter Annotations##
 <code language="java">
 public class TheClass {
   public static void doSomethingElse(
@@ -91,7 +96,7 @@ for(Annotation[] annotations : parameterAnnotations){
   }
 }
 </code>
-==Field Annotations==
+##Field Annotations##
 <code language="java">
 public class TheClass {
 
@@ -120,7 +125,7 @@ if(annotation instanceof MyAnnotation){
 }
 </code>
 
-==User defined Annotation==
+##User defined Annotation##
 
 <code language="java">
 //Twizzle.java

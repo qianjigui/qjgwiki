@@ -1,40 +1,45 @@
-#summary Linux/Ubuntu 使用知识
-<wiki:toc max_depth="3" />
-=Ubuntu=
+---
+title: "Linux/Ubuntu 使用知识"
+tags: undefine
+---
 
-==常识==
-===用户态与内核态===
+
+
+#Ubuntu#
+
+##常识##
+###用户态与内核态###
 这个网上讨论很多，从编程角度看：调用内核函数的为内核态，其他可以看作用户态。
 time指令中的标准输出就是由：墙上时间、用户态调用、内核态调用三部分时间组成。
 
 一个已经安装的系统的支持的所有的系统调用可以在*/usr/include/bits/syscall.h*文件里面看到。
 
-==基本操作==
+##基本操作##
 
-==Mercurial SCM==
-[ItTechnicalScmMercurial MercurialSCM使用知识]
+##Mercurial SCM##
+[MercurialSCM使用知识](<%=(../scm/mercurial)l%>)
 
-==Firefox打印问题==
+##Firefox打印问题##
 很多时候，页面被不正常的分页或者打印内容不全等一系列问题的时候，可以考虑检查css代码。
   * overflow 需要关闭
   * padding/margin 需要调节
 
-==网络设置==
-===VPN===
-Ubuntu [http://ubuntuforums.org/showthread.php?p=7002673 需要设置个把属性]:
+##网络设置##
+###VPN###
+Ubuntu [需要设置个把属性](http://ubuntuforums.org/showthread.php?p=7002673):
 需要让PPTP拒绝EAP验证，而这个设置在VPN设置栏中没有。
 需要通过手工进行处理:
-  # 打开gconf-editor
-  # 进入到 /system/networking/connections
-  # 查看并找到VPN文件夹
-  # 添加新的键值
-  # Name: refuse-eap
-  # Type: string
-  # Value: yes
-  # 保存、退出并重新连接
+  1. 打开gconf-editor
+  1. 进入到 /system/networking/connections
+  1. 查看并找到VPN文件夹
+  1. 添加新的键值
+  1. Name: refuse-eap
+  1. Type: string
+  1. Value: yes
+  1. 保存、退出并重新连接
 
 日志信息，从错误到成功:
-{{{
+{% highlight none %}
 pppd[5094]: pppd 2.4.5 started by root, uid 0
 pppd[5094]: Using interface ppp0
 pppd[5094]: Connect: ppp0 <--> /dev/pts/2
@@ -61,13 +66,13 @@ pppd[5427]: local  IP address 172.0.0.18
 pppd[5427]: remote IP address 172.0.0.1
 pppd[5427]: primary   DNS address 20x.1x5.xxx.xxx
 pppd[5427]: secondary DNS address 20x.1x5.xxx.xxx
-}}}
+{% endhighlight %}
 
 另外就是如果前端有个不怎么给力的路由器，请设置DMZ主机为后端VPN使用的PC机。
 
-==屏幕问题==
+##屏幕问题##
 
-===开机黑屏/中途使用突然黑屏===
+###开机黑屏/中途使用突然黑屏###
   网上也有很多材料谈到，目前确实不知道这类问题产生的真正原因。
 
   查错的困难: 
@@ -88,13 +93,13 @@ pppd[5427]: secondary DNS address 20x.1x5.xxx.xxx
 
   配置ACPI http://www.brighthub.com/computing/linux/articles/39504.aspx :
     主要是通过在grub加载时向内核发送参数来控制ACPI模块的加载:
-      * {{{acpi=off}}}:
+      * {% highlight none %}acpi=off{% endhighlight %}:
         关闭ACPI的支持
-      * {{{ acpi=ht }}}:
+      * {% highlight none %} acpi=ht {% endhighlight %}:
         关闭除超线程之外的ACPI支持
-      * {{{ pci=noacpi }}}:
+      * {% highlight none %} pci=noacpi {% endhighlight %}:
         关闭ACPI的硬中断并且PCI不再扫描ACPI
-      * {{{ acpi=noirq }}}:
+      * {% highlight none %} acpi=noirq {% endhighlight %}:
         关闭ACPI的IRQ(硬中断)
 
   而我是直接采用 _pci=noacpi_ 。

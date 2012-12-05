@@ -1,34 +1,39 @@
-#summary MercurialSCM使用知识
-<wiki:toc max_depth="3" />
+---
+title: "MercurialSCM使用知识"
+tags: undefine
+---
 
-=MercurialSCM=
-==Add a footprint for a url==
-  # 获取fingerprint(注意空格位置等):
-{{{
+
+
+
+#MercurialSCM#
+##Add a footprint for a url##
+  1. 获取fingerprint(注意空格位置等):
+{% highlight none %}
 openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 -fingerprint -noout -in /dev/stdin
-}}}
-  # 在~/.hgrc文件的hostfingerprints部分添加一行: host=fingerprint
+{% endhighlight %}
+  1. 在~/.hgrc文件的hostfingerprints部分添加一行: host=fingerprint
 
-==Ubuntu hg-git plugin 配置==
-[https://bugs.launchpad.net/ubuntu/+source/hg-git/+bug/666292 修复方法]
+##Ubuntu hg-git plugin 配置##
+[修复方法](https://bugs.launchpad.net/ubuntu/+source/hg-git/+bug/666292)
 添加如下信息到~/.hgrc:
-{{{ 
+{% highlight none %} 
 [extensions]
 hgext.bookmarks =
 hggit = /usr/share/pyshared/hgext/git
-}}}
+{% endhighlight %}
 
 从本地文件夹转移过来，需要将git文件夹名字改为XXX.git.
-[http://stackoverflow.com/questions/5785158/mercurial-hg-git-clone-from-a-local-directory 本地同步]
+[本地同步](http://stackoverflow.com/questions/5785158/mercurial-hg-git-clone-from-a-local-directory)
 
-==hgrc==
-[http://www.selenic.com/mercurial/hgrc.5.html 配置详解]
+##hgrc##
+[配置详解](http://www.selenic.com/mercurial/hgrc.5.html)
 
 认真利用:
-  # .hg/hgrc
-  # 缩写路径，存储登录帐号与密码:
+  1. .hg/hgrc
+  1. 缩写路径，存储登录帐号与密码:
 
-{{{
+{% highlight none %}
 [paths]
 default = https://code.google.com/p/project/default
 gitserver = git+ssh://xxxx@demo.com/directory/github/xxx.git
@@ -41,4 +46,4 @@ googlecode.username=username
 gitserver.prefix=git+ssh://xxxx@demo.com/directory/github/xxx.git
 gitserver.password=password
 gitserver.username=username
-}}}
+{% endhighlight %}
