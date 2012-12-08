@@ -10,7 +10,7 @@
     :index: index
     :img: '_image'
   :output:
-    :dir: 'githubwiki/fullarts/_posts'
+    :dir: 'githubwiki/www/_posts'
   :template: template
 
 :types:
