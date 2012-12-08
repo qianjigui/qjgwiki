@@ -63,7 +63,7 @@ module KnowledgeUtils
 
                 # The '/' is the first character
                 def link
-                    @dstpathWithoutType
+                    @dstlinkWithoutType
                 end
 
                 # The url does NOT contain suffix, so you don't have to care about the suffix in linking
@@ -136,6 +136,7 @@ module KnowledgeUtils
 
                     #For generate in dest directory
                     @dstpathWithoutType='/'+@category+'/'+@prefix+@name
+                    @dstlinkWithoutType='/'+@category+'/'+@prefix.gsub('-','/')+@name
                 end
 
                 def add_url_map(localpath, link)
