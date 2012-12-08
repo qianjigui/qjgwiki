@@ -16,14 +16,11 @@ module KnowledgeUtils
         @mm = @types[:mm]
         @tmd= @types[:tmd]
 
-        clean
       end
 
       def generate_imp
         FileSet.files(@src+'/**/**'+@mm, /\/#{@encrypt_dir}\//).each do |file|
-          dest = dest_name(file, @src, @dir_index, @mm, @tmd, @wiki_dir)
-          @conf.add_tag_file(dest, @wiki_suffix)
-          to_md(file, @mm, @tmd) if refresh?(file,dest)
+          to_md(file, @mm, @tmd)
         end
       end
 
@@ -38,13 +35,13 @@ module KnowledgeUtils
       VALUE = 'TEXT'
 
       def pre_spaces(level)
-        ('  '*level)
+        ('  '*(level-2))
       end
       def pre_tag(level)
         case level
         when 1 then '##'
         else
-          pre_spaces(level)+'*  '
+          pre_spaces(level)+'* '
         end
       end
 
@@ -64,14 +61,16 @@ module KnowledgeUtils
       end
 
       def to_md(file, mm, tmd)
+        newfile = file.sub(mm,tmd)
+        return unless refresh?(file,newfile)
+
+        @conf.log('Freemind to MarkDown:', file)
         data = File.read(file)
         doc = REXML::Document.new(data)
         root = nil
         doc.elements.each('map/node') do |node|
           root = node
         end
-        newfile = file.sub(mm,tmd)
-        @conf.log('Freemind to MarkDown:', file)
         File.open(newfile, 'w') do |f|
           sum = process_text(root.attributes[VALUE], root)
           f.puts '---'
@@ -106,7 +105,6 @@ module KnowledgeUtils
         unless node.nil?
           node.elements.each('richcontent/html/body') do |body|
             tag_value=''
-            @conf.debug('Fuck, there is a richcontent')
             body.elements.each do |tag|
               tag_value += tag.to_s
             end
@@ -119,7 +117,6 @@ module KnowledgeUtils
             if is_code
               require 'cgi'
               res = CGI.unescapeHTML(tag_value)
-              @conf.debug('Fuck, there is a code list')
             else
               res = "\n<blockquote>"+tag_value+"</blockquote>"
               res.gsub!("\n","\n"+pre_spaces(level))
@@ -130,9 +127,8 @@ module KnowledgeUtils
       end
 
       def long_node_parse(value)
-        value.sub!(/<longnode>[\s ]*/,":\n")
+        value.sub!(/<longnode>[\s ]*/,":\n\n")
         value.sub!('</longnode>',"\n\n")
-        @conf.debug('Fuck, there is a longnode')
         #For table
         value.gsub!(/\|[\s ]*\|/,"|\n|")
         value

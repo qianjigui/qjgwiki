@@ -15,19 +15,26 @@ module KnowledgeUtils
             def prepare_imp
                 @env = @conf
                 @mdtype = @env[:types][:md]
-                @wikitype=@env[:types][:wiki]
+                @tmdtype = @env[:types][:tmd]
                 @outputconf=@env[:build][:output]
                 @outdir = @outputconf[:dir]
-                @ctx = MDContext.new(@env, @wikitype, @mdtype)
+                @mdctx = MDContext.new(@env, @mdtype, @mdtype)
+                @tmdctx = MDContext.new(@env, @tmdtype, @mdtype)
+                def @tmdctx.realpath(path)
+                    path.sub(@tmdtype, @mmtype)
+                end
             end
 
             def generate_imp
                 gen = ScannerForMarkdownExtension.new
                 list = []
-                FileSet.files(@src+'/**/**'+@wikitype, /\/#{@encrypt_dir}\//).each do |file|
-                    @env.warn(file)
-                    info = MDInfo.new(file,@ctx)
-                    list << [info,file]
+                [[@mdtype, @mdctx], [@tmdtype,@tmdctx]].each do |value|
+                    type,ctx=value
+                    FileSet.files(@src+'/**/**'+type, /\/#{@encrypt_dir}\//).each do |file|
+                        @env.warn(file)
+                        info = MDInfo.new(file,ctx)
+                        list << [info,file]
+                    end
                 end
                 list.each do |f|
                     info,file = f

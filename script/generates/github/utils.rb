@@ -13,12 +13,18 @@ module KnowledgeUtils
                     #src directory base
                     @env = env
                     @src=env[:build][:src][:dir]
+                    @mmtype = env[:types][:mm]
+                    @tmdtype = env[:types][:tmd]
                     @img_dir = env[:build][:src][:img]
                     @img_suffixes = env[:types][:imgs]
                     #The file type in src
                     @srctype=srctype
                     #The file type in generate directory
                     @dsttype=dsttype
+                end
+
+                def realpath(path)
+                    path
                 end
             end
 
@@ -102,6 +108,7 @@ module KnowledgeUtils
 
                 def init_file_time(path)
                     #TODO I don't like this style~~
+                    path = @ctx.realpath(path)
                     res = %x[git log --format=%ci #{path}]
                     @ctime = res.split("\n")
                     #The last commit for this file, so this is the modify time

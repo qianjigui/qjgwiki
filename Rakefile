@@ -22,7 +22,8 @@ crypt_suf=encrypt[:suffix]
 generators = [ EncryptGenerator.new(CONFS), CleanLostGenerator.new(CONFS,dir+'/**/**'+crypt_suf,crypt_suf), FreemindGenerator.new(CONFS), GoogleWikiGenerator.new(CONFS), CleanLostGenerator.new(CONFS, wiki_dir+'/**/**'+wiki_suf, wiki_suf), IndexGenerator.new(CONFS) ]
 unpacks=[DecryptGenerator.new(CONFS), CleanLostGenerator.new(CONFS, dir+'/**/'+crypt_dir+'/**', crypt_suf)]
 conv=[GoogleWikiFormat2MarkdownFormat.new(CONFS)]
-md=[MarkdownGenerator.new(CONFS)]
+#md=[MarkdownGenerator.new(CONFS)]
+md=[Freemind2MarkDownGenerator.new(CONFS), MarkdownGenerator.new(CONFS)]
 
 task :gen_make do
   generators.each do |g|
@@ -61,7 +62,10 @@ end
 
 desc 'Clean all Generated files'
 task :clean do
-  generators.each do |g|
+  md.each do |g|
+    g.prepare
+  end
+  md.each do |g|
     g.clean
   end
 end
