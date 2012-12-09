@@ -109,7 +109,7 @@ module KnowledgeUtils
                 def init_file_time(path)
                     #TODO I don't like this style~~
                     path = @ctx.realpath(path)
-                    res = %x[git log --format=%ci #{path}]
+                    res = %x[git log --follow --format=%ci #{path}]
                     @ctime = res.split("\n")
                     #The last commit for this file, so this is the modify time
                     @mtime = @ctime[0]
