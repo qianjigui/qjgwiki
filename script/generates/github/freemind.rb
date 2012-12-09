@@ -39,7 +39,7 @@ module KnowledgeUtils
       end
       def pre_tag(level)
         case level
-        when 1 then '##'
+        when 1 then "\n##"
         else
           pre_spaces(level)+'* '
         end
@@ -71,13 +71,21 @@ module KnowledgeUtils
         doc.elements.each('map/node') do |node|
           root = node
         end
+        @tags = 'undefine'
+        @title=''
         File.open(newfile, 'w') do |f|
           sum = process_text(root.attributes[VALUE], root)
-          f.puts '---'
-          f.puts "title: \"#{sum}\""
-          f.puts '---'
+          @title=sum
           f.puts '#'+sum+'#'
           traver(root, 1, f)
+        end
+        data = File.read(newfile)
+        File.open(newfile,'w') do |f|
+          f.puts '---'
+          f.puts "title: \"#{@title}\""
+          f.puts "tags: #{@tags}"
+          f.puts '---'
+          f.puts data
         end
         touch_mtime newfile, file
       end
@@ -88,8 +96,16 @@ module KnowledgeUtils
         elsif value.nil?
           richcontent(node, level)
         else
-          value
+          basic_node(value)
         end
+      end
+
+      def basic_node(value)
+          if /\A\s*tags:(.+)\Z/=~value
+              r = Regexp.last_match
+              @tags = r[1]
+          end
+          value
       end
 
       RICHCONTENT_TAGS = [

@@ -23,6 +23,7 @@ generators = [ EncryptGenerator.new(CONFS), CleanLostGenerator.new(CONFS,dir+'/*
 unpacks=[DecryptGenerator.new(CONFS), CleanLostGenerator.new(CONFS, dir+'/**/'+crypt_dir+'/**', crypt_suf)]
 conv=[GoogleWikiFormat2MarkdownFormat.new(CONFS)]
 #md=[MarkdownGenerator.new(CONFS)]
+#md=[Freemind2MarkDownGenerator.new(CONFS)]
 md=[Freemind2MarkDownGenerator.new(CONFS), MarkdownGenerator.new(CONFS)]
 
 task :gen_make do
