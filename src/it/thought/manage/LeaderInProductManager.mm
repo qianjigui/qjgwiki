@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1299437696652" ID="ID_264064857" MODIFIED="1299437708592" TEXT="LeaderInProductManager">
+<node CREATED="1299437696652" ID="ID_264064857" MODIFIED="1355043671753" TEXT="LeaderInProductManager">
 <node CREATED="1299437808863" ID="ID_1840348753" MODIFIED="1299437818033" POSITION="right" TEXT="&#x4ea7;&#x54c1;&#x56e2;&#x961f;">
 <node CREATED="1299437819415" ID="ID_300898732" MODIFIED="1299437820201" TEXT="&#x5c06;&#x5458;&#x5de5;&#x4e2a;&#x4eba;&#x80fd;&#x529b;&#x6210;&#x957f;&#x4e0e;&#x56e2;&#x961f;&#x4e1a;&#x7ee9;&#x53d1;&#x5c55;&#x7d27;&#x5bc6;&#x7ed3;&#x5408; ">
 <node CREATED="1299437842790" ID="ID_768711034" MODIFIED="1299437843816" TEXT="&#x63d0;&#x9ad8;&#x5458;&#x5de5;&#x7684;&#x6838;&#x5fc3;&#x7ade;&#x4e89;&#x529b;&#xff0c;&#x63d0;&#x9ad8;&#x6297;&#x98ce;&#x9669;&#x80fd;&#x529b;"/>
@@ -25,5 +25,6 @@
 <node CREATED="1299438036422" ID="ID_964880672" MODIFIED="1299438037204" TEXT="&#x53d1;&#x73b0;&#x4e0e;&#x57f9;&#x517b;&#x4eba;&#x624d;&#xff0c;&#x52a0;&#x5f3a;&#x68af;&#x961f;&#x5efa;&#x8bbe;"/>
 <node CREATED="1299438063461" ID="ID_702558268" MODIFIED="1299438064532" TEXT="&#x5f3a;&#x5316;&#x6709;&#x6548;&#x6c9f;&#x901a;&#xff0c;&#x9f13;&#x52b1;&#x5411;&#x4e0a;&#x6c9f;&#x901a;"/>
 </node>
+<node CREATED="1355043672519" ID="ID_1396532097" MODIFIED="1355043682861" POSITION="left" TEXT="tags: PD, product, team, &#x7ecf;&#x9a8c;"/>
 </node>
 </map>
