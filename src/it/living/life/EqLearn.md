@@ -1,6 +1,6 @@
 ---
 title: "情商训练"
-tags: undefine
+tags: EQ
 ---
 
 
