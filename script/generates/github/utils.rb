@@ -8,7 +8,7 @@ module KnowledgeUtils
     module Generate
         module MarkdownHelper
             class MDContext
-                attr_reader :src, :srctype, :dsttype, :img_dir, :img_suffixes, :env
+                attr_reader :src, :srctype, :dsttype, :img_dir, :img_suffixes, :env, :dst_img_dir
                 def initialize(env, srctype, dsttype)
                     #src directory base
                     @env = env
@@ -17,6 +17,7 @@ module KnowledgeUtils
                     @tmdtype = env[:types][:tmd]
                     @img_dir = env[:build][:src][:img]
                     @img_suffixes = env[:types][:imgs]
+                    @dst_img_dir = env[:build][:output][:img_prefix]
                     #The file type in src
                     @srctype=srctype
                     #The file type in generate directory
@@ -96,7 +97,7 @@ module KnowledgeUtils
                         @ctx.env.warn('internal link image', img_path, 'is error')
                         res='undefine'
                     end
-                    Pathname.new(res).cleanpath.to_s
+                    Pathname.new(res).cleanpath.to_s.sub(@ctx.src, @ctx.dst_img_dir)
                 end
 
                 private

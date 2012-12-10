@@ -11,7 +11,6 @@ class ScannerForMarkdownExtension
             write data;
             action header_def{
             metadata = metadata[0...-4]
-            p metadata
 @header=<<HEADER
 ---
 layout: default

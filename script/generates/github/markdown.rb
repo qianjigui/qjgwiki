@@ -31,19 +31,20 @@ module KnowledgeUtils
                 [[@mdtype, @mdctx], [@tmdtype,@tmdctx]].each do |value|
                     type,ctx=value
                     FileSet.files(@src+'/**/**'+type, /\/#{@encrypt_dir}\//).each do |file|
-                        @env.warn(file)
                         info = MDInfo.new(file,ctx)
                         list << [info,file]
                     end
                 end
                 list.each do |f|
                     info,file = f
-                    @env.warn(file)
                     res = gen.generate(info, file)
                     path=@outdir+'/'+info.dstpath
-                    FileUtils.mkdir_p(File.dirname(path))
-                    File.open(path,'w') do |f|
-                        f.puts res
+                    if refresh?(file,path)
+                        @env.warn(file)
+                        FileUtils.mkdir_p(File.dirname(path))
+                        File.open(path,'w') do |f|
+                            f.puts res
+                        end
                     end
                 end
             end

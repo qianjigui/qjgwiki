@@ -240,7 +240,6 @@ when 0 then
 		begin
 
             metadata = metadata[0...-4]
-            p metadata
 @header=<<HEADER
 ---
 layout: default
@@ -250,13 +249,13 @@ category: #{info.category}
 HEADER
             		end
 when 1 then
-# line 23 "mdgenerate.rl"
+# line 22 "mdgenerate.rl"
 		begin
 
                 metadata += data[p].chr
             		end
 when 2 then
-# line 26 "mdgenerate.rl"
+# line 25 "mdgenerate.rl"
 		begin
 
                 unless isInternalLink
@@ -268,7 +267,7 @@ when 2 then
                 end
             		end
 when 3 then
-# line 36 "mdgenerate.rl"
+# line 35 "mdgenerate.rl"
 		begin
 
                 isInternalLink = true
@@ -276,13 +275,13 @@ when 3 then
                 relative_url = ''
             		end
 when 4 then
-# line 41 "mdgenerate.rl"
+# line 40 "mdgenerate.rl"
 		begin
 
                 relative_url += data[p].chr
             		end
 when 5 then
-# line 44 "mdgenerate.rl"
+# line 43 "mdgenerate.rl"
 		begin
 
                 bodydata+=link_url
@@ -290,18 +289,18 @@ when 5 then
                 isGeneratedLink= true
             		end
 when 6 then
-# line 50 "mdgenerate.rl"
+# line 49 "mdgenerate.rl"
 		begin
 
                 link_url = info.link_to(relative_url)
             		end
 when 7 then
-# line 53 "mdgenerate.rl"
+# line 52 "mdgenerate.rl"
 		begin
 
                 link_url = info.img_to(relative_url)
             		end
-# line 305 "mdgenerate.rb"
+# line 304 "mdgenerate.rb"
 			end # action switch
 		end
 	end
@@ -328,7 +327,7 @@ when 7 then
 	end
 	end
 
-# line 80 "mdgenerate.rl"
+# line 79 "mdgenerate.rl"
 
         @header+bodydata
     end

@@ -11,6 +11,8 @@
     :img: '_image'
   :output:
     :dir: 'githubwiki/www/_posts'
+    :img_dir_base: 'githubwiki/www/images'
+    :img_prefix: 'https://github.com/qianjigui/www/raw/gh-pages/images'
   :template: template
 
 :types:
