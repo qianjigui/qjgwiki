@@ -39,7 +39,7 @@ module KnowledgeUtils
       end
       def pre_tag(level)
         case level
-        when 1 then "\n##"
+        when 1 then "\n\n\n##"
         else
           pre_spaces(level)+'* '
         end

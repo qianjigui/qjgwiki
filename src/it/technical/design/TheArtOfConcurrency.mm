@@ -230,7 +230,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1355049507796" ID="ID_876622962" MODIFIED="1355049524682" POSITION="left" TEXT="tags: Concurrency, Rules, Threads">
+<node COLOR="#0033ff" CREATED="1355049507796" ID="ID_876622962" MODIFIED="1355049524682" POSITION="left" TEXT="tags: Concurrency Rules Threads">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 </node>

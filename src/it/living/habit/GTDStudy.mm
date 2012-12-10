@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1355044305230" ID="ID_1194201107" MODIFIED="1355044314563" TEXT="GTD&#x5b66;&#x4e60;">
-<node CREATED="1355044345629" ID="ID_910043632" MODIFIED="1355044359486" POSITION="right" TEXT="tags: GTD, Time"/>
+<node CREATED="1355044345629" ID="ID_910043632" MODIFIED="1355044359486" POSITION="right" TEXT="tags: GTD Time"/>
 <node CREATED="1355044362423" ID="ID_183131917" MODIFIED="1355044382684" POSITION="left" TEXT="What&amp;Why">
 <node CREATED="1355044366032" ID="ID_776647766" MODIFIED="1355044372240" TEXT="GTD&#x539f;&#x7406;&#x56fe;"/>
 </node>

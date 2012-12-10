@@ -1,6 +1,6 @@
 ---
 title: "如何读书"
-tags: Method, Reading
+tags: Method Reading
 ---
 
 

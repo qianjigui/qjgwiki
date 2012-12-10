@@ -25,6 +25,6 @@
 <node CREATED="1299438036422" ID="ID_964880672" MODIFIED="1299438037204" TEXT="&#x53d1;&#x73b0;&#x4e0e;&#x57f9;&#x517b;&#x4eba;&#x624d;&#xff0c;&#x52a0;&#x5f3a;&#x68af;&#x961f;&#x5efa;&#x8bbe;"/>
 <node CREATED="1299438063461" ID="ID_702558268" MODIFIED="1299438064532" TEXT="&#x5f3a;&#x5316;&#x6709;&#x6548;&#x6c9f;&#x901a;&#xff0c;&#x9f13;&#x52b1;&#x5411;&#x4e0a;&#x6c9f;&#x901a;"/>
 </node>
-<node CREATED="1355043672519" ID="ID_1396532097" MODIFIED="1355043682861" POSITION="left" TEXT="tags: PD, product, team, &#x7ecf;&#x9a8c;"/>
+<node CREATED="1355043672519" ID="ID_1396532097" MODIFIED="1355043682861" POSITION="left" TEXT="tags: PD product team &#x7ecf;&#x9a8c;"/>
 </node>
 </map>
