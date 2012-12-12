@@ -24,7 +24,7 @@ unpacks=[DecryptGenerator.new(CONFS), CleanLostGenerator.new(CONFS, dir+'/**/'+c
 conv=[GoogleWikiFormat2MarkdownFormat.new(CONFS)]
 #md=[MarkdownGenerator.new(CONFS)]
 #md=[Freemind2MarkDownGenerator.new(CONFS)]
-md=[Freemind2MarkDownGenerator.new(CONFS), MarkdownGenerator.new(CONFS), InternalImageGenerator.new(CONFS)]
+md=[Freemind2MarkDownGenerator.new(CONFS), MarkdownGenerator.new(CONFS)]
 
 task :gen_make do
   generators.each do |g|
