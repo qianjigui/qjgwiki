@@ -1,6 +1,6 @@
 ---
 title: "Linux/Ubuntu 使用知识"
-tags: undefine
+tags: Linux Tools
 ---
 
 
