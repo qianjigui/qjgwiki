@@ -24,6 +24,7 @@ unpacks=[DecryptGenerator.new(CONFS), CleanLostGenerator.new(CONFS, dir+'/**/'+c
 conv=[GoogleWikiFormat2MarkdownFormat.new(CONFS)]
 #md=[MarkdownGenerator.new(CONFS)]
 #md=[Freemind2MarkDownGenerator.new(CONFS)]
+encrypt=[EncryptGenerator.new(CONFS), CleanLostGenerator.new(CONFS,dir+'/**/**'+crypt_suf,crypt_suf)]
 md=[Freemind2MarkDownGenerator.new(CONFS), MarkdownGenerator.new(CONFS)]
 
 task :gen_make do
@@ -33,6 +34,16 @@ task :gen_make do
   generators.each do |g|
     g.generate
   end
+end
+
+desc 'Encrypt gpg files'
+task :enc do
+    encrypt.each do |g|
+        g.prepare
+    end
+    encrypt.each do |g|
+        g.generate
+    end
 end
 
 task :default => :md2md
