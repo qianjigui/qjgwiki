@@ -1,0 +1,35 @@
+//Android Zygote startup
+digraph AndroidZygoteStartup{
+init[label="Actor"];
+app_process[label="App_main"]
+runtime[label="AppRuntime"]
+env[label="JavaVMEnv"]
+
+init -> app_process [label="startup/restart"];
+app_process->runtime_cluster;
+
+subgraph runtime_cluster{
+    alloc -> config -> start
+};
+
+app_process:runtime.alloc
+app_process:runtime.config add arguments
+app_process:runtime.start("com.android.internal.os.ZygoteInit"...)
+
+runtime:env.startVm
+runtime:env.findClass
+runtime:env.CallStaticVoidMethod("com.android.internal.os.ZygoteInit",'main','String[] args')
+
+env:zygoteinit.main
+zygoteinit:zygotemethods.preload classes and resources~
+zygoteinit:zygotemethods.gc three times gc and run finalize
+zygoteinit:zygotemethods.startSystemServer
+zygotemethods:zygote.forkSystemServer("com.android.server.SystemServer")
+zygote:systemserver.handleSystemServerProcess
+systemserver:zygoteinit.closeServerSocket
+systemserver:runner.invoke execApplication or zygoteInit
+runner:runner.invokeStaticMain com.android.server.SystemServer:main
+runner:runner.throw new ZygoteInit MethodAndArgsCaller Exception
+runner:zygoteinit.catch exception and invoke run method
+[/c]
+}

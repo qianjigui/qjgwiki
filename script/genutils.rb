@@ -17,6 +17,7 @@ module KnowledgeUtils
         build = @conf[:build]
         encrypt= build[:encrypt]
         @encrypt_dir = encrypt[:dir]
+        @local_res_dir = build[:res][:dir]
         @encrypt_suffix= encrypt[:suffix]
         @src = build[:src][:dir]
         @types = @conf[:types]

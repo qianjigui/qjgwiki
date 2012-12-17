@@ -19,7 +19,7 @@ module KnowledgeUtils
       end
 
       def generate_imp
-        FileSet.files(@src+'/**/**'+@mm, /\/#{@encrypt_dir}\//).each do |file|
+        FileSet.files(@src+'/**/**'+@mm, /\/(#{@encrypt_dir})|(#{@local_res_dir})\//).each do |file|
           to_md(file, @mm, @tmd)
         end
       end

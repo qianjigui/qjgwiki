@@ -8,6 +8,7 @@
 </node>
 <node CREATED="1355406075731" ID="ID_191431857" MODIFIED="1355406079043" POSITION="right" TEXT="Resources">
 <node CREATED="1355406079732" ID="ID_1333205651" MODIFIED="1355406091106" TEXT="[Android&#x7cfb;&#x7edf;&#x8fdb;&#x7a0b;Zygote&#x542f;&#x52a8;&#x8fc7;&#x7a0b;&#x7684;&#x6e90;&#x4ee3;&#x7801;&#x5206;&#x6790;](http://blog.csdn.net/luoshengyang/article/details/6768304)"/>
+<node CREATED="1355746891047" ID="ID_950908139" MODIFIED="1355746896514" TEXT="![Steps](http://pic.yupoo.com/qianjigui/CuRPLCqf/UhmYQ.png)"/>
 </node>
 <node CREATED="1355406123243" ID="ID_1534774886" MODIFIED="1355406125528" POSITION="left" TEXT="IPC">
 <node CREATED="1355406127083" ID="ID_989818391" MODIFIED="1355406131875" TEXT="UNIX domain socket"/>

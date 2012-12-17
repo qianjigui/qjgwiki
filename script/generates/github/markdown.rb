@@ -30,7 +30,7 @@ module KnowledgeUtils
                 list = []
                 [[@mdtype, @mdctx], [@tmdtype,@tmdctx]].each do |value|
                     type,ctx=value
-                    FileSet.files(@src+'/**/**'+type, /\/#{@encrypt_dir}\//).each do |file|
+                    FileSet.files(@src+'/**/**'+type, /\/(#{@encrypt_dir})|(#{@local_res_dir})\//).each do |file|
                         info = MDInfo.new(file,ctx)
                         list << [info,file]
                     end

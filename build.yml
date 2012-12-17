@@ -2,6 +2,8 @@
   :encrypt:
     :dir: gpg
     :suffix: .gpg
+  :res:
+    :dir: __res
   :wiki:
     :dir: wiki
     :suffix: .wiki
