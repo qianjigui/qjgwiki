@@ -165,3 +165,10 @@ fun(s);//Right
 
 ##编程注意事项##
   * 数据越界，看看template complex abs() 实现
+
+# Tips #
+* Link-list
+* if/else likely unlikely
+* 汇编实现的原子操作 __asm__  __volatile__ ( xxxxxx)
+* Size=0 array: int a[0];
+* a=x?:y;  // is same to a=x?x:y;
