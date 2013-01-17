@@ -261,7 +261,7 @@
   </head>
   <body>
     <p>
-      {% highlight none %}
+      {% highlight html %}
     </p>
     <p>
       sum=0;

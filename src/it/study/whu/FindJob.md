@@ -16,7 +16,7 @@ http://www.riabook.cn/doc/designpattern/images/decorator-3.jpg
 ##工厂##
 http://qjg-wiki.googlecode.com/files/AbstractFactoryDP.jpg
 ##单例##
-{% highlight none %}
+{% highlight java %}
 public class Singleton {
     private static Singleton instance = new Singleton();
 
@@ -32,7 +32,7 @@ public class Singleton {
 }
 {% endhighlight %}
 
-{% highlight none %}
+{% highlight java %}
 public class Singleton {
     private static Singleton instance = null;
     private Singleton(){}
@@ -97,7 +97,7 @@ http://www.riabook.cn/doc/designpattern/images/proxy-3.jpg
   1. 线程池
 
 ###Java IO###
-{% highlight none %}
+{% highlight java %}
   BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(new File("abc"))));
   reader.close();
   BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File("bb"))));
@@ -107,7 +107,7 @@ http://www.riabook.cn/doc/designpattern/images/proxy-3.jpg
 ##C/C++##
 ###二进制1的个数###
 主要是需要考虑各种类型，负数:
-{% highlight none %}
+{% highlight java %}
 template<typename T>
 int countbits1(T x)
 {

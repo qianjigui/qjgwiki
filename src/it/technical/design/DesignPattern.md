@@ -33,7 +33,7 @@ http://qjg-wiki.googlecode.com/files/FactoryMethodDP.jpg
 http://qjg-wiki.googlecode.com/files/ProtoTypeDP.jpg
 
 ###Singleton 模式###
-{% highlight none %}
+{% highlight java %}
 public class Singleton {
     private static Singleton instance = new Singleton();
 
@@ -49,7 +49,7 @@ public class Singleton {
 }
 {% endhighlight %}
 
-{% highlight none %}
+{% highlight java %}
 public class Singleton {
     private static Singleton instance = null;
     private Singleton(){}

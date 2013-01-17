@@ -26,7 +26,7 @@ Makefile 详细指南 [http://blog.csdn.net/liang13664759/archive/2007/09/04/177
   2
 
 当存在负数时: x%y
-{% highlight none %}
+{% highlight java %}
    i. 当异号时：
                  if |x|>|y|
                     result: x+y
@@ -56,7 +56,7 @@ Makefile 详细指南 [http://blog.csdn.net/liang13664759/archive/2007/09/04/177
 宏的概念在C中运用最为普遍，普通的替换和联接就不再多说。
 关键是字符中的替换：
 
-{% highlight none %}
+{% highlight c %}
 
 //字符串连接
 #define DEFINE_EQ(_name)\
@@ -77,7 +77,7 @@ PRINT_FUN(var) //printf("%s: %d\n", "var", var)
 
 #C++ Programming language#
 ##命名空间##
-{% highlight none %}
+{% highlight c %}
   // one.h
   namespace one
   {
@@ -130,11 +130,11 @@ C++ 命名规则 [http://blog.csdn.net/huliang82/article/details/3870153](http:/
   * templates may not be ‘virtual’, *typename* change to *class*
   * 模板的定义与实现需要写在同一个头文件中
   * 模板中使用迭代:
-{% highlight none %}
+{% highlight c %}
 typename std::list<_Tp>::iterator terrain_it;//define a iterator
 {% endhighlight %}
   * 临时变量无法被转换成引用
-{% highlight none %}
+{% highlight c %}
 void fun(string & x){...}
 ...
 fun(string("132"));//Error

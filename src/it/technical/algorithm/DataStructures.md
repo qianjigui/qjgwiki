@@ -40,7 +40,7 @@ tags: algorithm datastructure
 ####O(n^2^)排序方法####
 
 #####插入排序#####
-{% highlight none %}
+{% highlight c %}
 #A[1..length]
 INSERTION-SORT(A)
   for j <- 2 to length[A]
@@ -55,7 +55,7 @@ INSERTION-SORT(A)
 {% endhighlight %}
 
 #####冒泡排序#####
-{% highlight none %}
+{% highlight c %}
 #A[1..length]
 BUBBLE-SORT(A)
   #注意边界
@@ -74,7 +74,7 @@ BUBBLE-SORT(A)
 ####O(nlog(n))排序方法####
 
 #####归并排序#####
-{% highlight none %}
+{% highlight c %}
 #include <stdio.h>
 
 #define MAX (5)
@@ -134,7 +134,7 @@ int main()
 {% endhighlight %}
 
 #####堆排序#####
-{% highlight none %}
+{% highlight c %}
 
 #include <stdio.h>
 
@@ -258,7 +258,7 @@ int main()
 {% endhighlight %}
 
 #####快速排序#####
-{% highlight none %}
+{% highlight c %}
 
 #include <stdio.h>
 
@@ -344,7 +344,7 @@ void random_qsort(int l,int r)
 
 
 #####线性查找#####
-{% highlight none %}
+{% highlight c %}
 int select(int index, int l, int r)
 {
   int i;

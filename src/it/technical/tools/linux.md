@@ -39,7 +39,7 @@ Ubuntu [需要设置个把属性](http://ubuntuforums.org/showthread.php?p=70026
   1. 保存、退出并重新连接
 
 日志信息，从错误到成功:
-{% highlight none %}
+{% highlight bash %}
 pppd[5094]: pppd 2.4.5 started by root, uid 0
 pppd[5094]: Using interface ppp0
 pppd[5094]: Connect: ppp0 <--> /dev/pts/2
@@ -93,13 +93,13 @@ pppd[5427]: secondary DNS address 20x.1x5.xxx.xxx
 
   配置ACPI http://www.brighthub.com/computing/linux/articles/39504.aspx :
     主要是通过在grub加载时向内核发送参数来控制ACPI模块的加载:
-      * {% highlight none %}acpi=off{% endhighlight %}:
+      * {% highlight bash %}acpi=off{% endhighlight %}:
         关闭ACPI的支持
-      * {% highlight none %} acpi=ht {% endhighlight %}:
+      * {% highlight bash %} acpi=ht {% endhighlight %}:
         关闭除超线程之外的ACPI支持
-      * {% highlight none %} pci=noacpi {% endhighlight %}:
+      * {% highlight bash %} pci=noacpi {% endhighlight %}:
         关闭ACPI的硬中断并且PCI不再扫描ACPI
-      * {% highlight none %} acpi=noirq {% endhighlight %}:
+      * {% highlight bash %} acpi=noirq {% endhighlight %}:
         关闭ACPI的IRQ(硬中断)
 
   而我是直接采用 _pci=noacpi_ 。

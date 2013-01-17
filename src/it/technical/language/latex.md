@@ -11,7 +11,7 @@ tags: undefine
 ###经典用例###
 充分利用自定义目录、标号和修正。
 
-{% highlight none %}
+{% highlight latex %}
 \documentclass[a4paper,jounral]{report}
 \usepackage{../paper/sty/dcuappendices}
 \input{../paper/src/config}
@@ -106,7 +106,7 @@ tags: undefine
 
 ##页面布局##
 ###自定义布局###
-{% highlight none %}
+{% highlight latex %}
 \ProvidesPackage{dcuappendices}
 
 %Set Header & Footer
@@ -118,7 +118,7 @@ tags: undefine
 {% endhighlight %}
 
 ###页面边距设置###
-{% highlight none %}
+{% highlight latex %}
 \usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
 {% endhighlight %}
 
@@ -126,7 +126,7 @@ tags: undefine
 Try the placeins package: it defines a \FloatBarrier command beyond which floats may not pass.
 A package option allows you to declare that floats may not pass a \section command, but you can place \FloatBarriers wherever you choose.
 
-{% highlight none %}
+{% highlight latex %}
 \usepackage[section]{placeins}
 % Let the subsection can FloatBarrier
 \let \oldsubsection \subsection
@@ -145,7 +145,7 @@ A package option allows you to declare that floats may not pass a \section comma
 
 ###How do I vertically center the text on a page?###
 纵向居中:
-{% highlight none %}
+{% highlight latex %}
 \begin{document}
 %
 \vspace*{\fill}
@@ -156,7 +156,7 @@ text
 {% endhighlight %}
 
 ##合并PDF##
-{% highlight none %}
+{% highlight latex %}
 \usepackage{pdfpages}
 \includepdf[pages=1-5]{../paper/output/main.pdf}
 \includepdf[pages=-]{../paper/output/main.pdf}
