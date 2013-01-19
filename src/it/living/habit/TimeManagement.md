@@ -1,6 +1,6 @@
 ---
 title: "时间管理"
-tags: undefine
+tags: GTD Time SelfManage
 ---
 
 
