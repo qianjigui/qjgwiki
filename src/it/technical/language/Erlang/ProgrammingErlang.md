@@ -1,17 +1,13 @@
-
 ---
-
 title: "Programming Eralng"
-tags: ProgrammingLanguage Erlang
-
+tags: Erlang
 ---
+
 
 #整体介绍#
 * Paperback: 536 pages
 * Publisher: Pragmatic Bookshelf; 1 edition (11 July 2007)
 * Language English
-* ISBN-10: 193435600X
-* ISBN-13: 978-1934356005
 
 ##网络上总结的读书笔记##
 http://www.javaeye.com/wiki/erlang?category_id=91
@@ -856,7 +852,7 @@ factorial 25 = 15511210043330985984000000
 
 
 使用Makefile构建Erl程序
------------------------------------------------------------
+
 % Makefile.template
 # leave these lines alone
 .SUFFIXED: .erl .beam .yrl
@@ -911,7 +907,6 @@ clean:
   rm -rf *.beam erl_crash.dump
   cd dir1; make clean
   cd dir2; make clean
------------------------------------------------------------
 
 
 Getting Help
@@ -1398,14 +1393,14 @@ test_ets(Mode) ->
   ets:delete(TableId).
  
 - show quoted text -
-%% ---
+%% 
 %%  Excerpted from "Programming Erlang",
 %%  published by The Pragmatic Bookshelf.
 %%  Copyrights apply to this code. It may not be used to create training material, 
 %%  courses, books, articles, and the like. Contact us if you are in doubt.
 %%  We make no guarantees that this code is fit for any purpose. 
 %%  Visit http://www.pragmaticprogrammer.com/titles/jaerlang for more book information.
-%%---
+%%
 -module(test_mnesia).
 -import(lists, [foreach/2]).
 -compile(export_all).
