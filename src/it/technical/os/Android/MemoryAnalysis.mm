@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node COLOR="#000000" CREATED="1364104946643" ID="ID_1827295405" MODIFIED="1364109362164" TEXT="AndroidOSMemory&#x5206;&#x6790;">
+<node COLOR="#000000" CREATED="1364104946643" ID="ID_1827295405" MODIFIED="1364109592740" TEXT="AndroidOSMemory&#x5206;&#x6790;">
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
 <node COLOR="#0033ff" CREATED="1364104998340" ID="ID_1961902378" MODIFIED="1364109362149" POSITION="right" TEXT="&#x5185;&#x5b58;&#x4f7f;&#x7528;&#x5206;&#x6790;">
@@ -129,6 +129,10 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
+</node>
+<node COLOR="#0033ff" CREATED="1364109594255" ID="ID_16937179" MODIFIED="1364109605833" POSITION="left" TEXT="tags: Android OS Memory Heap">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
 </node>
 </node>
 </map>
