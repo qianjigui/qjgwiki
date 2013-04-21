@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1348190259371" ID="ID_230830375" MODIFIED="1358249123846" TEXT="BeautifulCode">
+<node CREATED="1348190259371" ID="ID_230830375" MODIFIED="1366518729131" TEXT="BeautifulCode">
 <node CREATED="1348190318849" ID="ID_1593807425" MODIFIED="1348190322804" POSITION="right" TEXT="RegularMatcher">
 <node CREATED="1348190324540" ID="ID_1194217426" MODIFIED="1348190427166" TEXT="&#x9009;&#x62e9;&#x5408;&#x9002;&#x7684;&#x529f;&#x80fd;&#x96c6;&#x5408;"/>
 <node CREATED="1348190427554" ID="ID_1136254363" MODIFIED="1348190468636" TEXT="&#x6b63;&#x786e;&#x4f7f;&#x7528;&#x9012;&#x5f52;"/>
@@ -27,5 +27,6 @@
 <node CREATED="1358249189983" ID="ID_1588153689" MODIFIED="1358249190514" TEXT="&#x4ee5;&#x6700;&#x5408;&#x9002;&#x7684;&#x65b9;&#x5f0f;&#x89e3;&#x51b3;&#x95ee;&#x9898;"/>
 </node>
 </node>
+<node CREATED="1366518730057" ID="ID_352946802" MODIFIED="1366518741681" POSITION="left" TEXT="tags: code"/>
 </node>
 </map>
