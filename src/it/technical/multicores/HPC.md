@@ -1,6 +1,6 @@
 ---
 title: "高性能计算"
-tags: undefine
+tags: MultiCPU
 ---
 
 

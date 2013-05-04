@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1297444705597" ID="ID_474475162" MODIFIED="1297445725964" TEXT="&#x5546;&#x4e1a;">
+<node CREATED="1297444705597" ID="ID_474475162" MODIFIED="1367660321540" TEXT="&#x5546;&#x4e1a;">
 <node CREATED="1297445084336" ID="ID_280299017" MODIFIED="1297445088973" POSITION="right" TEXT="&#x5546;&#x4e1a;&#x6a21;&#x5f0f;">
 <node CREATED="1297445090669" ID="ID_736285916" MODIFIED="1297445097067" TEXT="&#x8981;&#x7d20;">
 <node CREATED="1297445189124" ID="ID_1432553000" MODIFIED="1297445193126" TEXT="&#x63a5;&#x89e6;&#x7528;&#x6237;">
@@ -130,5 +130,6 @@
 </node>
 </node>
 </node>
+<node CREATED="1367660322540" ID="ID_1455214634" MODIFIED="1367660326790" POSITION="right" TEXT="tags: Company"/>
 </node>
 </map>

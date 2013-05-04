@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1297296015191" ID="ID_1322756629" MODIFIED="1297296695092" TEXT="Introduction Functions">
+<node CREATED="1297296015191" ID="ID_1322756629" MODIFIED="1367659556353" TEXT="Introduction Functions">
 <node CREATED="1297296143643" ID="ID_65111416" MODIFIED="1297296239666" POSITION="right" TEXT="&#x6574;&#x5408;">
 <icon BUILTIN="desktop_new"/>
 <node CREATED="1297296045530" ID="ID_1016342112" MODIFIED="1297296344923" TEXT="&#x5185;&#x5bb9;">
@@ -65,5 +65,6 @@
 <icon BUILTIN="full-5"/>
 </node>
 </node>
+<node CREATED="1367659557384" ID="ID_1235169716" MODIFIED="1367659562134" POSITION="left" TEXT="tags: MyWiki"/>
 </node>
 </map>

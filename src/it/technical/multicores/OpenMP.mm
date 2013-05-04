@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1311254200226" ID="ID_1087536524" MODIFIED="1311254206960" TEXT="OpenMP">
+<node CREATED="1311254200226" ID="ID_1087536524" MODIFIED="1367660053275" TEXT="OpenMP">
 <node CREATED="1311254251974" ID="ID_1100983390" MODIFIED="1311254255849" POSITION="right" TEXT="&#x57fa;&#x672c;&#x539f;&#x7406;">
 <node CREATED="1311254256562" ID="ID_1953246059" MODIFIED="1311254264691" TEXT="Fork/Join&#x591a;&#x7ebf;&#x7a0b;&#x6a21;&#x578b;"/>
 <node CREATED="1311254265087" ID="ID_1329908165" MODIFIED="1311254292688" TEXT="&#x5728;&#x7ebf;&#x7a0b;&#x7ea7;&#x522b;&#x91c7;&#x7528;*&#x5171;&#x4eab;&#x5185;&#x5b58;*&#x5e76;&#x884c;&#x8ba1;&#x7b97;&#x6a21;&#x578b;"/>
@@ -315,8 +315,7 @@
       {% endhighlight %}
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -327,5 +326,6 @@
 <node CREATED="1311373252066" ID="ID_1842661791" MODIFIED="1311373830872" TEXT="[OpenMp&#x7f16;&#x7a0b;&#x6750;&#x6599;&#x96c6;&#x5408;](http://www.cnblogs.com/me115/archive/2011/01/25/1944567.html)"/>
 <node CREATED="1311373276300" ID="ID_1975021489" MODIFIED="1311373842891" TEXT="[OpenMP&#x5de5;&#x4f5c;&#x539f;&#x7406;](http://cobweb.ecn.purdue.edu/ParaMount/iwomp2008/documents/chapman-underthehood)"/>
 </node>
+<node CREATED="1367660054103" ID="ID_1037016713" MODIFIED="1367660063368" POSITION="left" TEXT="tags: MultiCPU"/>
 </node>
 </map>

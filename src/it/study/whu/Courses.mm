@@ -163,5 +163,6 @@
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
+<node CREATED="1367659573040" ID="ID_1798980508" MODIFIED="1367659586493" POSITION="left" TEXT="tags: StudySummary"/>
 </node>
 </map>

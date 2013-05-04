@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1348408132883" ID="ID_1797621214" MODIFIED="1348408142908" TEXT="RubyAuthorThinking">
+<node CREATED="1348408132883" ID="ID_1797621214" MODIFIED="1367659698415" TEXT="RubyAuthorThinking">
 <node CREATED="1348408264995" ID="ID_222050284" MODIFIED="1348408267331" POSITION="right" TEXT="Design">
 <node CREATED="1348408268036" ID="ID_914499119" MODIFIED="1348408268744" TEXT="&#x539f;&#x5219;">
 <node CREATED="1348408275524" ID="ID_301686123" MODIFIED="1348408276196" TEXT="&#x7b80;&#x6d01;&#x6027; "/>
@@ -88,5 +88,6 @@
 <node CREATED="1348408952780" ID="ID_814419828" MODIFIED="1348408954058" TEXT="Erlang"/>
 </node>
 </node>
+<node CREATED="1367659699384" ID="ID_1283155709" MODIFIED="1367659711071" POSITION="right" TEXT="tags: Ruby LanguagePattern"/>
 </node>
 </map>

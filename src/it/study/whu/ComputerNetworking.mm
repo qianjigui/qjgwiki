@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1316051679162" ID="ID_1099915445" MODIFIED="1316051697021" TEXT="ComputerNetworking">
+<node CREATED="1316051679162" ID="ID_1099915445" MODIFIED="1367659973259" TEXT="ComputerNetworking">
 <node CREATED="1316051747001" ID="ID_506795898" MODIFIED="1316051804726" POSITION="right" TEXT="&#x8fd0;&#x8f93;&#x5c42;">
 <node CREATED="1316051804651" ID="ID_626373273" MODIFIED="1316051814153" TEXT="&#x670d;&#x52a1;">
 <node CREATED="1316051759190" ID="ID_1968797760" MODIFIED="1316051795919" TEXT="&#x4e0d;&#x540c;&#x8fdb;&#x7a0b;&#x95f4;&#x770b;&#x4f3c;&#x76f4;&#x63a5;&#x76f8;&#x8fde;&#x7684;&#x903b;&#x8f91;&#x901a;&#x4fe1;"/>
@@ -37,5 +37,6 @@
 <node CREATED="1316059264617" ID="ID_954004356" MODIFIED="1316059266647" TEXT="UDP"/>
 </node>
 </node>
+<node CREATED="1367659974040" ID="ID_1990705976" MODIFIED="1367659977775" POSITION="left" TEXT="tags: Network"/>
 </node>
 </map>

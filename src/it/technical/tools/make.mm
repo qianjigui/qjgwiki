@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1297605147519" ID="ID_1095062493" MODIFIED="1297605152397" TEXT="make">
+<node CREATED="1297605147519" ID="ID_1095062493" MODIFIED="1367660220353" TEXT="make">
 <node CREATED="1297605289373" ID="ID_94603789" MODIFIED="1297605296525" POSITION="left" TEXT="&#x53d8;&#x91cf;">
 <node CREATED="1297633181027" ID="ID_1817299631" MODIFIED="1297633184926" TEXT="$(VAR)"/>
 <node CREATED="1297633185581" ID="ID_1996529260" MODIFIED="1297633188049" TEXT="VAR=gcc"/>
@@ -173,5 +173,6 @@
 </node>
 </node>
 </node>
+<node CREATED="1367660221165" ID="ID_1996093837" MODIFIED="1367660230931" POSITION="right" TEXT="tags: make CI"/>
 </node>
 </map>

@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1344416205683" ID="ID_1151354043" MODIFIED="1346578738229" TEXT="Virtual Machines">
+<node CREATED="1344416205683" ID="ID_1151354043" MODIFIED="1367659727212" TEXT="Virtual Machines">
 <node CREATED="1344416234965" ID="ID_1040686709" MODIFIED="1344416243707" POSITION="right" TEXT="&#x5bfc;&#x8bba;">
 <node CREATED="1344416244728" ID="ID_1491075132" MODIFIED="1344416248124" TEXT="&#x8ba1;&#x7b97;&#x673a;&#x4f53;&#x7cfb;&#x7ed3;&#x6784;">
 <node CREATED="1344416282139" ID="ID_1082137992" MODIFIED="1344416286590" TEXT="&#x6982;&#x5ff5;">
@@ -904,5 +904,6 @@
 <node CREATED="1346579400341" ID="ID_547016244" MODIFIED="1346579428422" TEXT="&#x5171;&#x4eab;&#x5b58;&#x50a8;&#x591a;&#x5904;&#x7406;&#x5668;"/>
 </node>
 </node>
+<node CREATED="1367659728556" ID="ID_950204186" MODIFIED="1367659733806" POSITION="right" TEXT="tags: VM JVM "/>
 </node>
 </map>

@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1298721482823" ID="ID_1919756406" MODIFIED="1298721776647" TEXT="OpenMPI">
+<node CREATED="1298721482823" ID="ID_1919756406" MODIFIED="1367660070243" TEXT="OpenMPI">
 <node CREATED="1298721776565" ID="ID_936989409" MODIFIED="1298721804267" POSITION="right" TEXT="Concept&#x57fa;&#x672c;&#x6982;&#x5ff5;">
 <node CREATED="1298721592608" ID="ID_473709097" MODIFIED="1298721815050" TEXT="&#x5355;&#x5143;Unit">
 <node CREATED="1298721607747" ID="ID_1829937037" MODIFIED="1298721664256" TEXT="Process&#x8fdb;&#x7a0b;(MPI &#x7a0b;&#x5e8f;&#x4e2d;&#x4e00;&#x4e2a;&#x72ec;&#x7acb;&#x53c2;&#x4e0e;&#x901a;&#x4fe1;&#x7684;&#x4e2a;&#x4f53;) ">
@@ -98,5 +98,6 @@
 <node CREATED="1298726547410" ID="ID_206152281" MODIFIED="1298726548081" TEXT="&#x5f52;&#x7ea6;(MPI_Reduce) "/>
 </node>
 </node>
+<node CREATED="1367660076603" ID="ID_738801880" MODIFIED="1367660081259" POSITION="right" TEXT="tags: MultiCPU"/>
 </node>
 </map>

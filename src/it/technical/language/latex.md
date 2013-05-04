@@ -1,6 +1,6 @@
 ---
 title: "Latex使用知识"
-tags: undefine
+tags: Latex
 ---
 
 

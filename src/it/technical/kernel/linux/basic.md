@@ -1,6 +1,6 @@
 ---
 title: "Linux内核源代码阅读基础知识"
-tags: undefine
+tags: Linux Kernel
 ---
 
 

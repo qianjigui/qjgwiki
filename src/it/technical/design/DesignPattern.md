@@ -1,6 +1,6 @@
 ---
 title: "设计模式"
-tags: undefine
+tags: DesignPattern
 ---
 
 

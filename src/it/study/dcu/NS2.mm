@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1298665751755" ID="ID_1439513353" MODIFIED="1298665757761" TEXT="NS-2">
+<node CREATED="1298665751755" ID="ID_1439513353" MODIFIED="1367660130696" TEXT="NS-2">
 <node CREATED="1298665784900" ID="ID_46003809" MODIFIED="1298665786845" POSITION="right" TEXT="Install">
 <node CREATED="1298665791677" ID="ID_1345633818" MODIFIED="1298665792830" TEXT="http://ns2onubuntu.blogspot.com/2009/11/easiest-way-to-install-ns2-on-ubuntu.html"/>
 <node CREATED="1298665799015" ID="ID_1667474291" MODIFIED="1298665805758" TEXT="Ubuntu 10.04">
@@ -60,5 +60,6 @@
 <node CREATED="1299599474548" ID="ID_1950189797" MODIFIED="1299599481775" TEXT="&#x91cd;&#x65b0;&#x751f;&#x6210;&#x8f6f;&#x4ef6;&#x5305;"/>
 </node>
 </node>
+<node CREATED="1367660131525" ID="ID_1863495030" MODIFIED="1367660137009" POSITION="right" TEXT="tags: Network NS2"/>
 </node>
 </map>

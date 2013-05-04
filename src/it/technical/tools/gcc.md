@@ -1,6 +1,6 @@
 ---
 title: "GCC使用知识"
-tags: undefine
+tags: GCC C Compiler
 ---
 
 

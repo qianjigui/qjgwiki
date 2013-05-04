@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1297507594425" ID="ID_877659954" MODIFIED="1297507605851" TEXT="&#x6069;&#x5a01;&#x5e76;&#x91cd;&#x7684;&#x9886;&#x5bfc;&#x827a;&#x672f;">
+<node CREATED="1297507594425" ID="ID_877659954" MODIFIED="1367660265868" TEXT="&#x6069;&#x5a01;&#x5e76;&#x91cd;&#x7684;&#x9886;&#x5bfc;&#x827a;&#x672f;">
 <node CREATED="1297507689236" ID="ID_1219211054" MODIFIED="1297507692355" POSITION="right" TEXT="2R">
 <node CREATED="1297507693199" ID="ID_323502232" MODIFIED="1297507703831" TEXT="&#x534f;&#x4f5c;&#x578b;"/>
 <node CREATED="1297507704254" ID="ID_268540449" MODIFIED="1297507712842" TEXT="&#x7ba1;&#x7406;&#x578b;"/>
@@ -54,5 +54,6 @@
 <node CREATED="1297508113628" ID="ID_671972871" MODIFIED="1297508123333" TEXT="&#x9ad8;&#x5ea6;&#x534f;&#x4f5c;&#x3001;&#x9ad8;&#x5ea6;&#x547d;&#x4ee4;"/>
 </node>
 </node>
+<node CREATED="1367660266853" ID="ID_1928072586" MODIFIED="1367660273181" POSITION="right" TEXT="tags: Manage 2R"/>
 </node>
 </map>

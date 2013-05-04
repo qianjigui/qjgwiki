@@ -1,6 +1,6 @@
 ---
 title: "生活中的小技巧"
-tags: undefine
+tags: Tips
 ---
 
 

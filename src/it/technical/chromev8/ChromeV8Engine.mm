@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1323528772151" ID="ID_1191169047" MODIFIED="1323574872550" TEXT="JS-V8&#x5f15;&#x64ce;">
+<node CREATED="1323528772151" ID="ID_1191169047" MODIFIED="1367659790400" TEXT="JS-V8&#x5f15;&#x64ce;">
 <node CREATED="1323528848463" ID="ID_1516847118" MODIFIED="1323574089535" POSITION="right" TEXT="&#x8bbe;&#x8ba1;&#x7406;&#x5ff5;">
 <node CREATED="1323574077969" ID="ID_1644921126" MODIFIED="1323574120768" TEXT="&#x8bd1;&#x6587;&#x5730;&#x5740; [V8 Javascript &#x5f15;&#x64ce;&#x8bbe;&#x8ba1;&#x7406;&#x5ff5;](http://blog.pluskid.org/?p=186)"/>
 <node CREATED="1323528879734" ID="ID_811824292" MODIFIED="1323528880350" TEXT="&#x5feb;&#x901f;&#x5c5e;&#x6027;&#x8bbf;&#x95ee;">
@@ -91,5 +91,6 @@
 <node CREATED="1323665076272" ID="ID_1133753682" MODIFIED="1323665081282" TEXT="Debug&#x652f;&#x6301;"/>
 </node>
 </node>
+<node CREATED="1367659791212" ID="ID_198640036" MODIFIED="1367659797587" POSITION="left" TEXT="tags: JavaScript V8"/>
 </node>
 </map>

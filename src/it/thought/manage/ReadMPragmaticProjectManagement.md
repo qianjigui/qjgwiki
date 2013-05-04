@@ -1,6 +1,6 @@
 ---
 title: "Manage It!: Your Guide to Modern, Pragmatic Project Management 项目管理修炼之道"
-tags: undefine
+tags: Manage
 ---
 
 
