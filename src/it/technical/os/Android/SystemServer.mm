@@ -22,5 +22,10 @@
 </node>
 </node>
 <node CREATED="1366003396676" ID="ID_1226061651" MODIFIED="1366003406191" POSITION="left" TEXT="tags:Android SystemServer PackageManager"/>
+<node CREATED="1369658756952" ID="ID_1987383606" MODIFIED="1369658760873" POSITION="right" TEXT="HowToStart">
+<node CREATED="1355406549423" ID="ID_1904075238" MODIFIED="1355406550505" TEXT="RuntimeInit.zygoteInit">
+<node CREATED="1355406718281" ID="ID_629318682" MODIFIED="1369658800686" TEXT="&#x8c03;&#x7528; com.android.server.SystemServer&#x7c7b;&#x7684;main&#x51fd;&#x6570; "/>
+</node>
+</node>
 </node>
 </map>
