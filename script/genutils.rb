@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# encoding: UTF-8
 # Copyright (C) 2003-2011 Wang Pengcheng <wpc0000@gmail.com>
 # , released under the MIT license
 # You may obtain a template of the MIT License at

@@ -1,11 +1,13 @@
 #!/usr/bin/env rake
+# encoding: UTF-8
 # Copyright (C) 2003-2011 Wang Pengcheng <wpc0000@gmail.com>
 # , released under the MIT license
 # You may obtain a template of the MIT License at
 # http://www.opensource.org/licenses/mit-license.php
+
 $KCODE = 'utf8'
 
-require 'script/utils'
+require_relative 'script/utils'
 
 include KnowledgeUtils::Generate
 include KnowledgeUtils
