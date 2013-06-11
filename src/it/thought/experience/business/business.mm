@@ -129,6 +129,17 @@
 </node>
 </node>
 </node>
+<node CREATED="1370949065879" ID="ID_442196207" MODIFIED="1370949067364" TEXT="Steps">
+<node CREATED="1370949073520" ID="ID_1531788631" MODIFIED="1370949074114" TEXT="&#x505a;&#x4e00;&#x4e2a;&#x751f;&#x610f;&#x4e4b;&#x524d;&#xff0c;&#x8bf7;&#x81ea;&#x95ee;&#x81ea;&#x5df1;6&#x4e2a;&#x95ee;&#x9898;">
+<node CREATED="1370949078285" ID="ID_1340954566" MODIFIED="1370949078926" TEXT="http://www.alibuybuy.com/posts/80123.html"/>
+<node CREATED="1370949083707" ID="ID_517225698" MODIFIED="1370949084223" TEXT="&#x95ee;&#x9898;1&#xff1a;&#x4f60;&#x505a;&#x7684;&#x4e8b;&#x60c5;&#x5bf9;&#x522b;&#x4eba;&#x6709;&#x4ec0;&#x4e48;&#x610f;&#x4e49;&#xff1f;"/>
+<node CREATED="1370949088145" ID="ID_497696658" MODIFIED="1370949088692" TEXT="&#x95ee;&#x9898;2&#xff1a;&#x4f60;&#x505a;&#x7684;&#x4e8b;&#x60c5;&#x662f;&#x5426;&#x662f;&#x522b;&#x4eba;&#x5fc5;&#x987b;&#x7684;&#xff1f;"/>
+<node CREATED="1370949094504" ID="ID_310742704" MODIFIED="1370949095176" TEXT="&#x95ee;&#x9898;3&#xff1a;&#x4f60;&#x505a;&#x7684;&#x4e8b;&#x60c5;&#x8ddf;&#x7ade;&#x4e89;&#x8005;&#x76f8;&#x6bd4;&#x4f18;&#x52bf;&#x5728;&#x54ea;&#x91cc;&#xff1f;"/>
+<node CREATED="1370949100801" ID="ID_1827583750" MODIFIED="1370949101301" TEXT="&#x95ee;&#x9898;4&#xff1a;&#x4f60;&#x505a;&#x7684;&#x4e8b;&#x60c5;&#x80fd;&#x5426;&#x517b;&#x6d3b;&#x81ea;&#x5df1;&#x548c;&#x56e2;&#x961f;&#xff1f;"/>
+<node CREATED="1370949107083" ID="ID_1154537681" MODIFIED="1370949108301" TEXT="&#x95ee;&#x9898;5&#xff1a;&#x4f60;&#x505a;&#x7684;&#x4e8b;&#x60c5;&#x6709;&#x591a;&#x5927;&#x7684;&#x672a;&#x6765;&#xff1f;"/>
+<node CREATED="1370949114051" ID="ID_48804725" MODIFIED="1370949114551" TEXT="&#x95ee;&#x9898;6&#xff1a;&#x4f60;&#x505a;&#x7684;&#x4e8b;&#x60c5;&#x6709;&#x591a;&#x957f;&#x7684;&#x751f;&#x547d;&#x5468;&#x671f;&#xff1f;"/>
+</node>
+</node>
 </node>
 <node CREATED="1367660322540" ID="ID_1455214634" MODIFIED="1367660326790" POSITION="right" TEXT="tags: Company"/>
 </node>
