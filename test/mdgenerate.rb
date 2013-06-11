@@ -1,3 +1,6 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+$KCODE='u8'
 
 # line 1 "mdgenerate.rl"
 class ScannerForMarkdownExtension

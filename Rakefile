@@ -7,7 +7,12 @@
 
 $KCODE = 'utf8'
 
-require_relative 'script/utils'
+SCRIPT_UTILS_RELATE_PATH='script/utils'
+if defined?(require_relative)
+    require_relative SCRIPT_UTILS_RELATE_PATH
+else
+    require SCRIPT_UTILS_RELATE_PATH
+end
 
 include KnowledgeUtils::Generate
 include KnowledgeUtils
