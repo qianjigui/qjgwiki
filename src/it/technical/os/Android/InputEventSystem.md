@@ -76,3 +76,7 @@ InputManager类从不与Java交互，而InputDispatchPolicy负责执行所有与
 1. com_android_server_input_InputManagerService.cpp::nativeStart
     1. mReader->loopOnce (InputReader.cpp)
     1. mDispatcher -> dispatchOnce
+
+##事件反馈##
+WindowManagerService.main
+    创建一个WindowManagerService对象，作为inputManager的回调
