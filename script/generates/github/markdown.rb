@@ -37,6 +37,7 @@ module KnowledgeUtils
                 end
                 list.each do |f|
                     info,file = f
+                    p f
                     res = gen.generate(info, file)
                     path=@outdir+'/'+info.dstpath
                     if refresh?(file,path)
