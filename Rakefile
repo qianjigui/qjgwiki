@@ -5,7 +5,6 @@
 # You may obtain a template of the MIT License at
 # http://www.opensource.org/licenses/mit-license.php
 
-$KCODE = 'utf8'
 
 SCRIPT_UTILS_RELATE_PATH='script/utils'
 if defined?(require_relative)
@@ -55,7 +54,7 @@ end
 task :default => :release
 
 desc 'Relase the source codes[ENC and mardown generate]'
-task :release => [:md2md]
+task :release => [:enc, :md2md]
 
 desc 'Convert Google Wiki to Markdown'
 task :g2m do

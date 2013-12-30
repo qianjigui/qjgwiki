@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 # encoding: UTF-8
 
-$KCODE = 'utf8'
 
 module KnowledgeUtils
   module Generate

@@ -4,7 +4,6 @@
 # , released under the MIT license
 # You may obtain a template of the MIT License at
 # http://www.opensource.org/licenses/mit-license.php
-$KCODE = 'utf8'
 
 require 'fileutils'
 
