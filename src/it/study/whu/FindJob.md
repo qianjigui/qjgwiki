@@ -16,7 +16,8 @@ http://www.riabook.cn/doc/designpattern/images/decorator-3.jpg
 ##工厂##
 http://qjg-wiki.googlecode.com/files/AbstractFactoryDP.jpg
 ##单例##
-{% highlight java %}
+
+```java
 public class Singleton {
     private static Singleton instance = new Singleton();
 
@@ -30,9 +31,11 @@ public class Singleton {
 
     // 其它实作
 }
-{% endhighlight %}
+```
 
-{% highlight java %}
+
+
+```java
 public class Singleton {
     private static Singleton instance = null;
     private Singleton(){}
@@ -47,7 +50,8 @@ public class Singleton {
         return instance;
     }
 }
-{% endhighlight %}
+```
+
 
 http://qjg-wiki.googlecode.com/files/SingletonDP.jpg
 ##命令##
@@ -97,17 +101,20 @@ http://www.riabook.cn/doc/designpattern/images/proxy-3.jpg
   1. 线程池
 
 ###Java IO###
-{% highlight java %}
+
+```java
   BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(new File("abc"))));
   reader.close();
   BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File("bb"))));
   writer.close();
-{% endhighlight %}
+```
+
 
 ##C/C++##
 ###二进制1的个数###
 主要是需要考虑各种类型，负数:
-{% highlight java %}
+
+```java
 template<typename T>
 int countbits1(T x)
 {
@@ -118,7 +125,8 @@ int countbits1(T x)
   }
   return count;
 }
-{% endhighlight %}
+```
+
 
 #名词#
   1. DOM: Document Object Model

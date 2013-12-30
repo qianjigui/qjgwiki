@@ -66,28 +66,35 @@ tags: ComputerSystem
 ## 基于数据位的操作 ##
 [Bit Twiddling Hacks](http://graphics.stanford.edu/~seander/bithacks.html) :
     * 基于最高位的符号数判断
-{% highlight c %}
+
+```c
 int v;
 int sign;
 sign = v >> (sizeof(int)*CHAR_BIT-1);//v>>31
-{% endhighlight %}
+```
+
     * 判断符号位是否相同
-{% highlight c %}
+
+```c
 int x,y;
 bool f = ((x^y)<0);
-{% endhighlight %}
+```
+
 
 ###不需要跳转###
     * 语句处理绝对值
-{% highlight c %} 
+
+```c 
 int v;
 unsigned int r;
 int const mask = v >> sizeof(int)*CHAR_BIT - 1;
 r = (v+mask) ^ mask;
 r = (v^mask) - mask;
-{% endhighlight %}
+```
+
     * 计算两个数的较大者/较小者
-{% highlight c %} 
+
+```c 
 int x;
 int y;
 int r;
@@ -96,32 +103,41 @@ r = x^((x^y)&-(x<y));//max(x,y)
 
 r = y + ((x - y) & ((x - y) >> (sizeof(int) * CHAR_BIT - 1))); // min(x, y)
 r = x - ((x - y) & ((x - y) >> (sizeof(int) * CHAR_BIT - 1))); // max(x, y)
-{% endhighlight %}
+```
+
     * 判断一个数是否为2的幂
-{% highlight c %} 
+
+```c 
 unsigned int v;
 bool f;
 f = (v&(v-1))==0;//v==0时有问题，0不是2的幂次
 f = v && !(v & (v - 1));
-{% endhighlight %}
+```
+
     * 位标识处理
-{% highlight c %} 
+
+```c 
 bool f;         // conditional flag
 unsigned int m; // the bit mask
 unsigned int w; // the word to modify:  if (f) w |= m; else w &= ~m;
 
 w ^= (-f ^ w) & m;
-{% endhighlight %}
+```
+
     * 统计1-bit的个数
-{% highlight c %} 
+
+```c 
 unsigned int v; // count the number of bits set in v
 unsigned int c; // c accumulates the total bits set in v
 for (c = 0; v; c++)
 {
   v &= v - 1; // clear the least significant bit set
 }
-{% endhighlight %}
+```
+
     * 数据交换
-{% highlight c %} 
+
+```c 
 #define SWAP(a, b) (((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b)))
-{% endhighlight %}
+```
+

@@ -39,7 +39,8 @@ Ubuntu [需要设置个把属性](http://ubuntuforums.org/showthread.php?p=70026
   1. 保存、退出并重新连接
 
 日志信息，从错误到成功:
-{% highlight bash %}
+
+```bash
 pppd[5094]: pppd 2.4.5 started by root, uid 0
 pppd[5094]: Using interface ppp0
 pppd[5094]: Connect: ppp0 <--> /dev/pts/2
@@ -66,7 +67,8 @@ pppd[5427]: local  IP address 172.0.0.18
 pppd[5427]: remote IP address 172.0.0.1
 pppd[5427]: primary   DNS address 20x.1x5.xxx.xxx
 pppd[5427]: secondary DNS address 20x.1x5.xxx.xxx
-{% endhighlight %}
+```
+
 
 另外就是如果前端有个不怎么给力的路由器，请设置DMZ主机为后端VPN使用的PC机。
 
@@ -93,13 +95,21 @@ pppd[5427]: secondary DNS address 20x.1x5.xxx.xxx
 
   配置ACPI http://www.brighthub.com/computing/linux/articles/39504.aspx :
     主要是通过在grub加载时向内核发送参数来控制ACPI模块的加载:
-      * {% highlight bash %}acpi=off{% endhighlight %}:
+      * 
+```bashacpi=off```
+:
         关闭ACPI的支持
-      * {% highlight bash %} acpi=ht {% endhighlight %}:
+      * 
+```bash acpi=ht ```
+:
         关闭除超线程之外的ACPI支持
-      * {% highlight bash %} pci=noacpi {% endhighlight %}:
+      * 
+```bash pci=noacpi ```
+:
         关闭ACPI的硬中断并且PCI不再扫描ACPI
-      * {% highlight bash %} acpi=noirq {% endhighlight %}:
+      * 
+```bash acpi=noirq ```
+:
         关闭ACPI的IRQ(硬中断)
 
   而我是直接采用 _pci=noacpi_ 。

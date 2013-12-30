@@ -26,7 +26,8 @@ Makefile 详细指南 [http://blog.csdn.net/liang13664759/archive/2007/09/04/177
   2
 
 当存在负数时: x%y
-{% highlight java %}
+
+```java
    i. 当异号时：
                  if |x|>|y|
                     result: x+y
@@ -47,7 +48,8 @@ Makefile 详细指南 [http://blog.csdn.net/liang13664759/archive/2007/09/04/177
                 -6%-5等于-1
                 -4%-5等于-4
                 -5%-6等于-5
-{% endhighlight %}
+```
+
 
 ##struct##
 [http://stackoverflow.com/questions/612328/difference-between-struct-and-typedef-struct-in-c](http://stackoverflow.com/questions/612328/difference-between-struct-and-typedef-struct-in-c)
@@ -56,7 +58,8 @@ Makefile 详细指南 [http://blog.csdn.net/liang13664759/archive/2007/09/04/177
 宏的概念在C中运用最为普遍，普通的替换和联接就不再多说。
 关键是字符中的替换：
 
-{% highlight c %}
+
+```c
 
 //字符串连接
 #define DEFINE_EQ(_name)\
@@ -73,18 +76,21 @@ DEFINE_EQ(Integer)   // => equalIntegerTo
 ...
 PRINT_FUN(var) //printf("%s: %d\n", "var", var)
 ...
-{% endhighlight %}
+```
+
 
 #C++ Programming language#
 ##命名空间##
-{% highlight c %}
+
+```c
   // one.h
   namespace one
   {
     char func(char);
     class String { ... };
   }
-{% endhighlight %}
+```
+
 
 一个不错的总结网站 [http://hi.baidu.com/%C5%E1%F6%CE0227/blog/item/26578b1295cf55876438db64.html](http://hi.baidu.com/%C5%E1%F6%CE0227/blog/item/26578b1295cf55876438db64.html)
 
@@ -130,11 +136,14 @@ C++ 命名规则 [http://blog.csdn.net/huliang82/article/details/3870153](http:/
   * templates may not be ‘virtual’, *typename* change to *class*
   * 模板的定义与实现需要写在同一个头文件中
   * 模板中使用迭代:
-{% highlight c %}
+
+```c
 typename std::list<_Tp>::iterator terrain_it;//define a iterator
-{% endhighlight %}
+```
+
   * 临时变量无法被转换成引用
-{% highlight c %}
+
+```c
 void fun(string & x){...}
 ...
 fun(string("132"));//Error
@@ -142,7 +151,8 @@ fun(string("132"));//Error
 string s("132");
 fun(s);//Right
 ...
-{% endhighlight %}
+```
+
   * 非常严厉，连const匹配都要检查
   * expected constructor, destructor, or type conversion before 需要在返回类型前加*typename* [http://www.cnblogs.com/edwardlost/archive/2011/04/25/2027656.html](http://www.cnblogs.com/edwardlost/archive/2011/04/25/2027656.html):
     只要是符合类型，特别是利用typedef声明时，如果提示类型错误，就需要添加typename显示指明为类中声明的类型。

@@ -11,7 +11,8 @@ tags: Latex
 ###经典用例###
 充分利用自定义目录、标号和修正。
 
-{% highlight latex %}
+
+```latex
 \documentclass[a4paper,jounral]{report}
 \usepackage{../paper/sty/dcuappendices}
 \input{../paper/src/config}
@@ -102,11 +103,13 @@ tags: Latex
 \includepdf[pages=14-16]{../paper/output/main.pdf}
 
 \end{document}
-{% endhighlight %}
+```
+
 
 ##页面布局##
 ###自定义布局###
-{% highlight latex %}
+
+```latex
 \ProvidesPackage{dcuappendices}
 
 %Set Header & Footer
@@ -115,18 +118,22 @@ tags: Latex
 \def\@evenhead{\mbox{}\scriptsize\MakeUppercase{\finalReportLeftheaderTitle} \hfil \thepage}%
 \def\@oddfoot{}%
 \def\@evenfoot{}}
-{% endhighlight %}
+```
+
 
 ###页面边距设置###
-{% highlight latex %}
+
+```latex
 \usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
-{% endhighlight %}
+```
+
 
 ###强制figure,table进行放置停止float###
 Try the placeins package: it defines a \FloatBarrier command beyond which floats may not pass.
 A package option allows you to declare that floats may not pass a \section command, but you can place \FloatBarriers wherever you choose.
 
-{% highlight latex %}
+
+```latex
 \usepackage[section]{placeins}
 % Let the subsection can FloatBarrier
 \let \oldsubsection \subsection
@@ -141,11 +148,13 @@ A package option allows you to declare that floats may not pass a \section comma
   \FloatBarrier
   \oldsubsubsection#1{#2}
 }
-{% endhighlight %}
+```
+
 
 ###How do I vertically center the text on a page?###
 纵向居中:
-{% highlight latex %}
+
+```latex
 \begin{document}
 %
 \vspace*{\fill}
@@ -153,16 +162,19 @@ text
 \vspace*{\fill}
 %
 \end{document}
-{% endhighlight %}
+```
+
 
 ##合并PDF##
-{% highlight latex %}
+
+```latex
 \usepackage{pdfpages}
 \includepdf[pages=1-5]{../paper/output/main.pdf}
 \includepdf[pages=-]{../paper/output/main.pdf}
 \includepdf[pages=3-]{../paper/output/main.pdf}
 \includepdf[pages=13]{../paper/output/main.pdf}
-{% endhighlight %}
+```
+
 
 ##字号字体##
 [字体大小对照表](http://qianjigui.iteye.com/blog/841052)

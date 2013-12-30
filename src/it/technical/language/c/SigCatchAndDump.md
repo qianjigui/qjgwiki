@@ -3,7 +3,8 @@ title: "C语言发生问题产生log并crash dump"
 tags: C
 ---
 
-{% highlight c %}
+
+```c
 /* This is the crash handler.
  * Does a best effort at logging and calls _exit to terminate
  * the process immediately (without atexit handlers, etc.) */
@@ -50,4 +51,5 @@ void __stack_chk_fail(void)
 
     _exit(127);
 }
-{% endhighlight %}
+```
+

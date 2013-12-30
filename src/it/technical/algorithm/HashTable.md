@@ -25,7 +25,8 @@ tags: algorithm
 [各种字符串hash函数比较](http://www.byvoid.com/blog/string-hash-compare/)
 
 ####BKDRH####
-{%highlight c%}
+
+```c
 //BKDR Hash Function
 unsigned int BKDRHash(char *str)
 {
@@ -38,4 +39,4 @@ unsigned int BKDRHash(char *str)
 
     return (hash & 0x7FFFFFFF);
 }
-{%endhighlight%}
+```
