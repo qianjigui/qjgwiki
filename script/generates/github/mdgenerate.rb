@@ -1,1 +1,0 @@
-../../../test/mdgenerate.rb

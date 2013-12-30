@@ -37,8 +37,7 @@ module KnowledgeUtils
                 end
                 list.each do |f|
                     info,file = f
-                    p f
-                    res = gen.generate(info, file)
+                    res = gen.generate(info, file, @mdctx)
                     path=@outdir+'/'+info.dstpath
                     if refresh?(file,path)
                         @env.warn(file)

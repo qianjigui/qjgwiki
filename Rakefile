@@ -34,32 +34,30 @@ conv=[GoogleWikiFormat2MarkdownFormat.new(CONFS)]
 encrypt=[EncryptGenerator.new(CONFS), CleanLostGenerator.new(CONFS,dir+'/**/**'+crypt_suf,crypt_suf)]
 md=[Freemind2MarkDownGenerator.new(CONFS), MarkdownGenerator.new(CONFS)]
 
-task :gen_make do
-  generators.each do |g|
+def prepare_and_generate(gens)
+  gens.each do |g|
     g.prepare
   end
-  generators.each do |g|
+  gens.each do |g|
     g.generate
   end
 end
 
+task :gen_make do
+  prepare_and_generate(generators)
+end
+
 desc 'Encrypt gpg files'
 task :enc do
-    encrypt.each do |g|
-        g.prepare
-    end
-    encrypt.each do |g|
-        g.generate
-    end
+    prepare_and_generate(encrypt)
 end
 
-task :default => :md2md
+task :default => :release
 
-desc 'Compile All files'
-task :compile => :gen_make do
-end
+desc 'Relase the source codes[ENC and mardown generate]'
+task :release => [:md2md]
 
-desc 'Convert G2M'
+desc 'Convert Google Wiki to Markdown'
 task :g2m do
   conv.each do |g|
     g.prepare
@@ -71,12 +69,7 @@ end
 
 desc 'Generate markdown files'
 task :md2md do
-  md.each do |g|
-    g.prepare
-  end
-  md.each do |g|
-    g.generate
-  end
+    prepare_and_generate(md)
 end
 
 desc 'Clean all Generated files'
@@ -91,10 +84,5 @@ end
 
 desc 'Unpack the Data to directory'
 task :unpack do
-  unpacks.each do |g|
-    g.prepare
-  end
-  unpacks.each do |g|
-    g.generate
-  end
+    prepare_and_generate(unpacks)
 end
