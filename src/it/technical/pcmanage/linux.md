@@ -17,7 +17,7 @@ time指令中的标准输出就是由：墙上时间、用户态调用、内核�
 ##基本操作##
 
 ##Mercurial SCM##
-[MercurialSCM使用知识](<%=(../scm/mercurial)l%>)
+[MercurialSCM使用知识](<%=(../ContinuousIntegration/mercurial)l%>)
 
 ##Firefox打印问题##
 很多时候，页面被不正常的分页或者打印内容不全等一系列问题的时候，可以考虑检查css代码。
