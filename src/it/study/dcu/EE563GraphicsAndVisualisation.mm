@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1298046649027" ID="ID_1139567986" MODIFIED="1301259628975" TEXT="EE563GraphicsAndVisualisation">
+<node CREATED="1298046649027" ID="ID_1139567986" MODIFIED="1388574733633" TEXT="EE563GraphicsAndVisualisation">
 <node CREATED="1298046912948" ID="ID_656493583" MODIFIED="1298046915602" POSITION="left" TEXT="Java2D">
 <node CREATED="1298046944452" ID="ID_1268941342" MODIFIED="1298046946513" TEXT="Functions">
 <node CREATED="1298046947297" ID="ID_1481201650" MODIFIED="1298046982262" TEXT="Interpretation &#x89e3;&#x91ca;(&#x8f93;&#x5165;)">
@@ -438,5 +438,6 @@
 <node CREATED="1301260241993" ID="ID_1708842864" MODIFIED="1301260242841" TEXT="-lglut -lGLU"/>
 </node>
 </node>
+<node CREATED="1388574734358" ID="ID_1409553947" MODIFIED="1388574740994" POSITION="left" TEXT="tags: 3D"/>
 </node>
 </map>

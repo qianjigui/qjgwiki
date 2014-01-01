@@ -88,6 +88,6 @@
 <node CREATED="1365872357748" ID="ID_911121640" MODIFIED="1365872358654" TEXT="&#x5bff;&#x547d;&#xff1a;&#x8003;&#x8651;&#x5de5;&#x5177;&#x7684;&#x5c06;&#x6765;&#xff0c;&#x8981;&#x5728;&#x5065;&#x5eb7;&#x7684;&#x7528;&#x6237;&#x7fa4;&#x548c;&#x5f00;&#x53d1;&#x56e2;&#x961f;&#x4e2d;&#x5bfb;&#x627e;&#x8bc1;&#x636e;&#x3002;"/>
 <node CREATED="1365872363211" ID="ID_1350869975" MODIFIED="1365872364226" TEXT="&#x6613;&#x7528;&#x6027;&#xff1a;&#x5de5;&#x5177;&#x914d;&#x7f6e;&#x548c;&#x4f7f;&#x7528;&#x8d77;&#x6765;&#x8d8a;&#x5bb9;&#x6613;&#xff0c;&#x5b83;&#x5c31;&#x8d8a;&#x597d;&#x3002;"/>
 </node>
-<node CREATED="1366003424332" ID="ID_914596405" MODIFIED="1366003433160" POSITION="left" TEXT="tags:CI SCM Document"/>
+<node CREATED="1366003424332" ID="ID_914596405" MODIFIED="1388574937741" POSITION="left" TEXT="tags:Tool"/>
 </node>
 </map>

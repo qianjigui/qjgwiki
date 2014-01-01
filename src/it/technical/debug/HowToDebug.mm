@@ -3,7 +3,7 @@
 <node COLOR="#000000" CREATED="1366518663384" ID="ID_776697818" MODIFIED="1366541853292" TEXT="HowToDebug">
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
-<node COLOR="#0033ff" CREATED="1366518779974" ID="ID_1529394172" MODIFIED="1366541853052" POSITION="right" TEXT="tags: debug Review methods">
+<node COLOR="#0033ff" CREATED="1366518779974" ID="ID_1529394172" MODIFIED="1388574962462" POSITION="right" TEXT="tags: Method">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 </node>

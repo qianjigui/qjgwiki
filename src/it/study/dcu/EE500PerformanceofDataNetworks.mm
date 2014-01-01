@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1297935133446" ID="ID_1948158339" MODIFIED="1306009356150" TEXT="EE500PerformanceofDataNetworks">
+<node CREATED="1297935133446" ID="ID_1948158339" MODIFIED="1388574686450" TEXT="EE500PerformanceofDataNetworks">
 <node CREATED="1297935191008" ID="ID_1237430710" MODIFIED="1297935194074" POSITION="right" TEXT="background">
 <node CREATED="1297935257937" ID="ID_1743148936" MODIFIED="1297935270232" TEXT="Hierarchy of Layer">
 <node CREATED="1297935278088" ID="ID_1470781468" MODIFIED="1297935723466" TEXT="Modularity&#x6a21;&#x5757;&#x5316;"/>
@@ -782,5 +782,6 @@
 </node>
 </node>
 <node CREATED="1306009364674" ID="ID_1863475870" MODIFIED="1306009365958" POSITION="right" TEXT="http://code.google.com/p/wpcdcuassignment2010-2011/downloads/detail?name=500ee.zip&amp;can=2&amp;q="/>
+<node CREATED="1388574687711" ID="ID_1261280313" MODIFIED="1388574693476" POSITION="right" TEXT="tags: Network"/>
 </node>
 </map>

@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1361626814816" ID="ID_1236237405" MODIFIED="1366007954941" TEXT="SmallMemorySoftwarePatternsForSystemWithLimitedMemory">
-<node CREATED="1361626861126" ID="ID_1640380888" MODIFIED="1361626878222" POSITION="right" TEXT="tags: Heap Memory Pattern"/>
+<node CREATED="1361626861126" ID="ID_1640380888" MODIFIED="1388575014390" POSITION="right" TEXT="tags: System"/>
 <node CREATED="1361626890420" ID="ID_413058059" MODIFIED="1361626918805" POSITION="left" TEXT="SmallArchitecture(&#x5c0f;&#x5bb9;&#x91cf;&#x4f53;&#x7cfb;&#x7ed3;&#x6784;)">
 <node CREATED="1361626934632" ID="ID_1828183259" MODIFIED="1361626942884" TEXT="Problem">
 <node CREATED="1361626975879" ID="ID_1544709184" MODIFIED="1361626979822" TEXT="Questions">

@@ -1,6 +1,6 @@
 ---
 title: "时间管理"
-tags: GTD Time SelfManage
+tags: Time
 ---
 
 #第五代时间管理#

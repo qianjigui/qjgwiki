@@ -1,6 +1,6 @@
 ---
 title: "看前辈们如何推动团队运作"
-tags: Manage
+tags: Index
 ---
 
 

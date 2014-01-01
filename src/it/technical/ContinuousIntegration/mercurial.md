@@ -1,6 +1,6 @@
 ---
 title: "MercurialSCM使用知识"
-tags: SCM
+tags: Tool
 ---
 
 

@@ -1,6 +1,6 @@
 ---
-title: "程序员修炼之道 读书笔记"
-tags: Coder Grow Review
+title: 程序员修炼之道 读书笔记
+tags: Review
 ---
 
 

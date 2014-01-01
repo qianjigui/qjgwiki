@@ -1,6 +1,6 @@
 ---
 title: "GCC使用知识"
-tags: GCC C Compiler
+tags: Tool
 ---
 
 

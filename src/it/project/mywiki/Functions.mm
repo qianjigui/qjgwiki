@@ -65,6 +65,5 @@
 <icon BUILTIN="full-5"/>
 </node>
 </node>
-<node CREATED="1367659557384" ID="ID_1235169716" MODIFIED="1367659562134" POSITION="left" TEXT="tags: MyWiki"/>
 </node>
 </map>

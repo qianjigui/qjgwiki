@@ -1,6 +1,6 @@
 ---
 title: "如何成为一个架构师"
-tags: architecture
+tags: Architecture
 ---
 #How to?#
 http://www.iteye.com/news/26955

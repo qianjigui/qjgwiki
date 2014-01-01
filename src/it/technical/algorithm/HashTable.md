@@ -1,6 +1,6 @@
 ---
 title: "散列表"
-tags: algorithm
+tags: Datastructure
 ---
 
 

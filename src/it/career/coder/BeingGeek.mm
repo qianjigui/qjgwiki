@@ -3,7 +3,7 @@
 <node COLOR="#000000" CREATED="1355752715500" ID="ID_20680868" MODIFIED="1358684138185" TEXT="BeingGeek">
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
-<node COLOR="#0033ff" CREATED="1355752740475" ID="ID_243881395" MODIFIED="1358684138076" POSITION="right" TEXT="tags: Geek Career Review">
+<node COLOR="#0033ff" CREATED="1355752740475" ID="ID_243881395" MODIFIED="1388574042681" POSITION="right" TEXT="tags: Review">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 </node>
