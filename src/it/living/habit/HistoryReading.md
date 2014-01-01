@@ -1,5 +1,5 @@
 ---
-title: "历史学习"
+title: 历史学习
 tags: History
 ---
 
