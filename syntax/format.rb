@@ -4,9 +4,9 @@
 
 
 if ARGV.length < 1
-    puts <<END
+    puts <<-END
     Usage: #{__FILE__} <dir>
-END
+    END
     exit 1
 end
 

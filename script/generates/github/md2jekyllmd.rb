@@ -31,7 +31,7 @@ module KnowledgeUtils
             def gen_head(metadata)
                 head=<<HEADER
 ---
-layout: default
+layout: post
 category: #{@info.category}
 #{metadata}
 ---
