@@ -1,6 +1,7 @@
 ---
 title: Android 编译系统学习计划
 tags: Make
+tagline: 将Makefile打造成OOP
 ---
 
 # 整体目标
@@ -17,3 +18,18 @@ tags: Make
 4. apk去so化
 5. Hack编译系统,添加与修改相关变量
 6. 面向对象化的编译系统模块设计
+
+# 一般学习方法与策略
+1. 代码静态学习
+2. 通过编译系统动态调试学习
+    1. 准备一个完整的Opensource编译环境
+    2. 整体编译完成
+    3. 通过单个模块进行分析:
+
+        ```shell
+        # Add -d to make for debugging information
+        mm -B -d | tee a.log
+        ```
+
+    4. 查看a.log
+
