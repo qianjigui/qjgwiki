@@ -3,23 +3,23 @@ title: "Java 标注"
 tags: Java
 ---
 
-
-
-
-
 #Java Annotations#
 
 ##Class Annotations##
-<code language="java">
+
+```java
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface MyAnnotation {
     public String name();
     public String value();
 }
-</code>
 
-<code language="java">
+```
+
+
+
+```java
 @MyAnnotation(name="someName",  value = "Hello World")
 public class TheClass {
 }
@@ -43,9 +43,12 @@ if(annotation instanceof MyAnnotation){
     System.out.println("name: " + myAnnotation.name());
     System.out.println("value: " + myAnnotation.value());
 }
-</code>
+
+```
+
 ##Method Annotations##
-<code language="java">
+
+```java
 public class TheClass {
   @MyAnnotation(name="someName",  value = "Hello World")
   public void doSomething(){}
@@ -70,9 +73,12 @@ if(annotation instanceof MyAnnotation){
     System.out.println("name: " + myAnnotation.name());
     System.out.println("value: " + myAnnotation.value());
 }
-</code>
+
+```
+
 ##Paramenter Annotations##
-<code language="java">
+
+```java
 public class TheClass {
   public static void doSomethingElse(
         @MyAnnotation(name="aName", value="aValue") String parameter){
@@ -95,9 +101,12 @@ for(Annotation[] annotations : parameterAnnotations){
     }
   }
 }
-</code>
+
+```
+
 ##Field Annotations##
-<code language="java">
+
+```java
 public class TheClass {
 
   @MyAnnotation(name="someName",  value = "Hello World")
@@ -123,11 +132,14 @@ if(annotation instanceof MyAnnotation){
     System.out.println("name: " + myAnnotation.name());
     System.out.println("value: " + myAnnotation.value());
 }
-</code>
+
+```
+
 
 ##User defined Annotation##
 
-<code language="java">
+
+```java
 //Twizzle.java
 package demo;
 
@@ -164,19 +176,19 @@ import java.lang.annotation.Target;
  * 使用这个meta-annotation可以对annotation的“生命周期”限制。
  */
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Twizzle {
-	@Edible
-	int mem() default 1;
+    public @interface Twizzle {
+        @Edible
+            int mem() default 1;
 
-	/*
-	 * annotation的成员在annotation类型中以无参数的方法的形式被声明。其方法名和返回值定义了该成员的名字和类型
-	 * 在此有一个特定的默认语法
-	 * ：允许声明任何annotation成员的默认值：一个annotation可以将name=value对作为没有定义默认值的annotation成员的值
-	 * ， 当然也可以使用name=value对来覆盖其它成员默认值。
-	 * 这一点有些近似类的继承特性，父类的构造函数可以作为子类的默认构造函数，但是也可以被子类覆盖 。
-	 */
-	String name() default "Jack";
-}
+        /*
+         * annotation的成员在annotation类型中以无参数的方法的形式被声明。其方法名和返回值定义了该成员的名字和类型
+         * 在此有一个特定的默认语法
+         * ：允许声明任何annotation成员的默认值：一个annotation可以将name=value对作为没有定义默认值的annotation成员的值
+         * ， 当然也可以使用name=value对来覆盖其它成员默认值。
+         * 这一点有些近似类的继承特性，父类的构造函数可以作为子类的默认构造函数，但是也可以被子类覆盖 。
+         */
+        String name() default "Jack";
+    }
 
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
@@ -196,43 +208,43 @@ import java.lang.reflect.Method;
 //针对类的标注
 @Twizzle
 public class A {
-	
-	//marker annotation
-	@Deprecated
-	public void run()
-	{
-		
-	}
-	
-	public void test()
-	{
-		AnnotatedElement target = B.class;
-		Twizzle t = target.getAnnotation(Twizzle.class);
-		//访问字段
-		System.out.println(t);
-		for(Annotation a : Twizzle.class.getAnnotations()){
-			System.out.println(a);
-		}
-		System.out.println("----------------");
-		target = Twizzle.class;
-		for(Annotation a:target.getDeclaredAnnotations()){
-			System.out.println(a);
-		}
-	}
-	
-	public static void main(String[] args)
-	{
-		(new A()).test();
-	}
+
+    //marker annotation
+    @Deprecated
+        public void run()
+        {
+
+        }
+
+    public void test()
+    {
+        AnnotatedElement target = B.class;
+        Twizzle t = target.getAnnotation(Twizzle.class);
+        //访问字段
+        System.out.println(t);
+        for(Annotation a : Twizzle.class.getAnnotations()){
+            System.out.println(a);
+        }
+        System.out.println("----------------");
+        target = Twizzle.class;
+        for(Annotation a:target.getDeclaredAnnotations()){
+            System.out.println(a);
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        (new A()).test();
+    }
 }
 
 //自定义默认值的标注
 @Twizzle(
-		name="Lucy",
-		mem = 2
-		)
+        name="Lucy",
+        mem = 2
+        )
 class B{
-	
-}
 
-</code>
+}
+```
+
