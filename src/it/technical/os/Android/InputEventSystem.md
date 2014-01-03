@@ -1,6 +1,6 @@
 ---
 title: "Android 事件处理系统"
-tags: Android EventProcess
+tags: EventProcess
 ---
 
 #主要参考#

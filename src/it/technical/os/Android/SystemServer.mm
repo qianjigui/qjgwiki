@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1364476063773" ID="ID_767118317" MODIFIED="1371017804057" TEXT="SystemServer">
+<node CREATED="1364476063773" ID="ID_767118317" MODIFIED="1388734310785" TEXT="SystemServer">
 <node CREATED="1364476098851" ID="ID_1474480407" MODIFIED="1364476102929" POSITION="right" TEXT="PackageManagerService">
 <node CREATED="1364476110116" ID="ID_1830481345" MODIFIED="1364476255351" TEXT="http://blog.sina.com.cn/s/blog_3e3fcadd01014678.html">
 <node CREATED="1364476114944" ID="ID_1833700996" MODIFIED="1364476119194" TEXT="PackageManger"/>
@@ -21,7 +21,6 @@
 <node CREATED="1364476333366" ID="ID_951079635" MODIFIED="1364476334523" TEXT="&#x5c06;&#x89e3;&#x6790;/&#x5b89;&#x88c5;&#x7684;.apk&#x4fe1;&#x606f;&#x4fdd;&#x5b58;&#x5230;/data/system/packages.xml&#x548c;/data/system/packages.lst&#x6587;&#x4ef6;&#x4ee5;&#x5907;&#x67e5;&#x8be2;"/>
 </node>
 </node>
-<node CREATED="1366003396676" ID="ID_1226061651" MODIFIED="1366003406191" POSITION="left" TEXT="tags:Android SystemServer PackageManager"/>
 <node CREATED="1369658756952" ID="ID_1987383606" MODIFIED="1369658760873" POSITION="right" TEXT="HowToStart">
 <node CREATED="1355406549423" ID="ID_1904075238" MODIFIED="1355406550505" TEXT="RuntimeInit.zygoteInit">
 <node CREATED="1355406718281" ID="ID_629318682" MODIFIED="1369658800686" TEXT="&#x8c03;&#x7528; com.android.server.SystemServer&#x7c7b;&#x7684;main&#x51fd;&#x6570; ">

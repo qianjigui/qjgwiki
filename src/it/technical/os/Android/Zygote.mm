@@ -1,7 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1355405941649" ID="ID_631344100" MODIFIED="1355406032576" TEXT="Zygote">
-<node CREATED="1355406007594" ID="ID_457699158" MODIFIED="1355406020812" POSITION="right" TEXT="tags: Android OS Zygote Startup"/>
 <node CREATED="1355406033905" ID="ID_977934526" MODIFIED="1355406037211" POSITION="left" TEXT="From">
 <node CREATED="1355406038314" ID="ID_1585371270" MODIFIED="1355406041641" TEXT="init process"/>
 <node CREATED="1355406047826" ID="ID_1712269780" MODIFIED="1355406050632" TEXT="app_process"/>

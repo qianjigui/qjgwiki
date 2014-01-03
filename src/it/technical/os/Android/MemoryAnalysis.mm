@@ -130,7 +130,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1364109594255" ID="ID_16937179" MODIFIED="1364109605833" POSITION="left" TEXT="tags: Android OS Memory Heap">
+<node COLOR="#0033ff" CREATED="1364109594255" ID="ID_16937179" MODIFIED="1388734302870" POSITION="left" TEXT="tags: GC Memory">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 </node>
