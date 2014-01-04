@@ -28,3 +28,53 @@ tags: Review Heart
     1. blog to wiki
     2. After every plan *time end*
 
+# 涓滴列表
+
+## 2014
+1. Day
+    - Life
+        - Sport
+            - Run
+            - Energy
+        - Music
+        - On Time
+    - Read
+        - Technial
+            - ATA
+            - BBS
+            - News
+        - Book
+    - Review
+        - Blog
+        - Life
+2. Week
+    - Wiki
+    - Project
+    - Interpersonal
+        - Family
+        - Friends
+        - Work Team
+        - Technical
+    - Life
+        - Movie
+        - Clean house
+
+## 2013
+1. Day
+    - Interpersonal
+        - Family
+        - Friends
+        - Work Team
+        - Technical Team
+    - Sports
+        - Run
+        - Energy
+    - Music
+    - Review
+    - Read
+        - Technical
+        - Android Training
+        - News
+2. Week
+    - Blog
+    - Project
