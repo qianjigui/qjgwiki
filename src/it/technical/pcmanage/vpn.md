@@ -19,15 +19,35 @@ tagline: 安全才能回家 :-)
 4. 添加VPN
 5. 配置VPN
 6. 点击连接，输入username&password
+    - 添加特定IP的路由
 7. Connect & Use
 
-## 图示
+## 具体使用
+
+建议使用命令模式, 这样可以通过不同设备有选择性的访问网络.
+
+### 图示
 
 ![Install APP](http://pic.yupoo.com/qianjigui/Dr6AnrCz/medish.jpg)
 ![Create VPN](http://pic.yupoo.com/qianjigui/Dr6yOOGr/medish.jpg)
 ![Setup VPN](http://pic.yupoo.com/qianjigui/Dr6AnTj9/medish.jpg)
 ![Connect](http://pic.yupoo.com/qianjigui/Dr6Ao37w/medish.jpg)
 
+### 命令行模式
+
+```shell
+# Connect to server by openconnect
+sudo openconnect -u xxxx.xxx vpn.xxx-inc.com
+
+# In other terminal
+
+# list the network interface
+ifconfig
+
+# Add route for ip connect
+#    route: connect to 10.x.x.x with tun0 device
+sudo route add -net 10.0.0.0 netmask 255.0.0.0 dev tun0
+```
 
 # P2P VPN
 
