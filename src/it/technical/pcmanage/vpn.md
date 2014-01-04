@@ -1,6 +1,7 @@
 ---
 title: Ubuntu 10.04 安装 VPN
 tags: 
+tagline: 安全才能回家 :-)
 ---
 
 # 企业 Cisco VPN 安装与配置使用
