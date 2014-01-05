@@ -364,8 +364,11 @@ The general process for a typical build is outlined below:
     - LOCAL_PACKAGE_NAME
 - all_modules
 
+### 中间整体加载的Makefile
+
 # 编译脚本
 
 ## 具体组织结构
+
 
 ## 提供给开发者的控制参数

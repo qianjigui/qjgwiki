@@ -32,6 +32,7 @@ module KnowledgeUtils
                 head=<<HEADER
 ---
 layout: post
+lmtime: #{@info.lmtime}
 category: #{@info.category}
 #{metadata}
 ---

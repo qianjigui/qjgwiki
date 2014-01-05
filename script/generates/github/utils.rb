@@ -100,6 +100,10 @@ module KnowledgeUtils
                     Pathname.new(res).cleanpath.to_s.sub(@ctx.src, @ctx.dst_img_dir)
                 end
 
+                def lmtime
+                    @mtime.split(" ")[0]
+                end
+
                 private
 
                 def dst_localpath(relative_url)
