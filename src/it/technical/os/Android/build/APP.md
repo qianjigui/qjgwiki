@@ -494,13 +494,86 @@ mm
             build/core/main.mk include $(ONE_SHOT_MAKEFILE)
 ```
 
+## 各个过程的功能
+1. mm 获取上下文与目标Android.mk后, 设置关键ONE_SHOT_MAKEFILE, 并进入make
+2. build/core/main.mk
+    - 设置系统环境
+    - 定义目标
+    - packages/apps/Calculator/Android.mk
+        - 清理LOCAL_*变量
+        - 定义编译模块相关的源代码等
+        - build/core/package.mk
+            - AndroidManifest指定
+            - 应用资源指定
+            - 模块依赖
+                - PROGUARD
+                - EMMA
+            - build/core/java.mk
+                - 依赖模块定义(JAVA\_LIBRARIES, STATIC_JAVA_LIBRARIES)
+                - PROGUARD
+                - renderscript
+                - base/core/base_rules.mk
+                    - 相关模块的依赖关系定义(主要用于与具体模块无关的上下文关系定义, 并可以明确需要安装的具体模块)
+                    - .aidl to java
+                    - Add .logtags
+                    - proto to java
+                    - java to class
+                    - 定义make clean的具体任务
+                    - Install 模块相关定义
+                        - do dexpreopt
+                    - Register with ALL_MODULES
+                    - NOTICE file target
+                - 定义中间模块产生的具体command
+
+                    ```shell
+                    $(full_classes_compiled_jar): $(java_sources) $(java_resource_sources) $(full_java_lib_deps) $(jar_manifest_file) $(RenderScript_file_stamp) $(proto_java_sources_file_stamp)
+                       $(transform-java-to-classes.jar)
+                    $(full_classes_jarjar_jar): $(full_classes_compiled_jar)
+                       # 根据是否需要jarjar的不同采用不同的处理
+                       # JARJAR
+                    $(full_classes_emma_jar): $(full_classes_jarjar_jar)
+                       # 根据是否需要emma的不同采用不同的处理
+                       # EMMA
+                    $(full_classes_jar): $(full_classes_emma_jar) | $(ACP)
+                    $(full_classes_proguard_jar) : $(full_classes_jar) $(proguard_flag_files)
+                        # PROGUARD
+                    $(built_dex_intermediate): $(full_classes_proguard_jar) $(DX)
+                        # DEX
+                    $(built_dex): $(built_dex_intermediate) | $(ACP)
+                    $(findbugs_xml) : $(LOCAL_BUILT_MODULE)
+                    ```
+
+            - 定义APP相关数据的生成
+
+                ```shell
+                $(R_file_stamp): $(all_res_assets) $(full_android_manifest) $(RenderScript_file_stamp) $(AAPT) | $(ACP)
+                    # AAPT
+                $(LOCAL_BUILT_MODULE): XXXXX
+                    # PACKAGE
+                    # signature
+                    # zipalign
+                ```
+
+            - lintall : lint-$(LOCAL_PACKAGE_NAME)
+
+
 # 开发者需要关注的API
 ## 可以使用的工具
-
-1. EMMC测试覆盖工具
-2. jarjar Java包批处理工具
-3. Proguard 系统优化工具
-4. 系统级优化工具(需要以ROM的形式发布): preopt/odex
+1. SRC
+    1. java
+    2. RenderScript
+    3. Proto
+    4. AIDL
+    5. jni
+2. TOOLS
+    1. EMMC测试覆盖工具
+    2. jarjar Java包批处理工具
+    3. Proguard 系统优化工具
+    4. 系统级优化工具(需要以ROM的形式发布): preopt/odex
+    5. lint bug分析工具
+    6. signature
+    7. zipalign
+    8. findbugs 好像已经无法使用了
 
 ## 编译控制参数
 目前我们主要关注APP相关的控制参数.
@@ -518,9 +591,11 @@ mm
         - debug eng tests optional samples shell\_ash shell\_mksh
     - 具体参数可能的影响
         - tests
+
             ```makefile
             LOCAL_AAPT_FLAGS := $(LOCAL_AAPT_FLAGS) -z
             ```
+
 - Resources
     - LOCAL_MANIFEST_FILE
         - default value: AndroidManifest.xml
@@ -551,9 +626,11 @@ mm
             - disabled: 关闭
             - custom
                 - !=
+
                     ```makefile
                     proguard_options_file := $(package_expected_intermediates_COMMON)/proguard_options
                     ```
+
     - LOCAL_PROGUARD_FLAGS
         - 用于定义PROGUARD的相关参数
     - LOCAL_INSTRUMENTATION_FOR
@@ -582,6 +659,7 @@ mm
     - LOCAL_RENDERSCRIPT_FLAGS
     - LOCAL_RENDERSCRIPT_INCLUDES
     - LOCAL_RENDERSCRIPT_INCLUDES\_OVERRIDE: 会覆盖上述变量LOCAL_RENDERSCRIPT_INCLUDES
+
 ### HACK时使用的API
 - LOCAL_MODULE_PATH
     - default value: system/app
@@ -590,9 +668,11 @@ mm
 - LOCAL_UNINSTALLABLE_MODULE
     - default value: false
     - 起作用后主要是通过如下操作完成
-    ```makefile
-    LOCAL_INSTALLED_MODULE := $(LOCAL_MODULE_PATH)/$(LOCAL_INSTALLED_MODULE_STEM)
-    ```
+
+        ```makefile
+        LOCAL_INSTALLED_MODULE := $(LOCAL_MODULE_PATH)/$(LOCAL_INSTALLED_MODULE_STEM)
+        ```
+
 - LOCAL_SDK_VERSION
 - LOCAL_BUILT_MODULE_STEM
 - LOCAL_INTERMEDIATE_TARGETS
@@ -611,7 +691,7 @@ mm
 - LOCAL_AAPT_FLAGS
 - findbugs.xml
 
-# 整体回忆
+# 分析后的感觉
 
 不得不说, Makefile能够变成OO化的东西, 确实不容易.
 整体编译系统中,我们可以看到Google在工程化上的强大, 将开发, 集成, 发布, 测试, 代码开源许可证等大量工程流程化的工作进行了一体化的封装与管理.
