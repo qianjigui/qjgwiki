@@ -336,7 +336,7 @@ The general process for a typical build is outlined below:
     - R_file_stamp
 - out/target/common/obj/APPS/Calculator_intermediates/classes-full-debug.jar
     - LOCAL_EMMA_INSTRUMENT == false
-    - emma 测试覆盖工具
+    - [emma 测试覆盖工具](http://www.ibm.com/developerworks/cn/opensource/os-cn-emma)
     - full_classes_compiled_jar_leaf
     - full_classes_compiled_jar
 - out/target/common/obj/APPS/Calculator_intermediates/classes-jarjar.jar
@@ -493,6 +493,119 @@ mm
             build/core/main.mk include $(ONE_SHOT_MAKEFILE)
 ```
 
-## 提供给开发者的控制参数
+# 开发者需要关注的API
+## 可以使用的工具
+
+1. EMMC测试覆盖工具
+2. jarjar Java包批处理工具
+3. Proguard 系统优化工具
+4. 系统级优化工具(需要以ROM的形式发布): preopt/odex
+
+## 编译控制参数
 目前我们主要关注APP相关的控制参数.
 
+### 主要的API
+- LOCAL_PACKAGE_NAME
+- LOCAL_MODULE
+- LOCAL_IS_HOST_MODULE
+    - default value: false
+- LOCAL_MODULE_CLASS
+    - default value: APPS
+- LOCAL_MODULE_TAGS
+    - default value: optional
+    - 可以是很多参数
+        - debug eng tests optional samples shell\_ash shell\_mksh
+    - 具体参数可能的影响
+        - tests
+            ```makefile
+            LOCAL_AAPT_FLAGS := $(LOCAL_AAPT_FLAGS) -z
+            ```
+- Resources
+    - LOCAL_MANIFEST_FILE
+        - default value: AndroidManifest.xml
+        - LOCAL\_PATH下用于指定MANIFEST
+    - FULL_MANIFEST_FILE
+        - default value: $(LOCAL_PATH)/$(LOCAL_MANIFEST_FILE)
+        - 最终指定MANIFEST_FILE的地方
+    - LOCAL_ASSET_DIR
+        - default value: $(LOCAL_PATH)/assets
+    - LOCAL_RESOURCE_DIR
+        - default value: $(LOCAL_PATH)/res
+            - add $(package_resource_overlays)
+                - PRODUCT_PACKAGE_OVERLAYS
+                - DEVICE_PACKAGE_OVERLAYS
+        - 最后的整体结构是, 按先后编译应用的资源: 优先顺序是 PRODUCT, DEVICE, LOCAL
+    - LOCAL_EXPORT_PACKAGE_RESOURCES
+- EMMA
+    - LOCAL_EMMA_INSTRUMENT
+        - default value:
+            - $(LOCAL_MODULE_TAGS))$(LOCAL_INSTRUMENTATION_FOR) contain tests => true
+        - 会根据上下文自动添加emma的模块依赖
+    - LOCAL_EMMA_COVERAGE_FILTER
+- PROGUARD
+    - LOCAL_PROGUARD_ENABLED
+        - default value:
+            - TARGET_BUILD_VARIANT contains user,userdebug=> full
+        - value:
+            - disabled: 关闭
+            - custom
+                - !=
+                    ```makefile
+                    proguard_options_file := $(package_expected_intermediates_COMMON)/proguard_options
+                    ```
+    - LOCAL_PROGUARD_FLAGS
+        - 用于定义PROGUARD的相关参数
+    - LOCAL_INSTRUMENTATION_FOR
+- LOCAL_DEX_PREOPT
+    - default value:
+        - WITH_DEXPREOPT==true => true
+- LOCAL_SRC_FILES
+    - 源代码文件列表
+    - .java
+    - .aidl
+    - MODULE_LICENSE*
+    - .proto
+    - .logtags
+- LOCAL_JNI_SHARED_LIBRARIES
+- LOCAL_CERTIFICATE
+    - 签名
+    - platform 等
+- LOCAL_STATIC_JAVA_LIBRARIES
+    - 静态依赖库, 最终会与应用一起打包
+- LOCAL_JAVA_LIBRARIES
+    - 动态依赖库
+    - 会根据上下文添加SDK依赖, 系统模块依赖等
+- RENDERSCRIPT
+    - LOCAL_RENDERSCRIPT_TARGET_API
+    - LOCAL_RENDERSCRIPT_CC
+    - LOCAL_RENDERSCRIPT_FLAGS
+    - LOCAL_RENDERSCRIPT_INCLUDES
+    - LOCAL_RENDERSCRIPT_INCLUDES\_OVERRIDE: 会覆盖上述变量LOCAL_RENDERSCRIPT_INCLUDES
+### HACK时使用的API
+- LOCAL_MODULE_PATH
+    - default value: system/app
+    - 安装路径
+- LOCAL_NO_STANDARD_LIBRARIES
+- LOCAL_UNINSTALLABLE_MODULE
+    - default value: false
+    - 起作用后主要是通过如下操作完成
+    ```makefile
+    LOCAL_INSTALLED_MODULE := $(LOCAL_MODULE_PATH)/$(LOCAL_INSTALLED_MODULE_STEM)
+    ```
+- LOCAL_SDK_VERSION
+- LOCAL_BUILT_MODULE_STEM
+- LOCAL_INTERMEDIATE_TARGETS
+    - 中间编译结果, 在添加新机制时可以使用. 一般*不要定义*.
+- LOCAL_SOURCE_FILES_ALL_GENERATED
+- LOCAL_PROPRIETARY_MODULE
+    - 主要影响partition_tag
+- LOCAL_MODULE_STEM
+    - default value: LOCAL_MODULE
+- LOCAL_MODULE_SUFFIX
+    - default value: .apk
+- LOCAL_AIDL_INCLUDES
+- LOCAL_PROTOC_OPTIMIZE_TYPE
+- LOCAL_JAVA_RESOURCE_DIRS
+- LOCAL_JAR_MANIFEST
+- LOCAL_AAPT_FLAGS
+- findbugs.xml
