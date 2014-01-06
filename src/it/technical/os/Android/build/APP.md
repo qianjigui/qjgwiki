@@ -472,6 +472,7 @@ Reading makefile `build/core/Makefile' (search path) (no ~ expansion)...
 # 编译脚本
 
 目前先关注主要的Makefile过程,后续从整体上分析整个系统的结构.
+例如后续从APPS入手,分析整个编译系统的功能分布与依赖继承关系.
 
 ## Makefile加载的主要步骤
 - Makefile
@@ -609,3 +610,10 @@ mm
 - LOCAL_JAR_MANIFEST
 - LOCAL_AAPT_FLAGS
 - findbugs.xml
+
+# 整体回忆
+
+不得不说, Makefile能够变成OO化的东西, 确实不容易.
+整体编译系统中,我们可以看到Google在工程化上的强大, 将开发, 集成, 发布, 测试, 代码开源许可证等大量工程流程化的工作进行了一体化的封装与管理.
+
+后续我准备按模块地将这些OO化的东西进行学习.
