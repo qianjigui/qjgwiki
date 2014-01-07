@@ -1,6 +1,6 @@
 ---
 title: Android JAVA_LIBRARY 模块编译过程学习
-tags: Make JAVA_LIBRARY
+tags: Make
 tagline: 将Makefile打造成OOP
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Android APP 模块编译过程学习
-tags: Make APP
+tags: Make
 tagline: 将Makefile打造成OOP
 ---
 
