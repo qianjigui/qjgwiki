@@ -215,6 +215,10 @@ tags: GC VM MarkSweep GenerationGC
 有些比较可观的结论：
 * 对象生命周期的分布是"成块"的。
 
+目前CRuby已经在2.1.0上采用了混合MarkSweep与分代式GC的策略.
+[Ruby2.1.0GC](http://www.infoq.com/cn/news/2013/12/ruby21)
+其中有一些GC方面的分析技术与手段思路还是可以借见的.
+
 ##渐进式和并发垃圾收集##
 主要是进行并发时的保护，主要是通过拦截器完成。
 
