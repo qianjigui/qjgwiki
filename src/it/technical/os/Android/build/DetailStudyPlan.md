@@ -4,6 +4,10 @@ tags: Make
 tagline: 将Makefile打造成OOP
 ---
 
+# 学习环境
+
+Android: android-4.2.2_r1.2
+
 # 整体目标
 - 将原先的功能学习通过demo串起来
 - 系统化整个demo运行过程中的问题

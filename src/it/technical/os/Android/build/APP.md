@@ -4,6 +4,10 @@ tags: Make APP
 tagline: 将Makefile打造成OOP
 ---
 
+# 学习环境
+
+Android: android-4.2.2_r1.2
+
 # 一个例子
 
 ## 模块编译并明确需要分析的过程
