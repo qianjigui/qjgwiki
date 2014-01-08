@@ -17,7 +17,10 @@ Android: android-4.2.2_r1.2
     1. 中间产生物
     2. 内置工具优化与整合: proguard, lint, signature
     3. 对外提供的API
+    4. 一个完整的应用将所有参数进行使用
 2. 编译系统的整个工作过程
+    1. 整体结构关系
+    2. 上下模块间关系与传递原理
 3. PREBUILT dexpreopt
 4. apk去so化
 5. Hack编译系统,添加与修改相关变量

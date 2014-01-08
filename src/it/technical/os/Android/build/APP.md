@@ -701,3 +701,43 @@ mm
 整体编译系统中,我们可以看到Google在工程化上的强大, 将开发, 集成, 发布, 测试, 代码开源许可证等大量工程流程化的工作进行了一体化的封装与管理.
 
 后续我准备按模块地将这些OO化的东西进行学习.
+
+## 具体使用中的问题
+
+### 内置工具优化与整合
+#### proguard
+官方文档[proguard](http://developer.android.com/tools/help/proguard.html)
+
+#### lint
+官方文档[lint](http://developer.android.com/tools/help/lint.html)
+
+```shell
+mm lintall
+```
+
+### java_library 是如何起作用的
+
+通过变量LOCAL_JAVA_LIBRARIES:
+
+```shell
+###################
+# @ base_rules.mk
+###################
+
+# out/target/common/obj/xxx/xxx_intermediates/classes.jar
+# 在编译时的依赖.class
+full_java_libs := $(call java-lib-files,$(LOCAL_JAVA_LIBRARIES),$(LOCAL_IS_HOST_MODULE))
+
+# out/target/common/obj/xxx/xxx_intermediates/javalib.jar
+# 在设备上的依赖.dex
+full_java_lib_deps := $(call java-lib-deps,$(LOCAL_JAVA_LIBRARIES),$(LOCAL_IS_HOST_MODULE))
+
+PRIVATE_ALL_JAVA_LIBRARIES:= $(full_java_libs)
+
+###################
+# @ definitions.mk
+###################
+compile-java
+    javac -classpath $(PRIVATE_ALL_JAVA_LIBRARIES)
+
+```
