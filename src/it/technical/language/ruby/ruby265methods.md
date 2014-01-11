@@ -1,6 +1,6 @@
 ---
 title: "Ruby 编程技巧--265式"
-tags: Ruby Tips Review
+tags: Method
 ---
 
 

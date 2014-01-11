@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1378773943493" ID="ID_1533660180" MODIFIED="1378773968028" TEXT="DesignPatternsForEmbeddedSystemsInC">
-<node CREATED="1378773992084" ID="ID_733344845" MODIFIED="1378774006576" POSITION="right" TEXT="tags: Embedded Review"/>
+<node CREATED="1378773992084" ID="ID_733344845" MODIFIED="1389439146778" POSITION="right" TEXT="tags: Embedded"/>
 <node CREATED="1378774029123" ID="ID_508505680" MODIFIED="1378774040118" POSITION="left" TEXT="&#x8bbf;&#x95ee;&#x786c;&#x4ef6;">
 <node CREATED="1378774046965" ID="ID_497598191" MODIFIED="1378774073876" TEXT="&#x786c;&#x4ef6;&#x4ee3;&#x7406;&#x6a21;&#x5f0f;">
 <node CREATED="1378774075078" ID="ID_1515663457" MODIFIED="1378774100596" TEXT="&#x5c06;&#x786c;&#x4ef6;&#x5c01;&#x88c5;&#x5230;&#x7c7b;&#x6216;&#x7ed3;&#x6784;&#x4f53;&#x4e2d;"/>
