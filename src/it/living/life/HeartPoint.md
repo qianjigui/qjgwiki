@@ -1,6 +1,6 @@
 ---
 title: 心灵提醒与反馈
-tags: Review Heart
+tags: Review
 ---
 
 # 个人习惯与性格

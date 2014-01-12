@@ -71,7 +71,7 @@ module KnowledgeUtils
         doc.elements.each('map/node') do |node|
           root = node
         end
-        @tags = 'undefine'
+        @tags = ''
         @title=''
         File.open(newfile, 'w') do |f|
           sum = process_text(root.attributes[VALUE], root)
