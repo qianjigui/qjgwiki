@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1364109955844" ID="ID_1384433925" MODIFIED="1364110122045" TEXT="ThinkingInJavaFromVM">
-<node CREATED="1364110004500" ID="ID_1455973454" MODIFIED="1364110009594" POSITION="right" TEXT="tags: VM Java"/>
+<node CREATED="1364110004500" ID="ID_1455973454" MODIFIED="1389539847442" POSITION="right" TEXT="tags: VM"/>
 <node CREATED="1364110069843" ID="ID_1370131079" MODIFIED="1364110070483" POSITION="left" TEXT="&#x521b;&#x5efa;&#x548c;&#x9500;&#x6bc1;&#x5bf9;&#x8c61;">
 <node CREATED="1364110074827" ID="ID_1336169232" MODIFIED="1364110075358" TEXT="&#x8003;&#x8651;&#x7528;&#x9759;&#x6001;&#x5de5;&#x5382;&#x65b9;&#x6cd5;&#x4ee3;&#x66ff;&#x6784;&#x9020;&#x5668;">
 <node CREATED="1364110160638" ID="ID_1071685693" MODIFIED="1364110187341" TEXT="&#x547d;&#x540d;&#x4e0e;&#x521b;&#x5efa;&#x66f4;&#x6709;&#x610f;&#x4e49;"/>

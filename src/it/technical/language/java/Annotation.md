@@ -1,6 +1,5 @@
 ---
 title: "Java 标注"
-tags: Java
 ---
 
 #Java Annotations#

@@ -61,6 +61,5 @@
 </node>
 </node>
 </node>
-<node CREATED="1367659664868" ID="ID_730259795" MODIFIED="1367659668931" POSITION="right" TEXT="tags: JavaScript"/>
 </node>
 </map>

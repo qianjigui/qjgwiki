@@ -1,6 +1,6 @@
 ---
 title: "Reading Note for Advanced Rails Recipes"
-tags: Rails Ruby Framework
+tags: Rails
 ---
 
 1  Introduction

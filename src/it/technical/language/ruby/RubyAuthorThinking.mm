@@ -88,6 +88,5 @@
 <node CREATED="1348408952780" ID="ID_814419828" MODIFIED="1348408954058" TEXT="Erlang"/>
 </node>
 </node>
-<node CREATED="1367659699384" ID="ID_1283155709" MODIFIED="1367659711071" POSITION="right" TEXT="tags: Ruby LanguagePattern"/>
 </node>
 </map>

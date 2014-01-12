@@ -1,6 +1,6 @@
 ---
 title: Java 技术学习列表
-tags:
+tags: Index
 ---
 
 # 主要关注点

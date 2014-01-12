@@ -1,6 +1,5 @@
 ---
 title: "Programming Eralng"
-tags: Erlang
 ---
 
 
