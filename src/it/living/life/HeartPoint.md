@@ -57,6 +57,7 @@ tags: Review
         - Technical
     - Life
         - Movie
+        - SPA
         - Clean house
 
 ## 2013
