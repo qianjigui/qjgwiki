@@ -117,12 +117,21 @@ module KnowledgeUtils
                     res = %x[git log --follow --format=%ci #{path}]
                     @ctime = res.split("\n")
                     #The last commit for this file, so this is the modify time
-                    @mtime = @ctime[0]
+                    now=Time.now.strftime('%Y-%m-%d')
+                    @mtime = if @ctime[0]
+                                 @ctime[0]
+                             else
+                                 now
+                             end
                     #The first commit for this file, so this is the create time
                     @ctime = @ctime[-1]
                     #Because of the jeklly template, the file name should contain the prefix with a timestamp
                     #The format is YYYY-MM-DD-filename
-                    @prefix= @ctime.split(' ')[0]+'-'
+                    @prefix = if @ctime
+                        @ctime.split(' ')[0]
+                    else
+                        now
+                    end + '-'
                 end
                 def init_category(path, ctx)
                     src=ctx.src
