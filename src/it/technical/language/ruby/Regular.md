@@ -68,6 +68,32 @@ r4 = Regexp.new('dog', Regexp::EXTENDED | Regexp::IGNORECASE) #=> /dog/ix
 | `/[[:word:]]/`|  A character in one of the following Unicode general categories Letter, Mark, Number, Connector_Punctuation | |
 | `/[[:ascii:]]/`|  A character in the ASCII character set | |
 
+## 复用 Repetition
+### 结构/量词
+| 符号/量词 | English | 备注 |
+|------|---------|------|
+| * | Zero or more times | |
+| + | One or more times | |
+| ? | Zero or one times (optional) | |
+| {n} | Exactly n times | |
+| {n,} | n or more times | |
+| {,m} | m or less times | |
+| {n,m} | At least n and at most m times | |
+
+### 模式
+- 默认为贪婪型, 最多成功匹配
+- 非贪婪/懒惰型, 最少*成功*匹配
+    - 量词后面添加`?`
+    - 涉及量词: ` * + {n,}`
+
+```ruby
+/<(.+)>/.match("<a><b>") # => #<MatchData "<a><b>" 1:"a><b">
+/<(.+?)>/.match("<a><b>") # => #<MatchData "<a>" 1:"a">
+/<(.+?)>/.match("<abc><b>") # => #<MatchData "<abc>" 1:"abc">
+/<(.{1,}?)>/.match("<abc><b>") # => #<MatchData "<abc>" 1:"abc">
+/<(.{1,})>/.match("<abc><b>") # => #<MatchData "<abc><b>" 1:"abc><b">
+```
+
 # 参考资料
 - [Ruby Regular RDoc](http://www.ruby-doc.org/core-2.1.0/Regexp.html)
 - [Ruby 正则表达式官方文档翻译参照](http://blog.chinaunix.net/uid-298861-id-3144205.html)
