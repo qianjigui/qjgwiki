@@ -44,5 +44,7 @@ tags: Index
 ```
 
 
-##Ruby 265 Methods##
-  ItTechnicalRuby265methods
+# 其它参考
+- [Ruby常用265技巧](<%=(ruby265methods)l%>)
+- [Ruby技术讨论](http://blog.chinaunix.net/topic/ruby/)
+- [Ruby 正则表达式](<%=(Regular)l%>)
