@@ -35,3 +35,10 @@ title: C 语言最佳实践
 
 
 # 网络通信处理
+
+# Log
+
+## Android NDK logger
+
+<script src="https://gist.github.com/qianjigui/8910802.js"></script>
+
