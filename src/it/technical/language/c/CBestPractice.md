@@ -42,3 +42,17 @@ title: C 语言最佳实践
 
 <script src="https://gist.github.com/qianjigui/8910802.js"></script>
 
+# Other
+
+## 利用%n去处理sscanf 的移动
+
+```c
+//http://stackoverflow.com/questions/4217583/sscanf-with-multiline-string
+int byte_read=0;
+int total_read=0;
+while(EOF!=sscanf((const char*)(res+total_read), "%s %d %n", name, &filesize, &byte_read)){
+    total_read+=byte_read;
+    LOGI("Name=%s, Size=%d",buff,filesize);
+}
+```
+
