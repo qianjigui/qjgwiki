@@ -36,6 +36,50 @@ title: C 语言最佳实践
 
 # 网络通信处理
 
+## 网络传输
+
+### 相关支持库
+- libcurl
+
+## 传输安全
+
+### 相关支持库
+- openssl
+
+## 协议解析
+
+其中的标准解决方案是: 针对协议规范制定标准语言文法描述, 通过编译原理的前端处理技术完成相关工作.
+目前实现上述方案的有: Ragel, lex, yacc等标准生成引擎.
+
+### 手工处理
+类似于[Ruby文本处理方法](<%=(../ruby/TextProcessing)l%>), 目前主要讨论基于行解析的一些实践.
+主要使用如下API:
+- sscanf
+- sgets
+
+整体结构:
+```c
+int count=0;
+int tcount=0;
+char* multiline="Download: a\nDownload: b\nDownload: c\nRun: c\nRun: a\n";
+char s[1024];
+int tot = 0;
+int b;
+do{
+    b=0;
+    tcount +=(count=sscanf(multiline+tot,"Download: %s\n%n",s,&b));
+    if(count>0){
+        //Process Download
+    }
+    tot += b;
+    tcount +=(count=sscanf(multiline+tot,"Run: %s\n%n",s,&b));
+    if(count>0){
+        //Process Run
+    }
+    tot += b;
+}while(tcount>0);
+```
+
 # Log
 
 ## Android NDK logger
