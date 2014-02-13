@@ -54,10 +54,12 @@ title: C 语言最佳实践
 ### 手工处理
 类似于[Ruby文本处理方法](<%=(../ruby/TextProcessing)l%>), 目前主要讨论基于行解析的一些实践.
 主要使用如下API:
+
 - sscanf
 - sgets
 
 整体结构:
+
 ```c
 int count=0;
 int tcount=0;
@@ -99,4 +101,3 @@ while(EOF!=sscanf((const char*)(res+total_read), "%s %d %n", name, &filesize, &b
     LOGI("Name=%s, Size=%d",buff,filesize);
 }
 ```
-
