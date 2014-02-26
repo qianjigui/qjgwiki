@@ -30,7 +30,7 @@ title: C 语言最佳实践
 - 步骤与任务间可以串行运行, 各任务间通过*事务*的概念进行统一管理.
 - 在这种情况下, 事务实现时需要保证*可回滚*.
 
-<script src="https://gist.github.com/qianjigui/8663359.js"></script>
+<script src="http://gist.github.com/qianjigui/8663359.js"></script>
 
 
 
@@ -86,7 +86,7 @@ do{
 
 ## Android NDK logger
 
-<script src="https://gist.github.com/qianjigui/8910802.js"></script>
+<script src="http://gist.github.com/qianjigui/8910802.js"></script>
 
 # Other
 
