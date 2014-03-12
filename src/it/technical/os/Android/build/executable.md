@@ -45,6 +45,20 @@ Successfully remade target file `all_modules'.
     7. file
     8. install file
 
+# 内部的主要实现
+
+## 支持的源代码级文件
+
+* `$(asm_objects)`
+* `$(cpp_objects)`
+* `$(gen_cpp_objects)`
+* `$(gen_asm_objects)`
+* `$(c_objects)`
+* `$(gen_c_objects)`
+* `$(objc_objects)`
+* `$(yacc_objects)`
+* `$(lex_objects)`
+* `$(proto_generated_objects)`
 
 # 开发者需要关注的API
 
