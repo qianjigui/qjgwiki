@@ -32,6 +32,32 @@ tagline: 将Makefile打造成OOP
     3. 关键点: `BUILD_XXXXXX`
         1. 例如: build/core/executable.mk
 
-## 编译系统功能的上下文
+# 模块分析
 
-### 
+## 基础模块分析
+
+### base_rules.mk
+
+### 功能
+
+* 选择中间产生文件与最终生成文件
+* AIDL Convert
+* logtags
+* proto Convert
+* java compile
+* 添加通用FLAGS信息
+    * AAPT
+* 模块安装: 最后输出Install的地方
+    * `$(LOCAL_INSTALLED_MODULE): $(LOCAL_BUILT_MODULE) | $(ACP)`
+    * odex
+
+#### Input
+
+* LOCAL_MODULE
+* LOCAL_MODULE_TAGS
+* LOCAL_MODULE_PATH
+* Pick a name for the intermediate and final targets
+    * LOCAL_MODULE_STEM
+    * LOCAL_MODULE_SUFFIX
+    * LOCAL_BUILT_MODULE_STEM
+    * LOCAL_BUILT_MODULE
