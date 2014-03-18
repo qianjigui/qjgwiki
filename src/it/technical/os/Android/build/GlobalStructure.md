@@ -36,6 +36,10 @@ tagline: 将Makefile打造成OOP
 
 ## 基础模块分析
 
+### lunch
+
+这个阶段,shell竟然使用了make过程中的`$(info xxx)`进行上下文构建.
+
 ### base_rules.mk
 
 ### 功能
