@@ -18,3 +18,19 @@ tags: Index
 
 #介绍#
   * 功能介绍 ItProjectMywikiFunctions
+
+# 我的草稿箱
+
+## 技术类
+
+* Android Init 程序
+    * 整体功能
+    * 主要模块
+    * 与外界通信: Unix Domain Socket
+    * init.rc的记法与语法分析实现
+    * 属性服务的各层次关系与权限控制
+* 高安方案
+    * 目标: 系统可控可管
+    * 立体防御功能
+    * 防更改launcher
+    * 防root
