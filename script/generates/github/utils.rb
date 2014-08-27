@@ -149,7 +149,7 @@ module KnowledgeUtils
                     @localpath = Pathname.new(@category+'/'+@name)
 
                     #For generate in dest directory
-                    @dstpathWithoutType='/'+@category+'/'+@prefix+@name
+                    @dstpathWithoutType='/'+@prefix+@name
                     @dstlinkWithoutType='/'+@category+'/'+@prefix.gsub('-','/')+@name
                 end
 
