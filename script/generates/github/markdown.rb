@@ -39,6 +39,7 @@ module KnowledgeUtils
                     info,file = f
                     res = gen.generate(info, file, @mdctx)
                     path=@outdir+'/'+info.dstpath
+                    #@env.debug(file,' write to', path)
                     if refresh?(file,path)
                         @env.warn(file)
                         FileUtils.mkdir_p(File.dirname(path))
