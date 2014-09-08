@@ -5,6 +5,24 @@ tags:
 
 本文是对[introduction-to-go-golang-part-1](http://www.zhubert.com/blog/2014/01/12/introduction-to-go-golang-part-1/)的翻译
 
+作者作为一个长期从事Web后端开发的工程师, 对Go语言有系统开发人员的具体认识.
+Go语言的设计重点是: 解决软件工程中遇见的问题, 从工程上提升软件质量与开发效率
+
+总体上说, Go语言有如下特点让作者称赞.
+
+* 专注于解决开发效率问题:
+    * 减少编译时间
+    * 去掉显示关联, 降低模块间耦合
+    * 利用静态语言特性, 提高性能
+* 专注于解决现代编程中见到的问题:
+    * 并行编程: CSP模型
+    * 强大的基础库支持
+* 简化语言内在复杂性
+    * 语法关键字少: 只有25个
+    * 添加了GC
+    * 利用组合取代继承
+    * 通过CSP模型简化目前常用的信号量锁等机制
+
 # Go语言介绍 第一部分
 
 If you read this blog for any amount of time you’ll know that I really like technology, specifically web development technologies. I’ve written about my experiences with Ruby on Rails, Batman, and a few curiosities along the way.
