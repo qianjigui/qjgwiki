@@ -170,3 +170,50 @@ If this is your first foray into CSP, I recommend reading the original CSP paper
 
 如果这是你第一次接触CSP, 我建议你认真了解下由Hoare编写的CSP的相关文章.
 如果有兴趣可以详细看到这个视频.
+
+### 强大的标准库
+
+The Go developers like to describe the standard library as a “batteries-included” library. What I think they mean by that is if you spin up a simple webserver like so:
+
+Go语言开发者需要将标准库看到一组增量工具库.
+作者认为他们可能是觉得实现一个功能可以很简单地搭建展开.
+例如如下的这个web服务:
+
+<script src="https://gist.github.com/qianjigui/1a91e6e5e1ed39dafffb.js"></script> 
+
+that it will actually be awesome from the start (I’d say “webscale” but then I couldn’t finish writing the article for humilitation). This leads to one source of confusion for newbies who immediately ask for the “Ruby on Rails” of Go. There are plenty of great libraries that build upon the strong foundations of the Standard Library, but you can get away without having to use them. I admit, it was really weird for me at first that I could use a standard library and not a diadem-full of Gems to build something.
+
+这就导致了一些开发者会有为何没有如同RoR的开发库.
+其实在Go语言中, 有很多基于Go语言富强大的基础设施标准库上面的的框架库, 但是你可以在不需要这些扩展库的情况下通过基础设施简单地构建出来.
+作者说, 在使用Go语言进行开发时, 通过简单库构建功能业务是件让人很开心的事情.
+
+Ok, well I want to cover those again in the future, so for now, that will have to suffice.
+
+好了, 先讨论到这里, 关于Go语言的现代性, 作者会在后续的文章中详细谈到.
+
+## 问题三: 复杂性
+
+Finally, I think the Go designers wanted to keep the language simple (simple in the usual definition of simple).
+
+最后呢, 作者认为Go语言的设计者希望将语言设计的简单(在语言定义与使用上简单).
+
+* How many loop keywords are there? 1 for
+* Why Garbage Collection? Because it’s easier while working with concurrency.
+* Why eliminate inheritance? Because it’s inflexible to change and composition is almost always better.
+* How many keywords? 25. vs 50 in Java and 48 in C++ Expressiveness of Go
+* Why CSP model for concurrency? Because mutexes and locking are a hard paradigm to get right.
+
+* 只有1种描述循环的关键字: for
+* 有GC特性, 便于并行编程的数据生命周期控制
+* 为何去掉**继承**? 因为对扩展性不好, 取而代之的是**组合**
+* 仅有25个关键字: java中是50, C++是48
+* 为何选用CSP模型用于并行开发? 因为信号量与锁非常难管理
+
+Another way to see this is you can sit down and read the Language Specification in one sitting and have it all in your working memory. The concepts are “simple” enough that this is a feasible task. It’s actually really cool…one, that there is a language spec…nudge nudge…but primarily that it’s written in such comprehensible terms. I’ve had serveral sittings by the fire with the spec in one hand and a Lagavulin 16 in the other…and each time I appreciate the efforts of the developers in documenting their work.
+
+如果想更详细地了解Go语言, 你可以阅读Go语言规格.
+"简明"这个概念在Go语言中到处体现.
+
+If you’ve read this far, then you are most certainly a delightful person. I’ll write quite a bit more on Go, hopefully this was a helpful first step.
+
+
