@@ -1,15 +1,29 @@
 <map version="1.0.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node COLOR="#000000" CREATED="1409789085706" ID="ID_573105625" MODIFIED="1409971410603" TEXT="Lesson">
+<node COLOR="#000000" CREATED="1409789085706" ID="ID_573105625" MODIFIED="1410393354213" TEXT="Lesson">
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
-<node COLOR="#0033ff" CREATED="1409789167513" ID="ID_1410604653" MODIFIED="1409971410583" POSITION="right" TEXT="&#x996e;&#x98df;">
+<node COLOR="#0033ff" CREATED="1410393354185" ID="ID_723143163" MODIFIED="1410393359461" POSITION="right" TEXT="Review">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1409793862442" ID="ID_19476980" MODIFIED="1409971410584" TEXT="&#x539f;&#x5219;">
+<node COLOR="#00b439" CREATED="1409789167513" ID="ID_1410604653" MODIFIED="1410393354207" TEXT="&#x996e;&#x98df;">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1409793867516" ID="ID_1458343843" MODIFIED="1409971410584" TEXT="&#x5c11;&#x98df;&#x591a;&#x9910;">
+<node COLOR="#990000" CREATED="1409793862442" ID="ID_395013303" MODIFIED="1410393354207" TEXT="&#x539f;&#x5219;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1409793867516" ID="ID_492932518" MODIFIED="1410393354208" TEXT="&#x5c11;&#x98df;&#x591a;&#x9910;">
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1410393395759" ID="ID_1055444676" MODIFIED="1410393402152" TEXT="&#x4e60;&#x60ef;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1410393288147" ID="ID_248172538" MODIFIED="1410393335136" TEXT="&#x4e0b;&#x8e72;&#x62ff;&#x4e1c;&#x897f;&#x65f6;, &#x5c11;&#x7528;&#x8170;&#x90e8;&#x529b;&#x91cf;, &#x591a;&#x4f7f;&#x7528;&#x817f;&#x90e8;&#x529b;&#x91cf;">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1410393427219" ID="ID_944355067" MODIFIED="1410393432600" TEXT="&#x610f;&#x5fd7;&#x529b;">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
@@ -253,6 +267,10 @@
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
+</node>
+<node COLOR="#0033ff" CREATED="1410393363990" ID="ID_1690681179" MODIFIED="1410393372113" POSITION="right" TEXT="tags: Review">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
 </node>
 </node>
 </map>
