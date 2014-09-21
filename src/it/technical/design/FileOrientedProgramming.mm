@@ -25,6 +25,10 @@
 </node>
 </node>
 </node>
+<node COLOR="#0033ff" CREATED="1411292077084" ID="ID_186725056" MODIFIED="1411292112497" POSITION="right" TEXT="tags: DesignPatterns IO">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+</node>
 <node COLOR="#0033ff" CREATED="1411087017040" ID="ID_532347563" MODIFIED="1411172293185" POSITION="left" TEXT="FileSystem">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
