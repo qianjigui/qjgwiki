@@ -1,4 +1,4 @@
-<map version="1.0.0">
+<map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node COLOR="#000000" CREATED="1409789085706" ID="ID_573105625" MODIFIED="1410393354213" TEXT="Lesson">
 <font NAME="SansSerif" SIZE="20"/>
@@ -426,6 +426,14 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 <node COLOR="#00b439" CREATED="1411000728381" ID="ID_400235450" MODIFIED="1411000738922" TEXT="&#x692d;&#x5706;&#x673a;10min">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1411356800246" ID="ID_1312958840" MODIFIED="1411356813887" POSITION="left" TEXT="6.1 &#x4e0a;&#x80a2;&#x7ec3;&#x4e60;(20140921&#x665a;&#x4e0a;)">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1411356818142" ID="ID_171472359" MODIFIED="1411356838888" TEXT="&#x4fef;&#x5367;&#x6491;20*5">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
