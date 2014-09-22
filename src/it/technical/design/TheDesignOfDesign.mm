@@ -1,9 +1,9 @@
-<map version="1.0.0">
+<map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node COLOR="#000000" CREATED="1411292015209" ID="ID_564626144" MODIFIED="1411296570495" TEXT="TheDesignOfDesign">
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
-<node COLOR="#0033ff" CREATED="1411292100724" ID="ID_1856102534" MODIFIED="1411296570472" POSITION="right" TEXT="tags: DesignPatterns">
+<node COLOR="#0033ff" CREATED="1411292100724" ID="ID_1856102534" MODIFIED="1411359452233" POSITION="right" TEXT="tags: DesignPattern">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 </node>

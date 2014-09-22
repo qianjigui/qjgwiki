@@ -1,4 +1,4 @@
-<map version="1.0.0">
+<map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node COLOR="#000000" CREATED="1411086654516" ID="ID_115398999" MODIFIED="1411172293193" TEXT="FileOrientedProgramming">
 <font NAME="SansSerif" SIZE="20"/>
@@ -25,7 +25,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1411292077084" ID="ID_186725056" MODIFIED="1411292112497" POSITION="right" TEXT="tags: DesignPatterns IO">
+<node COLOR="#0033ff" CREATED="1411292077084" ID="ID_186725056" MODIFIED="1411359463655" POSITION="right" TEXT="tags: DesignPattern IO">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 </node>
