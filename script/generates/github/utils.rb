@@ -150,7 +150,7 @@ module KnowledgeUtils
 
                     #For generate in dest directory
                     @dstpathWithoutType='/'+@prefix+@name
-                    @dstlinkWithoutType='/'+@category+'/'+@prefix.gsub('-','/')+@name
+                    @dstlinkWithoutType='/'+@category+'/'+@prefix.gsub('-','/')+@name+'/'
                 end
 
                 def add_url_map(localpath, link)

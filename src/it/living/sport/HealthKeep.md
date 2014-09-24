@@ -15,3 +15,15 @@ tags:
   - http://qjg-wiki.googlecode.com/files/LivingFootPoint.jpg
   - 人体在脚心上反射区较多，常搓脚心能起到补脑益肾、益智安神、活血通络的疗效，还可以防治健忘、失眠、消化不良、食欲减退、腹胀、便秘和心、肝、脾、胆等脏器病症。搓脚有干搓和湿搓两种。
   - 干搓时左手握住左脚背前部，用右手沿脚心上下搓100次，以使脚心发热；换用左手搓右脚脚心。搓的力度以自己舒适为宜。湿搓时把脚放在温水盆中，泡至脚发红，再按干搓的方法搓。 
+
+
+# 食物与身体
+
+## 女生
+
+![http://pic.yupoo.com/qianjigui/E53ud2Az/medish.jpg](http://pic.yupoo.com/qianjigui/E53ud2Az/medish.jpg)
+
+## 男生
+
+![http://pic.yupoo.com/qianjigui/E53uKEbQ/medish.jpg](http://pic.yupoo.com/qianjigui/E53uKEbQ/medish.jpg)
+
