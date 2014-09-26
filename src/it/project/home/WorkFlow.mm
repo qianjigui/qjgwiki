@@ -1,6 +1,6 @@
 <map version="1.0.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1409789533594" ID="ID_440920350" MODIFIED="1409789634906" TEXT="WorkFlow">
+<node CREATED="1409789533594" ID="ID_440920350" MODIFIED="1411690775880" TEXT="&#x4e70;&#x623f;WorkFlow">
 <node CREATED="1409789569708" ID="ID_1000138060" MODIFIED="1409789642012" POSITION="right" TEXT="1.&#x4e86;&#x89e3;&#x4e0e;&#x9009;&#x62e9;&#xff1a;&#x4e3b;&#x8981;&#x662f;&#x5728;&#x7b26;&#x5408;&#x79df;&#x623f;&#x57fa;&#x672c;&#x8981;&#x6c42;&#x540e;&#xff0c;&#x8fd8;&#x8981;&#x8003;&#x8651;&#x5f00;&#x53d1;&#x5546;&#x4e0e;&#x7269;&#x4e1a; ">
 <node CREATED="1409789814204" ID="ID_241990007" MODIFIED="1409789815841" TEXT="2014&#x5e74;&#x4e70;&#x623f;&#x6ce8;&#x610f;&#x4e8b;&#x9879; 20&#x6761;&#x9ec4;&#x91d1;&#x6cd5;&#x5219;&#x4e70;&#x623f;&#x4e0d;&#x5403;&#x4e8f;">
 <node CREATED="1409789863862" ID="ID_1397497000" MODIFIED="1409789864898" TEXT="http://news.sjz.fang.com/2014-02-10/12055612_all.html "/>
