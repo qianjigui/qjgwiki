@@ -46,6 +46,14 @@
 <node COLOR="#111111" CREATED="1411690943915" ID="ID_1827057259" MODIFIED="1411690977832" TEXT="&#x5728;&#x8fd9;&#x79cd;&#x60c5;&#x51b5;&#x4e0b;,&#x57fa;&#x672c;&#x5c31;&#x662f;&#x505a;&#x4e3a;&#x957f;&#x7ebf;&#x6295;&#x8d44;, &#x901a;&#x8fc7;&#x5bf9;&#x4e1a;&#x754c;&#x7684;&#x4e86;&#x89e3;&#x4e0e;&#x628a;&#x63e1;&#x53bb;&#x505a;&#x51fa;&#x9009;&#x62e9;."/>
 </node>
 </node>
+<node COLOR="#00b439" CREATED="1411950088138" ID="ID_1936284575" MODIFIED="1411950095135" TEXT="20140929&#x4e0a;&#x5348;&#x5b66;&#x4e60;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1411950095448" ID="ID_1739293491" MODIFIED="1411950097286" TEXT="http://xueqiu.com/4226803442/21990358">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1411950097625" ID="ID_1123620573" MODIFIED="1411950115135" TEXT="&#x5c06;&#x8fd9;&#x4e9b;&#x6750;&#x6599;&#x6c47;&#x603b;&#x7528;&#x4e8e;&#x4e2a;&#x4eba;&#x5b66;&#x4e60;"/>
+</node>
+</node>
 </node>
 <node COLOR="#0033ff" CREATED="1409789261399" ID="ID_554694554" MODIFIED="1410307895262" POSITION="left" TEXT="&#x9014;&#x5f84;">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
