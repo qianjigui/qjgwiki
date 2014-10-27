@@ -270,5 +270,28 @@
 </node>
 </node>
 </node>
+<node COLOR="#0033ff" CREATED="1414370560966" ID="ID_1257741471" MODIFIED="1414370576711" POSITION="left" TEXT="&#x6cdb;&#x5316;&#x4ef7;&#x503c;">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1414370577016" ID="ID_1345585208" MODIFIED="1414370664814" TEXT="&#x7531;&#x4e8e;&#x7cfb;&#x7edf;&#x4f53;&#x7cfb;&#x7ed3;&#x6784;&#x7684;&#x62bd;&#x8c61;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1414370620449" ID="ID_207686556" MODIFIED="1414370649954" TEXT="&#x5229;&#x7528;&#x9762;&#x5bf9;&#x6587;&#x4ef6;&#x7684;&#x7f16;&#x7a0b;&#x6269;&#x5c55;&#x5230;&#x9762;&#x5411;IPC/&#x4fe1;&#x606f;&#x901a;&#x4fe1;&#x4e0e;&#x5b58;&#x50a8;&#x7684;&#x57fa;&#x672c;&#x65b9;&#x5f0f;&#x4e0a;">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1414370669170" ID="ID_580282070" MODIFIED="1414370674628" TEXT="&#x6240;&#x6709;&#x9488;&#x5bf9;&#x901a;&#x4fe1;/&#x4fe1;&#x606f;&#x5b58;&#x50a8;&#x7684;&#x65b9;&#x5f0f;&#x5747;&#x4e0e;&#x6587;&#x4ef6;API&#x7c7b;&#x4f3c;(&#x6570;&#x636e;&#x5e93;&#x7cfb;&#x7edf;&#x9664;&#x5916;)">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1414370679722" ID="ID_1550577325" MODIFIED="1414370685952" TEXT="&#x4e3b;&#x8981;&#x5173;&#x6ce8;&#x70b9;">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1414370686864" ID="ID_413835435" MODIFIED="1414370692636" TEXT="&#x4e00;&#x822c;API&#x63a5;&#x53e3;"/>
+<node COLOR="#111111" CREATED="1414370692867" ID="ID_413895660" MODIFIED="1414370698427" TEXT="&#x6027;&#x80fd;&#x63d0;&#x5347;&#x65b9;&#x6cd5;">
+<node COLOR="#111111" CREATED="1414370699128" ID="ID_1814669891" MODIFIED="1414370700079" TEXT="NIO"/>
+<node COLOR="#111111" CREATED="1414370700344" ID="ID_303749831" MODIFIED="1414370704251" TEXT="&#x540c;&#x6b65;&#x4e0e;&#x5f02;&#x6b65;"/>
+<node COLOR="#111111" CREATED="1414370704483" ID="ID_1281844126" MODIFIED="1414370706665" TEXT="&#x7f13;&#x5b58;"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 </map>

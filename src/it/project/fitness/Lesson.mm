@@ -1021,6 +1021,39 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
+<node COLOR="#0033ff" CREATED="1414371852828" ID="ID_324649889" MODIFIED="1414371865071" POSITION="left" TEXT="13.1 &#x4e0a;&#x80a2;&#x7ec3;&#x4e60;(20141026&#x665a;&#x4e0a;)">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1412986060799" ID="ID_699202637" MODIFIED="1414371877356" TEXT="&#x692d;&#x5706;&#x673a;10min">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1414202873571" ID="ID_256825421" MODIFIED="1414202925671" TEXT="&#x51f3;&#x4e0a;&#x4fef;&#x5367;&#x6491;+&#x53cd;&#x5c48;&#x4f38;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1414202926326" ID="ID_303266409" MODIFIED="1414202930392" TEXT="10*2*4">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1414371915136" ID="ID_1562978117" MODIFIED="1414371921431" TEXT="&#x5377;&#x8179;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1414371939961" ID="ID_787989296" MODIFIED="1414371941372" TEXT="30*4">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1414371921912" ID="ID_413274212" MODIFIED="1414371939026" TEXT="&#x54d1;&#x94c3;&#x5e73;&#x4e3e;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1414371942097" ID="ID_458524546" MODIFIED="1414371944746" TEXT="30*4">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1412986060799" ID="ID_603210768" MODIFIED="1414371880310" TEXT="&#x692d;&#x5706;&#x673a;3min">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+</node>
 <node COLOR="#0033ff" CREATED="1409794174499" ID="ID_1823070133" MODIFIED="1409971410599" POSITION="right" TEXT="&#x4ef7;&#x503c;">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
