@@ -89,6 +89,44 @@ tagline: 通过开发模式来保证开发质量与效率
 * 伪实现
 * 模拟对象: 可以完成对象构建, 状态模拟与过程录制
 
+```java
+import static org.easymock.classextension.EasyMock.*;
+import static org.juni.Assert.*;
+import org.junit.*;
+
+public class OrderProcessorEasymockTest{
+    @Test
+    public void testOrderProcessorWithEasyMock() throws Exception {
+        //为测试准备普通对象和数据
+        float initialBalance = 100.0f;
+        float listPrice = 30.0f;
+        float discount = 10.0f;
+        float expectedBalance = 
+            initialBalance - (listPrice*(1-discount/100));
+        Customer customer = new Customer(initialBalance);
+        Product product = new Product("TDD in action", listPrice);
+
+        //模拟对象 创建过程
+        //通过模拟对象创建动态模拟过程中的相关假对象
+        PricingService mock = createMock(PricingService.class);
+        //BDD模式,调用输入与期望输出, 后期统一对状态进行测试
+        expect(mock.getDiscountPercentage(customer, product).addReturn(discount));
+
+        replay(mock);//进入播放模式
+
+        //待测对象 中间利用模拟对象完成部分交互
+        //测试OrderProcessor
+        OrderProcessor processor = new OrderProcessor();
+        processor.setPricingService(mock);//注入依赖
+        processor.process(new Order(customer, product));//正常调用过程
+
+        assertEquals(expectedBalance, customer.getBalance(), 0.001f);
+        verify(mock);//验证输入输出
+
+    }
+}
+```
+
 ## 提高设计的可测试性的准则
 
 * 多使用组合而不是继承
