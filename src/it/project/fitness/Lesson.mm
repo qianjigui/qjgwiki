@@ -1,4 +1,4 @@
-<map version="1.0.1">
+<map version="1.0.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node COLOR="#000000" CREATED="1409789085706" ID="ID_573105625" MODIFIED="1411431630169" TEXT="FitnessLesson">
 <font NAME="SansSerif" SIZE="20"/>
@@ -1251,6 +1251,62 @@
 <node COLOR="#990000" CREATED="1415018873530" ID="ID_1935253605" MODIFIED="1415018890465" TEXT="&#xff13;&#xff16;&#xff2c;*&#xff13;+&#xff14;&#xff10;&#xff2c;*&#xff11;">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1415199047075" ID="ID_1071000805" MODIFIED="1415199057273" POSITION="left" TEXT="15.1 &#x4e0a;&#x80a2;&#x7ec3;&#x4e60;(20141105&#x665a;&#x4e0a;)">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1415199084615" ID="ID_1852407353" MODIFIED="1415199089277" TEXT="&#x5212;&#x8239;5min">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1415199089721" ID="ID_473179308" MODIFIED="1415199103586" TEXT="&#x692d;&#x5706;&#x673a;10min">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1415199105759" ID="ID_1355247952" MODIFIED="1415199148373" TEXT="&#x5750;&#x59ff;&#x5bbd;&#x63e1;&#x5212;&#x8239;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1415199149240" ID="ID_1563091721" MODIFIED="1415199152646" TEXT="10*4">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1415199194997" ID="ID_156537375" MODIFIED="1415199201562" TEXT="&#x80cc;&#x90e8;">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1415199202616" ID="ID_723090134" MODIFIED="1415199281190" TEXT="&#x62c9;&#x529b;&#x5668;&#x53cc;&#x81c2;&#x4e0b;&#x62c9;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1415199283258" ID="ID_422820887" MODIFIED="1415199285269" TEXT="10*4">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1415199286226" ID="ID_717691057" MODIFIED="1415199288965" TEXT="&#x80f8;&#x90e8;">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1415199289994" ID="ID_764033293" MODIFIED="1415199311314" TEXT="&#x9524;&#x5f0f;&#x4e0b;&#x62c9;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1415199312520" ID="ID_1811759082" MODIFIED="1415199314757" TEXT="10*4">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1415199315048" ID="ID_254942398" MODIFIED="1415199321050" TEXT="&#x4e09;&#x5934;&#x808c;">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1415199327407" ID="ID_1492430747" MODIFIED="1415199349963" TEXT="&#x53cd;&#x624b;&#x5f15;&#x4f53;&#x5411;&#x4e0a;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1415199350856" ID="ID_1119222361" MODIFIED="1415199355777" TEXT="5*4">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1415199355982" ID="ID_1801191265" MODIFIED="1415199363308" TEXT="&#x4e8c;&#x5934;&#x808c;">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1415199373918" ID="ID_1034999155" MODIFIED="1415199380485" TEXT="&#x6ce8;&#x610f;&#x4fdd;&#x6696;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
 <node COLOR="#0033ff" CREATED="1409794174499" ID="ID_1823070133" MODIFIED="1409971410599" POSITION="right" TEXT="&#x4ef7;&#x503c;">
