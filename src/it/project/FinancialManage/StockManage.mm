@@ -6,6 +6,24 @@
 <node COLOR="#0033ff" CREATED="1409703520283" ID="ID_1984919383" MODIFIED="1410307869895" POSITION="right" TEXT="&#x4ea4;&#x6613;&#x901a;&#x9053;">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1415445734996" ID="ID_394149433" MODIFIED="1415445776563" TEXT="&#x8d44;&#x91d1;&#x8d70;&#x5411;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1415445776901" ID="ID_360615337" MODIFIED="1415445783499" TEXT="&#x6dfb;&#x52a0;&#x72ec;&#x7acb;&#x94f6;&#x884c;&#x8d26;&#x53f7;&#x7528;&#x4e8e;&#x5411;&#x9999;&#x6e2f;&#x8bc1;&#x5238;&#x673a;&#x6784;&#x6c47;&#x6b3e;">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1415445783989" ID="ID_457182823" MODIFIED="1415445791195" TEXT="&#x9999;&#x6e2f;&#x4e00;&#x5361;&#x901a;"/>
+<node COLOR="#111111" CREATED="1415445836926" ID="ID_688546260" MODIFIED="1415445837731" TEXT="&#x8d2d;&#x6c47; ">
+<node COLOR="#111111" CREATED="1415445877263" ID="ID_1702659474" MODIFIED="1415445878572" TEXT="&#x81ea;&#x52a9;&#x8d2d;&#x6c47;&#x4e1a;&#x52a1;&#x7684;&#x4ea4;&#x6613;&#x65f6;&#x95f4;&#x4e3a;&#xff1a;&#x5de5;&#x4f5c;&#x65e5;&#xff08;8&#xff1a;30-22&#xff1a;00&#xff09;&#xff1b;&#x5468;&#x516d;&#x3001;&#x65e5;&#xff08;8&#xff1a;30-17&#xff1a;20&#xff09;&#xff1b;&#x4e00;&#x822c;&#x8282;&#x5047;&#x65e5;&#xff08;8&#xff1a;30-17&#xff1a;20&#xff09;&#xff1b;&#x6625;&#x8282;&#x548c;&#x56fd;&#x5e86;&#x4e03;&#x5929;&#x957f;&#x5047;&#x7cfb;&#x7edf;&#x4e0d;&#x5f00;&#x653e;&#xff1b;&#x6bcf;&#x5e74;&#x7684;12&#x6708;31&#x65e5;&#xff08;8&#xff1a;30-17&#xff1a;20&#xff09;&#x3002;"/>
+</node>
+<node COLOR="#111111" CREATED="1415446221012" ID="ID_1963093849" MODIFIED="1415446224467" TEXT="&#x6c47;&#x6b3e;">
+<node COLOR="#111111" CREATED="1415446224868" ID="ID_531279573" MODIFIED="1415446226050" TEXT="http://www.cmbchina.com/cmbpb/v50/gb/pb/TransferHK.htm"/>
+</node>
+</node>
+<node COLOR="#990000" CREATED="1415445794516" ID="ID_594464333" MODIFIED="1415445801618" TEXT="&#x9009;&#x62e9;&#x8bc1;&#x5238;&#x673a;&#x6784;">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1415445802325" ID="ID_1197073929" MODIFIED="1415445822315" TEXT="&#x9999;&#x6e2f;&#x76c8;&#x900f;"/>
+</node>
+</node>
 <node COLOR="#00b439" CREATED="1409703453677" ID="ID_183475670" MODIFIED="1410307869896" TEXT="https://www.ibkr.com.cn/cn/main.php">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
