@@ -1625,6 +1625,56 @@
 </node>
 </node>
 </node>
+<node COLOR="#0033ff" CREATED="1416626937693" ID="ID_854503118" MODIFIED="1416626953653" POSITION="left" TEXT="18.1 &#x4e0a;&#x80a2;&#x4e0e;&#x80a9;&#x90e8;&#x7ec3;&#x4e60;(20141121&#x665a;&#x4e0a;)">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1416626955035" ID="ID_1229851015" MODIFIED="1416626975703" TEXT="&#x8dd1;&#x6b65;10min">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1416627028072" ID="ID_639699921" MODIFIED="1416627041184" TEXT="&#x4e8c;&#x5934;&#x808c;&#x5f15;&#x4f53;&#x5411;&#x4e0a;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1416627042025" ID="ID_858591234" MODIFIED="1416627044693" TEXT="4*4">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1416627045945" ID="ID_1115045479" MODIFIED="1416627109267" TEXT="&#x91cd;&#x529b;&#x5668;&#x4e0a;&#x63a8;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1416627110461" ID="ID_935726814" MODIFIED="1416627116816" TEXT="5*8">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1416627118366" ID="ID_1210590677" MODIFIED="1416627226617" TEXT="&#x91cd;&#x529b;&#x5668;&#x659c;&#x677f;&#x6258;&#x81c2;&#x5f2f;&#x4e3e;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1416627227956" ID="ID_236249096" MODIFIED="1416627258702" TEXT="5*8">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1416627350024" ID="ID_1470777510" MODIFIED="1416627364959" TEXT="&#x5bbd;&#x5f0f;&#x8774;&#x8776;&#x5939;&#x80f8;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1416627365688" ID="ID_762774120" MODIFIED="1416627368299" TEXT="4*10">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1416627566851" ID="ID_655702226" MODIFIED="1416627579925" TEXT="&#x91cd;&#x529b;&#x5668;&#x5f15;&#x4f53;&#x5411;&#x4e0a;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1416627585302" ID="ID_1104682324" MODIFIED="1416627588777" TEXT="5*8">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1416627608462" ID="ID_953828820" MODIFIED="1416627667992" TEXT="&#x5750;&#x59ff;&#x5bbd;&#x63e1;&#x5212;&#x8239;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1416627669084" ID="ID_318542601" MODIFIED="1416627672591" TEXT="4*8">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+</node>
 <node COLOR="#0033ff" CREATED="1409794174499" ID="ID_1823070133" MODIFIED="1409971410599" POSITION="right" TEXT="&#x4ef7;&#x503c;">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
