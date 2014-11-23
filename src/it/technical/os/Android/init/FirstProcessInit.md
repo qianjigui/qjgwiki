@@ -176,6 +176,7 @@ import_list
 ### Android系统级对于property的设置
 
 与系统流程相关的主要property:
+
 * Android系统启动完成后,通知系统
     * sys.boot_completed=1
     * dev.bootcomplete=1

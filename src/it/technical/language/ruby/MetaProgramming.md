@@ -609,6 +609,7 @@ end
 ## 作用域门
 Scope Gate
 用class、module或def关键字来隔离作用域。
+
 ```
 a=1
 defined? a #<图>"local-variable"
