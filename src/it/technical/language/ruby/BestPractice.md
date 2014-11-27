@@ -40,7 +40,8 @@ tagline: Ruby 基础技术
 
 ### tempfile
 
-```
+```ruby
+
 require 'tempfile'
 a = Tempfile
 a.close  (delete @ GC a)
@@ -66,6 +67,7 @@ a.close! (delete immediately)
 ## pp 相关库
 
 ```
+
 #!/usr/bin/env ruby
 #
 # Pretty-Printer for Ruby Objects
@@ -131,6 +133,7 @@ Output:
 ## Working with HTTP and FTP
 
 ```
+
 require 'open-uri'
 
 a = open('http://www.ruby-lang.org/en/LICENSE.txt')
@@ -153,60 +156,55 @@ pp a
 ## 时间处理，词法分析，HASH加密，数学处理，cvs,json,模板生成
 
 ```
-    #Working with Dates and Times(date)
-    puts 'date'
-    pp Date.today
 
-    #Lexical Parsing with Regular Expressions(strscan)
-    puts 'strscan'
-    require 'strscan'
-    s = StringScanner.new('This is an example string')
-    s.eos?               # -> false
+#Working with Dates and Times(date)
+puts 'date'
+pp Date.today
 
-    p s.scan(/\w+/)      # -> "This"
-    p s.scan(/\w+/)      # -> nil
-    p s.scan(/\s+/)      # -> " "
-    p s.scan(/\s+/)      # -> nil
-    p s.scan(/\w+/)      # -> "is"
-    s.eos?               # -> false
+#Lexical Parsing with Regular Expressions(strscan)
+puts 'strscan'
+require 'strscan'
+s = StringScanner.new('This is an example string')
+s.eos?               # -> false
 
-    p s.scan(/\s+/)      # -> " "
-    p s.scan(/\w+/)      # -> "an"
-    p s.scan(/\s+/)      # -> " "
-    p s.scan(/\w+/)      # -> "example"
-    p s.scan(/\s+/)      # -> " "
-    p s.scan(/\w+/)      # -> "string"
-    s.eos?               # -> true
+p s.scan(/\w+/)      # -> "This"
+p s.scan(/\w+/)      # -> nil
+p s.scan(/\s+/)      # -> " "
+p s.scan(/\s+/)      # -> nil
+p s.scan(/\w+/)      # -> "is"
+s.eos?               # -> false
 
-    p s.scan(/\s+/)      # -> nil
-    p s.scan(/\w+/)      # -> nil
+p s.scan(/\s+/)      # -> " "
+p s.scan(/\w+/)      # -> "an"
+p s.scan(/\s+/)      # -> " "
+p s.scan(/\w+/)      # -> "example"
+p s.scan(/\s+/)      # -> " "
+p s.scan(/\w+/)      # -> "string"
+s.eos?               # -> true
 
-    #Cryptographic Hash Functions (digest)
+p s.scan(/\s+/)      # -> nil
+p s.scan(/\w+/)      # -> nil
 
-    puts 'digest'
+#Cryptographic Hash Functions (digest)
 
-    require 'digest/md5'
+puts 'digest'
 
-    pp Digest::MD5.hexdigest(File.binread(__FILE__))
+require 'digest/md5'
 
-    require 'digest/sha2'
-    pp Digest::SHA256.hexdigest(File.binread(__FILE__))
+pp Digest::MD5.hexdigest(File.binread(__FILE__))
+
+require 'digest/sha2'
+pp Digest::SHA256.hexdigest(File.binread(__FILE__))
 ```
 
 ## Mathematical Ruby Scripts(mathn)
 
 ```
-    puts 'mathn'
-    require 'mathn'
-    pp Math.sqrt(-1)
-    pp 1/2
+puts 'mathn'
+require 'mathn'
+pp Math.sqrt(-1)
+pp 1/2
 ```
 
 ## cvs,json,erb
-
-* include : mixes in specified module methods as instance methods in the target class
-* extend : mixes in specified module methods as class methods in the target class
-* include: Invokes Module.append_features on each parameter in reverse order.
-    *  this module is included in another, Ruby calls append_features in this module, passing it the receiving module in mod. Ruby’s default implementation is to add the constants, methods, and module variables of this module to mod if this module has not already been added to mod or one of its ancestors. 
-* extend: Adds to obj the instance methods from each module given as a parameter.
 

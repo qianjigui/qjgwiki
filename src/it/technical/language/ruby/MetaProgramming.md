@@ -43,53 +43,54 @@ Ruby元编程 【意】Paolo Perrotta
 ### 2.5 关于method_missing()方法的更多内容
 1. 第一种方法依赖于动态方法和动态派发：
 
-```ruby
-methods/computer/more_dynamic.rb
-class Computer
-def initialize(computer_id, data_source)
-@id = computer_id
-@data_source = data_source
-data_source.methods.grep(/^get_(.*)_info$/) { Computer.define_component $1 }
-end
+```
+#methods/computer/more_dynamic.rb
 
-def self.define_component(name)
-define_method(name) {
-info = @data_source.send "get_#{name}_info", @id
-price = @data_source.send "get_#{name}_price", @id
-result = "#{name.capitalize}: #{info} ($#{price})"
-return " * #{result}" if price >= 100
-result
-}
-end
+class Computer
+    def initialize(computer_id, data_source)
+        @id = computer_id
+        @data_source = data_source
+        data_source.methods.grep(/^get_(.*)_info$/) { Computer.define_component $1 }
+    end
+
+    def self.define_component(name)
+        define_method(name) {
+            info = @data_source.send "get_#{name}_info", @id
+            price = @data_source.send "get_#{name}_price", @id
+            result = "#{name.capitalize}: #{info} ($#{price})"
+            return " * #{result}" if price >= 100
+            result
+        }
+    end
 end
 ```
 
 2. 第二种方法使用了动态代理及白板技术：
 
 ```ruby
-methods/computer/final.rb
+# methods/computer/final.rb
+
 class Computer
-instance_methods.each do |m|
-undef_method m unless m.to_s =~ /^__|method_missing|respond_to?/
-end
-def initialize(computer_id, data_source)
-@id = computer_id
-@data_source = data_source
-  2014-11-07 08:44:34
-end
+    instance_methods.each do |m|
+        undef_method m unless m.to_s =~ /^__|method_missing|respond_to?/
+    end
+    def initialize(computer_id, data_source)
+        @id = computer_id
+        @data_source = data_source
+    end
 
-def method_missing(name, *args)
-super if !respond_to?(name)
-info = @data_source.send("get_#{name}_info", args[0])
-price = @data_source.send("get_#{name}_price", args[0])
-result = "#{name.to_s.capitalize}: #{info} ($#{price})"
-return " * #{result}" if price >= 100
-result
-end
-
-def respond_to?(method)
-@data_source.respond_to?("get_#{method}_info") || super
-end
+    def method_missing(name, *args)
+        super if !respond_to?(name)
+        info = @data_source.send("get_#{name}_info", args[0])
+        price = @data_source.send("get_#{name}_price", args[0])
+        result = "#{name.to_s.capitalize}: #{info} ($#{price})"
+        return " * #{result}" if price >= 100
+        result
+    end
+    
+    def respond_to?(method)
+        @data_source.respond_to?("get_#{method}_info") || super
+    end
 end
 
 ```
@@ -120,13 +121,13 @@ end
 * 如果希望在类中存储一个变量，那么除了类实例变量，还可以使用以@@开头的类变量（class variable）：
 
         class C
-        @@v = 1
+            @@v = 1
         end
 
 * 类变量与类实例变量不同，它们可以被子类或类的实例所使用（在这个意义上，它们更像是Java的静态成员。）。
 
         class D < C
-        def my_method; @@v; end
+            def my_method; @@v; end
         end
         D.new.my_method # 1
 
@@ -134,7 +135,7 @@ end
 
         @@v = 1
         class MyClass
-        @@v = 2
+            @@v = 2
         end
         @@v # 2
 
@@ -169,6 +170,7 @@ end
 ### 5.8 小测验：校验过的属性（第五步）
 
 ```
+
 module CheckedAttributes
     def self.included(base)
         base.extend ClassMethods
@@ -198,10 +200,11 @@ end
 把一组参数压入到一个数组中。
 
 ```
+
 def my_method(*args)
-args.map{|arg|arg.reverse}
+    args.map{|arg|arg.reverse}
 end
-my_method('abc','xyz','123')#<图>["cba","zyx","321"]
+my_method('abc','xyz','123')#=>["cba","zyx","321"]
 ```
 
 ## 环绕别名
@@ -209,13 +212,14 @@ Around Alias
 从一个重新定义的方法中调用原始的、被重命名的版本。
 
 ```
+
 class String
-alias :old_reverse:reverse
-def reverse
-"x#{old_reverse}x"
+    alias :old_reverse:reverse
+    def reverse
+        "x#{old_reverse}x"
+    end
 end
-end
-"abc".reverse#<图>"xcbax"
+"abc".reverse#=>"xcbax"
 ```
 
 ## 白板
@@ -223,19 +227,20 @@ Blank Slate
 移除一个对象中的所有方法，以便把它们转换成幽灵方法。
 
 ```
+
 class C
-def method_missing(name,*args)
-"a Ghost Method"
-end
+    def method_missing(name,*args)
+        "a Ghost Method"
+    end
 end
 obj=C.new
-obj.to_s#<图>"#<C:0x357258>"
+obj.to_s#=>"#<C:0x357258>"
 class C
-instance_methods.each do|m|
-undef_methodm unless m.to_s=~/method_missing|respond_to?|^/
+    instance_methods.each do|m|
+        undef_methodm unless m.to_s=~/method_missing|respond_to?|^/
+    end
 end
-end
-obj.to_s#<图>"a Ghost Method"
+obj.to_s#=>"a Ghost Method"
 ```
 
 ## 类扩展
@@ -243,16 +248,17 @@ Class Extension
 通过向类的eigenclass中混入模块来定义类方法（是对象扩展的一个特例）。
 
 ```
+
 class C;end
 module M
-def my_method
-'aclass method'
-end
+    def my_method
+        'aclass method'
+    end
 end
 class<<C
-include M
+    include M
 end
-C.my_method#<图>"a class method"
+C.my_method#=>"a class method"
 ```
 
 ## 类扩展混入
@@ -260,20 +266,21 @@ Class Extension Mixin
 使一个模块可以通过钩子方法扩展它的包含者。
 
 ```
+
 module M
-def self.included(base)
-base.extend(ClassMethods)
-end
-module ClassMethods
-def my_method
-'a class method'
-end
-end
+    def self.included(base)
+        base.extend(ClassMethods)
+    end
+    module ClassMethods
+        def my_method
+            'a class method'
+        end
+    end
 end
 class C
-include M
+    include M
 end
-C.my_method#<图>"a class method"
+C.my_method#=>"a class method"
 ```
 
 ## 类实例变量
@@ -281,13 +288,14 @@ Class Instance Variable
 在一个Class对象的实例变量中存储类级别的状态。
 
 ```
+
 class C
-@my_class_instance_variable="some value"
-def self.class_attribute
-@my_class_instance_variable
+    @my_class_instance_variable="some value"
+    def self.class_attribute
+        @my_class_instance_variable
+    end
 end
-end
-C.class_attribute#<图>"some value"
+C.class_attribute#=>"some value"
 ```
 
 ## 类宏
@@ -295,14 +303,15 @@ Class Macro
 在类定义中使用一个类方法。
 
 ```
+
 class C;end
 class<<C
-def my_macro(arg)
-"my_macro(#{arg}) called"
-end
+    def my_macro(arg)
+        "my_macro(#{arg}) called"
+    end
 end
 class C
-my_macro:x#<图>"my_macro(x) called"
+    my_macro:x#=>"my_macro(x) called"
 end
 ```
 
@@ -311,10 +320,11 @@ Clean Room
 使用对象作为执行块的上下文环境。
 
 ```
+
 class CleanRoom
-def a_useful_method(x);x*2;end
+    def a_useful_method(x);x*2;end
 end
-CleanRoom.new.instance_eval{a_useful_method(3)} #<图>6
+CleanRoom.new.instance_eval{a_useful_method(3)} #=>6
 ```
 
 ## 代码处理器
@@ -322,12 +332,13 @@ Code Processor
 处理从外部获得的字符串代码。
 
 ```
+
 File.readlines("a_file_containing_lines_of_ruby.txt").each do|line|
-puts"#{line.chomp}=<图>#{eval(line)}"
+    puts"#{line.chomp}==>#{eval(line)}"
 end
-#>>1+1=<图>2
-#>>3*2=<图>6
-#>>Math.log10(100)=<图>2.0
+#>>1+1==>2
+#>>3*2==>6
+#>>Math.log10(100)==>2.0
 ```
 
 ## 上下文探针
@@ -335,13 +346,14 @@ Context Probe
 执行块来获取对象上下文中的信息。
 
 ```
+
 class C
-def initialize
-@x="a private instance variable"
-end
+    def initialize
+        @x="a private instance variable"
+    end
 end
 obj=C.new
-obj.instance_eval{@x}#<图>"a private instance variable"
+obj.instance_eval{@x}#=>"a private instance variable"
 ```
 
 ## 延迟执行
@@ -349,19 +361,20 @@ Deferred Evaluation
 在proc或lambda中存储一段代码及其上下文，用于以后执行。
 
 ```
+
 class C
-def store(&block)
-@my_code_capsule=block
-end
-def execute
-@my_code_capsule.call
-end
+    def store(&block)
+        @my_code_capsule=block
+    end
+    def execute
+        @my_code_capsule.call
+    end
 end
 obj=C.new
 obj.store{$X=1}
 $X=0
 obj.execute
-$X#<图>1
+$X#=>1
 ```
 
 ## 动态派发
@@ -369,22 +382,27 @@ Dynamic Dispatch
 在运行时决定调用哪个方法。
 
 ```
+
 method_to_call=:reverse
 obj="abc"
-obj.send(method_to_call)#<图>"cba"
-  2014-11-21 22:12:09
-动态方法
+obj.send(method_to_call)#=>"cba"
+```
+
+## 动态方法
 Dynamic Method
 在运行时才决定如何定义一个方法。
+
+```
+
 class C
 end
 C.class_eval do
-define_method:my_method do
-"a dynamic method"
-end
+    define_method:my_method do
+        "a dynamic method"
+    end
 end
 obj=C.new
-obj.my_method#<图>"a dynamic method"
+obj.my_method#=>"a dynamic method"
 ```
 
 ## 动态代理
@@ -392,16 +410,17 @@ Dynamic Proxy
 把不能对应某个方法名的消息转发给另外一个对象。
 
 ```
+
 class MyDynamicProxy
-def initialize(target)
-@target=target
-end
-def method missing(name,*args,&block)
-"result:#{@target.send(name,*args,&block)}"
-end
+    def initialize(target)
+        @target=target
+    end
+    def method missing(name,*args,&block)
+        "result:#{@target.send(name,*args,&block)}"
+    end
 end
 obj=MyDynamicProxy.new("a string")
-obj.reverse#<图>"result: gnirts a"
+obj.reverse#=>"result: gnirts a"
 ```
 
 ## 扁平作用域
@@ -409,18 +428,19 @@ Flat Scope
 使用闭包在两个作用域之间共享变量。
 
 ```
+
 class C
-def an_attribute
-@attr
-end
+    def an_attribute
+        @attr
+    end
 end
 obj=C.new
 a_variable=100
 #flatscope:
 obj.instance_eval do
-@attr=a_variable
+    @attr=a_variable
 end
-obj.an_attribute#<图>100
+obj.an_attribute#=>100
 ```
 
 ## 幽灵方法
@@ -428,13 +448,14 @@ Ghost Method
 响应一个没有关联方法的消息。
 
 ```
+
 class C
-def method_missing(name,*args)
-name.to_s.reverse
-end
+    def method_missing(name,*args)
+        name.to_s.reverse
+    end
 end
 obj=C.new
-obj.my_ghost_method #<图>"dohtem_tsohg_ym"
+obj.my_ghost_method #=>"dohtem_tsohg_ym"
 ```
 
 ## 钩子方法
@@ -442,11 +463,12 @@ Hook Method
 通过覆写某个特殊方法来截获对象模型事件。
 
 ```
+
 $INHERITORS=[]
 class C
-def self.inherited(subclass)
-$INHERITORS<<subclass
-end
+    def self.inherited(subclass)
+        $INHERITORS<<subclass
+    end
 end
 class D<C
 end
@@ -454,7 +476,7 @@ class E<C
 end
 class F<E
 end
-$INHERITORS #<图>[D,E,F]
+$INHERITORS #=>[D,E,F]
 ```
 
 ## 内核方法
@@ -462,23 +484,28 @@ Kernel Method
 在Kernel模块中定义一个方法，使之对所有对象都可用。
 
 ```
+
 module Kernel
-def a_method
-"a kernel method"
+    def a_method
+        "a kernel method"
+    end
 end
-end
-a_method#<图>"a kernel method"
-  2014-11-21 22:13:03
-惰性实例变量
+a_method#=>"a kernel method"
+```
+
+## 惰性实例变量
 Lazy Instance Variable
 当第一次访问一个实例变量时才对之进行初始化。
+
+```
+
 class C
-def attribute
-@attribute=@attribute||"some value"
-end
+    def attribute
+        @attribute=@attribute||"some value"
+    end
 end
 obj=C.new
-obj.attribute#<图>"some value"
+obj.attribute#=>"some value"
 ```
 
 ## 拟态方法
@@ -486,25 +513,30 @@ Mimic Method
 把一个方法伪装成另外一种语言构件。
 
 ```
+
 def BaseClass(name)
-name=="string" ? String : Object
+    name=="string" ? String : Object
 end
 class C<BaseClass "string" #一个看起来像类的方法
-attr_accessor :an_attribute #一个看起来像关键字的方法
+    attr_accessor :an_attribute #一个看起来像关键字的方法
 end
 obj=C.new
 obj.an_attribute=1 #一个看起来像属性的方法
-  2014-11-21 22:13:27
-猴子打补丁
+```
+
+## 猴子打补丁
 Monkeypatch
 修改已有类的特性。
-"abc".reverse #<图>"cba"
+
+```
+
+"abc".reverse #=>"cba"
 class String
-def reverse
-"override"
+    def reverse
+        "override"
+    end
 end
-end
-"abc".reverse #<图>"override"
+"abc".reverse #=>"override"
 ```
 
 ## 有名参数
@@ -512,23 +544,28 @@ Named Arguments
 把方法参数收集到一个哈希表中，以便通过名字访问。
 
 ```
+
 def my_method(args)
-args[:arg2]
+    args[:arg2]
 end
-my_method(:arg1<图>"A",:arg2<图>"B",:arg3<图>"C") #<图>"B"
-  2014-11-21 22:13:37
-命名空间
+my_method(:arg1=>"A",:arg2=>"B",:arg3=>"C") #=>"B"
+```
+
+## 命名空间
 Namespace
 在一个模块中定义常量，以防止命名冲突。
+
+```
+
 module MyNamespace
-class Array
-def to_s
-"myclass"
+    class Array
+        def to_s
+            "myclass"
+        end
+    end
 end
-end
-end
-Array.new #<图>[]
-MyNamespace::Array.new#<图>my class
+Array.new #=>[]
+MyNamespace::Array.new#=>my class
 ```
 
 ## 空指针保护
@@ -537,7 +574,7 @@ Nil Guard
 
 ```
 x=nil
-y=x ||"a value" # <图>"a value"
+y=x ||"a value" # =>"a value"
 ```
 
 ## 对象扩展
@@ -547,14 +584,14 @@ Object Extension
 ```
 obj=Object.new
 module M
-def my_method
-'a singleton method'
-end
+    def my_method
+        'a singleton method'
+    end
 end
 class<<obj
-include M
+    include M
 end
-obj.my_method#<图>"a singleton method"
+obj.my_method#=>"a singleton method"
 ```
 
 ## 打开类
@@ -563,11 +600,11 @@ Open Class
 
 ```
 class String
-def my_string_method
-"my method"
+    def my_string_method
+        "my method"
+    end
 end
-end
-"abc".my_string_method#<图>"my method"
+"abc".my_string_method#=>"my method"
 ```
 
 ## 模式派发
@@ -575,34 +612,39 @@ Pattern Dispatch
 根据名字来选择需要调用的方法。
 
 ```
+
 $x=0
 class C
-def my_first_method
-$x +=1
-end
-def my_second_method
-$x +=2
-end
+    def my_first_method
+        $x +=1
+    end
+    def my_second_method
+        $x +=2
+    end
 end
 obj=C.new
 obj.methods.each do |m|
-obj.send(m) if m.to_s=~/^my_/
+    obj.send(m) if m.to_s=~/^my_/
 end
-$x # <图> 3
-  2014-11-21 22:14:17
-沙盒
+$x # => 3
+```
+
+## 沙盒
 Sandbox
 在一个安全的环境中执行未授信的代码。
+
+```
+
 def sandbox(&code)
-proc {
-$SAFE = 2
-yield
-}.call
+    proc {
+        $SAFE = 2
+        yield
+    }.call
 end
 begin
-sandbox{File.delete 'a_file'}
-rescue Exception<图>ex
-ex #<图>#<SecurityError:Insecure operation 'delete' at level 2>
+    sandbox{File.delete 'a_file'}
+rescue Exception=>ex
+    ex #=>#<SecurityError:Insecure operation 'delete' at level 2>
 end
 ```
 
@@ -611,27 +653,32 @@ Scope Gate
 用class、module或def关键字来隔离作用域。
 
 ```
+
 a=1
-defined? a #<图>"local-variable"
+defined? a #=>"local-variable"
 module MyModule
-b = 1
-defined? a#<图>nil
-defined? b#<图>"local-variable"
+    b = 1
+    defined? a#=>nil
+    defined? b#=>"local-variable"
 end
-defined? a #<图>"local-variable"
-defined? b #<图>nil
-  2014-11-21 22:14:32
-Self Yield
+defined? a #=>"local-variable"
+defined? b #=>nil
+```
+
+## Self Yield
 把self传给当前块。
+
+```
+
 class Person
-attr_accessor :name, :surname
-def initialize
-yield self
-end
+    attr_accessor :name, :surname
+    def initialize
+        yield self
+    end
 end
 joe = Person.new do |p|
-p.name = 'Joe'
-p.surname = 'Smith'
+    p.name = 'Joe'
+    p.surname = 'Smith'
 end
 ```
 
@@ -640,20 +687,21 @@ Shared Scope
 在同一个扁平作用域的多个上下文中共享变量。
 
 ```
+
 lambda {
-shared = 10
-self.class.class_eval do
-define_method: counter do
-shared
-end
-define_method :down do
-shared -= 1
-end
-end
+    shared = 10
+    self.class.class_eval do
+        define_method: counter do
+            shared
+        end
+        define_method :down do
+            shared -= 1
+        end
+    end
 }.call
-Counter #<图>10
+Counter #=>10
 3.times {down}
-Counter #<图>7
+Counter #=>7
 ```
 
 ## 单件方法
@@ -661,19 +709,24 @@ Singleton Method
 在一个对象上定义一个方法。
 
 ```
+
 obj = "abc"
 class << obj
-def my_singleton_method
-"x"
+    def my_singleton_method
+        "x"
+    end
 end
-end
-obj.my_singleton_method # <图> "x"
-  2014-11-21 22:15:02
-代码字符串
+obj.my_singleton_method # => "x"
+```
+
+## 代码字符串
 String of Code
 执行一段表示Ruby代码的字符串。
+
+```
+
 my_string_of_code="1+1"
-eval(my_string_of_code)#<图>2
+eval(my_string_of_code)#=>2
 ```
 
 ## 符号到Proc
@@ -681,6 +734,7 @@ Symbol To Proc
 把一个符号转换为调用单个方法的代码块。
 
 ```
-[1, 2, 3, 4].map(&:even?) # <图> [false, true, false, true]
+
+[1, 2, 3, 4].map(&:even?) # => [false, true, false, true]
 ```
 
