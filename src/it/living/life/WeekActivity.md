@@ -1,7 +1,7 @@
 ---
 title: 周末活动收集与落实
 tagline: 让周末更有趣
-tags: Review
+tags: 
 ---
 
 #2014
