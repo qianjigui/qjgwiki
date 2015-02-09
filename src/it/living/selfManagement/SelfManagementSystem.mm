@@ -1,4 +1,4 @@
-<map version="1.0.0">
+<map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node COLOR="#000000" CREATED="1422368908719" ID="ID_568227316" MODIFIED="1422764875962" TEXT="SelfManagementSystem">
 <font NAME="SansSerif" SIZE="20"/>
@@ -66,10 +66,17 @@
 <node COLOR="#0033ff" CREATED="1422369003325" ID="ID_1429002050" MODIFIED="1422764875959" POSITION="right" TEXT="&#x4e60;&#x60ef;&#x4e0e;&#x6027;&#x683c;&#x7ba1;&#x7406;">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1422369014846" ID="ID_1392204881" MODIFIED="1423109249791" TEXT="&#x60c5;&#x7eea;&#x7ba1;&#x7406;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1423109140741" ID="ID_72186744" MODIFIED="1423109249791" TEXT="&#x4e0e;&#x770b;&#x5f85;&#x4e8b;&#x60c5;&#x7684;&#x601d;&#x7eea;&#x65b9;&#x6cd5;&#x76f8;&#x5173;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1423109153706" ID="ID_1368134407" MODIFIED="1423109249792" TEXT="&#x63d0;&#x9ad8;&#x601d;&#x7ef4;&#x5ba2;&#x89c2;&#x5ea6;">
+<font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#0033ff" CREATED="1422369014846" ID="ID_1392204881" MODIFIED="1422764875959" POSITION="right" TEXT="&#x60c5;&#x7eea;&#x7ba1;&#x7406;">
-<edge STYLE="sharp_bezier" WIDTH="8"/>
-<font NAME="SansSerif" SIZE="18"/>
+</node>
+</node>
 </node>
 <node COLOR="#0033ff" CREATED="1422369047874" ID="ID_123094551" MODIFIED="1422764875960" POSITION="right" TEXT="&#x4eba;&#x8109;&#x7ba1;&#x7406;">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
@@ -81,6 +88,9 @@
 <node COLOR="#00b439" CREATED="1422764931987" ID="ID_244302960" MODIFIED="1422764936016" TEXT="&#x7a81;&#x51fa;&#x91cd;&#x70b9;">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1423109180177" ID="ID_185426647" MODIFIED="1423109196617" TEXT="&#x5c06;&#x90e8;&#x5206;&#x4e8b;&#x60c5;&#x59d4;&#x6d3e;&#x7ed9;&#x5176;&#x4ed6;&#x4eba;">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
 </node>
 </node>
 <node COLOR="#0033ff" CREATED="1422369095187" ID="ID_1242618529" MODIFIED="1422764875962" POSITION="right" TEXT="&#x5bb6;&#x5ead;&#x7ba1;&#x7406;">
