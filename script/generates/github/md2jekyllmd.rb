@@ -22,6 +22,7 @@ module KnowledgeUtils
                     bodydata = r[2]
                 else
                     #TODO Fix bug for here, how to support syntax
+                    @ctx.env.warn(@data)
                     @ctx.env.warn('ToJekyllMarkdown Failed')
                     exit 1
                 end
