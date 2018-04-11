@@ -1,4 +1,5 @@
 require 'openssl'
+require 'pp'
 
 module KnowledgeUtils
   module Generate
@@ -11,6 +12,7 @@ module KnowledgeUtils
       def encrypt(infile, outfile)
         c = OpenSSL::Cipher::Cipher.new('DES-CBC')
         c.encrypt
+        c.padding = 0
         c.key = @key
         c.iv = @iv
         plaintext = File.read(infile)
@@ -22,8 +24,10 @@ module KnowledgeUtils
       def decrypt(infile, outfile)
         c = OpenSSL::Cipher::Cipher.new('DES-CBC')
         c.decrypt
+        c.padding = 0
         c.key = @key
         c.iv = @iv
+        pp 'decrypt:'+infile
         encrypt_value = File.read(infile)
         ret = c.update(encrypt_value)
         ret << c.final
