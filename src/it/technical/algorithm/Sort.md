@@ -13,3 +13,5 @@ python/ruby中
 go中
 
 看着很高深的一个方案: 桶排序https://blog.csdn.net/ii1245712564/article/details/45869623
+
+目前主流语言的hash表
