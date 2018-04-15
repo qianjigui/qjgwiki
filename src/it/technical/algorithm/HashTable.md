@@ -41,9 +41,18 @@ unsigned int BKDRHash(char *str)
 
 ### 一般语言的内建hash表
 
-1. key的范围与容量, 最大规模是与机器相关联的int最大边界数值.
+key的范围与容量, 最大规模是与机器相关联的int最大边界数值:
     * Golang: `func make(t Type, size ...IntegerType) Type`, eg `m := make(map[string]int, 1e6)`
     * Java: `HashMap(int initialCapacity)` 装载率是75%
 
+来看看golang: 在 `go/src/runtime/hashmap.go` 中是对`make(map[string]int, 1e6)`的真实实现位置.
+
+```
+if hint < 0 || hint > int(maxSliceCap(t.bucket.size)) {
+    hint = 0
+}
+```
+
+从上述实现中可以看到,如果期望创建的map容量过大,则会默认将容量设置为0, 边用边申请.
 当我们想通过机器去试验程序语言的边界的时候, 最终限制我们的是机器资源边界.
 
