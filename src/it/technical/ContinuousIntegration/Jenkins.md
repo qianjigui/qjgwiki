@@ -20,3 +20,9 @@ tags: Docker CI
 # 外部工具集合
 
 1. Gerrit/Jenkins Rest调用工具
+
+# 管理技巧
+
+## https://stackoverflow.com/questions/10238604/how-to-shutdown-my-jenkins-safely
+
+服务detach: ctrl-p ctrl-q
