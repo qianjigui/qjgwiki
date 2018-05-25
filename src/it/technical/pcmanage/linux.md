@@ -116,3 +116,55 @@ sudo apt-get update
 sudo apt-get install firefox
 ```
 
+# Linux 管理常用指令
+
+```
+# Mount相关
+sudo apt-get install cifs-utils
+sudo mount -t cifs -o uid=1000,username=administrator,passwd=system009 //10.9.5.20/share Your_local_path
+
+ 
+
+# File相关
+# 创建一个文件大小为file_size
+dd if=/dev/zero of=upload_test bs=file_size(in bytes) count=1
+
+  
+
+# Server Manager
+sudo useradd username -m -s /bin/bash
+sudo passwd username
+sudo adduser username sudo
+
+# scp 本地用户名 @IP 地址 : 文件名 1 远程用户名 @IP 地址 : 文件名 2 
+# delete user and home directory:
+sudo deluser --remove-home username
+
+   
+
+# key
+
+创建keystore：keytool -genkey -alias test.keystore -keyalg RSA -validity 10000 -keystore test.keystore
+查看keystore：keytool -list  -v -keystore "C:\sign\bin1\test.keystore"
+签名: jarsigner -keystore test.keystore -storepass test.test -keypass test.test -signedjar t.lar t.apk test.keystore
+
+    
+
+tar
+
+ls -l | grep ^[^d] | awk '{print $8}' | tar czfhv snod.tar.gz -T -
+
+Diff
+#diff a directory with git format and ignore .git directory
+
+diff -r -u -x '.git' aaaa/packages/apps/PackageInstaller bbb/packages/apps/PackageInstaller
+```
+
+版本号相关规范
+http://www.cnblogs.com/sdjxcolin/archive/2007/07/02/803376.html
+
+MediaWiki change main page: MediaWiki:Mainpage
+How to change the user privileges in MediaWiki?
+The privileges for existing users can be modified by logging in to your MediaWiki as administrator and going to Special Pages. 
+Then, under Restricted special pages, click User rights management.
+Enter the username which you wish to modify and click the Edit User Groups button. Next, select the desired rights listed under Available groups and click the Save User Groups button.
