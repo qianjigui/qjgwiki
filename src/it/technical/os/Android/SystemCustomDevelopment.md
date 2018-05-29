@@ -22,6 +22,8 @@ void AudioFlinger::MixerThread::threadLoop_standby()
 
 * frameworks/base commit a32dbad
 
+https://lark.alipay.com/pengcheng.wang/aosppatch/fix-valgrind-run
+
 ### 系统多层系统签名问题
 
 ### 第三方应用广播接收权限管理
