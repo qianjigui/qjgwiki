@@ -140,6 +140,12 @@ sudo adduser username sudo
 # delete user and home directory:
 sudo deluser --remove-home username
 
+#添加sudo免密码
+
+```
+vim /etc/sudoers
+jenkins ALL=(ALL) NOPASSWD: ALL
+```
    
 
 # key
