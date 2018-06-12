@@ -5,7 +5,9 @@ tags: AOSP
 
 ## 具体Case
 
-### 实时反馈目前系统是否在播放声音
+### 多媒体相关
+
+#### 实时反馈目前系统是否在播放声音
 
 主要介入修改点: `frameworks/av/services/audioflinger/Threads.cpp`
 
@@ -16,23 +18,16 @@ AudioFlinger::PlaybackThread::mixer_state AudioFlinger::MixerThread::prepareTrac
 void AudioFlinger::MixerThread::threadLoop_standby()
 ```
 
-### 系统广播乱发问题
+### 系统性能相关
 
-### Valgrind不可使用的问题
+#### 系统广播乱发问题
 
-* frameworks/base commit a32dbad
+#### 开机广播发送速度慢
 
-https://lark.alipay.com/pengcheng.wang/aosppatch/fix-valgrind-run
+`BOOT_COMPLETE`广播是串行广播，需要上个应用处理完成后，才能在下个应用中进行处理。
+通过添加广播转发log，查看问题.
 
-### 系统多层系统签名问题
-
-### 第三方应用广播接收权限管理
-
-### 安全管家相关功能
-
-### 开机广播
-
-#### Android 7.0相关流程
+##### Android 7.0相关流程调试
 
 https://blog.csdn.net/petib_wangwei/article/details/70318057
 
@@ -68,3 +63,23 @@ index f78f29c..cfa03e5 100644
                              + target + ": " + r);
                      deliverToRegisteredReceiverLocked(r, (BroadcastFilter)target, false, i);
 ```
+
+### 系统调试相关
+
+#### Valgrind不可使用的问题
+
+* frameworks/base commit a32dbad
+
+https://lark.alipay.com/pengcheng.wang/aosppatch/fix-valgrind-run
+
+### 系统安全
+
+#### 多层系统签名问题
+
+#### 第三方应用广播接收权限管理
+
+#### 安全管家相关功能
+
+### 系统UI定制
+
+资源替换

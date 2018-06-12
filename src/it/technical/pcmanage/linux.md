@@ -129,8 +129,6 @@ sudo mount -t cifs -o uid=1000,username=administrator,passwd=system009 //10.9.5.
 # 创建一个文件大小为file_size
 dd if=/dev/zero of=upload_test bs=file_size(in bytes) count=1
 
-  
-
 # Server Manager
 sudo useradd username -m -s /bin/bash
 sudo passwd username
@@ -141,8 +139,6 @@ sudo adduser username sudo
 sudo deluser --remove-home username
 
 #添加sudo免密码
-
-```
 vim /etc/sudoers
 jenkins ALL=(ALL) NOPASSWD: ALL
 ```
