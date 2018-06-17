@@ -2,6 +2,14 @@
 title: "如何成为一个架构师"
 tags: Architecture
 ---
+
+# 业务场景总结
+
+![BigWebStructureHighPerformance](BigWebStructureHighPerformance.svg)
+![ContainerTech](ContainerTech.svg)
+![SolveAndroidFragmentsVersions](SolveAndroidFragmentsVersions.svg)
+![SystemMonitor](SystemMonitor.svg)
+
 #How to?#
 http://www.iteye.com/news/26955
 
