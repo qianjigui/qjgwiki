@@ -13,6 +13,10 @@ cd aosp
 repo init -u http://sssss -b android-4.2.2_r1.2
 ```
 
+## Build 构建
+
+[Ubuntu 18.04编译出错问题处理](https://blog.csdn.net/shui1025701856/article/details/80497911)
+
 ### 非AOSP部分代码合入
 
 请根据版本与设备型号从[google官方](https://developers.google.com/android/nexus/drivers#magurojdq39)下载补丁.
