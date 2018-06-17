@@ -5,10 +5,10 @@ tags: Architecture
 
 # 业务场景总结
 
-![BigWebStructureHighPerformance](BigWebStructureHighPerformance.svg)
-![ContainerTech](ContainerTech.svg)
-![SolveAndroidFragmentsVersions](SolveAndroidFragmentsVersions.svg)
-![SystemMonitor](SystemMonitor.svg)
+* ![BigWebStructureHighPerformance](/assets/BigWebStructureHighPerformance.svg)
+* ![ContainerTech](/assets/ContainerTech.svg)
+* ![SolveAndroidFragmentsVersions](/assets/SolveAndroidFragmentsVersions.svg)
+* ![SystemMonitor](/assets/SystemMonitor.svg)
 
 #How to?#
 http://www.iteye.com/news/26955
